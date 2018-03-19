@@ -1,0 +1,89 @@
+{
+  "name": "nba-menubar",
+  "version": "1.0.0",
+  "description": "NBA Menubar app",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "electron-builder install-app-deps",
+    "start": "electron .",
+    "dev": "concurrently -k './node_modules/.bin/webpack-dev-server --config ./webpack.config.development.js' 'NODE_ENV=development npm start'",
+    "build": "webpack --config webpack.config.production.js",
+    "package": "npm run build && electron-builder"
+  },
+  "author": "xxhomey19",
+  "engines": {
+    "node": ">= 6",
+    "npm": ">= 3"
+  },
+  "build": {
+    "appId": "org.epilande.yarems",
+    "productName": "NBA Menubar",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/",
+      "resources/",
+      "index.html",
+      "main.js",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "icon": "resources/app.icns"
+    }
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "electron-debug": "^1.5.0",
+    "electron-devtools-installer": "^2.2.3",
+    "fix-path": "^2.1.0",
+    "menubar": "^5.2.3",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-hot-loader": "^4.0.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^3.2.3",
+    "webpack": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-styled-components": "^1.5.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "concurrently": "^3.5.1",
+    "devtron": "^1.4.0",
+    "electron": "^1.8.4",
+    "electron-builder": "^20.5.1",
+    "eslint": "^4.19.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-import-resolver-webpack": "^0.8.3",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "file-loader": "^1.1.5",
+    "prettier": "^1.11.1",
+    "prettier-package-json": "^1.5.1",
+    "stylelint": "^9.1.3",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.3.1",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.1"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "node": true
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true
+      }
+    ],
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx"] }],
+    "consistent-return": "off",
+    "global-require": "off",
+    "no-console": "off",
+    "import/no-extraneous-dependencies": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./webpack.config.development.js"
+      }
+    }
+  },
+  "plugins": [
+    "react",
+    "babel",
+    "prettier"
+  ]
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <style>
+      .z-loader-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(2);
+      }
+
+      #root {
+        height: 100vh;
+        background: #fff;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <svg class="z-loader-logo" width="80" height="44" viewBox="0 0 80 44" xmlns="http://www.w3.org/2000/svg">
+        <title>NBA Menubar</title>
+        <g fill="none" fill-rule="evenodd">
+          <path fill="#FEC33D" d="M.482.171L64.557.17 49.496 27.34z"/>
+          <path fill="#EF7024" d="M79.265 43.766l-64.075.002L30.25 16.597z"/>
+        </g>
+      </svg>
+    </div>
+    <script>
+      {
+        const scripts = [];
+        const port = process.env.PORT || 8080;
+        scripts.push(
+          (process.env.NODE_ENV === 'development')
+            ? 'http://localhost:' + port + '/dist/bundle.js'
+            : './dist/bundle.js'
+        );
+        document.write(
+          scripts
+            .map(script => '<script defer src="' + script + '"><\/script>')
+            .join('')
+        );
+      }
+    </script>
+  </body>
+</html>
