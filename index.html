@@ -2,32 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <style>
-      .z-loader-logo {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(2);
+    <title>NBA Menubar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+    <script>
+      if(!window.Promise) {
+        document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
       }
-
+    </script>
+    <style>
       #root {
         height: 100vh;
-        background: #fff;
+        background: #f7f7f7;
         border-radius: 5px;
       }
     </style>
   </head>
   <body>
-    <div id="root">
-      <svg class="z-loader-logo" width="80" height="44" viewBox="0 0 80 44" xmlns="http://www.w3.org/2000/svg">
-        <title>NBA Menubar</title>
-        <g fill="none" fill-rule="evenodd">
-          <path fill="#FEC33D" d="M.482.171L64.557.17 49.496 27.34z"/>
-          <path fill="#EF7024" d="M79.265 43.766l-64.075.002L30.25 16.597z"/>
-        </g>
-      </svg>
-    </div>
+    <div id="root"></div>
     <script>
       {
         const scripts = [];

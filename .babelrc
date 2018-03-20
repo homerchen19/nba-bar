@@ -3,6 +3,7 @@
   "plugins": [
     "babel-plugin-styled-components",
     "react-hot-loader/babel",
-    ["transform-class-properties", { "loose": true }]
+    ["transform-class-properties", { "loose": true }],
+    ["import", { "libraryName": "antd-mobile", "style": "css" }]
   ]
 }

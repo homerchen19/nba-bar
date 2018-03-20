@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+import { WingBlank, WhiteSpace } from 'antd-mobile';
 
 import theme from './styles/theme';
 import './styles/global';
@@ -15,7 +16,12 @@ render(
   <Provider store={store}>
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <App />
+        <Fragment>
+          <WhiteSpace />
+          <WingBlank>
+            <App />
+          </WingBlank>
+        </Fragment>
       </BrowserRouter>
     </ThemeProvider>
   </Provider>,
