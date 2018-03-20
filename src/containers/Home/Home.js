@@ -5,17 +5,23 @@ import { connect } from 'react-redux';
 
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
+import DateSelector from '../../components/DateSelector';
 
 class Home extends Component {
   render() {
-    const { date } = this.props;
+    const { addDay, subDay, date } = this.props;
 
     return (
       <Wrapper>
         <Fragment>
-          <h1>Home Page</h1>
-          <p>{date}</p>
-          <Link to="/settings">Settings</Link>
+          <DateSelector
+            date={date}
+            addDay={() => addDay(date)}
+            subDay={() => subDay(date)}
+          />
+          <Link to="/settings" href="settings">
+            Settings
+          </Link>
         </Fragment>
       </Wrapper>
     );
@@ -23,7 +29,9 @@ class Home extends Component {
 }
 
 Home.propTypes = {
+  addDay: PropTypes.func.isRequired,
   date: PropTypes.number.isRequired,
+  subDay: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({

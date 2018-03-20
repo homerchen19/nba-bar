@@ -23,6 +23,7 @@
     "global-require": "off",
     "no-console": "off",
     "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
     "react/prefer-stateless-function": "off"
   },
   "settings": {
