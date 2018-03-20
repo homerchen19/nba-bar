@@ -4,8 +4,9 @@ import { colors, fonts } from './theme';
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
-  :root {
-    font-size: 14px;
+  #root {
+    width: 100%;
+    height: 100%;
   }
 
   * {
@@ -15,7 +16,9 @@ injectGlobal`
   }
 
   body {
+    height: 100vh;
     color: ${colors.darkText};
+    background: ${colors.white};
     font-family: ${fonts.base};
     font-weight: 300;
     letter-spacing: 0.1px;

@@ -1,21 +1,21 @@
 export const colors = {
   // Colors
-  white: '#FFFFFF',
-  liteGrey: '#F9F9F9',
-  black: '#3D4B50',
+  white: '#f7f7f7',
+  liteGrey: '#f9f9f9',
+  black: '#3d4b50',
 
   // Text
-  liteText: '#CCCCCC',
-  text: '#8A8A8A',
-  darkText: '#3D4B50',
+  liteText: '#ccc',
+  text: '#8a8a8a',
+  darkText: '#3d4b50',
 
   // Border
-  border: '#EDEDED',
+  border: '#ededed',
 
   // Status
-  success: '#2AD955',
-  warn: '#FFBB00',
-  error: '#FF6D26',
+  success: '#2ad955',
+  warn: '#fbb00',
+  error: '#f6d26',
 };
 
 export const fonts = {

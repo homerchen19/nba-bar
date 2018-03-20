@@ -6,12 +6,10 @@ import Home from '../Home';
 import Settings from '../Settings';
 
 const App = () => (
-  <div>
-    <Switch>
-      <Route path="/settings" component={Settings} />
-      <Route path="/" component={Home} />
-    </Switch>
-  </div>
+  <Switch>
+    <Route path="/settings" component={Settings} />
+    <Route path="/" component={Home} />
+  </Switch>
 );
 
 export default hot(module)(App);

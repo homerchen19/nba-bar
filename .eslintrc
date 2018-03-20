@@ -22,7 +22,8 @@
     "consistent-return": "off",
     "global-require": "off",
     "no-console": "off",
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "react/prefer-stateless-function": "off"
   },
   "settings": {
     "import/resolver": {
