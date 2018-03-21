@@ -7,49 +7,47 @@ import {
   REQUEST_START,
   REQUEST_SUCCESS,
   REQUEST_ERROR,
-  TODAY,
-  ADD_DAY,
-  SUB_DAY,
+  SET_DATE,
 } from './constants';
 
 import nba from '../../utils/nba';
 
-export const requestStart = () => ({ type: REQUEST_START });
-export const requestSuccess = () => ({ type: REQUEST_SUCCESS });
-export const requestError = () => ({ type: REQUEST_ERROR });
+const requestStart = () => ({ type: REQUEST_START });
+const requestSuccess = () => ({ type: REQUEST_SUCCESS });
+const requestError = () => ({ type: REQUEST_ERROR });
 
-export const today = date => ({
-  type: TODAY,
+const setDate = date => ({
+  type: SET_DATE,
   payload: { date },
-});
-
-export const addDay = date => ({
-  type: ADD_DAY,
-  payload: { date: getTime(addDays(date, 1)) },
-});
-
-export const subDay = date => ({
-  type: SUB_DAY,
-  payload: { date: getTime(subDays(date, 1)) },
 });
 
 export const fetchData = (date, type) => async dispatch => {
   dispatch(requestStart());
 
+  let newDate;
+
   R.ifElse(
     R.equals('today'),
-    () => dispatch(today(date)),
+    () => {
+      newDate = date;
+    },
     R.ifElse(
       R.equals('add'),
-      () => dispatch(addDay(date)),
-      () => dispatch(subDay(date))
+      () => {
+        newDate = getTime(addDays(date, 1));
+      },
+      () => {
+        newDate = getTime(subDays(date, 1));
+      }
     )
   )(type);
+
+  dispatch(setDate(newDate));
 
   try {
     const {
       sports_content: { games: { game: gamesData } },
-    } = await nba.getGamesFromDate(date);
+    } = await nba.getGamesFromDate(newDate);
 
     console.log('=====================================');
     console.log(gamesData);

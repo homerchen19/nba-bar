@@ -5,9 +5,7 @@ import {
   REQUEST_START,
   REQUEST_SUCCESS,
   REQUEST_ERROR,
-  TODAY,
-  ADD_DAY,
-  SUB_DAY,
+  SET_DATE,
 } from './constants';
 
 const initialState = {
@@ -40,9 +38,7 @@ export default function reducer(state = initialState, action = {}) {
         loading: false,
       };
     }
-    case TODAY:
-    case ADD_DAY:
-    case SUB_DAY:
+    case SET_DATE:
       return {
         ...state,
         date: action.payload.date,

@@ -1,15 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavBar, Flex } from 'antd-mobile';
+import { Tabs, Flex } from 'antd-mobile';
 import styled from 'styled-components';
 
 const Layout = styled(Flex)`
   width: 100%;
   height: 100%;
-`;
-
-const Navbar = styled(NavBar)`
-  width: 100%;
 `;
 
 const Content = styled(Flex)`
@@ -18,10 +14,23 @@ const Content = styled(Flex)`
   flex: 1;
 `;
 
+const Title = styled.p`
+  cursor: pointer;
+`;
+
 const Wrapper = ({ children }) => (
   <Layout direction="column">
-    <Navbar mode="light">NBA Menubar</Navbar>
-    <Content direction="column">{children}</Content>
+    <Tabs
+      tabs={[
+        { title: <Title>Schedule</Title> },
+        { title: <Title>Ranking</Title> },
+      ]}
+    >
+      <Content direction="column">{children}</Content>
+      <Content direction="column">
+        <p>Ranking</p>
+      </Content>
+    </Tabs>
   </Layout>
 );
 
