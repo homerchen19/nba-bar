@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { WingBlank, WhiteSpace, NavBar, Flex } from 'antd-mobile';
+import { NavBar, Flex } from 'antd-mobile';
 import styled from 'styled-components';
 
 const Layout = styled(Flex)`
@@ -12,18 +12,16 @@ const Navbar = styled(NavBar)`
   width: 100%;
 `;
 
-const Content = styled(Flex.Item)`
+const Content = styled(Flex)`
   width: 100%;
-  margin: 0 !important;
+  padding: 15px;
+  flex: 1;
 `;
 
 const Wrapper = ({ children }) => (
   <Layout direction="column">
     <Navbar mode="light">NBA Menubar</Navbar>
-    <Content>
-      <WhiteSpace />
-      <WingBlank>{children}</WingBlank>
-    </Content>
+    <Content direction="column">{children}</Content>
   </Layout>
 );
 

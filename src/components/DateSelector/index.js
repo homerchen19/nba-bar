@@ -16,7 +16,7 @@ const Item = styled(Flex.Item)`
 `;
 
 const DateSelector = ({ date, addDay, subDay }) => (
-  <Flex>
+  <Flex style={{ width: '100%' }}>
     <Item align="left">
       <Button type="left" onClick={subDay} />
     </Item>

@@ -3,6 +3,8 @@ export const colors = {
   white: '#f7f7f7',
   liteGrey: '#f9f9f9',
   black: '#3d4b50',
+  blue: '#0069b9',
+  red: '#f00b47',
 
   // Text
   liteText: '#ccc',

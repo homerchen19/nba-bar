@@ -7,7 +7,11 @@ const baseConfig = require('./webpack.config.base');
 const config = merge(baseConfig, {
   mode: 'development',
 
-  entry: ['react-hot-loader/patch', path.resolve(__dirname, 'src/index.js')],
+  entry: [
+    'babel-polyfill',
+    'react-hot-loader/patch',
+    path.resolve(__dirname, 'src/index.js'),
+  ],
 
   output: {
     path: path.resolve(__dirname, 'dist'),

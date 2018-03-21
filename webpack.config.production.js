@@ -8,7 +8,7 @@ const baseConfig = require('./webpack.config.base');
 const config = merge(baseConfig, {
   mode: 'production',
 
-  entry: './src/index',
+  entry: ['babel-polyfill', './src/index'],
 
   output: {
     publicPath: path.join(__dirname, 'dist'),

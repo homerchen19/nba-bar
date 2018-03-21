@@ -1,24 +1,46 @@
-import addDays from 'date-fns/add_days';
-import subDays from 'date-fns/sub_days';
-import getTime from 'date-fns/get_time';
-
-import { ADD_DAY, SUB_DAY } from './constants';
+import {
+  REQUEST_START,
+  REQUEST_SUCCESS,
+  REQUEST_ERROR,
+  ADD_DAY,
+  SUB_DAY,
+} from './constants';
 
 const initialState = {
   date: Date.now(),
+  loading: false,
 };
 
 export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
-    case ADD_DAY:
+    case REQUEST_START: {
       return {
         ...state,
-        date: getTime(addDays(action.payload.date, 1)),
+        loading: true,
       };
+    }
+    case REQUEST_SUCCESS: {
+      return {
+        ...state,
+        loading: false,
+      };
+    }
+    case REQUEST_ERROR: {
+      return {
+        ...state,
+        loading: false,
+      };
+    }
+    case ADD_DAY: {
+      return {
+        ...state,
+        date: action.payload.date,
+      };
+    }
     case SUB_DAY:
       return {
         ...state,
-        date: getTime(subDays(action.payload.date, 1)),
+        date: action.payload.date,
       };
     default:
       return state;
