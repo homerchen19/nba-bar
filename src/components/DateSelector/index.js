@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import parse from 'date-fns/parse';
 import format from 'date-fns/format';
 
-const formatDate = date => format(parse(date), 'YYYY-MM-DD');
+const formatDate = date => format(parse(date), 'DD, MMM, YYYY');
 
 const Button = styled(Icon)`
   cursor: pointer;

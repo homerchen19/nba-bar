@@ -2,12 +2,12 @@ import R from 'ramda';
 import addDays from 'date-fns/add_days';
 import subDays from 'date-fns/sub_days';
 import getTime from 'date-fns/get_time';
-import moment from 'moment-timezone';
 
 import {
   REQUEST_START,
   REQUEST_SUCCESS,
   REQUEST_ERROR,
+  TODAY,
   ADD_DAY,
   SUB_DAY,
 } from './constants';
@@ -17,6 +17,11 @@ import nba from '../../utils/nba';
 export const requestStart = () => ({ type: REQUEST_START });
 export const requestSuccess = () => ({ type: REQUEST_SUCCESS });
 export const requestError = () => ({ type: REQUEST_ERROR });
+
+export const today = date => ({
+  type: TODAY,
+  payload: { date },
+});
 
 export const addDay = date => ({
   type: ADD_DAY,
@@ -32,20 +37,19 @@ export const fetchData = (date, type) => async dispatch => {
   dispatch(requestStart());
 
   R.ifElse(
-    R.equals('add'),
-    () => dispatch(addDay(date)),
-    () => dispatch(subDay(date))
+    R.equals('today'),
+    () => dispatch(today(date)),
+    R.ifElse(
+      R.equals('add'),
+      () => dispatch(addDay(date)),
+      () => dispatch(subDay(date))
+    )
   )(type);
-
-  const LADate = moment
-    .tz(date, 'America/Los_Angeles')
-    .startOf('day')
-    .format();
 
   try {
     const {
       sports_content: { games: { game: gamesData } },
-    } = await nba.getGamesFromDate(LADate);
+    } = await nba.getGamesFromDate(date);
 
     console.log('=====================================');
     console.log(gamesData);

@@ -9,6 +9,10 @@ import DateSelector from '../../components/DateSelector';
 import Spinner from '../../components/Spinner';
 
 class Home extends Component {
+  componentDidMount() {
+    this.props.fetchData(this.props.date, 'today');
+  }
+
   render() {
     const { fetchData, date, loading } = this.props;
 
