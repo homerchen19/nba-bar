@@ -16,6 +16,7 @@ const config = merge(baseConfig, {
   },
 
   plugins: [
+    new webpack.NormalModuleReplacementPlugin(/\/iconv-loader$/, 'node-noop'),
     new UglifyJsPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
