@@ -26,8 +26,8 @@ const mb = menubar({
   icon: path.join(app.getAppPath(), 'resources/IconTemplate.png'),
   minWidth: 300,
   // maxWidth: 300,
-  minHeight: 435,
-  // maxHeight: 435,
+  minHeight: 470,
+  // maxHeight: 470,
   preloadWindow: true,
   resizable: true,
 });

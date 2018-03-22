@@ -11,9 +11,8 @@ const Layout = styled(Flex)`
 const Content = styled(Flex)`
   width: 100%;
   height: 100%;
-  padding: 15px;
+  padding: 0 15px 15px;
   flex: 1;
-  overflow-y: scroll !important;
 `;
 
 const Title = styled.p`

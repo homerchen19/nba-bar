@@ -8,8 +8,11 @@ import format from 'date-fns/format';
 const formatDate = date => format(parse(date), 'DD, MMM, YYYY');
 
 const Wrapper = styled.div`
+  position: fixed;
   width: 100%;
-  margin-bottom: 20px;
+  padding: 5px 10px;
+  background-color: #eee;
+  z-index: 999;
 `;
 
 const Button = styled(Icon)`
@@ -17,6 +20,7 @@ const Button = styled(Icon)`
 `;
 
 const Item = styled(Flex.Item)`
+  margin-left: 0 !important;
   text-align: center;
 `;
 

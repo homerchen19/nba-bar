@@ -2,12 +2,26 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import styled from 'styled-components';
 
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
 import DateSelector from '../../components/DateSelector';
 import Spinner from '../../components/Spinner';
 import MatchCard from '../../components/MatchCard';
+
+const DataSection = styled.section`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  flex-direction: column;
+  overflow-y: scroll !important;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+`;
 
 class Home extends Component {
   componentDidMount() {
@@ -25,14 +39,16 @@ class Home extends Component {
             addDay={() => fetchData(date, 'add')}
             subDay={() => fetchData(date, 'sub')}
           />
-          {loading && <Spinner />}
-          {!loading &&
-            scheduleData.map(matchData => (
-              <MatchCard key={matchData.id} data={matchData} />
-            ))}
-          <Link to="/settings" href="settings">
-            Settings
-          </Link>
+          <DataSection>
+            {loading && <Spinner />}
+            {!loading &&
+              scheduleData.map(matchData => (
+                <MatchCard key={matchData.id} data={matchData} />
+              ))}
+            <Link to="/settings" href="settings">
+              Settings
+            </Link>
+          </DataSection>
         </Fragment>
       </Wrapper>
     );
