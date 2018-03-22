@@ -13,8 +13,11 @@ import {
 import nba from '../../utils/nba';
 
 const requestStart = () => ({ type: REQUEST_START });
-const requestSuccess = () => ({ type: REQUEST_SUCCESS });
 const requestError = () => ({ type: REQUEST_ERROR });
+const requestSuccess = scheduleData => ({
+  type: REQUEST_SUCCESS,
+  payload: { scheduleData },
+});
 
 const setDate = date => ({
   type: SET_DATE,
@@ -49,11 +52,26 @@ export const fetchData = (date, type) => async dispatch => {
       sports_content: { games: { game: gamesData } },
     } = await nba.getGamesFromDate(newDate);
 
+    const scheduleData = R.map(
+      gameData => ({
+        id: gameData.id,
+        time: gameData.id,
+        state: gameData.state,
+        city: gameData.city,
+        arena: gameData.arena,
+        home: gameData.home,
+        visitor: gameData.visitor,
+        periodTime: {
+          periodStatus: gameData.period_time.period_status,
+          gameClock: gameData.period_time.game_clock,
+        },
+      }),
+      gamesData
+    );
     console.log('=====================================');
-    console.log(gamesData);
+    console.log(scheduleData);
     console.log('=====================================');
-
-    dispatch(requestSuccess());
+    dispatch(requestSuccess(scheduleData));
   } catch (error) {
     dispatch(requestError());
   }

@@ -7,6 +7,7 @@ import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
 import DateSelector from '../../components/DateSelector';
 import Spinner from '../../components/Spinner';
+import MatchCard from '../../components/MatchCard';
 
 class Home extends Component {
   componentDidMount() {
@@ -14,7 +15,7 @@ class Home extends Component {
   }
 
   render() {
-    const { fetchData, date, loading } = this.props;
+    const { fetchData, date, loading, scheduleData } = this.props;
 
     return (
       <Wrapper>
@@ -24,8 +25,11 @@ class Home extends Component {
             addDay={() => fetchData(date, 'add')}
             subDay={() => fetchData(date, 'sub')}
           />
-          {loading}
-          <Spinner />
+          {loading && <Spinner />}
+          {!loading &&
+            scheduleData.map(matchData => (
+              <MatchCard key={matchData.id} data={matchData} />
+            ))}
           <Link to="/settings" href="settings">
             Settings
           </Link>
@@ -39,11 +43,13 @@ Home.propTypes = {
   date: PropTypes.number.isRequired,
   fetchData: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
+  scheduleData: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 const mapStateToProps = state => ({
   date: state.home.date,
   loading: state.home.loading,
+  scheduleData: state.home.scheduleData,
 });
 
 export default connect(mapStateToProps, actions)(Home);

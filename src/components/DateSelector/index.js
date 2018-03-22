@@ -7,24 +7,27 @@ import format from 'date-fns/format';
 
 const formatDate = date => format(parse(date), 'DD, MMM, YYYY');
 
+const Wrapper = styled.div`
+  width: 100%;
+  margin-bottom: 20px;
+`;
+
 const Button = styled(Icon)`
   cursor: pointer;
 `;
 
 const Item = styled(Flex.Item)`
-  text-align: ${prop => prop.align};
+  text-align: center;
 `;
 
 const DateSelector = ({ date, addDay, subDay }) => (
-  <Flex style={{ width: '100%' }}>
-    <Item align="left">
+  <Wrapper>
+    <Flex>
       <Button type="left" onClick={subDay} />
-    </Item>
-    <Item align="center">{formatDate(date)}</Item>
-    <Item align="right">
+      <Item>{formatDate(date)}</Item>
       <Button type="right" onClick={addDay} />
-    </Item>
-  </Flex>
+    </Flex>
+  </Wrapper>
 );
 
 DateSelector.propTypes = {

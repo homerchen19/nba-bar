@@ -16,6 +16,7 @@ const initialState = {
       .format()
   ),
   loading: false,
+  scheduleData: [],
 };
 
 export default function reducer(state = initialState, action = {}) {
@@ -30,6 +31,7 @@ export default function reducer(state = initialState, action = {}) {
       return {
         ...state,
         loading: false,
+        scheduleData: action.payload.scheduleData,
       };
     }
     case REQUEST_ERROR: {

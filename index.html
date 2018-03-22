@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>NBA Menubar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
-    <script>
-      if(!window.Promise) {
-        document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
-      }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script>
-      {
-        const scripts = [];
-        const port = process.env.PORT || 8080;
-        scripts.push(
-          (process.env.NODE_ENV === 'development')
-            ? 'http://localhost:' + port + '/dist/bundle.js'
-            : './dist/bundle.js'
-        );
-        document.write(
-          scripts
-            .map(script => '<script defer src="' + script + '"><\/script>')
-            .join('')
-        );
-      }
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>NBA Menubar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <script>
+    if (!window.Promise) {
+      document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"' + '>' + '<' + '/' + 'script>');
+    }
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    {
+      const scripts = [];
+      const port = process.env.PORT || 8080;
+      scripts.push(
+        (process.env.NODE_ENV === 'development')
+          ? 'http://localhost:' + port + '/dist/bundle.js'
+          : './dist/bundle.js'
+      );
+      document.write(
+        scripts
+          .map(script => '<script defer src="' + script + '"><\/script>')
+          .join('')
+      );
+    }
+  </script>
+</body>
+
 </html>

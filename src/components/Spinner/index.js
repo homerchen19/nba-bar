@@ -5,7 +5,7 @@ import MDSpinner from 'react-md-spinner';
 import { colors } from '../../styles/theme';
 
 const Spinner = () => (
-  <Flex justify="center" style={{ width: '100%', flex: 1 }}>
+  <Flex justify="center" style={{ height: '100%', width: '100%', flex: 1 }}>
     <MDSpinner
       color1={colors.blue}
       color2={colors.red}
