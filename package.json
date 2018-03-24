@@ -6,7 +6,8 @@
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
     "start": "electron .",
-    "dev": "concurrently -k './node_modules/.bin/webpack-dev-server --config ./webpack.config.development.js' 'NODE_ENV=development npm start'",
+    "dev":
+      "NODE_ENV=development concurrently -k './node_modules/.bin/webpack-dev-server --config ./webpack.config.development.js' 'npm start'",
     "build": "webpack --config webpack.config.production.js",
     "package": "npm run build && electron-builder"
   },
@@ -21,13 +22,7 @@
     "directories": {
       "output": "release"
     },
-    "files": [
-      "dist/",
-      "resources/",
-      "index.html",
-      "main.js",
-      "package.json"
-    ],
+    "files": ["dist/", "resources/", "index.html", "main.js", "package.json"],
     "mac": {
       "category": "public.app-category.developer-tools",
       "icon": "resources/app.icns"

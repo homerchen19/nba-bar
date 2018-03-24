@@ -15,7 +15,10 @@ const config = merge(baseConfig, {
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/',
+    publicPath:
+      process.env.NODE_ENV === 'development'
+        ? 'http://localhost:8080/dist/'
+        : '/dist/',
     filename: 'bundle.js',
   },
 
@@ -29,6 +32,8 @@ const config = merge(baseConfig, {
     contentBase: path.resolve(__dirname, 'dist'),
     compress: true,
     hot: true,
+    historyApiFallback: true,
+    inline: true,
   },
 });
 
