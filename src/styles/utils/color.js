@@ -8,7 +8,7 @@ export function hexToRgba(hex, alpha = 1) {
     }
     color = `0x${color.join('')}`;
     return `rgba(${[(color >> 16) & 255, (color >> 8) & 255, color & 255].join(
-      ',',
+      ','
     )},${alpha})`;
   }
   throw new Error('Bad Hex');
