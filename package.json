@@ -1,32 +1,18 @@
 {
   "name": "nba-menubar",
-  "version": "1.0.0",
   "description": "NBA Menubar app",
+  "author": "xxhomey19",
+  "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "postinstall": "electron-builder install-app-deps",
-    "start": "electron .",
-    "dev":
-      "NODE_ENV=development concurrently -k './node_modules/.bin/webpack-dev-server --config ./webpack.config.development.js' 'npm start'",
     "build": "webpack --config webpack.config.production.js",
-    "package": "npm run build && electron-builder"
-  },
-  "author": "xxhomey19",
-  "engines": {
-    "node": ">= 6",
-    "npm": ">= 3"
-  },
-  "build": {
-    "appId": "org.epilande.yarems",
-    "productName": "NBA Menubar",
-    "directories": {
-      "output": "release"
-    },
-    "files": ["dist/", "resources/", "index.html", "main.js", "package.json"],
-    "mac": {
-      "category": "public.app-category.developer-tools",
-      "icon": "resources/app.icns"
-    }
+    "precommit": "lint-staged",
+    "dev": "NODE_ENV=development concurrently -k './node_modules/.bin/webpack-dev-server --config ./webpack.config.development.js' 'npm start'",
+    "postinstall": "electron-builder install-app-deps",
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "package": "npm run build && electron-builder",
+    "start": "electron ."
   },
   "dependencies": {
     "antd-mobile": "^2.1.8",
@@ -81,7 +67,9 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.4.0",
     "file-loader": "^1.1.5",
+    "husky": "^0.14.3",
     "json-loader": "^0.5.7",
+    "lint-staged": "^7.0.0",
     "node-noop": "^1.0.0",
     "prettier": "^1.11.1",
     "prettier-package-json": "^1.5.1",
@@ -94,5 +82,37 @@
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1",
     "webpack-merge": "^4.1.1"
+  },
+  "engines": {
+    "node": ">= 6",
+    "npm": ">= 3"
+  },
+  "build": {
+    "appId": "org.epilande.yarems",
+    "productName": "NBA Menubar",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/",
+      "resources/",
+      "index.html",
+      "main.js",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "icon": "resources/app.icns"
+    }
+  },
+  "lint-staged": {
+    "package.json": [
+      "prettier-package-json --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
