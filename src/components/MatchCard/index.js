@@ -43,7 +43,7 @@ class MatchCard extends Component {
               </GameStatus>
             }
           />
-          <Card.Body>
+          <Card.Body style={{ cursor: 'pointer' }} onClick={this.props.onClick}>
             <Flex direction="column" align="start">
               <TeamContent align="start" justify="between">
                 <TeamName>{home.nickname}</TeamName>
@@ -65,6 +65,7 @@ MatchCard.propTypes = {
   data: PropTypes.objectOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.object])
   ).isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default MatchCard;

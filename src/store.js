@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
+
 import rootReducer from './reducers';
 
 const middleware = [thunk];
@@ -17,7 +18,7 @@ export default function configureStore(initialState = {}) {
   if (module.hot) {
     module.hot.accept(
       './reducers',
-      () => store.replaceReducer(require('./reducers').default), // eslint-disable-line
+      () => store.replaceReducer(require('./reducers').default) // eslint-disable-line
     );
   }
 

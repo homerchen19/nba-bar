@@ -24,9 +24,22 @@ const DataSection = styled.section`
 `;
 
 class Home extends Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchData(this.props.date, 'today');
   }
+
+  getPath = gameStatus => {
+    switch (gameStatus) {
+      default:
+      case '1':
+        return 'preview';
+      case 'Halftime':
+      case '2':
+        return 'live';
+      case '3':
+        return 'scoreboard';
+    }
+  };
 
   render() {
     const { fetchData, date, loading, scheduleData } = this.props;
@@ -42,8 +55,17 @@ class Home extends Component {
           <DataSection>
             {loading && <Spinner />}
             {!loading &&
-              scheduleData.map(matchData => (
-                <MatchCard key={matchData.id} data={matchData} />
+              scheduleData.map(game => (
+                <MatchCard
+                  key={game.id}
+                  data={game}
+                  onClick={() => {
+                    const gameId = game.id;
+                    const path = this.getPath(game.periodTime.gameStatus);
+
+                    this.props.history.push(`/${path}/${gameId}`);
+                  }}
+                />
               ))}
             <Link to="/settings" href="settings">
               Settings
@@ -58,6 +80,7 @@ class Home extends Component {
 Home.propTypes = {
   date: PropTypes.number.isRequired,
   fetchData: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
   loading: PropTypes.bool.isRequired,
   scheduleData: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

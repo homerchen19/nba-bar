@@ -64,13 +64,14 @@ export const fetchData = (date, type) => async dispatch => {
         periodTime: {
           periodStatus: gameData.period_time.period_status,
           gameClock: gameData.period_time.game_clock,
+          gameStatus: gameData.period_time.game_status,
         },
       }),
       gamesData
     );
-    console.log('=====================================');
+
     console.log(scheduleData);
-    console.log('=====================================');
+
     dispatch(requestSuccess(scheduleData));
   } catch (error) {
     dispatch(requestError());

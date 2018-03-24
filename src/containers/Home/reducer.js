@@ -15,7 +15,7 @@ const initialState = {
       .startOf('day')
       .format()
   ),
-  loading: false,
+  loading: true,
   scheduleData: [],
 };
 
