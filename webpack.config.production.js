@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 
@@ -16,6 +17,7 @@ const config = merge(baseConfig, {
   },
 
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new webpack.NormalModuleReplacementPlugin(/\/iconv-loader$/, 'node-noop'),
     new UglifyJsPlugin(),
     new webpack.DefinePlugin({
