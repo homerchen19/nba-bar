@@ -24,6 +24,20 @@ const setDate = date => ({
   payload: { date },
 });
 
+const getSeason = date => {
+  let season = '';
+  const year = date.slice(0, 4);
+  const month = date.slice(5, 6);
+
+  if (month > 9) {
+    season = `${year}-${(year + 1).toString().slice(-2)}`;
+  } else {
+    season = `${year - 1}-${year.toString().slice(-2)}`;
+  }
+
+  return season;
+};
+
 export const fetchData = (date, type) => async dispatch => {
   dispatch(requestStart());
 
@@ -55,6 +69,7 @@ export const fetchData = (date, type) => async dispatch => {
     const scheduleData = R.map(
       gameData => ({
         id: gameData.id,
+        season: getSeason(gameData.date),
         time: gameData.id,
         state: gameData.state,
         city: gameData.city,
@@ -69,8 +84,6 @@ export const fetchData = (date, type) => async dispatch => {
       }),
       gamesData
     );
-
-    console.log(scheduleData);
 
     dispatch(requestSuccess(scheduleData));
   } catch (error) {

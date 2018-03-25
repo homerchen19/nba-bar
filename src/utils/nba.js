@@ -6,6 +6,7 @@ const essentialMethods = [
   'getGamesFromDate',
   'getBoxScoreFromDate',
   'getPlayByPlayFromDate',
+  'teamSplits',
 ];
 
 const pickEssentialMethods = obj => R.pick(essentialMethods, obj);
