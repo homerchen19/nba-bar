@@ -9,9 +9,9 @@ import Settings from '../Settings';
 const App = () => (
   <main style={{ height: '100%' }}>
     <Switch>
+      <Route exact path="/" component={Home} />
       <Route path="/preview/:gameId" component={Preview} />
       <Route path="/settings" component={Settings} />
-      <Route path="/" component={Home} />
     </Switch>
   </main>
 );

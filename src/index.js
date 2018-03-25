@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 import theme from './styles/theme';
@@ -14,9 +14,9 @@ const store = configureStore();
 render(
   <Provider store={store}>
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
+      <MemoryRouter initialEntries={['/']} initialIndex={1}>
         <App />
-      </BrowserRouter>
+      </MemoryRouter>
     </ThemeProvider>
   </Provider>,
   document.getElementById('root')

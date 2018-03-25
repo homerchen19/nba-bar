@@ -29,7 +29,7 @@ const mb = menubar({
   minHeight: 470,
   // maxHeight: 470,
   preloadWindow: true,
-  resizable: true,
+  resizable: process.env.NODE_ENV === 'development',
 });
 
 mb.on('ready', async () => {
