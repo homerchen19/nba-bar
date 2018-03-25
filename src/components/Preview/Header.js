@@ -18,7 +18,7 @@ const TimeWrapper = styled(Flex)`
   border-bottom: 1px solid #000;
 `;
 
-const TeaemWrapper = styled(Flex)`
+const TeamWrapper = styled(Flex)`
   width: 100%;
   padding: 5px 0 10px;
 `;
@@ -44,14 +44,14 @@ const Header = ({ date, time, arena, city, home, visitor }) => (
         </Flex>
       </Flex.Item>
     </TimeWrapper>
-    <TeaemWrapper justify="center">
+    <TeamWrapper justify="center">
       <Flex.Item>
         <Team team={home} />
       </Flex.Item>
       <Flex.Item>
         <Team team={visitor} />
       </Flex.Item>
-    </TeaemWrapper>
+    </TeamWrapper>
     <span style={{ fontSize: '0.6rem' }}>{`${arena}, ${city}`}</span>
   </Wrapper>
 );

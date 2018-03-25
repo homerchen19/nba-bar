@@ -1,4 +1,5 @@
 import R from 'ramda';
+
 import { REQUEST_START, REQUEST_SUCCESS, REQUEST_ERROR } from './constants';
 import nba from '../../utils/nba';
 

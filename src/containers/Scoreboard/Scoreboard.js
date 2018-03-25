@@ -8,7 +8,7 @@ import R from 'ramda';
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
 import Spinner from '../../components/Spinner';
-import { Header, Table } from '../../components/Preview';
+import { Header } from '../../components/Scoreboard';
 
 const DataSection = styled.section`
   display: flex;
@@ -24,19 +24,14 @@ const DataSection = styled.section`
   }
 `;
 
-class Preview extends Component {
+class Scoreboard extends Component {
   componentDidMount() {
-    this.props.fetchData(this.props.gameData);
+    this.props.fetchData(this.props.date, this.props.gameData);
   }
 
   render() {
-    const {
-      loading,
-      gameData,
-      date,
-      homeTeamDashboardData,
-      visitorTeamDashboardData,
-    } = this.props;
+    const { loading, gameData, gameBoxScoreData } = this.props;
+    console.log(gameBoxScoreData);
 
     return (
       <Wrapper>
@@ -46,24 +41,21 @@ class Preview extends Component {
             {!loading && (
               <Fragment>
                 <Header
-                  date={date}
-                  time={gameData.periodTime.periodStatus}
                   arena={gameData.arena}
                   city={gameData.city}
                   home={{
                     name: gameData.home.abbreviation,
-                    w: homeTeamDashboardData.w,
-                    l: homeTeamDashboardData.l,
+                    score: gameData.home.score,
                   }}
                   visitor={{
                     name: gameData.visitor.abbreviation,
-                    w: visitorTeamDashboardData.w,
-                    l: visitorTeamDashboardData.l,
+                    score: gameData.visitor.score,
                   }}
-                />
-                <Table
-                  home={homeTeamDashboardData}
-                  visitor={visitorTeamDashboardData}
+                  winner={
+                    +gameData.home.score > +gameData.visitor.score
+                      ? 'home'
+                      : 'visitor'
+                  }
                 />
               </Fragment>
             )}
@@ -75,23 +67,21 @@ class Preview extends Component {
   }
 }
 
-Preview.propTypes = {
+Scoreboard.propTypes = {
   fetchData: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   gameData: PropTypes.object.isRequired,
   date: PropTypes.number.isRequired,
-  homeTeamDashboardData: PropTypes.object.isRequired,
-  visitorTeamDashboardData: PropTypes.object.isRequired,
+  gameBoxScoreData: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state, ownProps) => ({
-  loading: state.preview.loading,
+  loading: state.scoreboard.loading,
   gameData: R.find(R.propEq('id', ownProps.match.params.gameId))(
     state.home.scheduleData
   ),
   date: state.home.date,
-  homeTeamDashboardData: state.preview.homeTeamDashboardData,
-  visitorTeamDashboardData: state.preview.visitorTeamDashboardData,
+  gameBoxScoreData: state.scoreboard.gameBoxScoreData,
 });
 
-export default connect(mapStateToProps, actions)(Preview);
+export default connect(mapStateToProps, actions)(Scoreboard);
