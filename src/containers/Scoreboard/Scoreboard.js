@@ -8,7 +8,7 @@ import R from 'ramda';
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
 import Spinner from '../../components/Spinner';
-import { Header } from '../../components/Scoreboard';
+import { Header, LineScore } from '../../components/Scoreboard';
 
 const DataSection = styled.section`
   display: flex;
@@ -31,7 +31,6 @@ class Scoreboard extends Component {
 
   render() {
     const { loading, gameData, gameBoxScoreData } = this.props;
-    console.log(gameBoxScoreData);
 
     return (
       <Wrapper>
@@ -56,6 +55,18 @@ class Scoreboard extends Component {
                       ? 'home'
                       : 'visitor'
                   }
+                />
+                <LineScore
+                  home={{
+                    name: gameData.home.abbreviation,
+                    linescores: gameBoxScoreData.home.linescores.period,
+                    score: gameData.home.score,
+                  }}
+                  visitor={{
+                    name: gameData.visitor.abbreviation,
+                    linescores: gameBoxScoreData.visitor.linescores.period,
+                    score: gameData.visitor.score,
+                  }}
                 />
               </Fragment>
             )}

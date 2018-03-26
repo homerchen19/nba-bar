@@ -14,7 +14,7 @@ const TeamWrapper = styled(Flex)`
 
 const ScoreWrapper = styled(Flex)`
   width: 100%;
-  padding: 5px 0 10px;
+  padding: 5px 0 20px;
 `;
 
 const TeamName = styled.h3`

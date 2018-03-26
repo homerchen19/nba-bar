@@ -1,3 +1,4 @@
 import Header from './Header';
+import LineScore from './LineScore';
 
-export { Header };
+export { Header, LineScore };
