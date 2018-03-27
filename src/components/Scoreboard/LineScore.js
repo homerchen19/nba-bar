@@ -8,7 +8,6 @@ import 'react-sticky-table/dist/react-sticky-table.css';
 
 const Wrapper = styled(Flex)`
   width: 100%;
-  margin-top: 30px;
 `;
 
 const StyledCell = styled(Cell)`
