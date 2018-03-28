@@ -5,12 +5,9 @@ import nba from '../../utils/nba';
 
 const requestStart = () => ({ type: REQUEST_START });
 const requestError = () => ({ type: REQUEST_ERROR });
-const requestSuccess = ({
-  homeTeamDashboardData,
-  visitorTeamDashboardData,
-}) => ({
+const requestSuccess = payload => ({
   type: REQUEST_SUCCESS,
-  payload: { homeTeamDashboardData, visitorTeamDashboardData },
+  payload,
 });
 
 const pickEssentialProps = R.pick([

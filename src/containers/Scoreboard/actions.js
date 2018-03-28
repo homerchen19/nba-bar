@@ -5,9 +5,9 @@ import nba from '../../utils/nba';
 
 const requestStart = () => ({ type: REQUEST_START });
 const requestError = () => ({ type: REQUEST_ERROR });
-const requestSuccess = gameBoxScoreData => ({
+const requestSuccess = payload => ({
   type: REQUEST_SUCCESS,
-  payload: { gameBoxScoreData },
+  payload,
 });
 
 const pickEssentialProps = R.pick(['home', 'visitor']);
@@ -22,7 +22,7 @@ export const fetchData = (date, gameData) => async dispatch => {
 
     const gameBoxScoreData = pickEssentialProps(_gameBoxScoreData);
 
-    dispatch(requestSuccess(gameBoxScoreData));
+    dispatch(requestSuccess({ gameBoxScoreData }));
   } catch (error) {
     dispatch(requestError());
   }

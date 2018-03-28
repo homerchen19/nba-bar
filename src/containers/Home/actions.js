@@ -14,14 +14,14 @@ import nba from '../../utils/nba';
 
 const requestStart = () => ({ type: REQUEST_START });
 const requestError = () => ({ type: REQUEST_ERROR });
-const requestSuccess = scheduleData => ({
+const requestSuccess = payload => ({
   type: REQUEST_SUCCESS,
-  payload: { scheduleData },
+  payload,
 });
 
-const setDate = date => ({
+const setDate = payload => ({
   type: SET_DATE,
-  payload: { date },
+  payload,
 });
 
 const getSeason = date => {
@@ -59,7 +59,7 @@ export const fetchData = (date, type) => async dispatch => {
     )
   )(type);
 
-  dispatch(setDate(newDate));
+  dispatch(setDate({ date: newDate }));
 
   try {
     const {
@@ -85,7 +85,7 @@ export const fetchData = (date, type) => async dispatch => {
       gamesData
     );
 
-    dispatch(requestSuccess(scheduleData));
+    dispatch(requestSuccess({ scheduleData }));
   } catch (error) {
     dispatch(requestError());
   }

@@ -1,0 +1,6 @@
+export const REQUEST_START = 'LIVE_REQUEST_START';
+export const REQUEST_SUCCESS = 'LIVE_REQUEST_SUCCESS';
+export const REQUEST_ERROR = 'LIVE_REQUEST_ERROR';
+export const LIVE_START = 'LIVE_START';
+export const LIVE_SUCCESS = 'LIVE_SUCCESS';
+export const LIVE_ERROR = 'LIVE_ERROR';

@@ -1,0 +1,164 @@
+import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import R from 'ramda';
+
+import * as actions from './actions';
+import Wrapper from '../../components/Wrapper';
+import Spinner from '../../components/Spinner';
+import { Header, LineScore, BoxScore } from '../../components/Scoreboard';
+
+const DataSection = styled.section`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-top: 15px;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll !important;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
+const Item = styled.div`
+  width: 100%;
+  margin-top: ${props => props.marginTop}px;
+  flex: 1 1 auto;
+`;
+
+class Live extends Component {
+  state = {
+    interval: 5000,
+  };
+
+  componentDidMount() {
+    this.props.fetchData({
+      date: this.props.date,
+      gameId: this.props.gameData.id,
+      firstCall: true,
+    });
+
+    this.timer = setInterval(this.fetchLiveData, this.state.interval);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
+  fetchLiveData = () => {
+    const lastPlay = R.last(this.props.gamePlayByPlayData);
+    const isFinal =
+      (lastPlay.period === '4' || +lastPlay.period > 4) &&
+      lastPlay.description === 'End Period' &&
+      lastPlay.home_score !== lastPlay.visitor_score;
+
+    if (isFinal) {
+      clearInterval(this.timer);
+    } else {
+      this.props.fetchData({
+        date: this.props.date,
+        gameId: this.props.gameData.id,
+        firstCall: false,
+      });
+    }
+  };
+
+  render() {
+    const {
+      live,
+      loading,
+      gameData,
+      gameBoxScoreData,
+      gamePlayByPlayData,
+    } = this.props;
+    console.log(live, gamePlayByPlayData);
+
+    return (
+      <Wrapper>
+        <Fragment>
+          <DataSection>
+            {loading && <Spinner />}
+            {!loading && (
+              <Fragment>
+                <Item marginTop="0">
+                  <Header
+                    arena={gameData.arena}
+                    city={gameData.city}
+                    home={{
+                      name: gameData.home.abbreviation,
+                      score: gameBoxScoreData.home.score,
+                    }}
+                    visitor={{
+                      name: gameData.visitor.abbreviation,
+                      score: gameBoxScoreData.visitor.score,
+                    }}
+                    winner={
+                      +gameBoxScoreData.home.score >
+                      +gameBoxScoreData.visitor.score
+                        ? 'home'
+                        : 'visitor'
+                    }
+                  />
+                </Item>
+                <Item marginTop="30">
+                  <LineScore
+                    home={{
+                      name: gameData.home.abbreviation,
+                      linescores: gameBoxScoreData.home.linescores.period,
+                      score: gameBoxScoreData.home.score,
+                    }}
+                    visitor={{
+                      name: gameData.visitor.abbreviation,
+                      linescores: gameBoxScoreData.visitor.linescores.period,
+                      score: gameBoxScoreData.visitor.score,
+                    }}
+                  />
+                </Item>
+                <Item marginTop="30">
+                  <BoxScore
+                    home={{
+                      name: gameData.home.abbreviation,
+                      players: gameBoxScoreData.home.players.player,
+                    }}
+                    visitor={{
+                      name: gameData.visitor.abbreviation,
+                      players: gameBoxScoreData.visitor.players.player,
+                    }}
+                  />
+                </Item>
+              </Fragment>
+            )}
+            <Link to="/">Back</Link>
+          </DataSection>
+        </Fragment>
+      </Wrapper>
+    );
+  }
+}
+
+Live.propTypes = {
+  fetchData: PropTypes.func.isRequired,
+  live: PropTypes.oneOf(['loading', 'success', 'error']).isRequired,
+  loading: PropTypes.bool.isRequired,
+  gameData: PropTypes.object.isRequired,
+  date: PropTypes.number.isRequired,
+  gameBoxScoreData: PropTypes.object.isRequired,
+  gamePlayByPlayData: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+const mapStateToProps = (state, ownProps) => ({
+  live: state.live.live,
+  loading: state.live.loading,
+  gameData: R.find(R.propEq('id', ownProps.match.params.gameId))(
+    state.home.scheduleData
+  ),
+  date: state.home.date,
+  gameBoxScoreData: state.live.gameBoxScoreData,
+  gamePlayByPlayData: state.live.gamePlayByPlayData,
+});
+
+export default connect(mapStateToProps, actions)(Live);

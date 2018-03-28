@@ -4,6 +4,7 @@ import { hot } from 'react-hot-loader';
 
 import Home from '../Home';
 import Preview from '../Preview';
+import Live from '../Live';
 import Scoreboard from '../Scoreboard';
 import Settings from '../Settings';
 
@@ -13,6 +14,7 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route path="/preview/:gameId" component={Preview} />
       <Route path="/scoreboard/:gameId" component={Scoreboard} />
+      <Route path="/live/:gameId" component={Live} />
       <Route path="/settings" component={Settings} />
     </Switch>
   </main>
