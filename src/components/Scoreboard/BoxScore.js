@@ -9,6 +9,7 @@ import 'react-sticky-table/dist/react-sticky-table.css';
 const StyledCell = styled(Cell)`
   border: 1px solid #000;
   padding: 6px 5px;
+  background: #fff;
   text-align: center;
 `;
 
@@ -28,7 +29,11 @@ const renderHeaderCell = () => {
     '+/-',
   ];
 
-  return cells.map(cell => <StyledCell key={cell}>{cell}</StyledCell>);
+  return cells.map(cell => (
+    <StyledCell key={cell}>
+      <b>{cell}</b>
+    </StyledCell>
+  ));
 };
 
 const renderTeamBoxScoreTable = team => (

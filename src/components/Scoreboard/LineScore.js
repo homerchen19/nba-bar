@@ -8,11 +8,11 @@ import 'react-sticky-table/dist/react-sticky-table.css';
 
 const Wrapper = styled(Flex)`
   width: 100%;
+  background: #fff;
 `;
 
 const StyledCell = styled(Cell)`
-  border: 1px solid #000;
-  padding: 6px 10px;
+  padding: 8px 11px;
   text-align: center;
 `;
 

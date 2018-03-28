@@ -24,7 +24,7 @@ const DataSection = styled.section`
 `;
 
 class Home extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchData(this.props.date, 'today');
   }
 

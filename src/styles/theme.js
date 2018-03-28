@@ -25,15 +25,7 @@ export const fonts = {
     '-apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif',
 };
 
-export const sizes = {
-  xlarge: 1280,
-  large: 1024,
-  medium: 768,
-  small: 568,
-};
-
 export default {
   colors,
   fonts,
-  sizes,
 };
