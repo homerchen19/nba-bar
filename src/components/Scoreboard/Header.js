@@ -28,7 +28,7 @@ const Score = styled.p`
   opacity: ${props => (props.win ? '1' : '0.9')};
 `;
 
-const Header = ({ arena, city, home, visitor, winner }) => (
+const Header = ({ arena, city, home, visitor, winner, gameStatus }) => (
   <Wrapper justify="start" direction="column">
     <TeamWrapper justify="center" align="center">
       <Flex.Item style={{ textAlign: 'center' }}>
@@ -44,7 +44,7 @@ const Header = ({ arena, city, home, visitor, winner }) => (
       </Flex.Item>
       <Flex.Item style={{ margin: 0, flex: 1, textAlign: 'center' }}>
         <span style={{ fontSize: '0.8em' }}>
-          <b>Final</b>
+          <b>{gameStatus}</b>
         </span>
       </Flex.Item>
       <Flex.Item style={{ margin: 0, flex: 2 }}>
@@ -61,6 +61,7 @@ Header.propTypes = {
   winner: PropTypes.string.isRequired,
   home: PropTypes.object.isRequired,
   visitor: PropTypes.object.isRequired,
+  gameStatus: PropTypes.string.isRequired,
 };
 
 export default Header;

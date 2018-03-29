@@ -8,7 +8,12 @@ import R from 'ramda';
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
 import Spinner from '../../components/Spinner';
-import { Header, LineScore, BoxScore } from '../../components/Scoreboard';
+import {
+  Header,
+  LineScore,
+  BoxScore,
+  PlayByPlay,
+} from '../../components/Scoreboard';
 
 const DataSection = styled.section`
   display: flex;
@@ -75,7 +80,7 @@ class Live extends Component {
       gameBoxScoreData,
       gamePlayByPlayData,
     } = this.props;
-    console.log(live, gamePlayByPlayData);
+    console.log(live);
 
     return (
       <Wrapper>
@@ -102,6 +107,9 @@ class Live extends Component {
                         ? 'home'
                         : 'visitor'
                     }
+                    gameStatus={`${gameData.periodTime.periodStatus} ${
+                      gameData.periodTime.gameClock
+                    }`}
                   />
                 </Item>
                 <Item marginTop="30">
@@ -117,6 +125,9 @@ class Live extends Component {
                       score: gameBoxScoreData.visitor.score,
                     }}
                   />
+                </Item>
+                <Item marginTop="30">
+                  <PlayByPlay gamePlayByPlayData={gamePlayByPlayData} />
                 </Item>
                 <Item marginTop="30">
                   <BoxScore
