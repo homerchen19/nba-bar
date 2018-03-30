@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Tabs } from 'antd-mobile';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import R from 'ramda';
@@ -33,6 +34,12 @@ const Item = styled.div`
   width: 100%;
   margin-top: ${props => props.marginTop}px;
   flex: 1 1 auto;
+`;
+
+const TabTitle = styled.span`
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
 `;
 
 class Live extends Component {
@@ -134,20 +141,26 @@ class Live extends Component {
                     }}
                   />
                 </Item>
-                <Item marginTop="30">
-                  <PlayByPlay gamePlayByPlayData={gamePlayByPlayData} />
-                </Item>
-                <Item marginTop="30">
-                  <BoxScore
-                    home={{
-                      name: gameData.home.abbreviation,
-                      players: gameBoxScoreData.home.players.player,
-                    }}
-                    visitor={{
-                      name: gameData.visitor.abbreviation,
-                      players: gameBoxScoreData.visitor.players.player,
-                    }}
-                  />
+                <Item marginTop="20">
+                  <Tabs
+                    tabs={[
+                      { title: <TabTitle>PLAY-BY-PLAY</TabTitle> },
+                      { title: <TabTitle>BOX SCORE</TabTitle> },
+                    ]}
+                    initialPage={0}
+                  >
+                    <PlayByPlay gamePlayByPlayData={gamePlayByPlayData} />
+                    <BoxScore
+                      home={{
+                        name: gameData.home.abbreviation,
+                        players: gameBoxScoreData.home.players.player,
+                      }}
+                      visitor={{
+                        name: gameData.visitor.abbreviation,
+                        players: gameBoxScoreData.visitor.players.player,
+                      }}
+                    />
+                  </Tabs>
                 </Item>
               </Fragment>
             )}

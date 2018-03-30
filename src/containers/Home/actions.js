@@ -62,7 +62,7 @@ export const updateScheduleDataByGameId = (date, gameId) => async (
     const {
       sports_content: { game: _gameData },
     } = await nba.getBoxScoreFromDate(date, gameId);
-    const { scheduleData: _scheduleData } = getState();
+    const { home: { scheduleData: _scheduleData } } = getState();
 
     const gameData = pickEssentialProps(_gameData);
     const scheduleData = R.map(data => {

@@ -1,16 +1,39 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Tabs, Flex } from 'antd-mobile';
+import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
 import { StickyTable, Row, Cell } from 'react-sticky-table';
+import { getMainColor } from 'nba-color';
 
 import 'react-sticky-table/dist/react-sticky-table.css';
 
+const Wrapper = styled(Flex)`
+  width: 100%;
+  height: 300px;
+  overflow-y: scroll !important;
+`;
+
 const StyledCell = styled(Cell)`
-  border: 1px solid #000;
   padding: 6px 5px;
+  border: 1px solid #000;
   background: #fff;
   text-align: center;
+`;
+
+const Button = styled.button`
+  width: 30%;
+  height: 28px;
+  margin: 8px 0;
+  border: 0;
+  background-color: ${props => props.background} !important;
+  color: #fff !important;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity ease 0.5s;
+
+  & :hover {
+    opacity: 0.9;
+  }
 `;
 
 const renderHeaderCell = () => {
@@ -68,26 +91,54 @@ const renderTeamBoxScoreTable = team => (
   </StickyTable>
 );
 
-const Boxscore = ({ home, visitor }) => (
-  <Tabs
-    tabs={[
-      {
-        title: home.name,
-      },
-      {
-        title: visitor.name,
-      },
-    ]}
-    initalPage="1"
-  >
-    <Flex justify="start" key="home">
-      <Flex.Item>{renderTeamBoxScoreTable(home)}</Flex.Item>
-    </Flex>
-    <Flex justify="start" key="visitor">
-      <Flex.Item>{renderTeamBoxScoreTable(visitor)}</Flex.Item>
-    </Flex>
-  </Tabs>
-);
+class Boxscore extends Component {
+  state = {
+    team: this.props.home,
+  };
+
+  toggleTeam = team => {
+    this.setState({
+      team,
+    });
+  };
+
+  render() {
+    const { team } = this.state;
+    const { home, visitor } = this.props;
+
+    return (
+      <Fragment>
+        <Flex justify="center">
+          <Button
+            background={getMainColor(home.name).hex}
+            onClick={() => {
+              this.toggleTeam(home);
+            }}
+            style={{
+              borderRadius: '5px 0 0 5px',
+            }}
+          >
+            {home.name}
+          </Button>
+          <Button
+            background={getMainColor(visitor.name).hex}
+            onClick={() => {
+              this.toggleTeam(visitor);
+            }}
+            style={{
+              borderRadius: '0 5px 5px 0',
+            }}
+          >
+            {visitor.name}
+          </Button>
+        </Flex>
+        <Wrapper justify="start" align="start">
+          <Flex.Item>{renderTeamBoxScoreTable(team)}</Flex.Item>
+        </Wrapper>
+      </Fragment>
+    );
+  }
+}
 
 Boxscore.propTypes = {
   home: PropTypes.object.isRequired,
