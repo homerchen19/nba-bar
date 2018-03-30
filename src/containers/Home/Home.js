@@ -42,7 +42,13 @@ class Home extends Component {
   };
 
   render() {
-    const { fetchData, date, loading, scheduleData } = this.props;
+    const {
+      fetchData,
+      updateScheduleDataByGameId,
+      date,
+      loading,
+      scheduleData,
+    } = this.props;
 
     return (
       <Wrapper>
@@ -65,6 +71,9 @@ class Home extends Component {
 
                     this.props.history.push(`/${path}/${gameId}`);
                   }}
+                  updateScheduleDataByGameId={() =>
+                    updateScheduleDataByGameId(date, game.id)
+                  }
                 />
               ))}
             <Link to="/settings" href="settings">
@@ -80,6 +89,7 @@ class Home extends Component {
 Home.propTypes = {
   date: PropTypes.number.isRequired,
   fetchData: PropTypes.func.isRequired,
+  updateScheduleDataByGameId: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
   loading: PropTypes.bool.isRequired,
   scheduleData: PropTypes.arrayOf(PropTypes.object).isRequired,

@@ -107,8 +107,8 @@ class Live extends Component {
                         ? 'home'
                         : 'visitor'
                     }
-                    gameStatus={`${gameData.periodTime.periodStatus} ${
-                      gameData.periodTime.gameClock
+                    gameStatus={`${gameBoxScoreData.periodTime.periodStatus} ${
+                      gameBoxScoreData.periodTime.gameClock
                     }`}
                   />
                 </Item>
@@ -116,12 +116,20 @@ class Live extends Component {
                   <LineScore
                     home={{
                       name: gameData.home.abbreviation,
-                      linescores: gameBoxScoreData.home.linescores.period,
+                      linescores: Array.isArray(
+                        gameBoxScoreData.home.linescores.period
+                      )
+                        ? gameBoxScoreData.home.linescores.period
+                        : [gameBoxScoreData.home.linescores.period],
                       score: gameBoxScoreData.home.score,
                     }}
                     visitor={{
                       name: gameData.visitor.abbreviation,
-                      linescores: gameBoxScoreData.visitor.linescores.period,
+                      linescores: Array.isArray(
+                        gameBoxScoreData.visitor.linescores.period
+                      )
+                        ? gameBoxScoreData.visitor.linescores.period
+                        : [gameBoxScoreData.visitor.linescores.period],
                       score: gameBoxScoreData.visitor.score,
                     }}
                   />

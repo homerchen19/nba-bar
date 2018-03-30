@@ -38,6 +38,47 @@ const getSeason = date => {
   return season;
 };
 
+const pickEssentialProps = gameData => ({
+  id: gameData.id,
+  season: getSeason(gameData.date),
+  time: gameData.time,
+  state: gameData.state,
+  city: gameData.city,
+  arena: gameData.arena,
+  home: gameData.home,
+  visitor: gameData.visitor,
+  periodTime: {
+    periodStatus: gameData.period_time.period_status,
+    gameClock: gameData.period_time.game_clock,
+    gameStatus: gameData.period_time.game_status,
+  },
+});
+
+export const updateScheduleDataByGameId = (date, gameId) => async (
+  dispatch,
+  getState
+) => {
+  try {
+    const {
+      sports_content: { game: _gameData },
+    } = await nba.getBoxScoreFromDate(date, gameId);
+    const { scheduleData: _scheduleData } = getState();
+
+    const gameData = pickEssentialProps(_gameData);
+    const scheduleData = R.map(data => {
+      if (R.propSatisfies(id => R.equals(id, gameId), 'id', data)) {
+        return gameData;
+      }
+
+      return data;
+    }, _scheduleData);
+
+    dispatch(requestSuccess({ scheduleData }));
+  } catch (error) {
+    dispatch(requestError());
+  }
+};
+
 export const fetchData = (date, type) => async dispatch => {
   dispatch(requestStart());
 
@@ -66,24 +107,7 @@ export const fetchData = (date, type) => async dispatch => {
       sports_content: { games: { game: gamesData } },
     } = await nba.getGamesFromDate(newDate);
 
-    const scheduleData = R.map(
-      gameData => ({
-        id: gameData.id,
-        season: getSeason(gameData.date),
-        time: gameData.id,
-        state: gameData.state,
-        city: gameData.city,
-        arena: gameData.arena,
-        home: gameData.home,
-        visitor: gameData.visitor,
-        periodTime: {
-          periodStatus: gameData.period_time.period_status,
-          gameClock: gameData.period_time.game_clock,
-          gameStatus: gameData.period_time.game_status,
-        },
-      }),
-      gamesData
-    );
+    const scheduleData = R.map(pickEssentialProps, gamesData);
 
     dispatch(requestSuccess({ scheduleData }));
   } catch (error) {

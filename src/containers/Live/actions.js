@@ -39,6 +39,12 @@ export const fetchData = ({ date, gameId, firstCall }) => async dispatch => {
 
     const gameBoxScoreData = pickEssentialProps(_gameBoxScoreData);
 
+    gameBoxScoreData.periodTime = {
+      periodStatus: _gameBoxScoreData.period_time.period_status,
+      gameClock: _gameBoxScoreData.period_time.game_clock,
+      gameStatus: _gameBoxScoreData.period_time.game_status,
+    };
+
     if (firstCall) {
       dispatch(requestSuccess({ gameBoxScoreData, gamePlayByPlayData }));
     } else {
