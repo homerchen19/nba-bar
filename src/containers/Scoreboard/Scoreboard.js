@@ -68,6 +68,7 @@ class Scoreboard extends Component {
                         ? 'home'
                         : 'visitor'
                     }
+                    gameStatus="Final"
                   />
                 </Item>
                 <Item marginTop="30">
