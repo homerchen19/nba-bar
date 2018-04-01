@@ -7,7 +7,7 @@ import R from 'ramda';
 
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
-import Spinner from '../../components/Spinner';
+import { Spinner } from '../../components/Loader';
 import { Header, Table } from '../../components/Preview';
 
 const DataSection = styled.section`

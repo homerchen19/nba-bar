@@ -8,7 +8,7 @@ import R from 'ramda';
 
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
-import Spinner from '../../components/Spinner';
+import { Spinner, BarLoader } from '../../components/Loader';
 import {
   Header,
   LineScore,
@@ -87,11 +87,16 @@ class Live extends Component {
       gameBoxScoreData,
       gamePlayByPlayData,
     } = this.props;
-    console.log(live);
 
     return (
       <Wrapper>
         <Fragment>
+          {live !== 'error' && (
+            <Fragment>
+              LIVE
+              <BarLoader />
+            </Fragment>
+          )}
           <DataSection>
             {loading && <Spinner />}
             {!loading && (
