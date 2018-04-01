@@ -34,7 +34,7 @@ const Team = ({ team }) => (
   </Flex>
 );
 
-const Header = ({ date, time, arena, city, home, visitor }) => (
+const TeamScore = ({ date, time, arena, city, home, visitor }) => (
   <Wrapper justify="start" direction="column">
     <TimeWrapper justify="center">
       <Flex.Item>
@@ -60,7 +60,7 @@ Team.propTypes = {
   team: PropTypes.object.isRequired,
 };
 
-Header.propTypes = {
+TeamScore.propTypes = {
   date: PropTypes.number.isRequired,
   time: PropTypes.string.isRequired,
   arena: PropTypes.string.isRequired,
@@ -69,4 +69,4 @@ Header.propTypes = {
   visitor: PropTypes.object.isRequired,
 };
 
-export default Header;
+export default TeamScore;

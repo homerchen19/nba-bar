@@ -1,4 +1,4 @@
-import Header from './Header';
+import TeamScore from './TeamScore';
 import Table from './Table';
 
-export { Header, Table };
+export { TeamScore, Table };

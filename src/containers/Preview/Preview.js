@@ -2,13 +2,13 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import R from 'ramda';
 
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
+import NavBar from '../../components/NavBar';
 import { Spinner } from '../../components/Loader';
-import { Header, Table } from '../../components/Preview';
+import { TeamScore, Table } from '../../components/Preview';
 
 const DataSection = styled.section`
   display: flex;
@@ -41,11 +41,12 @@ class Preview extends Component {
     return (
       <Wrapper>
         <Fragment>
+          <NavBar page="PREVIEW" />
           <DataSection>
             {loading && <Spinner />}
             {!loading && (
               <Fragment>
-                <Header
+                <TeamScore
                   date={date}
                   time={gameData.periodTime.periodStatus}
                   arena={gameData.arena}
@@ -68,7 +69,6 @@ class Preview extends Component {
                 />
               </Fragment>
             )}
-            <Link to="/">Back</Link>
           </DataSection>
         </Fragment>
       </Wrapper>

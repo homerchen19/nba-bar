@@ -2,14 +2,14 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import R from 'ramda';
 
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
+import NavBar from '../../components/NavBar';
 import { Spinner } from '../../components/Loader';
 import {
-  Header,
+  TeamScore,
   LineScore,
   BoxScore,
   Stats,
@@ -47,12 +47,13 @@ class Scoreboard extends Component {
     return (
       <Wrapper>
         <Fragment>
+          <NavBar page="SCOREBOARD" />
           <DataSection>
             {loading && <Spinner />}
             {!loading && (
               <Fragment>
                 <Item marginTop="0">
-                  <Header
+                  <TeamScore
                     arena={gameData.arena}
                     city={gameData.city}
                     home={{
@@ -111,7 +112,6 @@ class Scoreboard extends Component {
                 </Item>
               </Fragment>
             )}
-            <Link to="/">Back</Link>
           </DataSection>
         </Fragment>
       </Wrapper>

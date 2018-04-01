@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Tabs } from 'antd-mobile';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import R from 'ramda';
 
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
+import NavBar from '../../components/NavBar';
 import { Spinner, BarLoader } from '../../components/Loader';
 import {
-  Header,
+  TeamScore,
   LineScore,
   BoxScore,
   PlayByPlay,
@@ -91,18 +91,14 @@ class Live extends Component {
     return (
       <Wrapper>
         <Fragment>
-          {live !== 'error' && (
-            <Fragment>
-              LIVE
-              <BarLoader />
-            </Fragment>
-          )}
+          <NavBar page="LIVE" />
+          {live !== 'error' && <BarLoader />}
           <DataSection>
             {loading && <Spinner />}
             {!loading && (
               <Fragment>
                 <Item marginTop="0">
-                  <Header
+                  <TeamScore
                     arena={gameData.arena}
                     city={gameData.city}
                     home={{
@@ -169,7 +165,6 @@ class Live extends Component {
                 </Item>
               </Fragment>
             )}
-            <Link to="/">Back</Link>
           </DataSection>
         </Fragment>
       </Wrapper>
