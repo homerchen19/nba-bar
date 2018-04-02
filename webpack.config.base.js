@@ -23,5 +23,6 @@ module.exports = {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     extensions: ['.js', '.json'],
   },
+
   target: 'electron-renderer',
 };

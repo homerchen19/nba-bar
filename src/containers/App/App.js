@@ -6,6 +6,7 @@ import Home from '../Home';
 import Preview from '../Preview';
 import Live from '../Live';
 import Scoreboard from '../Scoreboard';
+import Standings from '../Standings';
 import Settings from '../Settings';
 
 const App = () => (
@@ -15,6 +16,7 @@ const App = () => (
       <Route path="/preview/:gameId" component={Preview} />
       <Route path="/scoreboard/:gameId" component={Scoreboard} />
       <Route path="/live/:gameId" component={Live} />
+      <Route path="/standings" component={Standings} />
       <Route path="/settings" component={Settings} />
     </Switch>
   </main>

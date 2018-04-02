@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { TabBar, Flex } from 'antd-mobile';
 import styled from 'styled-components';
@@ -38,12 +38,12 @@ const Title = styled.span`
 
 class Wrapper extends Component {
   state = {
-    selectedTab: 1,
+    currentTab: this.props.currentTab,
   };
 
   render() {
-    const { selectedTab } = this.state;
-    const { children } = this.props;
+    const { currentTab } = this.state;
+    const { schedule, standings } = this.props;
 
     return (
       <Layout>
@@ -55,37 +55,35 @@ class Wrapper extends Component {
           <TabBar.Item
             key="Schedule"
             title={<Title>Schedule</Title>}
-            selected={selectedTab === 1}
+            selected={currentTab === 1}
             icon={<Icon url={calendarBlackIcon} />}
             selectedIcon={<Icon url={calendarWhiteIcon} />}
             onPress={() => {
-              this.setState({ selectedTab: 1 });
+              this.props.history.push(`/`);
             }}
           >
-            <Content direction="column">{children}</Content>
+            <Content direction="column">{schedule}</Content>
           </TabBar.Item>
           <TabBar.Item
             key="Standing"
             title={<Title>Standing</Title>}
-            selected={selectedTab === 2}
+            selected={currentTab === 2}
             icon={<Icon url={trophyBlackIcon} />}
             selectedIcon={<Icon url={trophyWhiteIcon} />}
             onPress={() => {
-              this.setState({ selectedTab: 2 });
+              this.props.history.push(`/standings`);
             }}
           >
-            <Content direction="column">
-              <p>Standing</p>
-            </Content>
+            <Content direction="column">{standings}</Content>
           </TabBar.Item>
           <TabBar.Item
             key="Settings"
             title={<Title>Settings</Title>}
-            selected={selectedTab === 3}
+            selected={currentTab === 3}
             icon={<Icon url={settingsBlackIcon} />}
             selectedIcon={<Icon url={settingsWhiteIcon} />}
             onPress={() => {
-              this.setState({ selectedTab: 3 });
+              this.setState({ currentTab: 3 });
             }}
           >
             <Content direction="column">
@@ -99,7 +97,15 @@ class Wrapper extends Component {
 }
 
 Wrapper.propTypes = {
-  children: PropTypes.element.isRequired,
+  currentTab: PropTypes.number.isRequired,
+  history: PropTypes.object.isRequired,
+  schedule: PropTypes.element,
+  standings: PropTypes.element,
+};
+
+Wrapper.defaultProps = {
+  schedule: <Fragment />,
+  standings: <Fragment />,
 };
 
 export default Wrapper;

@@ -42,6 +42,7 @@ class Home extends Component {
 
   render() {
     const {
+      history,
       fetchData,
       updateScheduleDataByGameId,
       date,
@@ -50,34 +51,38 @@ class Home extends Component {
     } = this.props;
 
     return (
-      <Wrapper>
-        <Fragment>
-          <DateSelector
-            date={date}
-            addDay={() => fetchData(date, 'add')}
-            subDay={() => fetchData(date, 'sub')}
-          />
-          <DataSection>
-            {loading && <Spinner />}
-            {!loading &&
-              scheduleData.map(game => (
-                <MatchCard
-                  key={game.id}
-                  data={game}
-                  onClick={() => {
-                    const gameId = game.id;
-                    const path = this.getPath(game.periodTime.gameStatus);
+      <Wrapper
+        currentTab={1}
+        history={history}
+        schedule={
+          <Fragment>
+            <DateSelector
+              date={date}
+              addDay={() => fetchData(date, 'add')}
+              subDay={() => fetchData(date, 'sub')}
+            />
+            <DataSection>
+              {loading && <Spinner />}
+              {!loading &&
+                scheduleData.map(game => (
+                  <MatchCard
+                    key={game.id}
+                    data={game}
+                    onClick={() => {
+                      const gameId = game.id;
+                      const path = this.getPath(game.periodTime.gameStatus);
 
-                    this.props.history.push(`/${path}/${gameId}`);
-                  }}
-                  updateScheduleDataByGameId={() =>
-                    updateScheduleDataByGameId(date, game.id)
-                  }
-                />
-              ))}
-          </DataSection>
-        </Fragment>
-      </Wrapper>
+                      this.props.history.push(`/${path}/${gameId}`);
+                    }}
+                    updateScheduleDataByGameId={() =>
+                      updateScheduleDataByGameId(date, game.id)
+                    }
+                  />
+                ))}
+            </DataSection>
+          </Fragment>
+        }
+      />
     );
   }
 }

@@ -81,6 +81,7 @@ class Live extends Component {
 
   render() {
     const {
+      history,
       live,
       loading,
       gameData,
@@ -89,91 +90,96 @@ class Live extends Component {
     } = this.props;
 
     return (
-      <Wrapper>
-        <Fragment>
-          <NavBar page="LIVE" />
-          {live !== 'error' && <BarLoader />}
-          <DataSection>
-            {loading && <Spinner />}
-            {!loading && (
-              <Fragment>
-                <Item marginTop="0">
-                  <TeamScore
-                    arena={gameData.arena}
-                    city={gameData.city}
-                    home={{
-                      name: gameData.home.abbreviation,
-                      score: gameBoxScoreData.home.score,
-                    }}
-                    visitor={{
-                      name: gameData.visitor.abbreviation,
-                      score: gameBoxScoreData.visitor.score,
-                    }}
-                    winner={
-                      +gameBoxScoreData.home.score >
-                      +gameBoxScoreData.visitor.score
-                        ? 'home'
-                        : 'visitor'
-                    }
-                    gameStatus={`${gameBoxScoreData.periodTime.periodStatus} ${
-                      gameBoxScoreData.periodTime.gameClock
-                    }`}
-                  />
-                </Item>
-                <Item marginTop="30">
-                  <LineScore
-                    home={{
-                      name: gameData.home.abbreviation,
-                      linescores: Array.isArray(
-                        gameBoxScoreData.home.linescores.period
-                      )
-                        ? gameBoxScoreData.home.linescores.period
-                        : [gameBoxScoreData.home.linescores.period],
-                      score: gameBoxScoreData.home.score,
-                    }}
-                    visitor={{
-                      name: gameData.visitor.abbreviation,
-                      linescores: Array.isArray(
-                        gameBoxScoreData.visitor.linescores.period
-                      )
-                        ? gameBoxScoreData.visitor.linescores.period
-                        : [gameBoxScoreData.visitor.linescores.period],
-                      score: gameBoxScoreData.visitor.score,
-                    }}
-                  />
-                </Item>
-                <Item marginTop="20">
-                  <Tabs
-                    tabs={[
-                      { title: <TabTitle>PLAY-BY-PLAY</TabTitle> },
-                      { title: <TabTitle>BOX SCORE</TabTitle> },
-                    ]}
-                    initialPage={0}
-                  >
-                    <PlayByPlay gamePlayByPlayData={gamePlayByPlayData} />
-                    <BoxScore
+      <Wrapper
+        currentTab={1}
+        history={history}
+        schedule={
+          <Fragment>
+            <NavBar page="LIVE" />
+            {live !== 'error' && <BarLoader />}
+            <DataSection>
+              {loading && <Spinner />}
+              {!loading && (
+                <Fragment>
+                  <Item marginTop="0">
+                    <TeamScore
+                      arena={gameData.arena}
+                      city={gameData.city}
                       home={{
                         name: gameData.home.abbreviation,
-                        players: gameBoxScoreData.home.players.player,
+                        score: gameBoxScoreData.home.score,
                       }}
                       visitor={{
                         name: gameData.visitor.abbreviation,
-                        players: gameBoxScoreData.visitor.players.player,
+                        score: gameBoxScoreData.visitor.score,
+                      }}
+                      winner={
+                        +gameBoxScoreData.home.score >
+                        +gameBoxScoreData.visitor.score
+                          ? 'home'
+                          : 'visitor'
+                      }
+                      gameStatus={`${
+                        gameBoxScoreData.periodTime.periodStatus
+                      } ${gameBoxScoreData.periodTime.gameClock}`}
+                    />
+                  </Item>
+                  <Item marginTop="30">
+                    <LineScore
+                      home={{
+                        name: gameData.home.abbreviation,
+                        linescores: Array.isArray(
+                          gameBoxScoreData.home.linescores.period
+                        )
+                          ? gameBoxScoreData.home.linescores.period
+                          : [gameBoxScoreData.home.linescores.period],
+                        score: gameBoxScoreData.home.score,
+                      }}
+                      visitor={{
+                        name: gameData.visitor.abbreviation,
+                        linescores: Array.isArray(
+                          gameBoxScoreData.visitor.linescores.period
+                        )
+                          ? gameBoxScoreData.visitor.linescores.period
+                          : [gameBoxScoreData.visitor.linescores.period],
+                        score: gameBoxScoreData.visitor.score,
                       }}
                     />
-                  </Tabs>
-                </Item>
-              </Fragment>
-            )}
-          </DataSection>
-        </Fragment>
-      </Wrapper>
+                  </Item>
+                  <Item marginTop="20">
+                    <Tabs
+                      tabs={[
+                        { title: <TabTitle>PLAY-BY-PLAY</TabTitle> },
+                        { title: <TabTitle>BOX SCORE</TabTitle> },
+                      ]}
+                      initialPage={0}
+                    >
+                      <PlayByPlay gamePlayByPlayData={gamePlayByPlayData} />
+                      <BoxScore
+                        home={{
+                          name: gameData.home.abbreviation,
+                          players: gameBoxScoreData.home.players.player,
+                        }}
+                        visitor={{
+                          name: gameData.visitor.abbreviation,
+                          players: gameBoxScoreData.visitor.players.player,
+                        }}
+                      />
+                    </Tabs>
+                  </Item>
+                </Fragment>
+              )}
+            </DataSection>
+          </Fragment>
+        }
+      />
     );
   }
 }
 
 Live.propTypes = {
   fetchData: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
   live: PropTypes.oneOf(['loading', 'success', 'error']).isRequired,
   loading: PropTypes.bool.isRequired,
   gameData: PropTypes.object.isRequired,

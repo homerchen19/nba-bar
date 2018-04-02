@@ -41,86 +41,90 @@ class Scoreboard extends Component {
   }
 
   render() {
-    const { loading, gameData, gameBoxScoreData } = this.props;
-    console.log(gameBoxScoreData);
+    const { history, loading, gameData, gameBoxScoreData } = this.props;
 
     return (
-      <Wrapper>
-        <Fragment>
-          <NavBar page="SCOREBOARD" />
-          <DataSection>
-            {loading && <Spinner />}
-            {!loading && (
-              <Fragment>
-                <Item marginTop="0">
-                  <TeamScore
-                    arena={gameData.arena}
-                    city={gameData.city}
-                    home={{
-                      name: gameData.home.abbreviation,
-                      score: gameData.home.score,
-                    }}
-                    visitor={{
-                      name: gameData.visitor.abbreviation,
-                      score: gameData.visitor.score,
-                    }}
-                    winner={
-                      +gameData.home.score > +gameData.visitor.score
-                        ? 'home'
-                        : 'visitor'
-                    }
-                    gameStatus="Final"
-                  />
-                </Item>
-                <Item marginTop="30">
-                  <LineScore
-                    home={{
-                      name: gameData.home.abbreviation,
-                      linescores: gameBoxScoreData.home.linescores.period,
-                      score: gameData.home.score,
-                    }}
-                    visitor={{
-                      name: gameData.visitor.abbreviation,
-                      linescores: gameBoxScoreData.visitor.linescores.period,
-                      score: gameData.visitor.score,
-                    }}
-                  />
-                </Item>
-                <Item marginTop="30">
-                  <Stats
-                    home={{
-                      name: gameData.home.abbreviation,
-                      stats: gameBoxScoreData.home.stats,
-                    }}
-                    visitor={{
-                      name: gameData.visitor.abbreviation,
-                      stats: gameBoxScoreData.visitor.stats,
-                    }}
-                  />
-                </Item>
-                <Item marginTop="30">
-                  <BoxScore
-                    home={{
-                      name: gameData.home.abbreviation,
-                      players: gameBoxScoreData.home.players.player,
-                    }}
-                    visitor={{
-                      name: gameData.visitor.abbreviation,
-                      players: gameBoxScoreData.visitor.players.player,
-                    }}
-                  />
-                </Item>
-              </Fragment>
-            )}
-          </DataSection>
-        </Fragment>
-      </Wrapper>
+      <Wrapper
+        currentTab={1}
+        history={history}
+        schedule={
+          <Fragment>
+            <NavBar page="SCOREBOARD" />
+            <DataSection>
+              {loading && <Spinner />}
+              {!loading && (
+                <Fragment>
+                  <Item marginTop="0">
+                    <TeamScore
+                      arena={gameData.arena}
+                      city={gameData.city}
+                      home={{
+                        name: gameData.home.abbreviation,
+                        score: gameData.home.score,
+                      }}
+                      visitor={{
+                        name: gameData.visitor.abbreviation,
+                        score: gameData.visitor.score,
+                      }}
+                      winner={
+                        +gameData.home.score > +gameData.visitor.score
+                          ? 'home'
+                          : 'visitor'
+                      }
+                      gameStatus="Final"
+                    />
+                  </Item>
+                  <Item marginTop="30">
+                    <LineScore
+                      home={{
+                        name: gameData.home.abbreviation,
+                        linescores: gameBoxScoreData.home.linescores.period,
+                        score: gameData.home.score,
+                      }}
+                      visitor={{
+                        name: gameData.visitor.abbreviation,
+                        linescores: gameBoxScoreData.visitor.linescores.period,
+                        score: gameData.visitor.score,
+                      }}
+                    />
+                  </Item>
+                  <Item marginTop="30">
+                    <Stats
+                      home={{
+                        name: gameData.home.abbreviation,
+                        stats: gameBoxScoreData.home.stats,
+                      }}
+                      visitor={{
+                        name: gameData.visitor.abbreviation,
+                        stats: gameBoxScoreData.visitor.stats,
+                      }}
+                    />
+                  </Item>
+                  <Item marginTop="30">
+                    <BoxScore
+                      home={{
+                        name: gameData.home.abbreviation,
+                        players: gameBoxScoreData.home.players.player,
+                      }}
+                      visitor={{
+                        name: gameData.visitor.abbreviation,
+                        players: gameBoxScoreData.visitor.players.player,
+                      }}
+                    />
+                  </Item>
+                </Fragment>
+              )}
+            </DataSection>
+          </Fragment>
+        }
+      />
     );
   }
 }
 
 Scoreboard.propTypes = {
   fetchData: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
   loading: PropTypes.bool.isRequired,
   gameData: PropTypes.object.isRequired,
   date: PropTypes.number.isRequired,

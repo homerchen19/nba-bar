@@ -31,6 +31,7 @@ class Preview extends Component {
 
   render() {
     const {
+      history,
       loading,
       gameData,
       date,
@@ -39,45 +40,50 @@ class Preview extends Component {
     } = this.props;
 
     return (
-      <Wrapper>
-        <Fragment>
-          <NavBar page="PREVIEW" />
-          <DataSection>
-            {loading && <Spinner />}
-            {!loading && (
-              <Fragment>
-                <TeamScore
-                  date={date}
-                  time={gameData.periodTime.periodStatus}
-                  arena={gameData.arena}
-                  city={gameData.city}
-                  home={{
-                    name: gameData.home.abbreviation,
-                    w: homeTeamDashboardData.w,
-                    l: homeTeamDashboardData.l,
-                  }}
-                  visitor={{
-                    name: gameData.visitor.abbreviation,
-                    w: visitorTeamDashboardData.w,
-                    l: visitorTeamDashboardData.l,
-                  }}
-                  gameStatus="Final"
-                />
-                <Table
-                  home={homeTeamDashboardData}
-                  visitor={visitorTeamDashboardData}
-                />
-              </Fragment>
-            )}
-          </DataSection>
-        </Fragment>
-      </Wrapper>
+      <Wrapper
+        currentTab={1}
+        history={history}
+        schedule={
+          <Fragment>
+            <NavBar page="PREVIEW" />
+            <DataSection>
+              {loading && <Spinner />}
+              {!loading && (
+                <Fragment>
+                  <TeamScore
+                    date={date}
+                    time={gameData.periodTime.periodStatus}
+                    arena={gameData.arena}
+                    city={gameData.city}
+                    home={{
+                      name: gameData.home.abbreviation,
+                      w: homeTeamDashboardData.w,
+                      l: homeTeamDashboardData.l,
+                    }}
+                    visitor={{
+                      name: gameData.visitor.abbreviation,
+                      w: visitorTeamDashboardData.w,
+                      l: visitorTeamDashboardData.l,
+                    }}
+                    gameStatus="Final"
+                  />
+                  <Table
+                    home={homeTeamDashboardData}
+                    visitor={visitorTeamDashboardData}
+                  />
+                </Fragment>
+              )}
+            </DataSection>
+          </Fragment>
+        }
+      />
     );
   }
 }
 
 Preview.propTypes = {
   fetchData: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
   loading: PropTypes.bool.isRequired,
   gameData: PropTypes.object.isRequired,
   date: PropTypes.number.isRequired,
