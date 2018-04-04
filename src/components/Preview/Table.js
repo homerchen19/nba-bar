@@ -41,9 +41,9 @@ const Table = ({ home, visitor }) => (
           <Column align="center">
             <b>
               <p>
-                {key === 'plusMinus'
+                {key === 'plus_minus'
                   ? '+/-'
-                  : key.toUpperCase().replace('PCT', ' %')}
+                  : key.toUpperCase().replace('_PCT', ' %')}
               </p>
             </b>
           </Column>

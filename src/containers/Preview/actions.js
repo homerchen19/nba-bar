@@ -15,9 +15,9 @@ const pickEssentialProps = R.pick([
   'w',
   'l',
   'pts',
-  'fgPct',
-  'fg3Pct',
-  'ftPct',
+  'fg_pct',
+  'fg3_pct',
+  'ft_pct',
   'oreb',
   'dreb',
   'reb',
@@ -26,7 +26,7 @@ const pickEssentialProps = R.pick([
   'stl',
   'tov',
   'pf',
-  'plusMinus',
+  'plus_minus',
 ]);
 
 export const fetchData = gameData => async dispatch => {
@@ -34,14 +34,14 @@ export const fetchData = gameData => async dispatch => {
 
   try {
     const {
-      overallTeamDashboard: [_homeTeamDashboardData],
+      OverallTeamDashboard: [_homeTeamDashboardData],
     } = await nba.teamSplits({
       Season: gameData.season,
       TeamID: gameData.home.id,
     });
 
     const {
-      overallTeamDashboard: [_visitorTeamDashboardData],
+      OverallTeamDashboard: [_visitorTeamDashboardData],
     } = await nba.teamSplits({
       Season: gameData.season,
       TeamID: gameData.visitor.id,
