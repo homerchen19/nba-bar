@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
 import { Spinner } from '../../components/Loader';
+import { Table } from '../../components/Standings';
 
 const DataSection = styled.section`
   display: flex;
@@ -34,7 +35,9 @@ class Standings extends Component {
         standings={
           <DataSection>
             {loading && <Spinner />}
-            {!loading && <div>{JSON.stringify(standingsData, null, 2)}</div>}
+            {!loading && (
+              <Table east={standingsData.east} west={standingsData.west} />
+            )}
           </DataSection>
         }
       />

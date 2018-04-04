@@ -1,4 +1,6 @@
 import R from 'ramda';
+import getYear from 'date-fns/get_year';
+import getMonth from 'date-fns/get_month';
 
 import { REQUEST_START, REQUEST_SUCCESS, REQUEST_ERROR } from './constants';
 import nba from '../../utils/nba';
@@ -10,7 +12,29 @@ const requestSuccess = payload => ({
   payload,
 });
 
-export const fetchData = () => async dispatch => {
+const pickEssentialProps = (team, allTeams) =>
+  R.map(
+    R.compose(
+      teamData =>
+        R.assoc(
+          'name',
+          R.prop(
+            'tricode',
+            R.find(R.propEq('teamId', teamData.teamId))(allTeams)
+          )
+        )(teamData),
+      R.pick(['teamId', 'win', 'loss', 'winPct', 'gamesBehind'])
+    )
+  )(team);
+
+const getCorrectYear = date => {
+  const year = getYear(date);
+  const month = getMonth(date);
+
+  return month > 9 ? year : year - 1;
+};
+
+export const fetchData = () => async (dispatch, getState) => {
   dispatch(requestStart());
 
   try {
@@ -18,10 +42,21 @@ export const fetchData = () => async dispatch => {
       date: 'current',
     });
 
-    const standingsData = R.path(
+    const { home: { date } } = getState();
+
+    const { league: { standard: allTeams } } = await nba.teams({
+      year: getCorrectYear(date),
+    });
+
+    const { east: eastStandingsData, west: westStandingsData } = R.path(
       ['league', 'standard', 'conference'],
       conferenceStandings
     );
+
+    const standingsData = {
+      east: pickEssentialProps(eastStandingsData, allTeams),
+      west: pickEssentialProps(westStandingsData, allTeams),
+    };
 
     dispatch(requestSuccess({ standingsData }));
   } catch (error) {

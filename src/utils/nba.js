@@ -7,6 +7,7 @@ const essentialMethods = [
   'getBoxScoreFromDate',
   'getPlayByPlayFromDate',
   'teamSplits',
+  'teams',
   'conferenceStandings',
 ];
 
