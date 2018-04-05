@@ -1,5 +1,5 @@
 const path = require('path');
-const { app, ipcMain } = require('electron');
+const { app, ipcMain, globalShortcut } = require('electron');
 const menubar = require('menubar');
 
 require('fix-path')();
@@ -35,18 +35,20 @@ const mb = menubar({
 mb.on('ready', async () => {
   await installExtensions();
 
-  console.log('app is ready');
-});
+  globalShortcut.register('CommandOrControl+R', () => {
+    mb.window.reload();
+  });
 
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
+  console.log('app is ready');
 });
 
 // mb.on('focus-lost', () => {
 //   mb.app.hide();
 // });
+
+mb.app.on('will-quit', () => {
+  globalShortcut.unregisterAll();
+});
 
 ipcMain.on('quit', () => {
   app.quit();

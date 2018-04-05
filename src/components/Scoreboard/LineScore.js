@@ -25,7 +25,10 @@ const reanderTeamRow = team => (
   <Row key={team.name}>
     <StyledCell
       key="name"
-      style={{ backgroundColor: getMainColor(team.name).hex }}
+      style={{
+        backgroundColor: getMainColor(team.name).hex,
+        padding: '8px 14px',
+      }}
     >
       <TeamName>{team.name}</TeamName>
     </StyledCell>

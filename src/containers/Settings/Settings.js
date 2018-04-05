@@ -1,45 +1,34 @@
-import { remote } from 'electron';
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import * as actions from './actions';
-import Button from '../../components/Button';
 import Wrapper from '../../components/Wrapper';
+import { List } from '../../components/Settings';
 
 class Settings extends Component {
-  constructor(props) {
-    super(props);
-    this.setPath = this.setPath.bind(this);
-  }
-
-  setPath() {
-    const { dialog } = remote;
-    const dir = dialog.showOpenDialog({ properties: ['openDirectory'] });
-
-    if (dir) {
-      const [path] = dir;
-      this.props.setPath(path);
-    }
-  }
-
   render() {
-    const { path } = this.props;
+    const { history } = this.props;
+    const { app } = window.require('electron').remote;
+    console.log(app);
 
     return (
-      <Wrapper>
-        <h1>Settings Page</h1>
-        <Button onClick={this.setPath}>{path || 'Set Path'}</Button>
-        <Link to="/">Back</Link>
-      </Wrapper>
+      <Wrapper
+        currentTab={3}
+        history={history}
+        settings={
+          <List
+            quit={() => {
+              app.quit();
+            }}
+          />
+        }
+      />
     );
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    path: state.settings.path,
-  };
-}
+Settings.propTypes = {
+  history: PropTypes.object.isRequired,
+};
 
-export default connect(mapStateToProps, actions)(Settings);
+export default connect()(Settings);

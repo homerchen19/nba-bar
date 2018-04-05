@@ -43,7 +43,7 @@ class Wrapper extends Component {
 
   render() {
     const { currentTab } = this.state;
-    const { schedule, standings } = this.props;
+    const { schedule, standings, settings } = this.props;
 
     return (
       <Layout>
@@ -83,12 +83,10 @@ class Wrapper extends Component {
             icon={<Icon url={settingsBlackIcon} />}
             selectedIcon={<Icon url={settingsWhiteIcon} />}
             onPress={() => {
-              this.setState({ currentTab: 3 });
+              this.props.history.push(`/settings`);
             }}
           >
-            <Content direction="column">
-              <p>Settings</p>
-            </Content>
+            <Content direction="column">{settings}</Content>
           </TabBar.Item>
         </TabBar>
       </Layout>
@@ -100,11 +98,13 @@ Wrapper.propTypes = {
   currentTab: PropTypes.number.isRequired,
   history: PropTypes.object.isRequired,
   schedule: PropTypes.element,
+  settings: PropTypes.element,
   standings: PropTypes.element,
 };
 
 Wrapper.defaultProps = {
   schedule: <Fragment />,
+  settings: <Fragment />,
   standings: <Fragment />,
 };
 
