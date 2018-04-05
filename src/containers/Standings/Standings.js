@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import differenceInHours from 'date-fns/difference_in_hours';
 
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
@@ -22,7 +23,9 @@ const DataSection = styled.section`
 
 class Standings extends Component {
   componentDidMount() {
-    this.props.fetchData();
+    if (differenceInHours(Date.now(), this.props.updatedAt) >= 6) {
+      this.props.fetchData();
+    }
   }
 
   render() {
@@ -50,11 +53,13 @@ Standings.propTypes = {
   history: PropTypes.object.isRequired,
   loading: PropTypes.bool.isRequired,
   standingsData: PropTypes.object.isRequired,
+  updatedAt: PropTypes.number.isRequired,
 };
 
 const mapStateToProps = state => ({
   loading: state.standings.loading,
   standingsData: state.standings.standingsData,
+  updatedAt: state.standings.updatedAt,
 });
 
 export default connect(mapStateToProps, actions)(Standings);
