@@ -69,7 +69,9 @@ class MatchCard extends Component {
             title={
               <GameStatus>
                 <span>
-                  {`${periodTime.periodStatus} ${periodTime.gameClock}`}
+                  {periodTime.periodStatus === 'Halftime'
+                    ? 'Halftime'
+                    : `${periodTime.periodStatus} ${periodTime.gameClock}`}
                 </span>
               </GameStatus>
             }

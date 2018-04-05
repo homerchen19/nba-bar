@@ -22,6 +22,14 @@ const DataSection = styled.section`
   }
 `;
 
+const NoGame = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+`;
+
 class Home extends Component {
   componentDidMount() {
     this.props.fetchData(this.props.date, 'today');
@@ -64,6 +72,18 @@ class Home extends Component {
             <DataSection>
               {loading && <Spinner />}
               {!loading &&
+                scheduleData.length === 0 && (
+                  <NoGame>
+                    <h3>
+                      No games available for this date{' '}
+                      <span role="img" aria-label="Comfused">
+                        😕
+                      </span>
+                    </h3>
+                  </NoGame>
+                )}
+              {!loading &&
+                scheduleData.length !== 0 &&
                 scheduleData.map(game => (
                   <MatchCard
                     key={game.id}

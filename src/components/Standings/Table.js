@@ -64,6 +64,7 @@ const renderConferenceTable = (team, conference) => (
     </StickyTable>
   </Fragment>
 );
+
 const Table = ({ east, west }) => (
   <Wrapper direction="column" align="center">
     <Item>{renderConferenceTable(east, 'east')}</Item>
