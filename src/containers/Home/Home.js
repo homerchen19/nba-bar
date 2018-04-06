@@ -5,9 +5,8 @@ import styled from 'styled-components';
 
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
-import DateSelector from '../../components/DateSelector';
+import { DateSelector, MatchCard } from '../../components/Home';
 import { Spinner } from '../../components/Loader';
-import MatchCard from '../../components/MatchCard';
 
 const DataSection = styled.section`
   display: flex;
