@@ -25,9 +25,9 @@ const Button = styled.button`
   height: 28px;
   margin: 8px 0;
   border: 0;
-  background-color: ${props => props.background} !important;
   color: #fff !important;
   cursor: pointer;
+  background-color: ${props => props.background} !important;
   opacity: 1;
   transition: opacity ease 0.5s;
 

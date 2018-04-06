@@ -22,8 +22,8 @@ const TeamName = styled.h3`
 `;
 
 const Score = styled.p`
-  text-align: center;
   font-size: large;
+  text-align: center;
   font-weight: ${props => (props.win ? '600' : '100')};
   opacity: ${props => (props.win ? '1' : '0.9')};
 `;

@@ -12,15 +12,17 @@ const Wrapper = styled.div`
 
 const loading = keyframes`
   from {
+    z-index: 100;
     left: 50%;
     width: 0;
-    z-index:100;
   }
+
   50% {
+    z-index: 10;
     left: 0;
     width: 100%;
-    z-index: 10;
   }
+
   to {
     left: 0;
     width: 100%;
@@ -28,23 +30,23 @@ const loading = keyframes`
 `;
 
 const Bar = styled.div`
-  content: '';
-  display: inline;
   position: absolute;
+  left: 50%;
+  display: inline;
   width: 0;
   height: 100%;
-  left: 50%;
   text-align: center;
+  content: '';
 `;
 
 const FirstBar = Bar.extend`
-  background-color: ${colors.red};
   animation: ${loading} 2s ease-in-out infinite;
+  background-color: ${colors.red};
 `;
 
 const SecondBar = Bar.extend`
-  background-color: ${colors.blue};
   animation: ${loading} 2s ease-in-out 1s infinite;
+  background-color: ${colors.blue};
 `;
 
 const BarLoader = () => (

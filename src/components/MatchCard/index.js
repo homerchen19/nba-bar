@@ -6,8 +6,8 @@ import styled from 'styled-components';
 
 const Wrapper = styled(Card)`
   width: 100%;
-  padding: 0 !important;
   margin-bottom: 7px;
+  padding: 0 !important;
 `;
 
 const GameStatus = styled.div`

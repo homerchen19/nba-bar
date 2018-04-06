@@ -38,8 +38,8 @@ const Item = styled.div`
 
 const TabTitle = styled.span`
   font-size: 13px;
-  font-weight: 500;
   cursor: pointer;
+  font-weight: 500;
 `;
 
 class Live extends Component {

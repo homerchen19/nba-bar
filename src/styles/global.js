@@ -10,15 +10,15 @@ injectGlobal`
   }
 
   * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
 
   body {
     height: 100vh;
-    color: ${colors.darkText};
     background: ${colors.white};
+    color: ${colors.darkText};
     font-family: ${fonts.base};
     font-weight: 300;
     letter-spacing: 0.1px;

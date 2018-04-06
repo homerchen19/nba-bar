@@ -9,10 +9,10 @@ const formatDate = date => format(parse(date), 'DD, MMM, YYYY');
 
 const Wrapper = styled.div`
   position: fixed;
+  z-index: 999;
   width: 100%;
   padding: 5px 10px;
   background-color: #eee;
-  z-index: 999;
 `;
 
 const Button = styled(Icon)`
