@@ -65,7 +65,6 @@ class Preview extends Component {
                       w: visitorTeamDashboardData.w,
                       l: visitorTeamDashboardData.l,
                     }}
-                    gameStatus="Final"
                   />
                   <Table
                     home={homeTeamDashboardData}

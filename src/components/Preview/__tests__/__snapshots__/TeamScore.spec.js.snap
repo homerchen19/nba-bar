@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<div
+  className="am-flexbox TeamScore__Wrapper-dkUenk bdPnDs am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
+  style={undefined}
+>
+  <div
+    className="am-flexbox TeamScore__TimeWrapper-hkVRlG bpjiQQ am-flexbox-justify-center am-flexbox-align-center"
+    style={undefined}
+  >
+    <div
+      className="am-flexbox-item"
+      style={undefined}
+    >
+      <div
+        className="am-flexbox am-flexbox-dir-column am-flexbox-align-center"
+        style={undefined}
+      >
+        <h6>
+          06, Apr, 2018
+        </h6>
+        <h4>
+          7:00 pm ET
+        </h4>
+      </div>
+    </div>
+  </div>
+  <div
+    className="am-flexbox TeamScore__TeamWrapper-gLIDml dPvllN am-flexbox-justify-center am-flexbox-align-center"
+    style={undefined}
+  >
+    <div
+      className="am-flexbox-item"
+      style={undefined}
+    >
+      <div
+        className="am-flexbox am-flexbox-dir-column am-flexbox-align-center"
+        style={undefined}
+      >
+        <h3
+          className="TeamScore__TeamName-lfDjMy ejiVTN"
+        >
+          PHI
+        </h3>
+        <p>
+          48 - 30
+        </p>
+      </div>
+    </div>
+    <div
+      className="am-flexbox-item"
+      style={undefined}
+    >
+      <div
+        className="am-flexbox am-flexbox-dir-column am-flexbox-align-center"
+        style={undefined}
+      >
+        <h3
+          className="TeamScore__TeamName-lfDjMy ejiVTN"
+        >
+          CLE
+        </h3>
+        <p>
+          49 - 30
+        </p>
+      </div>
+    </div>
+  </div>
+  <span
+    style={
+      Object {
+        "fontSize": "0.6rem",
+      }
+    }
+  >
+    Wells Fargo Center, Philadelphia
+  </span>
+</div>
+`;

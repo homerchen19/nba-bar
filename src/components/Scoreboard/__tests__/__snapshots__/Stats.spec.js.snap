@@ -1,0 +1,324 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<div
+  className="am-flexbox Stats__Wrapper-gMNrje jplNuA am-flexbox-justify-center am-flexbox-align-center"
+  style={undefined}
+>
+  <div
+    className="sticky-table Stats__Table-dASTOT gYJXPP"
+    id="sticky-table-500000000"
+  >
+    <div
+      className="x-scrollbar"
+    >
+      <div />
+    </div>
+    <div
+      className="y-scrollbar"
+    >
+      <div />
+    </div>
+    <div
+      className="sticky-table-header-wrapper"
+    >
+      <div
+        className="sticky-table-corner hidden"
+      >
+        <div
+          className="sticky-table-table "
+        >
+          <div
+            className="sticky-table-row "
+            id=""
+          />
+        </div>
+      </div>
+      <div
+        className="sticky-table-header "
+      >
+        <div
+          className="sticky-table-table "
+        >
+          <div
+            className="sticky-table-row "
+            id=""
+          >
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              <b>
+                IND
+              </b>
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            />
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              <b>
+                GSW
+              </b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sticky-table-y-wrapper"
+    >
+      <div
+        className="sticky-table-column hidden"
+      >
+        <div
+          className="sticky-table-table "
+        >
+          <div
+            className="sticky-table-row "
+            id=""
+          />
+          <div
+            className="sticky-table-row "
+            id=""
+          />
+          <div
+            className="sticky-table-row "
+            id=""
+          />
+          <div
+            className="sticky-table-row "
+            id=""
+          />
+          <div
+            className="sticky-table-row "
+            id=""
+          />
+          <div
+            className="sticky-table-row "
+            id=""
+          />
+          <div
+            className="sticky-table-row "
+            id=""
+          />
+          <div
+            className="sticky-table-row "
+            id=""
+          />
+          <div
+            className="sticky-table-row "
+            id=""
+          />
+        </div>
+      </div>
+      <div
+        className="sticky-table-x-wrapper"
+      >
+        <div
+          className="sticky-table-table "
+        >
+          <div
+            className="sticky-table-row "
+            id=""
+          >
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              53.8
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              <b>
+                FG%
+              </b>
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              44.6
+            </div>
+          </div>
+          <div
+            className="sticky-table-row "
+            id=""
+          >
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              51.7
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              <b>
+                3P%
+              </b>
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              31.0
+            </div>
+          </div>
+          <div
+            className="sticky-table-row "
+            id=""
+          >
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              73.3
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              <b>
+                FT%
+              </b>
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              95.8
+            </div>
+          </div>
+          <div
+            className="sticky-table-row "
+            id=""
+          >
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              32
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              <b>
+                AST
+              </b>
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              29
+            </div>
+          </div>
+          <div
+            className="sticky-table-row "
+            id=""
+          >
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              47
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              <b>
+                REB
+              </b>
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              39
+            </div>
+          </div>
+          <div
+            className="sticky-table-row "
+            id=""
+          >
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              11
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              <b>
+                STL
+              </b>
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              6
+            </div>
+          </div>
+          <div
+            className="sticky-table-row "
+            id=""
+          >
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              3
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              <b>
+                BLK
+              </b>
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              5
+            </div>
+          </div>
+          <div
+            className="sticky-table-row "
+            id=""
+          >
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              12
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              <b>
+                TOV
+              </b>
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              16
+            </div>
+          </div>
+          <div
+            className="sticky-table-row "
+            id=""
+          >
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              24
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              <b>
+                FOUL
+              </b>
+            </div>
+            <div
+              className="sticky-table-cell Stats__StyledCell-lisZzp gsyiOQ"
+            >
+              14
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

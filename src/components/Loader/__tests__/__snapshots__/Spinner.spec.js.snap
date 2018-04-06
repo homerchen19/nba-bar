@@ -1,0 +1,433 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<div
+  className="am-flexbox am-flexbox-justify-center am-flexbox-align-center"
+  style={
+    Object {
+      "flex": 1,
+      "height": "100%",
+      "width": "100%",
+    }
+  }
+>
+  <span
+    className={undefined}
+    style={
+      Object {
+        "animation": "__react-md-spinner-animation__root-rotate 1568.235294117647ms linear infinite",
+        "display": "inline-block",
+        "height": 32,
+        "position": "relative",
+        "verticalAlign": "middle",
+        "width": 32,
+      }
+    }
+  >
+    <span
+      style={
+        Object {
+          "animationDuration": "5332ms",
+          "animationIterationCount": "infinite",
+          "animationName": "__react-md-spinner-animation__fill-unfill-rotate, __react-md-spinner-animation__layer-1-fade-in-out",
+          "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+          "borderColor": "#0069b9",
+          "display": "flex",
+          "height": "100%",
+          "opacity": 1,
+          "position": "absolute",
+          "whiteSpace": "nowrap",
+          "width": "100%",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "borderColor": "inherit",
+            "display": "inline-block",
+            "flexGrow": 1,
+            "height": "100%",
+            "overflow": "hidden",
+            "position": "relative",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "animationDuration": "1333ms",
+              "animationIterationCount": "infinite",
+              "animationName": "__react-md-spinner-animation__left-spin",
+              "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "borderColor": "#0069b9 transparent transparent #0069b9",
+              "borderRadius": "50%",
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "transform": "rotate(129deg)",
+              "width": "200%",
+            }
+          }
+        />
+      </span>
+      <span
+        style={
+          Object {
+            "borderColor": "inherit",
+            "display": "inline-block",
+            "flexGrow": 1,
+            "height": "100%",
+            "overflow": "hidden",
+            "position": "relative",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "animationDuration": "1333ms",
+              "animationIterationCount": "infinite",
+              "animationName": "__react-md-spinner-animation__right-spin",
+              "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "borderColor": "#0069b9 #0069b9 transparent transparent",
+              "borderRadius": "50%",
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "left": "-100%",
+              "position": "absolute",
+              "top": 0,
+              "transform": "rotate(-129deg)",
+              "width": "200%",
+            }
+          }
+        />
+      </span>
+      <span
+        style={
+          Object {
+            "borderColor": "inherit",
+            "borderRadius": "50%",
+            "borderTopStyle": "solid",
+            "borderWidth": 3,
+            "boxSizing": "border-box",
+            "left": "45%",
+            "position": "absolute",
+            "top": 0,
+            "width": "10%",
+          }
+        }
+      />
+    </span>
+    <span
+      style={
+        Object {
+          "animationDuration": "5332ms",
+          "animationIterationCount": "infinite",
+          "animationName": "__react-md-spinner-animation__fill-unfill-rotate, __react-md-spinner-animation__layer-2-fade-in-out",
+          "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+          "borderColor": "#f00b47",
+          "display": "flex",
+          "height": "100%",
+          "opacity": 1,
+          "position": "absolute",
+          "whiteSpace": "nowrap",
+          "width": "100%",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "borderColor": "inherit",
+            "display": "inline-block",
+            "flexGrow": 1,
+            "height": "100%",
+            "overflow": "hidden",
+            "position": "relative",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "animationDuration": "1333ms",
+              "animationIterationCount": "infinite",
+              "animationName": "__react-md-spinner-animation__left-spin",
+              "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "borderColor": "#f00b47 transparent transparent #f00b47",
+              "borderRadius": "50%",
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "transform": "rotate(129deg)",
+              "width": "200%",
+            }
+          }
+        />
+      </span>
+      <span
+        style={
+          Object {
+            "borderColor": "inherit",
+            "display": "inline-block",
+            "flexGrow": 1,
+            "height": "100%",
+            "overflow": "hidden",
+            "position": "relative",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "animationDuration": "1333ms",
+              "animationIterationCount": "infinite",
+              "animationName": "__react-md-spinner-animation__right-spin",
+              "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "borderColor": "#f00b47 #f00b47 transparent transparent",
+              "borderRadius": "50%",
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "left": "-100%",
+              "position": "absolute",
+              "top": 0,
+              "transform": "rotate(-129deg)",
+              "width": "200%",
+            }
+          }
+        />
+      </span>
+      <span
+        style={
+          Object {
+            "borderColor": "inherit",
+            "borderRadius": "50%",
+            "borderTopStyle": "solid",
+            "borderWidth": 3,
+            "boxSizing": "border-box",
+            "left": "45%",
+            "position": "absolute",
+            "top": 0,
+            "width": "10%",
+          }
+        }
+      />
+    </span>
+    <span
+      style={
+        Object {
+          "animationDuration": "5332ms",
+          "animationIterationCount": "infinite",
+          "animationName": "__react-md-spinner-animation__fill-unfill-rotate, __react-md-spinner-animation__layer-3-fade-in-out",
+          "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+          "borderColor": "#0069b9",
+          "display": "flex",
+          "height": "100%",
+          "opacity": 1,
+          "position": "absolute",
+          "whiteSpace": "nowrap",
+          "width": "100%",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "borderColor": "inherit",
+            "display": "inline-block",
+            "flexGrow": 1,
+            "height": "100%",
+            "overflow": "hidden",
+            "position": "relative",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "animationDuration": "1333ms",
+              "animationIterationCount": "infinite",
+              "animationName": "__react-md-spinner-animation__left-spin",
+              "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "borderColor": "#0069b9 transparent transparent #0069b9",
+              "borderRadius": "50%",
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "transform": "rotate(129deg)",
+              "width": "200%",
+            }
+          }
+        />
+      </span>
+      <span
+        style={
+          Object {
+            "borderColor": "inherit",
+            "display": "inline-block",
+            "flexGrow": 1,
+            "height": "100%",
+            "overflow": "hidden",
+            "position": "relative",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "animationDuration": "1333ms",
+              "animationIterationCount": "infinite",
+              "animationName": "__react-md-spinner-animation__right-spin",
+              "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "borderColor": "#0069b9 #0069b9 transparent transparent",
+              "borderRadius": "50%",
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "left": "-100%",
+              "position": "absolute",
+              "top": 0,
+              "transform": "rotate(-129deg)",
+              "width": "200%",
+            }
+          }
+        />
+      </span>
+      <span
+        style={
+          Object {
+            "borderColor": "inherit",
+            "borderRadius": "50%",
+            "borderTopStyle": "solid",
+            "borderWidth": 3,
+            "boxSizing": "border-box",
+            "left": "45%",
+            "position": "absolute",
+            "top": 0,
+            "width": "10%",
+          }
+        }
+      />
+    </span>
+    <span
+      style={
+        Object {
+          "animationDuration": "5332ms",
+          "animationIterationCount": "infinite",
+          "animationName": "__react-md-spinner-animation__fill-unfill-rotate, __react-md-spinner-animation__layer-4-fade-in-out",
+          "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+          "borderColor": "#f00b47",
+          "display": "flex",
+          "height": "100%",
+          "opacity": 1,
+          "position": "absolute",
+          "whiteSpace": "nowrap",
+          "width": "100%",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "borderColor": "inherit",
+            "display": "inline-block",
+            "flexGrow": 1,
+            "height": "100%",
+            "overflow": "hidden",
+            "position": "relative",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "animationDuration": "1333ms",
+              "animationIterationCount": "infinite",
+              "animationName": "__react-md-spinner-animation__left-spin",
+              "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "borderColor": "#f00b47 transparent transparent #f00b47",
+              "borderRadius": "50%",
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "transform": "rotate(129deg)",
+              "width": "200%",
+            }
+          }
+        />
+      </span>
+      <span
+        style={
+          Object {
+            "borderColor": "inherit",
+            "display": "inline-block",
+            "flexGrow": 1,
+            "height": "100%",
+            "overflow": "hidden",
+            "position": "relative",
+          }
+        }
+      >
+        <span
+          style={
+            Object {
+              "animationDuration": "1333ms",
+              "animationIterationCount": "infinite",
+              "animationName": "__react-md-spinner-animation__right-spin",
+              "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "borderColor": "#f00b47 #f00b47 transparent transparent",
+              "borderRadius": "50%",
+              "borderStyle": "solid",
+              "borderWidth": 3,
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "left": "-100%",
+              "position": "absolute",
+              "top": 0,
+              "transform": "rotate(-129deg)",
+              "width": "200%",
+            }
+          }
+        />
+      </span>
+      <span
+        style={
+          Object {
+            "borderColor": "inherit",
+            "borderRadius": "50%",
+            "borderTopStyle": "solid",
+            "borderWidth": 3,
+            "boxSizing": "border-box",
+            "left": "45%",
+            "position": "absolute",
+            "top": 0,
+            "width": "10%",
+          }
+        }
+      />
+    </span>
+  </span>
+</div>
+`;

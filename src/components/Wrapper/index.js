@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { TabBar, Flex } from 'antd-mobile';
 import styled from 'styled-components';
@@ -36,63 +36,52 @@ const Title = styled.span`
   cursor: pointer;
 `;
 
-class Wrapper extends Component {
-  state = {
-    currentTab: this.props.currentTab,
-  };
-
-  render() {
-    const { currentTab } = this.state;
-    const { schedule, standings, settings } = this.props;
-
-    return (
-      <Layout>
-        <TabBar
-          tintColor={colors.white}
-          barTintColor={colors.blue}
-          unselectedTintColor={colors.black}
-        >
-          <TabBar.Item
-            key="Schedule"
-            title={<Title>Schedule</Title>}
-            selected={currentTab === 1}
-            icon={<Icon url={calendarBlackIcon} />}
-            selectedIcon={<Icon url={calendarWhiteIcon} />}
-            onPress={() => {
-              this.props.history.push(`/`);
-            }}
-          >
-            <Content direction="column">{schedule}</Content>
-          </TabBar.Item>
-          <TabBar.Item
-            key="Standing"
-            title={<Title>Standing</Title>}
-            selected={currentTab === 2}
-            icon={<Icon url={trophyBlackIcon} />}
-            selectedIcon={<Icon url={trophyWhiteIcon} />}
-            onPress={() => {
-              this.props.history.push(`/standings`);
-            }}
-          >
-            <Content direction="column">{standings}</Content>
-          </TabBar.Item>
-          <TabBar.Item
-            key="Settings"
-            title={<Title>Settings</Title>}
-            selected={currentTab === 3}
-            icon={<Icon url={settingsBlackIcon} />}
-            selectedIcon={<Icon url={settingsWhiteIcon} />}
-            onPress={() => {
-              this.props.history.push(`/settings`);
-            }}
-          >
-            <Content direction="column">{settings}</Content>
-          </TabBar.Item>
-        </TabBar>
-      </Layout>
-    );
-  }
-}
+const Wrapper = ({ currentTab, history, schedule, standings, settings }) => (
+  <Layout>
+    <TabBar
+      tintColor={colors.white}
+      barTintColor={colors.blue}
+      unselectedTintColor={colors.black}
+    >
+      <TabBar.Item
+        key="Schedule"
+        title={<Title>Schedule</Title>}
+        selected={currentTab === 1}
+        icon={<Icon url={calendarBlackIcon} />}
+        selectedIcon={<Icon url={calendarWhiteIcon} />}
+        onPress={() => {
+          history.push(`/`);
+        }}
+      >
+        <Content direction="column">{schedule}</Content>
+      </TabBar.Item>
+      <TabBar.Item
+        key="Standing"
+        title={<Title>Standing</Title>}
+        selected={currentTab === 2}
+        icon={<Icon url={trophyBlackIcon} />}
+        selectedIcon={<Icon url={trophyWhiteIcon} />}
+        onPress={() => {
+          history.push(`/standings`);
+        }}
+      >
+        <Content direction="column">{standings}</Content>
+      </TabBar.Item>
+      <TabBar.Item
+        key="Settings"
+        title={<Title>Settings</Title>}
+        selected={currentTab === 3}
+        icon={<Icon url={settingsBlackIcon} />}
+        selectedIcon={<Icon url={settingsWhiteIcon} />}
+        onPress={() => {
+          history.push(`/settings`);
+        }}
+      >
+        <Content direction="column">{settings}</Content>
+      </TabBar.Item>
+    </TabBar>
+  </Layout>
+);
 
 Wrapper.propTypes = {
   currentTab: PropTypes.number.isRequired,
