@@ -18,7 +18,7 @@ injectGlobal`
   body {
     height: 100vh;
     background: ${colors.white};
-    color: ${colors.darkText};
+    color: ${colors.black};
     font-family: ${fonts.base};
     font-weight: 300;
     letter-spacing: 0.1px;

@@ -1,23 +1,10 @@
 export const colors = {
-  // Colors
   white: '#f7f7f7',
-  liteGrey: '#f9f9f9',
-  black: '#3d4b50',
+  liteGrey: '#8D99AE',
+  black: '#32292F',
   blue: '#0069b9',
+  darkBlue: '#084887',
   red: '#f00b47',
-
-  // Text
-  liteText: '#ccc',
-  text: '#8a8a8a',
-  darkText: '#3d4b50',
-
-  // Border
-  border: '#ededed',
-
-  // Status
-  success: '#2ad955',
-  warn: '#fbb00',
-  error: '#f6d26',
 };
 
 export const fonts = {

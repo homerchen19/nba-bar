@@ -12,7 +12,7 @@ const DataSection = styled.section`
   display: flex;
   width: 100%;
   height: 100%;
-  margin-top: 40px;
+  margin-top: 30px;
   flex-direction: column;
   overflow-y: scroll !important;
 

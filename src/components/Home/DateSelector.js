@@ -5,14 +5,18 @@ import styled from 'styled-components';
 import parse from 'date-fns/parse';
 import format from 'date-fns/format';
 
+import { colors } from '../../styles/theme';
+
 const formatDate = date => format(parse(date), 'DD, MMM, YYYY');
 
 const Wrapper = styled.div`
   position: fixed;
   z-index: 999;
   width: 100%;
-  padding: 5px 10px;
-  background-color: #eee;
+  height: 30px;
+  padding: 4px 7px;
+  color: ${colors.white};
+  background-color: ${colors.darkBlue};
 `;
 
 const Button = styled(Icon)`
@@ -24,11 +28,17 @@ const Item = styled(Flex.Item)`
   text-align: center;
 `;
 
+const Date = styled.p`
+  font-size: 15px;
+`;
+
 const DateSelector = ({ date, addDay, subDay }) => (
   <Wrapper>
     <Flex>
       <Button type="left" onClick={subDay} />
-      <Item>{formatDate(date)}</Item>
+      <Item>
+        <Date>{formatDate(date)}</Date>
+      </Item>
       <Button type="right" onClick={addDay} />
     </Flex>
   </Wrapper>

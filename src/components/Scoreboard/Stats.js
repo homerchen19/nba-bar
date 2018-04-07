@@ -12,10 +12,6 @@ const Wrapper = styled(Flex)`
   background: #fff;
 `;
 
-const Table = styled(StickyTable)`
-  width: 100%;
-`;
-
 const StyledCell = styled(Cell)`
   padding: 8px 26px;
   text-align: center;
@@ -54,7 +50,7 @@ const reanderStatsRow = (homeStats, visitorStats) =>
 
 const Stats = ({ home, visitor }) => (
   <Wrapper justify="center">
-    <Table stickyColumnCount={0}>
+    <StickyTable stickyColumnCount={0}>
       <Row key="header">
         <StyledCell key="home">
           <b>{home.name}</b>
@@ -65,7 +61,7 @@ const Stats = ({ home, visitor }) => (
         </StyledCell>
       </Row>
       {reanderStatsRow(home.stats, visitor.stats)}
-    </Table>
+    </StickyTable>
   </Wrapper>
 );
 
