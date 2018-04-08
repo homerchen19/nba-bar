@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
@@ -8,29 +8,37 @@ import { colors } from '../../styles/theme';
 
 const Wrapper = styled(Flex)`
   width: 100%;
-  padding: 10px;
   flex: 1;
+  color: ${colors.white};
+`;
+
+const TeamWrapper = styled(Flex)`
+  width: 100%;
+  padding: 3px 0;
+  border-top: 1px solid ${colors.white};
+  flex: 3;
   /* stylelint-disable-next-line declaration-colon-newline-after */
   background: linear-gradient(
     to right,
     ${props => props.homeColor} 50%,
     ${props => props.visitorColor} 50%
   );
-  color: ${colors.white};
 `;
 
-const TeamWrapper = styled(Flex)`
+const InfoWrapper = styled(Flex)`
   width: 100%;
-  padding: 5px 0 10px;
+  padding: 0;
+  flex: 2;
+  background: ${colors.darkBlue};
 `;
 
 const TeamName = styled.h3`
-  line-height: 2em;
+  line-height: 25px;
 `;
 
 const Arena = styled.p`
-  margin-top: 5px;
-  font-size: 10px;
+  margin-top: 4px;
+  font-size: 9px;
 `;
 
 const Team = ({ team }) => (
@@ -41,25 +49,26 @@ const Team = ({ team }) => (
 );
 
 const TeamScore = ({ time, arena, city, home, visitor }) => (
-  <Wrapper
-    justify="start"
-    direction="column"
-    homeColor={getMainColor(home.name).hex}
-    visitorColor={getMainColor(visitor.name).hex}
-  >
-    <TeamWrapper justify="center">
-      <Flex.Item style={{ flex: 2 }}>
-        <Team team={home} />
-      </Flex.Item>
-      <Flex.Item style={{ margin: 0, textAlign: 'center', flex: 1 }}>
-        <h5>{time}</h5>
-      </Flex.Item>
-      <Flex.Item style={{ margin: 0, flex: 2 }}>
-        <Team team={visitor} />
-      </Flex.Item>
-    </TeamWrapper>
-    <Arena>{`${arena}, ${city}`}</Arena>
-  </Wrapper>
+  <Fragment>
+    <Wrapper justify="start" direction="column">
+      <InfoWrapper direction="column">
+        <h4>{time}</h4>
+        <Arena>{`${arena}, ${city}`}</Arena>
+      </InfoWrapper>
+      <TeamWrapper
+        justify="center"
+        homeColor={getMainColor(home.name).hex}
+        visitorColor={getMainColor(visitor.name).hex}
+      >
+        <Flex.Item>
+          <Team team={home} />
+        </Flex.Item>
+        <Flex.Item style={{ margin: 0 }}>
+          <Team team={visitor} />
+        </Flex.Item>
+      </TeamWrapper>
+    </Wrapper>
+  </Fragment>
 );
 
 Team.propTypes = {
