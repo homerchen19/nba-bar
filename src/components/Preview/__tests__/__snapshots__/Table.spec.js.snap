@@ -2,10 +2,10 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="Table__Wrapper-gqNOFZ jvpHVk"
+  className="Table__Wrapper-gqNOFZ hfmQhS"
 >
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -39,7 +39,7 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -73,7 +73,7 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -107,7 +107,7 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -141,7 +141,7 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -160,7 +160,7 @@ exports[`match snapshot 1`] = `
     >
       <b>
         <p>
-          FG %
+          FG%
         </p>
       </b>
     </div>
@@ -175,7 +175,7 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -194,7 +194,7 @@ exports[`match snapshot 1`] = `
     >
       <b>
         <p>
-          FG3 %
+          FG3%
         </p>
       </b>
     </div>
@@ -209,7 +209,7 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -228,7 +228,7 @@ exports[`match snapshot 1`] = `
     >
       <b>
         <p>
-          FT %
+          FT%
         </p>
       </b>
     </div>
@@ -243,7 +243,7 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -277,7 +277,7 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -311,7 +311,7 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -345,7 +345,7 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -379,7 +379,7 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -413,7 +413,7 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -447,7 +447,7 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -481,7 +481,7 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -515,7 +515,7 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ bqJYGI am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div

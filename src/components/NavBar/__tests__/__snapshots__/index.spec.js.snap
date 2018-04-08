@@ -5,9 +5,10 @@ exports[`match snapshot 1`] = `
   className="NavBar__Wrapper-bxbnRP khTjOw"
 >
   <div
-    className="am-navbar am-navbar-light"
+    className="am-navbar am-navbar-dark"
     style={
       Object {
+        "background": "#084887",
         "height": "100%",
       }
     }
@@ -17,38 +18,39 @@ exports[`match snapshot 1`] = `
       onClick={[Function]}
       role="button"
     >
-      <span
-        aria-hidden="true"
-        className="am-navbar-left-icon"
+      <a
+        href="/"
+        onClick={[Function]}
+        style={
+          Object {
+            "height": "100%",
+          }
+        }
       >
-        <a
-          href="/"
-          onClick={[Function]}
+        <svg
+          className="am-icon am-icon-left am-icon-md"
+          color="#f7f7f7"
           style={
             Object {
-              "color": "#000",
+              "cursor": "pointer",
+              "height": "30px",
+              "left": "7px",
+              "position": "absolute",
             }
           }
         >
-          <svg
-            className="am-icon am-icon-left am-icon-md"
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-          >
-            <use
-              xlinkHref="#left"
-            />
-          </svg>
-        </a>
-      </span>
+          <use
+            xlinkHref="#left"
+          />
+        </svg>
+      </a>
     </div>
     <div
       className="am-navbar-title"
     >
-      <p>
+      <p
+        className="NavBar__Title-jcYDvr hVhnwc"
+      >
         PAGE
       </p>
     </div>

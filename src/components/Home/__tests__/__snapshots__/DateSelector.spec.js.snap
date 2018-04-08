@@ -2,7 +2,7 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="DateSelector__Wrapper-cVxsRO ebyfwi"
+  className="DateSelector__Wrapper-cVxsRO hZJXXq"
 >
   <div
     className="am-flexbox am-flexbox-align-center"
@@ -20,7 +20,11 @@ exports[`match snapshot 1`] = `
       className="am-flexbox-item DateSelector__Item-Drwhw kiCtlP"
       style={undefined}
     >
-      06, Apr, 2018
+      <p
+        className="DateSelector__Date-alRPo PzPRF"
+      >
+        06, Apr, 2018
+      </p>
     </div>
     <svg
       className="DateSelector__Button-ldXrgg eyLdTr am-icon am-icon-right am-icon-md"

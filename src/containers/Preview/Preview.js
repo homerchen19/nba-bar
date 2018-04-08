@@ -14,7 +14,6 @@ const DataSection = styled.section`
   display: flex;
   width: 100%;
   height: 100%;
-  padding-top: 15px;
   flex-direction: column;
   align-items: center;
   overflow-y: scroll !important;
@@ -34,7 +33,6 @@ class Preview extends Component {
       history,
       loading,
       gameData,
-      date,
       homeTeamDashboardData,
       visitorTeamDashboardData,
     } = this.props;
@@ -51,8 +49,7 @@ class Preview extends Component {
               {!loading && (
                 <Fragment>
                   <TeamScore
-                    date={date}
-                    time={gameData.periodTime.periodStatus}
+                    time={gameData.periodTime.periodStatus.replace(' ET', '')}
                     arena={gameData.arena}
                     city={gameData.city}
                     home={{
@@ -85,7 +82,6 @@ Preview.propTypes = {
   history: PropTypes.object.isRequired,
   loading: PropTypes.bool.isRequired,
   gameData: PropTypes.object.isRequired,
-  date: PropTypes.number.isRequired,
   homeTeamDashboardData: PropTypes.object.isRequired,
   visitorTeamDashboardData: PropTypes.object.isRequired,
 };
@@ -95,7 +91,6 @@ const mapStateToProps = (state, ownProps) => ({
   gameData: R.find(R.propEq('id', ownProps.match.params.gameId))(
     state.home.scheduleData
   ),
-  date: state.home.date,
   homeTeamDashboardData: state.preview.homeTeamDashboardData,
   visitorTeamDashboardData: state.preview.visitorTeamDashboardData,
 });

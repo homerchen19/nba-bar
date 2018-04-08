@@ -98,7 +98,7 @@ exports[`match snapshot 1`] = `
   <span
     style={
       Object {
-        "fontSize": "0.6rem",
+        "fontSize": "10px",
       }
     }
   >

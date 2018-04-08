@@ -2,20 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
-import parse from 'date-fns/parse';
-import format from 'date-fns/format';
+import { getMainColor } from 'nba-color';
 
-const formatDate = date => format(parse(date), 'DD, MMM, YYYY');
+import { colors } from '../../styles/theme';
 
 const Wrapper = styled(Flex)`
   width: 100%;
+  padding: 10px;
   flex: 1;
-`;
-
-const TimeWrapper = styled(Flex)`
-  width: 100%;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #000;
+  /* stylelint-disable-next-line declaration-colon-newline-after */
+  background: linear-gradient(
+    to right,
+    ${props => props.homeColor} 50%,
+    ${props => props.visitorColor} 50%
+  );
+  color: ${colors.white};
 `;
 
 const TeamWrapper = styled(Flex)`
@@ -27,6 +28,11 @@ const TeamName = styled.h3`
   line-height: 2em;
 `;
 
+const Arena = styled.p`
+  margin-top: 5px;
+  font-size: 10px;
+`;
+
 const Team = ({ team }) => (
   <Flex direction="column">
     <TeamName>{team.name}</TeamName>
@@ -34,25 +40,25 @@ const Team = ({ team }) => (
   </Flex>
 );
 
-const TeamScore = ({ date, time, arena, city, home, visitor }) => (
-  <Wrapper justify="start" direction="column">
-    <TimeWrapper justify="center">
-      <Flex.Item>
-        <Flex direction="column">
-          <h6>{formatDate(date)}</h6>
-          <h4>{time}</h4>
-        </Flex>
-      </Flex.Item>
-    </TimeWrapper>
+const TeamScore = ({ time, arena, city, home, visitor }) => (
+  <Wrapper
+    justify="start"
+    direction="column"
+    homeColor={getMainColor(home.name).hex}
+    visitorColor={getMainColor(visitor.name).hex}
+  >
     <TeamWrapper justify="center">
-      <Flex.Item>
+      <Flex.Item style={{ flex: 2 }}>
         <Team team={home} />
       </Flex.Item>
-      <Flex.Item>
+      <Flex.Item style={{ margin: 0, textAlign: 'center', flex: 1 }}>
+        <h5>{time}</h5>
+      </Flex.Item>
+      <Flex.Item style={{ margin: 0, flex: 2 }}>
         <Team team={visitor} />
       </Flex.Item>
     </TeamWrapper>
-    <span style={{ fontSize: '0.6rem' }}>{`${arena}, ${city}`}</span>
+    <Arena>{`${arena}, ${city}`}</Arena>
   </Wrapper>
 );
 
@@ -61,7 +67,6 @@ Team.propTypes = {
 };
 
 TeamScore.propTypes = {
-  date: PropTypes.number.isRequired,
   time: PropTypes.string.isRequired,
   arena: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,

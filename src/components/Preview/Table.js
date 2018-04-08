@@ -4,12 +4,15 @@ import R from 'ramda';
 import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
 
+import { colors } from '../../styles/theme';
+
 const Wrapper = styled.div`
   display: block;
   width: 100%;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  flex: 2;
+  border-top: 1px solid ${colors.white};
+  border-bottom: 1px solid ${colors.white};
+  flex: 3;
+  background: #fff;
   overflow-y: scroll !important;
 
   ::-webkit-scrollbar {
@@ -19,9 +22,9 @@ const Wrapper = styled.div`
 
 const Row = styled(Flex)`
   width: 100%;
-  padding: 10px 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  padding: 10px 15px;
+  border-top: 1px solid ${colors.white};
+  border-bottom: 1px solid ${colors.white};
   flex: 1;
 `;
 
@@ -43,7 +46,7 @@ const Table = ({ home, visitor }) => (
               <p>
                 {key === 'plus_minus'
                   ? '+/-'
-                  : key.toUpperCase().replace('_PCT', ' %')}
+                  : key.toUpperCase().replace('_PCT', '%')}
               </p>
             </b>
           </Column>

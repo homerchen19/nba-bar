@@ -2,37 +2,22 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="am-flexbox TeamScore__Wrapper-dkUenk bdPnDs am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
+  className="am-flexbox TeamScore__Wrapper-dkUenk loMaZB am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
+  homeColor="#006bb6"
   style={undefined}
+  visitorColor="#6f263d"
 >
-  <div
-    className="am-flexbox TeamScore__TimeWrapper-hkVRlG bpjiQQ am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
-  >
-    <div
-      className="am-flexbox-item"
-      style={undefined}
-    >
-      <div
-        className="am-flexbox am-flexbox-dir-column am-flexbox-align-center"
-        style={undefined}
-      >
-        <h6>
-          06, Apr, 2018
-        </h6>
-        <h4>
-          7:00 pm ET
-        </h4>
-      </div>
-    </div>
-  </div>
   <div
     className="am-flexbox TeamScore__TeamWrapper-gLIDml dPvllN am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
       className="am-flexbox-item"
-      style={undefined}
+      style={
+        Object {
+          "flex": 2,
+        }
+      }
     >
       <div
         className="am-flexbox am-flexbox-dir-column am-flexbox-align-center"
@@ -50,7 +35,26 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       className="am-flexbox-item"
-      style={undefined}
+      style={
+        Object {
+          "flex": 1,
+          "margin": 0,
+          "textAlign": "center",
+        }
+      }
+    >
+      <h5>
+        7:00 pm ET
+      </h5>
+    </div>
+    <div
+      className="am-flexbox-item"
+      style={
+        Object {
+          "flex": 2,
+          "margin": 0,
+        }
+      }
     >
       <div
         className="am-flexbox am-flexbox-dir-column am-flexbox-align-center"
@@ -67,14 +71,10 @@ exports[`match snapshot 1`] = `
       </div>
     </div>
   </div>
-  <span
-    style={
-      Object {
-        "fontSize": "0.6rem",
-      }
-    }
+  <p
+    className="TeamScore__Arena-jFPVgG gsrdOw"
   >
     Wells Fargo Center, Philadelphia
-  </span>
+  </p>
 </div>
 `;

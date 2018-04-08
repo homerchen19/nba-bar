@@ -21,7 +21,7 @@ const Layout = styled.div`
 const Content = styled(Flex)`
   width: 100%;
   height: 100%;
-  padding: 0 15px;
+  padding: 0;
   flex: 1;
 `;
 

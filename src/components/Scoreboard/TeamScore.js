@@ -51,7 +51,7 @@ const TeamScore = ({ arena, city, home, visitor, winner, gameStatus }) => (
         <Score win={winner === 'visitor'}>{visitor.score}</Score>
       </Flex.Item>
     </ScoreWrapper>
-    <span style={{ fontSize: '0.6rem' }}>{`${arena}, ${city}`}</span>
+    <span style={{ fontSize: '10px' }}>{`${arena}, ${city}`}</span>
   </Wrapper>
 );
 

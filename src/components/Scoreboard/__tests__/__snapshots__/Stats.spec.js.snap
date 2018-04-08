@@ -6,7 +6,7 @@ exports[`match snapshot 1`] = `
   style={undefined}
 >
   <div
-    className="sticky-table Stats__Table-dASTOT gYJXPP"
+    className="sticky-table "
     id="sticky-table-500000000"
   >
     <div
