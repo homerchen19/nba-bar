@@ -11,12 +11,11 @@ const essentialMethods = [
   'conferenceStandings',
 ];
 
-const pickEssentialMethods = obj => R.pick(essentialMethods, obj);
+const pickEssentialMethods = R.pick(essentialMethods);
 
 export default R.compose(R.mergeAll, R.map(pickEssentialMethods))([
-  R.omit(['stats'], NBA),
+  R.omit(['stats', 'data'], NBA),
   R.prop('stats', NBA),
-  R.omit(['data'], NBA),
   R.prop('data', NBA),
   NBAClient,
 ]);
