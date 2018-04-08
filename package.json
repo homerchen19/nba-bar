@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.production.js --progress",
     "precommit": "lint-staged",
-    "dev": "NODE_ENV=development concurrently -k './node_modules/.bin/webpack-dev-server --config ./webpack.config.development.js' 'npm start'",
+    "dev": "cross-env NODE_ENV=development concurrently -k './node_modules/.bin/webpack-dev-server --config ./webpack.config.development.js' 'npm start'",
     "postinstall": "electron-builder install-app-deps",
     "lint": "eslint src",
     "lint:css": "stylelint './src/**/*.js, !**/__tests__/**'",
@@ -16,13 +16,14 @@
     "start": "electron .",
     "test": "npm run testonly",
     "testonly": "cross-env NODE_ENV=test jest",
-    "testonly:cov": "NODE_ENV=test jest --coverage --runInBand --forceExit",
-    "testonly:watch": "NODE_ENV=test jest --watch"
+    "testonly:cov": "cross-env NODE_ENV=test jest --coverage --runInBand --forceExit",
+    "testonly:watch": "cross-env NODE_ENV=test jest --watch"
   },
   "dependencies": {
     "antd-mobile": "^2.1.8",
     "babel-polyfill": "^6.26.0",
     "babel-register": "^6.26.0",
+    "cross-env": "^5.1.4",
     "date-fns": "^1.29.0",
     "electron-debug": "^1.5.0",
     "electron-devtools-installer": "^2.2.3",
@@ -117,7 +118,7 @@
   },
   "jest": {
     "globals": {
-      "widow": true
+      "window": true
     },
     "testPathIgnorePatterns": [
       "/node_modules/"
