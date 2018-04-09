@@ -5,6 +5,24 @@
     "react-hot-loader/babel",
     ["transform-class-properties", { "loose": true }],
     ["import", { "libraryName": "antd-mobile", "style": "css" }],
-    "ramda"
-  ]
+    "ramda",
+    [
+      "transform-imports",
+      {
+        "react-router": {
+          "transform": "react-router-dom/${member}",
+          "preventFullImport": true
+        }
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-react-pure-class-to-function",
+        "transform-react-remove-prop-types"
+      ]
+    }
+  }
 }
