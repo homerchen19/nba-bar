@@ -27,7 +27,7 @@ const Button = styled.button`
   height: 28px;
   margin: 8px 0;
   border: 0;
-  color: ${props => (props.selected ? colors.white : colors.black)} !important;
+  color: ${props => (props.selected ? '#fff' : colors.black)} !important;
   cursor: pointer;
   background-color: ${props =>
     props.selected ? props.background : colors.white} !important;

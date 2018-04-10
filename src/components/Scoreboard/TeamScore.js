@@ -9,7 +9,7 @@ import { colors } from '../../styles/theme';
 
 const Wrapper = styled(Flex)`
   width: 100%;
-  color: ${colors.white};
+  color: #fff;
 `;
 
 const InfoWrapper = styled(Flex)`

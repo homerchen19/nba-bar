@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Tabs } from 'antd-mobile';
 import styled from 'styled-components';
 import R from 'ramda';
 
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
+import Tab from '../../components/Tab';
 import NavBar from '../../components/NavBar';
 import { Spinner } from '../../components/Loader';
 import {
@@ -33,12 +33,6 @@ const Item = styled.div`
   width: 100%;
   margin-top: ${props => props.marginTop}px;
   flex: 1 1 auto;
-`;
-
-const TabTitle = styled.span`
-  font-size: 13px;
-  cursor: pointer;
-  font-weight: 500;
 `;
 
 class Live extends Component {
@@ -155,13 +149,7 @@ class Live extends Component {
                     />
                   </Item>
                   <Item marginTop="20">
-                    <Tabs
-                      tabs={[
-                        { title: <TabTitle>PLAY-BY-PLAY</TabTitle> },
-                        { title: <TabTitle>BOX SCORE</TabTitle> },
-                      ]}
-                      initialPage={0}
-                    >
+                    <Tab titles={['PLAY-BY-PLAY', 'BOX SCORE']}>
                       <PlayByPlay gamePlayByPlayData={gamePlayByPlayData} />
                       <BoxScore
                         home={{
@@ -173,7 +161,7 @@ class Live extends Component {
                           players: gameBoxScoreData.visitor.players.player,
                         }}
                       />
-                    </Tabs>
+                    </Tab>
                   </Item>
                 </Fragment>
               )}

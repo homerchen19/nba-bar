@@ -4,11 +4,16 @@ exports[`match snapshot 1`] = `
 Array [
   <div
     className="am-flexbox am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    style={
+      Object {
+        "background": "#fff",
+      }
+    }
   >
     <button
-      className="BoxScore__Button-fJbqjU iKUoQM"
+      className="BoxScore__Button-fJbqjU gaMIwA"
       onClick={[Function]}
+      selected={true}
       style={
         Object {
           "borderRadius": "5px 0 0 5px",
@@ -18,8 +23,9 @@ Array [
       IND
     </button>
     <button
-      className="BoxScore__Button-fJbqjU jgtUby"
+      className="BoxScore__Button-fJbqjU kSDadM"
       onClick={[Function]}
+      selected={false}
       style={
         Object {
           "borderRadius": "0 5px 5px 0",

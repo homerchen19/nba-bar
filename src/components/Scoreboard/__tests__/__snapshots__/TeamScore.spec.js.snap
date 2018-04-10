@@ -2,11 +2,11 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="am-flexbox TeamScore__Wrapper-dkUenk eDIqGI am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
+  className="am-flexbox TeamScore__Wrapper-dkUenk eqJmmP am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
   style={undefined}
 >
   <div
-    className="am-flexbox TeamScore__TeamWrapper-gLIDml dzAzBK am-flexbox-justify-center am-flexbox-align-center"
+    className="am-flexbox TeamScore__InfoWrapper-BUCyd hlwPDM am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
     style={undefined}
   >
     <div
@@ -17,51 +17,14 @@ exports[`match snapshot 1`] = `
         }
       }
     >
-      <h3
-        className="TeamScore__TeamName-lfDjMy ejiVTN"
-      >
-        IND
-      </h3>
+      <h4>
+        Final
+      </h4>
     </div>
     <div
       className="am-flexbox-item"
       style={
         Object {
-          "margin": 0,
-          "textAlign": "center",
-        }
-      }
-    >
-      <h3
-        className="TeamScore__TeamName-lfDjMy ejiVTN"
-      >
-        GSW
-      </h3>
-    </div>
-  </div>
-  <div
-    className="am-flexbox TeamScore__ScoreWrapper-tdjCa csZWAX am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
-  >
-    <div
-      className="am-flexbox-item"
-      style={
-        Object {
-          "flex": 2,
-        }
-      }
-    >
-      <p
-        className="TeamScore__Score-itlDXI dpSbIb"
-      >
-        126
-      </p>
-    </div>
-    <div
-      className="am-flexbox-item"
-      style={
-        Object {
-          "flex": 1,
           "margin": 0,
           "textAlign": "center",
         }
@@ -70,24 +33,48 @@ exports[`match snapshot 1`] = `
       <span
         style={
           Object {
-            "fontSize": "0.8em",
+            "fontSize": "10px",
           }
         }
       >
-        <b>
-          Final
-        </b>
+        Bankers Life Fieldhouse, Indianapolis
       </span>
     </div>
-    <div
-      className="am-flexbox-item"
-      style={
-        Object {
-          "flex": 2,
-          "margin": 0,
-        }
+  </div>
+  <div
+    background={
+      Object {
+        "home": "#041e42",
+        "visitor": "#ffc72d",
       }
+    }
+    className="am-flexbox TeamScore__ScoreWrapper-tdjCa fjZfdr am-flexbox-justify-center am-flexbox-align-center"
+    style={undefined}
+  >
+    <div
+      className="am-flexbox TeamScore__Team-HyUuo gxoOEK am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
+      style={undefined}
     >
+      <h3
+        className="TeamScore__TeamName-lfDjMy jdzNt"
+      >
+        IND
+      </h3>
+      <p
+        className="TeamScore__Score-itlDXI dpSbIb"
+      >
+        126
+      </p>
+    </div>
+    <div
+      className="am-flexbox TeamScore__Team-HyUuo gxoOEK am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
+      style={undefined}
+    >
+      <h3
+        className="TeamScore__TeamName-lfDjMy jdzNt"
+      >
+        GSW
+      </h3>
       <p
         className="TeamScore__Score-itlDXI dkGycK"
       >
@@ -95,14 +82,5 @@ exports[`match snapshot 1`] = `
       </p>
     </div>
   </div>
-  <span
-    style={
-      Object {
-        "fontSize": "10px",
-      }
-    }
-  >
-    Bankers Life Fieldhouse, Indianapolis
-  </span>
 </div>
 `;

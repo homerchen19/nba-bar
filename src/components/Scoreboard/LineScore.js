@@ -21,7 +21,7 @@ const StyledCell = styled(Cell)`
 `;
 
 const TeamName = styled.p`
-  color: ${colors.white};
+  color: #fff;
   font-weight: 500;
 `;
 
