@@ -12,17 +12,20 @@ const requestSuccess = payload => ({
 
 const pickEssentialProps = R.pick(['home', 'visitor']);
 
-export const fetchData = (date, gameData) => async dispatch => {
+export const fetchData = ({ date, gameId }) => async dispatch => {
   dispatch(requestStart());
 
   try {
     const {
       sports_content: { game: _gameBoxScoreData },
-    } = await nba.getBoxScoreFromDate(date, gameData.id);
+    } = await nba.getBoxScoreFromDate(date, gameId);
+    const {
+      sports_content: { game: { play: gamePlayByPlayData } },
+    } = await nba.getPlayByPlayFromDate(date, gameId);
 
     const gameBoxScoreData = pickEssentialProps(_gameBoxScoreData);
 
-    dispatch(requestSuccess({ gameBoxScoreData }));
+    dispatch(requestSuccess({ gameBoxScoreData, gamePlayByPlayData }));
   } catch (error) {
     dispatch(requestError());
   }

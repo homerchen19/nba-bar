@@ -40,7 +40,6 @@ const TeamContent = styled(Flex)`
   width: 100%;
   padding: 8px 15px;
   border-bottom: 1px solid ${colors.white};
-  /* stylelint-disable-next-line declaration-colon-newline-after */
   background: linear-gradient(
     to right,
     ${props => props.background} 80%,

@@ -4,7 +4,10 @@ import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
 import { StickyTable, Row, Cell } from 'react-sticky-table';
 import { getMainColor } from 'nba-color';
+
 import 'react-sticky-table/dist/react-sticky-table.css';
+
+import { colors } from '../../styles/theme';
 
 const Wrapper = styled(Flex)`
   width: 100%;
@@ -12,12 +15,13 @@ const Wrapper = styled(Flex)`
 `;
 
 const StyledCell = styled(Cell)`
-  padding: 8px 11px;
+  padding: 8px 12px;
+  border-bottom: 1px solid ${colors.white};
   text-align: center;
 `;
 
 const TeamName = styled.p`
-  color: #fff;
+  color: ${colors.white};
   font-weight: 500;
 `;
 
@@ -27,7 +31,7 @@ const reanderTeamRow = team => (
       key="name"
       style={{
         backgroundColor: getMainColor(team.name).hex,
-        padding: '8px 14px',
+        padding: '8px 16px',
       }}
     >
       <TeamName>{team.name}</TeamName>
@@ -40,7 +44,7 @@ const reanderTeamRow = team => (
 );
 
 const LineScore = ({ home, visitor }) => (
-  <Wrapper justify="center">
+  <Wrapper justify="start">
     <StickyTable stickyHeaderCount={0}>
       <Row key="header">
         <StyledCell key="name" />
@@ -53,8 +57,8 @@ const LineScore = ({ home, visitor }) => (
           <b>T</b>
         </StyledCell>
       </Row>
-      {reanderTeamRow(home)}
-      {reanderTeamRow(visitor)}
+      {reanderTeamRow(home, true)}
+      {reanderTeamRow(visitor, false)}
     </StickyTable>
   </Wrapper>
 );

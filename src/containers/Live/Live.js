@@ -8,7 +8,7 @@ import R from 'ramda';
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
 import NavBar from '../../components/NavBar';
-import { Spinner, BarLoader } from '../../components/Loader';
+import { Spinner } from '../../components/Loader';
 import {
   TeamScore,
   LineScore,
@@ -20,7 +20,6 @@ const DataSection = styled.section`
   display: flex;
   width: 100%;
   height: 100%;
-  padding-top: 15px;
   flex-direction: column;
   align-items: center;
   overflow-y: scroll !important;
@@ -89,6 +88,15 @@ class Live extends Component {
       gamePlayByPlayData,
     } = this.props;
 
+    let gameClock = '';
+
+    if (!loading) {
+      gameClock =
+        gameBoxScoreData.periodTime.gameClock === '0.0'
+          ? ''
+          : ` ${gameBoxScoreData.periodTime.gameClock}`;
+    }
+
     return (
       <Wrapper
         currentTab={1}
@@ -96,7 +104,6 @@ class Live extends Component {
         schedule={
           <Fragment>
             <NavBar page="LIVE" />
-            {live !== 'error' && <BarLoader />}
             <DataSection>
               {loading && <Spinner />}
               {!loading && (
@@ -121,10 +128,11 @@ class Live extends Component {
                       }
                       gameStatus={`${
                         gameBoxScoreData.periodTime.periodStatus
-                      } ${gameBoxScoreData.periodTime.gameClock}`}
+                      }${gameClock}`}
+                      showBarLoader={live !== 'error'}
                     />
                   </Item>
-                  <Item marginTop="30">
+                  <Item marginTop="20">
                     <LineScore
                       home={{
                         name: gameData.home.abbreviation,

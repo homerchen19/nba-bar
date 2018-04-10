@@ -17,7 +17,6 @@ const TeamWrapper = styled(Flex)`
   padding: 3px 0;
   border-top: 1px solid ${colors.white};
   flex: 3;
-  /* stylelint-disable-next-line declaration-colon-newline-after */
   background: linear-gradient(
     to right,
     ${props => props.homeColor} 50%,

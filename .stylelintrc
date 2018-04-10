@@ -1,4 +1,8 @@
 {
   "processors": ["stylelint-processor-styled-components"],
-  "extends": ["stylelint-config-yoctol", "stylelint-config-styled-components"]
+  "extends": ["stylelint-config-yoctol", "stylelint-config-styled-components"],
+  "rules": {
+    "declaration-colon-newline-after": null,
+    "value-list-max-empty-lines": null
+  }
 }

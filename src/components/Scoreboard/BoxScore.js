@@ -7,6 +7,8 @@ import { getMainColor } from 'nba-color';
 
 import 'react-sticky-table/dist/react-sticky-table.css';
 
+import { colors } from '../../styles/theme';
+
 const Wrapper = styled(Flex)`
   width: 100%;
   height: 300px;
@@ -25,14 +27,21 @@ const Button = styled.button`
   height: 28px;
   margin: 8px 0;
   border: 0;
-  color: #fff !important;
+  color: ${props => (props.selected ? colors.white : colors.black)} !important;
   cursor: pointer;
-  background-color: ${props => props.background} !important;
+  background-color: ${props =>
+    props.selected ? props.background : colors.white} !important;
   opacity: 1;
-  transition: opacity ease 0.5s;
+  transition: all ease 0.2s;
 
   & :hover {
-    opacity: 0.9;
+    ${props =>
+      props.selected
+        ? 'opacity: 0.9;'
+        : `
+    color: ${colors.white} !important;
+    background-color: ${props.background} !important;
+    `};
   }
 `;
 
@@ -94,25 +103,28 @@ const renderTeamBoxScoreTable = team => (
 class Boxscore extends Component {
   state = {
     team: this.props.home,
+    selected: 'home',
   };
 
-  toggleTeam = team => {
+  toggleTeam = (team, selected) => {
     this.setState({
       team,
+      selected,
     });
   };
 
   render() {
-    const { team } = this.state;
+    const { team, selected } = this.state;
     const { home, visitor } = this.props;
 
     return (
       <Fragment>
-        <Flex justify="center">
+        <Flex justify="center" style={{ background: '#fff' }}>
           <Button
+            selected={selected === 'home'}
             background={getMainColor(home.name).hex}
             onClick={() => {
-              this.toggleTeam(home);
+              this.toggleTeam(home, 'home');
             }}
             style={{
               borderRadius: '5px 0 0 5px',
@@ -121,9 +133,10 @@ class Boxscore extends Component {
             {home.name}
           </Button>
           <Button
+            selected={selected === 'visitor'}
             background={getMainColor(visitor.name).hex}
             onClick={() => {
-              this.toggleTeam(visitor);
+              this.toggleTeam(visitor, 'visitor');
             }}
             style={{
               borderRadius: '0 5px 5px 0',

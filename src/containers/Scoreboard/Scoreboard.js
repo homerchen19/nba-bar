@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Tabs } from 'antd-mobile';
 import styled from 'styled-components';
 import R from 'ramda';
 
@@ -11,15 +12,15 @@ import { Spinner } from '../../components/Loader';
 import {
   TeamScore,
   LineScore,
-  BoxScore,
   Stats,
+  BoxScore,
+  PlayByPlay,
 } from '../../components/Scoreboard';
 
 const DataSection = styled.section`
   display: flex;
   width: 100%;
   height: 100%;
-  padding-top: 15px;
   flex-direction: column;
   align-items: center;
   overflow-y: scroll !important;
@@ -35,13 +36,28 @@ const Item = styled.div`
   flex: 1 1 auto;
 `;
 
+const TabTitle = styled.span`
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 500;
+`;
+
 class Scoreboard extends Component {
   componentDidMount() {
-    this.props.fetchData(this.props.date, this.props.gameData);
+    this.props.fetchData({
+      date: this.props.date,
+      gameId: this.props.gameData.id,
+    });
   }
 
   render() {
-    const { history, loading, gameData, gameBoxScoreData } = this.props;
+    const {
+      history,
+      loading,
+      gameData,
+      gameBoxScoreData,
+      gamePlayByPlayData,
+    } = this.props;
 
     return (
       <Wrapper
@@ -74,7 +90,7 @@ class Scoreboard extends Component {
                       gameStatus="Final"
                     />
                   </Item>
-                  <Item marginTop="30">
+                  <Item marginTop="20">
                     <LineScore
                       home={{
                         name: gameData.home.abbreviation,
@@ -88,29 +104,37 @@ class Scoreboard extends Component {
                       }}
                     />
                   </Item>
-                  <Item marginTop="30">
-                    <Stats
-                      home={{
-                        name: gameData.home.abbreviation,
-                        stats: gameBoxScoreData.home.stats,
-                      }}
-                      visitor={{
-                        name: gameData.visitor.abbreviation,
-                        stats: gameBoxScoreData.visitor.stats,
-                      }}
-                    />
-                  </Item>
-                  <Item marginTop="30">
-                    <BoxScore
-                      home={{
-                        name: gameData.home.abbreviation,
-                        players: gameBoxScoreData.home.players.player,
-                      }}
-                      visitor={{
-                        name: gameData.visitor.abbreviation,
-                        players: gameBoxScoreData.visitor.players.player,
-                      }}
-                    />
+                  <Item marginTop="20">
+                    <Tabs
+                      tabs={[
+                        { title: <TabTitle>STATS</TabTitle> },
+                        { title: <TabTitle>PLAY-BY-PLAY</TabTitle> },
+                        { title: <TabTitle>BOX SCORE</TabTitle> },
+                      ]}
+                      initialPage={0}
+                    >
+                      <Stats
+                        home={{
+                          name: gameData.home.abbreviation,
+                          stats: gameBoxScoreData.home.stats,
+                        }}
+                        visitor={{
+                          name: gameData.visitor.abbreviation,
+                          stats: gameBoxScoreData.visitor.stats,
+                        }}
+                      />
+                      <PlayByPlay gamePlayByPlayData={gamePlayByPlayData} />
+                      <BoxScore
+                        home={{
+                          name: gameData.home.abbreviation,
+                          players: gameBoxScoreData.home.players.player,
+                        }}
+                        visitor={{
+                          name: gameData.visitor.abbreviation,
+                          players: gameBoxScoreData.visitor.players.player,
+                        }}
+                      />
+                    </Tabs>
                   </Item>
                 </Fragment>
               )}
@@ -129,6 +153,7 @@ Scoreboard.propTypes = {
   gameData: PropTypes.object.isRequired,
   date: PropTypes.number.isRequired,
   gameBoxScoreData: PropTypes.object.isRequired,
+  gamePlayByPlayData: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 const mapStateToProps = (state, ownProps) => ({
@@ -138,6 +163,7 @@ const mapStateToProps = (state, ownProps) => ({
   ),
   date: state.home.date,
   gameBoxScoreData: state.scoreboard.gameBoxScoreData,
+  gamePlayByPlayData: state.scoreboard.gamePlayByPlayData,
 });
 
 export default connect(mapStateToProps, actions)(Scoreboard);
