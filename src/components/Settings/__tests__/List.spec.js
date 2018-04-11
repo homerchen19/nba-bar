@@ -10,6 +10,7 @@ it('be defined', () => {
 it('match snapshot', () => {
   const props = {
     quit: jest.fn(),
+    openExternal: jest.fn(),
   };
   const tree = renderer.create(<List {...props} />).toJSON();
 

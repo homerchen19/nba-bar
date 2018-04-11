@@ -37,6 +37,28 @@ exports[`match snapshot 1`] = `
       <div
         className="am-list-item List__StyledItem-fXZPYN jpMBcp am-list-item-middle"
         onClick={[Function]}
+      >
+        <div
+          className="am-list-line"
+        >
+          <div
+            className="am-list-content"
+          >
+            Report issues
+          </div>
+        </div>
+        <div
+          className="am-list-ripple"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        />
+      </div>
+      <div
+        className="am-list-item List__StyledItem-fXZPYN jpMBcp am-list-item-middle"
+        onClick={[Function]}
         onMouseDown={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}

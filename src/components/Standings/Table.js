@@ -31,6 +31,7 @@ const HeaderCell = styled(Cell)`
 `;
 
 const StyledCell = styled(Cell)`
+  width: ${props => props.width}px;
   padding: 6px 14px;
   border-bottom: 1px solid ${colors.white};
   background: #fff;
@@ -67,15 +68,22 @@ const renderConferenceTable = (team, conference) => (
                 background: getMainColor(teamData.name).hex,
                 fontWeight: '500',
               }}
+              width="75"
             >
               {teamData.name}
             </StyledCell>
-            <StyledCell key="W">{teamData.win}</StyledCell>
-            <StyledCell key="L">{teamData.loss}</StyledCell>
-            <StyledCell key="WIN %" style={{ width: '73px' }}>
+            <StyledCell key="W" width="47">
+              {teamData.win}
+            </StyledCell>
+            <StyledCell key="L" width="47">
+              {teamData.loss}
+            </StyledCell>
+            <StyledCell key="WIN %" width="73">
               {teamData.winPct}
             </StyledCell>
-            <StyledCell key="GB">{teamData.gamesBehind}</StyledCell>
+            <StyledCell key="GB" width="59">
+              {teamData.gamesBehind}
+            </StyledCell>
           </Row>
         ),
         team

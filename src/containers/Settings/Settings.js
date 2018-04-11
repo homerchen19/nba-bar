@@ -8,8 +8,7 @@ import { List } from '../../components/Settings';
 class Settings extends Component {
   render() {
     const { history } = this.props;
-    const { app } = window.require('electron').remote;
-    console.log(app);
+    const { remote: { app }, shell } = window.require('electron');
 
     return (
       <Wrapper
@@ -19,6 +18,10 @@ class Settings extends Component {
           <List
             quit={() => {
               app.quit();
+            }}
+            openExternal={url => () => {
+              app.hide();
+              shell.openExternal(url);
             }}
           />
         }

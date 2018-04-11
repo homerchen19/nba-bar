@@ -20,10 +20,19 @@ const StyledItem = styled(AntdList.Item)`
   cursor: pointer;
 `;
 
-const List = ({ quit }) => (
+const List = ({ openExternal, quit }) => (
   <Wrapper direction="column" justify="start" align="center">
     <StyledList>
-      <StyledItem>About NBA Bar</StyledItem>
+      <StyledItem
+        onClick={openExternal('https://github.com/xxhomey19/nba-bar')}
+      >
+        About NBA Bar
+      </StyledItem>
+      <StyledItem
+        onClick={openExternal('https://github.com/xxhomey19/nba-bar/issues')}
+      >
+        Report issues
+      </StyledItem>
       <StyledItem extra="⌘Q" onClick={quit}>
         Quit NBA Bar
       </StyledItem>
@@ -32,6 +41,7 @@ const List = ({ quit }) => (
 );
 
 List.propTypes = {
+  openExternal: PropTypes.func.isRequired,
   quit: PropTypes.func.isRequired,
 };
 

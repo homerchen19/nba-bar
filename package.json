@@ -1,6 +1,6 @@
 {
-  "name": "nba-menubar",
-  "description": "NBA Menubar app",
+  "name": "nba-bar",
+  "description": "The best NBA menubar App",
   "author": "xxhomey19",
   "version": "1.0.0",
   "main": "main.js",
@@ -142,5 +142,6 @@
       "npm run lint:css",
       "git add"
     ]
-  }
+  },
+  "productName": "NBA Bar"
 }
