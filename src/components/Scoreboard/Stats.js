@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
 import { StickyTable, Row, Cell } from 'react-sticky-table';
+import { getMainColor } from 'nba-color';
+
+import { colors } from '../../styles/theme';
 
 const Wrapper = styled(Flex)`
   width: 100%;
@@ -12,6 +15,7 @@ const Wrapper = styled(Flex)`
 
 const StyledCell = styled(Cell)`
   padding: 8px 26px;
+  border-bottom: 1px solid ${colors.white};
   text-align: center;
 `;
 
@@ -50,12 +54,18 @@ const Stats = ({ home, visitor }) => (
   <Wrapper justify="center">
     <StickyTable stickyColumnCount={0}>
       <Row key="header">
-        <StyledCell key="home">
-          <b>{home.name}</b>
+        <StyledCell
+          key="home"
+          style={{ color: getMainColor(home.name).hex, fontWeight: '600' }}
+        >
+          {home.name}
         </StyledCell>
         <StyledCell />
-        <StyledCell key="visitor">
-          <b>{visitor.name}</b>
+        <StyledCell
+          key="visitor"
+          style={{ color: getMainColor(visitor.name).hex, fontWeight: '600' }}
+        >
+          {visitor.name}
         </StyledCell>
       </Row>
       {reanderStatsRow(home.stats, visitor.stats)}

@@ -11,11 +11,26 @@ const Wrapper = styled(Flex)`
   width: 100%;
   height: 300px;
   overflow-y: scroll !important;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  > .am-tabs * {
+    box-sizing: content-box;
+  }
+`;
+
+const HeaderCell = styled(Cell)`
+  padding: 6px;
+  background: ${colors.blue};
+  color: #fff;
+  text-align: center;
 `;
 
 const StyledCell = styled(Cell)`
-  padding: 6px 5px;
-  border: 1px solid #000;
+  padding: 6px;
+  border-bottom: 1px solid ${colors.white};
   background: #fff;
   text-align: center;
 `;
@@ -24,7 +39,7 @@ const Button = styled.button`
   width: 30%;
   height: 28px;
   margin: 8px 0;
-  border: 0;
+  border: 1px solid ${colors.white};
   color: ${props => (props.selected ? '#fff' : colors.black)} !important;
   cursor: pointer;
   background-color: ${props =>
@@ -60,9 +75,9 @@ const renderHeaderCell = () => {
   ];
 
   return cells.map(cell => (
-    <StyledCell key={cell}>
+    <HeaderCell key={cell}>
       <b>{cell}</b>
-    </StyledCell>
+    </HeaderCell>
   ));
 };
 
@@ -71,7 +86,14 @@ const renderTeamBoxScoreTable = team => (
     <Row key="header">{renderHeaderCell()}</Row>
     {team.players.map(player => (
       <Row key="player">
-        <StyledCell key="Player" style={{ textAlign: 'left' }}>
+        <StyledCell
+          key="Player"
+          style={{
+            borderRight: `1px solid ${colors.white}`,
+            textAlign: 'left',
+            fontWeight: '500',
+          }}
+        >
           {player.last_name}
         </StyledCell>
         <StyledCell key="MIN">{player.minutes}</StyledCell>
@@ -143,9 +165,7 @@ class Boxscore extends Component {
             {visitor.name}
           </Button>
         </Flex>
-        <Wrapper justify="start" align="start">
-          <Flex.Item>{renderTeamBoxScoreTable(team)}</Flex.Item>
-        </Wrapper>
+        <Wrapper>{renderTeamBoxScoreTable(team)}</Wrapper>
       </Fragment>
     );
   }

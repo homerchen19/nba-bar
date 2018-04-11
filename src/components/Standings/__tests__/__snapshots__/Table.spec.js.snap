@@ -6,11 +6,11 @@ exports[`match snapshot 1`] = `
   style={undefined}
 >
   <div
-    className="am-flexbox-item Table__Item-gKMlZn fvdCyI"
+    className="am-flexbox-item Table__Item-gKMlZn kRjFpw"
     style={undefined}
   >
     <h3
-      className="Table__Conference-gpsFgB krXnEd"
+      className="Table__Conference-gpsFgB jfkmjK"
     >
       east
     </h3>
@@ -54,39 +54,29 @@ exports[`match snapshot 1`] = `
               id=""
             >
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__HeaderCell-gkgVsI cdhTsi"
               >
-                <b>
-                  Teams
-                </b>
+                Teams
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__HeaderCell-gkgVsI cdhTsi"
               >
-                <b>
-                  W
-                </b>
+                W
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__HeaderCell-gkgVsI cdhTsi"
               >
-                <b>
-                  L
-                </b>
+                L
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__HeaderCell-gkgVsI cdhTsi"
               >
-                <b>
-                  WIN%
-                </b>
+                WIN%
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__HeaderCell-gkgVsI cdhTsi"
               >
-                <b>
-                  GB
-                </b>
+                GB
               </div>
             </div>
           </div>
@@ -127,27 +117,39 @@ exports[`match snapshot 1`] = `
             >
               <div
                 align="left"
-                className="sticky-table-cell Table__StyledCell-fIvCux pvDml"
+                className="sticky-table-cell Table__StyledCell-fIvCux jfQtaX"
+                style={
+                  Object {
+                    "background": "#ce1141",
+                    "color": "#fff",
+                    "fontWeight": "500",
+                  }
+                }
               >
                 TOR
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 56
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 22
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
+                style={
+                  Object {
+                    "width": "73px",
+                  }
+                }
               >
                 .718
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 0
               </div>
@@ -158,27 +160,39 @@ exports[`match snapshot 1`] = `
             >
               <div
                 align="left"
-                className="sticky-table-cell Table__StyledCell-fIvCux pvDml"
+                className="sticky-table-cell Table__StyledCell-fIvCux jfQtaX"
+                style={
+                  Object {
+                    "background": "#007a33",
+                    "color": "#fff",
+                    "fontWeight": "500",
+                  }
+                }
               >
                 BOS
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 53
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 25
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
+                style={
+                  Object {
+                    "width": "73px",
+                  }
+                }
               >
                 .679
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 3
               </div>
@@ -189,27 +203,39 @@ exports[`match snapshot 1`] = `
             >
               <div
                 align="left"
-                className="sticky-table-cell Table__StyledCell-fIvCux pvDml"
+                className="sticky-table-cell Table__StyledCell-fIvCux jfQtaX"
+                style={
+                  Object {
+                    "background": "#6f263d",
+                    "color": "#fff",
+                    "fontWeight": "500",
+                  }
+                }
               >
                 CLE
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 49
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 30
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
+                style={
+                  Object {
+                    "width": "73px",
+                  }
+                }
               >
                 .620
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 7.5
               </div>
@@ -220,11 +246,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox-item Table__Item-gKMlZn fvdCyI"
+    className="am-flexbox-item Table__Item-gKMlZn kRjFpw"
     style={undefined}
   >
     <h3
-      className="Table__Conference-gpsFgB krXnEd"
+      className="Table__Conference-gpsFgB jfkmjK"
     >
       west
     </h3>
@@ -268,39 +294,29 @@ exports[`match snapshot 1`] = `
               id=""
             >
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__HeaderCell-gkgVsI cdhTsi"
               >
-                <b>
-                  Teams
-                </b>
+                Teams
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__HeaderCell-gkgVsI cdhTsi"
               >
-                <b>
-                  W
-                </b>
+                W
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__HeaderCell-gkgVsI cdhTsi"
               >
-                <b>
-                  L
-                </b>
+                L
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__HeaderCell-gkgVsI cdhTsi"
               >
-                <b>
-                  WIN%
-                </b>
+                WIN%
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__HeaderCell-gkgVsI cdhTsi"
               >
-                <b>
-                  GB
-                </b>
+                GB
               </div>
             </div>
           </div>
@@ -341,27 +357,39 @@ exports[`match snapshot 1`] = `
             >
               <div
                 align="left"
-                className="sticky-table-cell Table__StyledCell-fIvCux pvDml"
+                className="sticky-table-cell Table__StyledCell-fIvCux jfQtaX"
+                style={
+                  Object {
+                    "background": "#ba0c2f",
+                    "color": "#fff",
+                    "fontWeight": "500",
+                  }
+                }
               >
                 HOU
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 64
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 15
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
+                style={
+                  Object {
+                    "width": "73px",
+                  }
+                }
               >
                 .810
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 0
               </div>
@@ -372,27 +400,39 @@ exports[`match snapshot 1`] = `
             >
               <div
                 align="left"
-                className="sticky-table-cell Table__StyledCell-fIvCux pvDml"
+                className="sticky-table-cell Table__StyledCell-fIvCux jfQtaX"
+                style={
+                  Object {
+                    "background": "#ffc72d",
+                    "color": "#fff",
+                    "fontWeight": "500",
+                  }
+                }
               >
                 GSW
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 57
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 22
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
+                style={
+                  Object {
+                    "width": "73px",
+                  }
+                }
               >
                 .722
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 7
               </div>
@@ -403,27 +443,39 @@ exports[`match snapshot 1`] = `
             >
               <div
                 align="left"
-                className="sticky-table-cell Table__StyledCell-fIvCux pvDml"
+                className="sticky-table-cell Table__StyledCell-fIvCux jfQtaX"
+                style={
+                  Object {
+                    "background": "#f0163a",
+                    "color": "#fff",
+                    "fontWeight": "500",
+                  }
+                }
               >
                 POR
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 48
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 31
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
+                style={
+                  Object {
+                    "width": "73px",
+                  }
+                }
               >
                 .608
               </div>
               <div
-                className="sticky-table-cell Table__StyledCell-fIvCux ccNlyE"
+                className="sticky-table-cell Table__StyledCell-fIvCux copTFP"
               >
                 16
               </div>

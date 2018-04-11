@@ -11,7 +11,7 @@ Array [
     }
   >
     <button
-      className="BoxScore__Button-fJbqjU gaMIwA"
+      className="BoxScore__Button-fJbqjU gMNDKv"
       onClick={[Function]}
       selected={true}
       style={
@@ -23,7 +23,7 @@ Array [
       IND
     </button>
     <button
-      className="BoxScore__Button-fJbqjU kSDadM"
+      className="BoxScore__Button-fJbqjU liExjX"
       onClick={[Function]}
       selected={false}
       style={
@@ -36,232 +36,229 @@ Array [
     </button>
   </div>,
   <div
-    className="am-flexbox BoxScore__Wrapper-iYJCii kXzwjZ am-flexbox-justify-start am-flexbox-align-start"
+    className="am-flexbox BoxScore__Wrapper-iYJCii ikeaQs am-flexbox-align-center"
     style={undefined}
   >
     <div
-      className="am-flexbox-item"
-      style={undefined}
+      className="sticky-table "
+      id="sticky-table-500000000"
     >
       <div
-        className="sticky-table "
-        id="sticky-table-500000000"
+        className="x-scrollbar"
+      >
+        <div />
+      </div>
+      <div
+        className="y-scrollbar"
+      >
+        <div />
+      </div>
+      <div
+        className="sticky-table-header-wrapper"
       >
         <div
-          className="x-scrollbar"
-        >
-          <div />
-        </div>
-        <div
-          className="y-scrollbar"
-        >
-          <div />
-        </div>
-        <div
-          className="sticky-table-header-wrapper"
+          className="sticky-table-corner "
         >
           <div
-            className="sticky-table-corner "
+            className="sticky-table-table "
           >
             <div
-              className="sticky-table-table "
+              className="sticky-table-row "
+              id=""
             >
               <div
-                className="sticky-table-row "
-                id=""
+                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
               >
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  <b>
-                    Player
-                  </b>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="sticky-table-header "
-          >
-            <div
-              className="sticky-table-table "
-            >
-              <div
-                className="sticky-table-row "
-                id=""
-              >
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  <b>
-                    MIN
-                  </b>
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  <b>
-                    PTS
-                  </b>
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  <b>
-                    REB
-                  </b>
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  <b>
-                    AST
-                  </b>
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  <b>
-                    STL
-                  </b>
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  <b>
-                    BLK
-                  </b>
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  <b>
-                    FG
-                  </b>
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  <b>
-                    3P
-                  </b>
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  <b>
-                    FT
-                  </b>
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  <b>
-                    TO
-                  </b>
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  <b>
-                    +/-
-                  </b>
-                </div>
+                <b>
+                  Player
+                </b>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="sticky-table-y-wrapper"
+          className="sticky-table-header "
         >
           <div
-            className="sticky-table-column "
+            className="sticky-table-table "
           >
             <div
-              className="sticky-table-table "
+              className="sticky-table-row "
+              id=""
             >
               <div
-                className="sticky-table-row "
-                id=""
+                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
               >
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                  style={
-                    Object {
-                      "textAlign": "left",
-                    }
+                <b>
+                  MIN
+                </b>
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+              >
+                <b>
+                  PTS
+                </b>
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+              >
+                <b>
+                  REB
+                </b>
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+              >
+                <b>
+                  AST
+                </b>
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+              >
+                <b>
+                  STL
+                </b>
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+              >
+                <b>
+                  BLK
+                </b>
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+              >
+                <b>
+                  FG
+                </b>
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+              >
+                <b>
+                  3P
+                </b>
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+              >
+                <b>
+                  FT
+                </b>
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+              >
+                <b>
+                  TO
+                </b>
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+              >
+                <b>
+                  +/-
+                </b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sticky-table-y-wrapper"
+      >
+        <div
+          className="sticky-table-column "
+        >
+          <div
+            className="sticky-table-table "
+          >
+            <div
+              className="sticky-table-row "
+              id=""
+            >
+              <div
+                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+                style={
+                  Object {
+                    "borderRight": "1px solid #f7f7f7",
+                    "fontWeight": "500",
+                    "textAlign": "left",
                   }
-                >
-                  Bogdanovic
-                </div>
+                }
+              >
+                Bogdanovic
               </div>
             </div>
           </div>
+        </div>
+        <div
+          className="sticky-table-x-wrapper"
+        >
           <div
-            className="sticky-table-x-wrapper"
+            className="sticky-table-table "
           >
             <div
-              className="sticky-table-table "
+              className="sticky-table-row "
+              id=""
             >
               <div
-                className="sticky-table-row "
-                id=""
+                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
               >
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  30
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  28
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  3
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  2
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  1
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  1
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  11-13
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  6-7
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  0-0
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  2
-                </div>
-                <div
-                  className="sticky-table-cell BoxScore__StyledCell-fEfkvL xLJfq"
-                >
-                  30
-                </div>
+                30
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+              >
+                28
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+              >
+                3
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+              >
+                2
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+              >
+                1
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+              >
+                1
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+              >
+                11-13
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+              >
+                6-7
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+              >
+                0-0
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+              >
+                2
+              </div>
+              <div
+                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+              >
+                30
               </div>
             </div>
           </div>

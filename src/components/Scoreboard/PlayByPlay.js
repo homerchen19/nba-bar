@@ -6,14 +6,17 @@ import styled from 'styled-components';
 import { StickyTable, Row, Cell } from 'react-sticky-table';
 import { getMainColor } from 'nba-color';
 
+import { colors } from '../../styles/theme';
+
 const Wrapper = styled(Flex)`
   width: 100%;
-  height: 300px;
+  height: 340px;
   background: #fff;
 `;
 
 const StyledCell = styled(Cell)`
   padding: 8px 11px;
+  border-bottom: 1px solid ${colors.white};
   text-align: ${props => props.align};
   white-space: pre;
   word-wrap: break-word;

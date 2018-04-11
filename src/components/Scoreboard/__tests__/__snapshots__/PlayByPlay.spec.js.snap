@@ -2,7 +2,7 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="am-flexbox PlayByPlay__Wrapper-jKyAEx fsvQIU am-flexbox-justify-center am-flexbox-align-center"
+  className="am-flexbox PlayByPlay__Wrapper-jKyAEx fXPtQX am-flexbox-justify-center am-flexbox-align-center"
   style={undefined}
 >
   <div
@@ -52,7 +52,7 @@ exports[`match snapshot 1`] = `
           >
             <div
               align="center"
-              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl QxHgS"
+              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl ddqmlj"
             >
               <p>
                 Q1 11:43
@@ -81,7 +81,7 @@ exports[`match snapshot 1`] = `
           >
             <div
               align="center"
-              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl QxHgS"
+              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl ddqmlj"
             >
               <p>
                 Q1 12:00
@@ -110,7 +110,7 @@ exports[`match snapshot 1`] = `
           >
             <div
               align="center"
-              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl QxHgS"
+              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl ddqmlj"
             >
               <p>
                 Q1 12:00
@@ -147,7 +147,7 @@ exports[`match snapshot 1`] = `
           >
             <div
               align="left"
-              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl dyIHnJ"
+              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl btptBf"
               style={
                 Object {
                   "padding": "8px 0",
@@ -163,7 +163,7 @@ exports[`match snapshot 1`] = `
           >
             <div
               align="left"
-              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl dyIHnJ"
+              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl btptBf"
               style={
                 Object {
                   "padding": "8px 0",
@@ -179,7 +179,7 @@ exports[`match snapshot 1`] = `
           >
             <div
               align="left"
-              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl dyIHnJ"
+              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl btptBf"
               style={
                 Object {
                   "padding": "8px 0",

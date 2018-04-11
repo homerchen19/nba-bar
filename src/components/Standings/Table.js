@@ -4,6 +4,9 @@ import R from 'ramda';
 import { Flex } from 'antd-mobile';
 import { StickyTable, Row, Cell } from 'react-sticky-table';
 import styled from 'styled-components';
+import { getMainColor } from 'nba-color';
+
+import { colors } from '../../styles/theme';
 
 const Wrapper = styled(Flex)`
   width: 100%;
@@ -16,18 +19,28 @@ const Wrapper = styled(Flex)`
 
 const Item = styled(Flex.Item)`
   width: 100%;
-  margin: 15px 0 !important;
+  margin: 0 !important;
+`;
+
+const HeaderCell = styled(Cell)`
+  padding: 8px 14px;
+  background: ${colors.darkBlue};
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
 `;
 
 const StyledCell = styled(Cell)`
-  padding: 6px 10.5px;
-  border: 1px solid #000;
+  padding: 6px 14px;
+  border-bottom: 1px solid ${colors.white};
   background: #fff;
   text-align: ${props => props.align || 'center'};
 `;
 
 const Conference = styled.h3`
-  margin-bottom: 10px;
+  padding: 10px 0;
+  background: ${colors.blue};
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
 `;
@@ -35,11 +48,7 @@ const Conference = styled.h3`
 const renderHeaderCell = () => {
   const cells = ['Teams', 'W', 'L', 'WIN%', 'GB'];
 
-  return cells.map(cell => (
-    <StyledCell key={cell}>
-      <b>{cell}</b>
-    </StyledCell>
-  ));
+  return cells.map(cell => <HeaderCell key={cell}>{cell}</HeaderCell>);
 };
 
 const renderConferenceTable = (team, conference) => (
@@ -50,12 +59,22 @@ const renderConferenceTable = (team, conference) => (
       {R.map(
         teamData => (
           <Row key={teamData.teamId}>
-            <StyledCell key="name" align="left">
+            <StyledCell
+              key="name"
+              align="left"
+              style={{
+                color: '#fff',
+                background: getMainColor(teamData.name).hex,
+                fontWeight: '500',
+              }}
+            >
               {teamData.name}
             </StyledCell>
             <StyledCell key="W">{teamData.win}</StyledCell>
             <StyledCell key="L">{teamData.loss}</StyledCell>
-            <StyledCell key="WIN %">{teamData.winPct}</StyledCell>
+            <StyledCell key="WIN %" style={{ width: '73px' }}>
+              {teamData.winPct}
+            </StyledCell>
             <StyledCell key="GB">{teamData.gamesBehind}</StyledCell>
           </Row>
         ),
