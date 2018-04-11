@@ -2,6 +2,8 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
 
+import 'react-sticky-table/dist/react-sticky-table.css';
+
 import Home from '../Home';
 import Preview from '../Preview';
 import Live from '../Live';

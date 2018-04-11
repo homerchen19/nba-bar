@@ -5,8 +5,6 @@ import styled from 'styled-components';
 import { StickyTable, Row, Cell } from 'react-sticky-table';
 import { getMainColor } from 'nba-color';
 
-import 'react-sticky-table/dist/react-sticky-table.css';
-
 import { colors } from '../../styles/theme';
 
 const Wrapper = styled(Flex)`

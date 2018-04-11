@@ -4,8 +4,6 @@ import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
 import { StickyTable, Row, Cell } from 'react-sticky-table';
 
-import 'react-sticky-table/dist/react-sticky-table.css';
-
 const Wrapper = styled(Flex)`
   width: 100%;
   padding: 5px 0;
