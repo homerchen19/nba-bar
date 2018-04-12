@@ -19,7 +19,13 @@ const config = merge(baseConfig, {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new webpack.NormalModuleReplacementPlugin(/\/iconv-loader$/, 'node-noop'),
-    new UglifyJsPlugin(),
+    new UglifyJsPlugin({
+      comments: false,
+      compress: {
+        warnings: false,
+        drop_console: true,
+      },
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),

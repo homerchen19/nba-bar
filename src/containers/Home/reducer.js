@@ -38,6 +38,7 @@ export default function reducer(state = initialState, action = {}) {
       return {
         ...state,
         loading: false,
+        scheduleData: [],
       };
     }
     case SET_DATE:

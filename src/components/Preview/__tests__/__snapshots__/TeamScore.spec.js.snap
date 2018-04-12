@@ -19,10 +19,14 @@ exports[`match snapshot 1`] = `
     </p>
   </div>
   <div
+    background={
+      Object {
+        "home": "#006bb6",
+        "visitor": "#6f263d",
+      }
+    }
     className="am-flexbox TeamScore__TeamWrapper-gLIDml fsdvYN am-flexbox-justify-center am-flexbox-align-center"
-    homeColor="#006bb6"
     style={undefined}
-    visitorColor="#6f263d"
   >
     <div
       className="am-flexbox-item"

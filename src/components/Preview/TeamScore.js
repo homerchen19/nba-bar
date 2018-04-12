@@ -19,8 +19,8 @@ const TeamWrapper = styled(Flex)`
   flex: 3;
   background: linear-gradient(
     to right,
-    ${props => props.homeColor} 50%,
-    ${props => props.visitorColor} 50%
+    ${props => props.background.home} 50%,
+    ${props => props.background.visitor} 50%
   );
 `;
 
@@ -56,8 +56,10 @@ const TeamScore = ({ time, arena, city, home, visitor }) => (
       </InfoWrapper>
       <TeamWrapper
         justify="center"
-        homeColor={getMainColor(home.name).hex}
-        visitorColor={getMainColor(visitor.name).hex}
+        background={{
+          home: getMainColor(home.name).hex,
+          visitor: getMainColor(visitor.name).hex,
+        }}
       >
         <Flex.Item>
           <Team team={home} />

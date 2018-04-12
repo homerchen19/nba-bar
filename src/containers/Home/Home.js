@@ -73,12 +73,7 @@ class Home extends Component {
               {!loading &&
                 scheduleData.length === 0 && (
                   <NoGame>
-                    <h3>
-                      No games available for this date{' '}
-                      <span role="img" aria-label="Comfused">
-                        😕
-                      </span>
-                    </h3>
+                    <h3>No games available for this date</h3>
                   </NoGame>
                 )}
               {!loading &&

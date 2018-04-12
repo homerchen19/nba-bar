@@ -8,7 +8,7 @@ import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
 import Tab from '../../components/Tab';
 import NavBar from '../../components/NavBar';
-import { Spinner } from '../../components/Loader';
+import { Spinner, Error } from '../../components/Loader';
 import {
   TeamScore,
   LineScore,
@@ -46,6 +46,7 @@ class Scoreboard extends Component {
 
   render() {
     const {
+      error,
       history,
       loading,
       gameData,
@@ -62,69 +63,72 @@ class Scoreboard extends Component {
             <NavBar page="SCOREBOARD" />
             <DataSection>
               {loading && <Spinner />}
-              {!loading && (
-                <Fragment>
-                  <Item marginTop="0">
-                    <TeamScore
-                      arena={gameData.arena}
-                      city={gameData.city}
-                      home={{
-                        name: gameData.home.abbreviation,
-                        score: gameData.home.score,
-                      }}
-                      visitor={{
-                        name: gameData.visitor.abbreviation,
-                        score: gameData.visitor.score,
-                      }}
-                      winner={
-                        +gameData.home.score > +gameData.visitor.score
-                          ? 'home'
-                          : 'visitor'
-                      }
-                      gameStatus="Final"
-                    />
-                  </Item>
-                  <Item marginTop="20">
-                    <LineScore
-                      home={{
-                        name: gameData.home.abbreviation,
-                        linescores: gameBoxScoreData.home.linescores.period,
-                        score: gameData.home.score,
-                      }}
-                      visitor={{
-                        name: gameData.visitor.abbreviation,
-                        linescores: gameBoxScoreData.visitor.linescores.period,
-                        score: gameData.visitor.score,
-                      }}
-                    />
-                  </Item>
-                  <Item marginTop="20">
-                    <Tab titles={['STATS', 'PLAY-BY-PLAY', 'BOX SCORE']}>
-                      <Stats
+              {error && <Error />}
+              {!error &&
+                !loading && (
+                  <Fragment>
+                    <Item marginTop="0">
+                      <TeamScore
+                        arena={gameData.arena}
+                        city={gameData.city}
                         home={{
                           name: gameData.home.abbreviation,
-                          stats: gameBoxScoreData.home.stats,
+                          score: gameData.home.score,
                         }}
                         visitor={{
                           name: gameData.visitor.abbreviation,
-                          stats: gameBoxScoreData.visitor.stats,
+                          score: gameData.visitor.score,
                         }}
+                        winner={
+                          +gameData.home.score > +gameData.visitor.score
+                            ? 'home'
+                            : 'visitor'
+                        }
+                        gameStatus="Final"
                       />
-                      <PlayByPlay gamePlayByPlayData={gamePlayByPlayData} />
-                      <BoxScore
+                    </Item>
+                    <Item marginTop="20">
+                      <LineScore
                         home={{
                           name: gameData.home.abbreviation,
-                          players: gameBoxScoreData.home.players.player,
+                          linescores: gameBoxScoreData.home.linescores.period,
+                          score: gameData.home.score,
                         }}
                         visitor={{
                           name: gameData.visitor.abbreviation,
-                          players: gameBoxScoreData.visitor.players.player,
+                          linescores:
+                            gameBoxScoreData.visitor.linescores.period,
+                          score: gameData.visitor.score,
                         }}
                       />
-                    </Tab>
-                  </Item>
-                </Fragment>
-              )}
+                    </Item>
+                    <Item marginTop="20">
+                      <Tab titles={['STATS', 'PLAY-BY-PLAY', 'BOX SCORE']}>
+                        <Stats
+                          home={{
+                            name: gameData.home.abbreviation,
+                            stats: gameBoxScoreData.home.stats,
+                          }}
+                          visitor={{
+                            name: gameData.visitor.abbreviation,
+                            stats: gameBoxScoreData.visitor.stats,
+                          }}
+                        />
+                        <PlayByPlay gamePlayByPlayData={gamePlayByPlayData} />
+                        <BoxScore
+                          home={{
+                            name: gameData.home.abbreviation,
+                            players: gameBoxScoreData.home.players.player,
+                          }}
+                          visitor={{
+                            name: gameData.visitor.abbreviation,
+                            players: gameBoxScoreData.visitor.players.player,
+                          }}
+                        />
+                      </Tab>
+                    </Item>
+                  </Fragment>
+                )}
             </DataSection>
           </Fragment>
         }
@@ -136,6 +140,7 @@ class Scoreboard extends Component {
 Scoreboard.propTypes = {
   fetchData: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
+  error: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
   gameData: PropTypes.object.isRequired,
   date: PropTypes.number.isRequired,
@@ -144,6 +149,7 @@ Scoreboard.propTypes = {
 };
 
 const mapStateToProps = (state, ownProps) => ({
+  error: state.scoreboard.error,
   loading: state.scoreboard.loading,
   gameData: R.find(R.propEq('id', ownProps.match.params.gameId))(
     state.home.scheduleData

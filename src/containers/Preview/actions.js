@@ -11,7 +11,6 @@ const requestSuccess = payload => ({
 });
 
 const pickEssentialProps = R.pick([
-  'gp',
   'w',
   'l',
   'pts',

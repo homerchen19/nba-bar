@@ -9,6 +9,7 @@ import {
 
 const initialState = {
   live: 'loading',
+  error: false,
   loading: true,
   gameBoxScoreData: {},
   gamePlayByPlayData: [],
@@ -19,6 +20,7 @@ export default function reducer(state = initialState, action = {}) {
     case REQUEST_START: {
       return {
         ...state,
+        error: false,
         loading: true,
       };
     }
@@ -26,6 +28,7 @@ export default function reducer(state = initialState, action = {}) {
       return {
         ...state,
         live: 'success',
+        error: false,
         loading: false,
         gameBoxScoreData: action.payload.gameBoxScoreData,
         gamePlayByPlayData: action.payload.gamePlayByPlayData,
@@ -34,6 +37,7 @@ export default function reducer(state = initialState, action = {}) {
     case REQUEST_ERROR: {
       return {
         ...state,
+        error: true,
         loading: false,
       };
     }

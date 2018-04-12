@@ -7,7 +7,7 @@ import R from 'ramda';
 import * as actions from './actions';
 import Wrapper from '../../components/Wrapper';
 import NavBar from '../../components/NavBar';
-import { Spinner } from '../../components/Loader';
+import { Spinner, Error } from '../../components/Loader';
 import { TeamScore, Table } from '../../components/Preview';
 
 const DataSection = styled.section`
@@ -30,6 +30,7 @@ class Preview extends Component {
 
   render() {
     const {
+      error,
       history,
       loading,
       gameData,
@@ -46,29 +47,31 @@ class Preview extends Component {
             <NavBar page="PREVIEW" />
             <DataSection>
               {loading && <Spinner />}
-              {!loading && (
-                <Fragment>
-                  <TeamScore
-                    time={gameData.periodTime.periodStatus.replace(' ET', '')}
-                    arena={gameData.arena}
-                    city={gameData.city}
-                    home={{
-                      name: gameData.home.abbreviation,
-                      w: homeTeamDashboardData.w,
-                      l: homeTeamDashboardData.l,
-                    }}
-                    visitor={{
-                      name: gameData.visitor.abbreviation,
-                      w: visitorTeamDashboardData.w,
-                      l: visitorTeamDashboardData.l,
-                    }}
-                  />
-                  <Table
-                    home={homeTeamDashboardData}
-                    visitor={visitorTeamDashboardData}
-                  />
-                </Fragment>
-              )}
+              {error && <Error />}
+              {!error &&
+                !loading && (
+                  <Fragment>
+                    <TeamScore
+                      time={gameData.periodTime.periodStatus.replace(' ET', '')}
+                      arena={gameData.arena}
+                      city={gameData.city}
+                      home={{
+                        name: gameData.home.abbreviation,
+                        w: homeTeamDashboardData.w,
+                        l: homeTeamDashboardData.l,
+                      }}
+                      visitor={{
+                        name: gameData.visitor.abbreviation,
+                        w: visitorTeamDashboardData.w,
+                        l: visitorTeamDashboardData.l,
+                      }}
+                    />
+                    <Table
+                      home={homeTeamDashboardData}
+                      visitor={visitorTeamDashboardData}
+                    />
+                  </Fragment>
+                )}
             </DataSection>
           </Fragment>
         }
@@ -80,6 +83,7 @@ class Preview extends Component {
 Preview.propTypes = {
   fetchData: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
+  error: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
   gameData: PropTypes.object.isRequired,
   homeTeamDashboardData: PropTypes.object.isRequired,
@@ -87,6 +91,7 @@ Preview.propTypes = {
 };
 
 const mapStateToProps = (state, ownProps) => ({
+  error: state.preview.error,
   loading: state.preview.loading,
   gameData: R.find(R.propEq('id', ownProps.match.params.gameId))(
     state.home.scheduleData
