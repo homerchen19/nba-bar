@@ -116,8 +116,7 @@
       "package.json"
     ],
     "mac": {
-      "category": "public.app-category.developer-tools",
-      "icon": "resources/app.icns"
+      "category": "public.app-category.developer-tools"
     }
   },
   "jest": {

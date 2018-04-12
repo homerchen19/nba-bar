@@ -59,13 +59,14 @@ const createAboutPage = () => {
 
 const mb = menubar({
   alwaysOnTop: process.env.NODE_ENV === 'development',
-  icon: path.join(app.getAppPath(), 'resources/IconTemplate.png'),
+  icon: path.join(app.getAppPath(), 'resources/menubarDefaultTemplate.png'),
   minWidth: 300,
   maxWidth: process.env.NODE_ENV === 'development' ? undefined : 300,
   minHeight: 465,
   maxHeight: process.env.NODE_ENV === 'development' ? undefined : 465,
   preloadWindow: true,
   resizable: process.env.NODE_ENV === 'development',
+  movable: false,
 });
 
 mb.on('ready', async () => {
