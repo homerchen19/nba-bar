@@ -1,18 +1,24 @@
 {
   "name": "nba-bar",
   "description": "The best NBA menubar App",
-  "author": "xxhomey19",
+  "license": "MIT",
+  "author": "xxhomey19 <xxhomey19@gmail.com> (https://github.com/xxhomey19)",
+  "repository": "https://github.com/xxhomey19/nba-bar",
+  "bugs": {
+    "url": "https://github.com/xxhomey19/nba-bar/issues"
+  },
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js --progress",
     "precommit": "lint-staged",
     "dev": "cross-env NODE_ENV=development concurrently -k './node_modules/.bin/webpack-dev-server --config ./webpack.config.development.js' 'npm start'",
+    "dist": "npm run build && electron-builder --mac --linux --win",
     "postinstall": "electron-builder install-app-deps",
     "lint": "eslint src",
     "lint:css": "stylelint './src/**/*.js, !**/__tests__/**'",
     "lint:fix": "npm run lint -- --fix",
-    "package": "npm run build && electron-builder",
+    "pack": "electron-builder --dir",
     "start": "electron .",
     "test": "npm run testonly",
     "testonly": "cross-env NODE_ENV=test jest",
@@ -98,14 +104,21 @@
     "webpack-dev-server": "^3.1.1",
     "webpack-merge": "^4.1.1"
   },
+  "keywords": [
+    "App",
+    "Electron",
+    "Menubar",
+    "NBA"
+  ],
   "engines": {
     "node": ">= 6",
     "npm": ">= 3"
   },
   "build": {
-    "appId": "org.epilande.yarems",
-    "productName": "NBA Menubar",
+    "appId": "com.nba.bar",
+    "productName": "NBA Bar",
     "directories": {
+      "buildResources": "resources",
       "output": "release"
     },
     "files": [
@@ -115,8 +128,32 @@
       "main.js",
       "package.json"
     ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
     "mac": {
-      "category": "public.app-category.developer-tools"
+      "category": "public.app-category.sports",
+      "icon": "resources/icon.png"
+    },
+    "win": {
+      "icon": "resources/icon.png"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
     }
   },
   "jest": {

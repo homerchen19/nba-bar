@@ -20,10 +20,12 @@ const config = merge(baseConfig, {
     new CleanWebpackPlugin(['dist']),
     new webpack.NormalModuleReplacementPlugin(/\/iconv-loader$/, 'node-noop'),
     new UglifyJsPlugin({
-      comments: false,
-      compress: {
-        warnings: false,
-        drop_console: true,
+      uglifyOptions: {
+        comments: false,
+        compress: {
+          warnings: false,
+          drop_console: true,
+        },
       },
     }),
     new webpack.DefinePlugin({
