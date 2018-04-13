@@ -26,8 +26,8 @@ const installExtensions = async () => {
   ).catch(console.log);
 };
 
-const createAboutPage = () => {
-  const aboutPage = new BrowserWindow({
+const createAboutWindow = () => {
+  const aboutWindow = new BrowserWindow({
     title: 'About',
     y: 0,
     width: 285,
@@ -47,15 +47,17 @@ const createAboutPage = () => {
     <p style="margin: 10px; font-size: 12px;">Copyright © 2018 xxhomey19</p>
   </body>`;
 
-  aboutPage.loadURL(`data:text/html;charset=utf-8, ${encodeURI(html)}`);
-  aboutPage.on('close', e => {
-    aboutPage.hide();
+  aboutWindow.loadURL(`data:text/html;charset=utf-8, ${encodeURI(html)}`);
+  aboutWindow.on('close', e => {
+    aboutWindow.hide();
 
     e.preventDefault();
   });
 
-  return aboutPage;
+  return aboutWindow;
 };
+
+let aboutWindow;
 
 const mb = menubar({
   alwaysOnTop: process.env.NODE_ENV === 'development',
@@ -78,16 +80,16 @@ mb.on('ready', async () => {
     mb.window.reload();
   });
 
+  aboutWindow = createAboutWindow();
+
   console.log('app is ready');
 });
 
 mb.on('after-create-window', () => {
-  const aboutPage = createAboutPage();
-
   const contextMenu = Menu.buildFromTemplate([
     {
       label: 'About NBA Bar',
-      click: () => aboutPage.show(),
+      click: () => aboutWindow.show(),
     },
     {
       type: 'separator',
@@ -114,6 +116,11 @@ mb.on('focus-lost', () => {
   if (process.env.NODE_ENV !== 'development') {
     mb.app.hide();
   }
+});
+
+mb.app.on('before-quit', () => {
+  aboutWindow.removeAllListeners('close');
+  aboutWindow.close();
 });
 
 mb.app.on('will-quit', () => {
