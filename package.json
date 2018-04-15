@@ -13,7 +13,7 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js --progress",
     "precommit": "lint-staged",
     "dev": "cross-env NODE_ENV=development concurrently -k './node_modules/.bin/webpack-dev-server --config ./webpack.config.development.js' 'npm start'",
-    "dist": "npm run build && electron-builder --mac --linux --win",
+    "dist": "npm run build && rimraf release && build --mac",
     "postinstall": "electron-builder install-app-deps",
     "lint": "eslint src",
     "lint:css": "stylelint './src/**/*.js, !**/__tests__/**'",
@@ -33,6 +33,7 @@
     "date-fns": "^1.29.0",
     "electron-debug": "^1.5.0",
     "electron-devtools-installer": "^2.2.3",
+    "electron-updater": "^2.21.4",
     "fix-path": "^2.1.0",
     "menubar": "^5.2.3",
     "moment-timezone": "^0.5.14",
@@ -74,7 +75,7 @@
     "css-loader": "^0.28.11",
     "devtron": "^1.4.0",
     "electron": "^1.8.4",
-    "electron-builder": "^20.5.1",
+    "electron-builder": "^20.8.1",
     "eslint": "^4.19.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -93,6 +94,7 @@
     "prettier": "^1.11.1",
     "prettier-package-json": "^1.5.1",
     "react-test-renderer": "^16.3.1",
+    "rimraf": "^2.6.2",
     "style-loader": "^0.20.3",
     "stylelint": "^9.1.3",
     "stylelint-config-styled-components": "^0.1.1",
@@ -106,6 +108,7 @@
   },
   "keywords": [
     "App",
+    "Bar",
     "Electron",
     "Menubar",
     "NBA"
@@ -142,18 +145,26 @@
         }
       ]
     },
+    "publish": {
+      "provider": "github",
+      "repo": "nba-bar",
+      "owner": "xxhomey19"
+    },
     "mac": {
       "category": "public.app-category.sports",
-      "icon": "resources/icon.png"
+      "icon": "resources/icon.png",
+      "artifactName": "nba-bar-${version}-mac.${ext}"
     },
     "win": {
-      "icon": "resources/icon.png"
+      "icon": "resources/icon.png",
+      "artifactName": "nba-bar-${version}-win.${ext}"
     },
     "linux": {
       "target": [
         "AppImage",
         "deb"
-      ]
+      ],
+      "artifactName": "nba-bar-${version}-linux.${ext}"
     }
   },
   "jest": {

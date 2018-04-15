@@ -6,12 +6,17 @@ const {
   Menu,
   shell,
   BrowserWindow,
+  dialog,
+  Notification,
 } = require('electron');
 const menubar = require('menubar');
+const { autoUpdater } = require('electron-updater');
 
 require('fix-path')();
 
-if (process.env.NODE_ENV === 'development') {
+const isDev = process.env.NODE_ENV === 'development';
+
+if (isDev) {
   require('electron-debug')({ showDevTools: true });
 }
 
@@ -34,7 +39,7 @@ const createAboutWindow = () => {
     height: 165,
     backgroundColor: '#f7f7f7',
     show: false,
-    resizable: process.env.NODE_ENV === 'development',
+    resizable: isDev,
     minimizable: false,
     maximizable: false,
     fullscreenable: false,
@@ -60,19 +65,19 @@ const createAboutWindow = () => {
 let aboutWindow;
 
 const mb = menubar({
-  alwaysOnTop: process.env.NODE_ENV === 'development',
+  alwaysOnTop: isDev,
   icon: path.join(app.getAppPath(), 'resources/menubarDefaultTemplate.png'),
   minWidth: 300,
-  maxWidth: process.env.NODE_ENV === 'development' ? undefined : 300,
+  maxWidth: isDev ? undefined : 300,
   minHeight: 465,
-  maxHeight: process.env.NODE_ENV === 'development' ? undefined : 465,
+  maxHeight: isDev ? undefined : 465,
   preloadWindow: true,
-  resizable: process.env.NODE_ENV === 'development',
+  resizable: isDev,
   movable: false,
 });
 
 mb.on('ready', async () => {
-  if (process.env.NODE_ENV === 'development') {
+  if (isDev) {
     await installExtensions();
   }
 
@@ -80,16 +85,32 @@ mb.on('ready', async () => {
     mb.window.reload();
   });
 
-  aboutWindow = createAboutWindow();
-
   console.log('app is ready');
 });
 
 mb.on('after-create-window', () => {
+  aboutWindow = createAboutWindow();
+
   const contextMenu = Menu.buildFromTemplate([
     {
       label: 'About NBA Bar',
       click: () => aboutWindow.show(),
+    },
+    {
+      type: 'separator',
+    },
+    {
+      label: 'Check for Updates…',
+      click: item => {
+        // eslint-disable-next-line no-param-reassign
+        item.enabled = false;
+
+        if (!isDev) {
+          autoUpdater.checkForUpdates();
+        } else {
+          console.log('autoUpdater is only available in production');
+        }
+      },
     },
     {
       type: 'separator',
@@ -128,5 +149,44 @@ mb.app.on('will-quit', () => {
 });
 
 ipcMain.on('quit', () => {
-  app.quit();
+  mb.app.quit();
+});
+
+autoUpdater.on('error', error => {
+  dialog.showErrorBox(
+    'Update Failed: ',
+    error == null ? 'unknown' : (error.stack || error).toString()
+  );
+});
+
+autoUpdater.on('update-not-available', () => {
+  new Notification({
+    title: 'No updates available!',
+    body: `You are running the latest version of ${mb.app.getName()} 🎉`,
+  }).show();
+});
+
+autoUpdater.on('update-downloaded', () => {
+  const message =
+    'It will be installed the next time you restart the application.';
+
+  dialog.showMessageBox(
+    {
+      type: 'question',
+      buttons: ['Install and Relaunch', 'Later'],
+      defaultId: 0,
+      message: `An update for ${app.getName()} is available 🎉`,
+      detail: message,
+    },
+    response => {
+      if (response === 0) {
+        setImmediate(() => {
+          mb.app.removeAllListeners('window-all-closed');
+
+          autoUpdater.quitAndInstall(false);
+          mb.app.quit();
+        });
+      }
+    }
+  );
 });

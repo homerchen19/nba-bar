@@ -21,9 +21,7 @@ const config = merge(baseConfig, {
     new webpack.NormalModuleReplacementPlugin(/\/iconv-loader$/, 'node-noop'),
     new UglifyJsPlugin({
       uglifyOptions: {
-        comments: false,
         compress: {
-          warnings: false,
           drop_console: true,
         },
       },
