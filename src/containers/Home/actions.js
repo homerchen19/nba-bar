@@ -52,6 +52,7 @@ const pickEssentialProps = gameData => ({
     gameClock: gameData.period_time.game_clock,
     gameStatus: gameData.period_time.game_status,
   },
+  playoffs: gameData.playoffs,
 });
 
 export const updateScheduleDataByGameId = (date, gameId) => async (

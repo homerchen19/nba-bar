@@ -11,6 +11,7 @@ const Wrapper = styled(Card)`
   width: 100%;
   margin: 5px 0;
   padding: 0 !important;
+  flex: 1 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease;
@@ -21,11 +22,28 @@ const Wrapper = styled(Card)`
   }
 `;
 
+const CardHeader = styled(Card.Header)`
+  padding: 7px 0 !important;
+  flex: 1 0 !important;
+`;
+
 const CardBody = styled(Card.Body)`
-  display: flex;
+  padding: 0 !important;
+  flex: 1 0 !important;
+`;
+
+const CardFooter = styled(Card.Footer)`
+  padding: 0 !important;
+  border-top: 1px solid ${colors.white};
+  flex: 1 0 !important;
+`;
+
+const Footer = styled.div`
   width: 100%;
-  padding: 1px 1px 0 0 !important;
-  flex-direction: column;
+  padding: 5px 0 !important;
+  flex: 1 0;
+  color: ${colors.black};
+  text-align: center;
 `;
 
 const GameStatus = styled.div`
@@ -40,6 +58,7 @@ const TeamContent = styled(Flex)`
   width: 100%;
   padding: 8px 15px;
   border-bottom: 1px solid ${colors.white};
+  flex: 1 0;
   background: linear-gradient(
     to right,
     ${props => props.background} 80%,
@@ -91,8 +110,27 @@ class MatchCard extends Component {
     }
   };
 
+  renderFooter = () => {
+    const { home, visitor, playoffs } = this.props.data;
+    const { home_wins: homeWins, visitor_wins: visitorWins } = playoffs;
+
+    let seriesScore = `Series tied ${homeWins}-${visitorWins}`;
+
+    if (+homeWins > +visitorWins) {
+      seriesScore = `${home.nickname} leads ${homeWins}-${visitorWins}`;
+    } else if (+homeWins < +visitorWins) {
+      seriesScore = `${visitor.nickname} leads ${visitorWins}-${homeWins}`;
+    }
+
+    return (
+      <Footer>
+        <p>{seriesScore}</p>
+      </Footer>
+    );
+  };
+
   render() {
-    const { periodTime, home, visitor } = this.props.data;
+    const { periodTime, home, visitor, playoffs } = this.props.data;
     let winner = 'draw';
 
     if (home.score !== visitor.score) {
@@ -101,7 +139,7 @@ class MatchCard extends Component {
 
     return (
       <Wrapper onClick={this.props.onClick}>
-        <Card.Header
+        <CardHeader
           title={
             <GameStatus>
               <span>
@@ -114,7 +152,7 @@ class MatchCard extends Component {
         />
         <CardBody>
           <TeamContent
-            align="start"
+            align="center"
             justify="between"
             background={getMainColor(home.team_key).hex}
           >
@@ -124,16 +162,22 @@ class MatchCard extends Component {
             </TeamScore>
           </TeamContent>
           <TeamContent
-            align="start"
+            align="center"
             justify="between"
             background={getMainColor(visitor.team_key).hex}
+            style={{
+              borderBottom: 0,
+              borderRadius: !playoffs && '0 0 10px',
+            }}
           >
             <TeamName>{visitor.nickname}</TeamName>
             <TeamScore winner={winner === 'visitor'}>
               {visitor.score === '' ? 0 : visitor.score}
             </TeamScore>
           </TeamContent>
+          {}
         </CardBody>
+        {playoffs && <CardFooter content={this.renderFooter()} />}
       </Wrapper>
     );
   }

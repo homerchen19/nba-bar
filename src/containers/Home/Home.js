@@ -11,7 +11,6 @@ import { Spinner } from '../../components/Loader';
 const DataSection = styled.section`
   display: flex;
   width: 100%;
-  height: 100%;
   margin-top: 30px;
   flex-direction: column;
   overflow-y: scroll !important;
@@ -23,6 +22,7 @@ const DataSection = styled.section`
 
 const NoGame = styled.div`
   display: flex;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
   flex: 1;

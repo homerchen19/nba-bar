@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { colors } from '../../styles/theme';
 
 const Wrapper = styled(Flex)`
-  width: 100%;
+  width: 100vh;
   height: 100%;
   flex: 1;
 `;
@@ -43,7 +43,6 @@ class Error extends PureComponent {
           </span>
         </Text>
         <Text>
-          Check internet or{' '}
           <Report
             onClick={() => {
               app.hide();
