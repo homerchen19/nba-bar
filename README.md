@@ -1,4 +1,5 @@
 <p align="center">
+  <br />
   <img src="https://user-images.githubusercontent.com/12113222/38729733-7c14e52e-3f46-11e8-9694-27e7105c8e01.png" height="128">
   <h3 align="center">NBA Bar</h3>
   <p align="center">The best NBA menubar App.</p>
@@ -28,6 +29,14 @@
 ### Live ⭐⭐⭐
 
 All ongoing game's score, play-by-play, box score and time period will be updated automatically.
+
+The GIF has been accelerated 5 times.  
+<br />
+
+<p align="center">
+  <img width="300" alt="gif" src="https://user-images.githubusercontent.com/12113222/38775091-0543d4b6-40ac-11e8-989f-104ee098637d.gif">
+</p>
+<br />
 
 ### Preview
 
@@ -67,8 +76,8 @@ $ npm run dev
 
 ## 🔗 Related repo
 
-* [nba-go](https://github.com/xxhomey19/nba-go)
-* [nba-color](https://github.com/xxhomey19/nba-color)
+* [nba-go](https://github.com/xxhomey19/nba-go): The finest NBA CLI.
+* [nba-color](https://github.com/xxhomey19/nba-color): NPM library which shows all NBA team's color.
 
 ## License
 
