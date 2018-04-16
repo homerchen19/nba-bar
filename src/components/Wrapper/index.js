@@ -5,11 +5,11 @@ import styled from 'styled-components';
 
 import { colors } from '../../styles/theme';
 import calendarWhiteIcon from '../../../resources/calendar_white.svg';
-import calendarBlackIcon from '../../../resources/calendar_black.svg';
+import calendarGreyIcon from '../../../resources/calendar_grey.svg';
 import trophyWhiteIcon from '../../../resources/trophy_white.svg';
-import trophyBlackIcon from '../../../resources/trophy_black.svg';
+import trophyBlackIcon from '../../../resources/trophy_grey.svg';
 import settingsWhiteIcon from '../../../resources/settings_white.svg';
-import settingsBlackIcon from '../../../resources/settings_black.svg';
+import settingsBlackIcon from '../../../resources/settings_grey.svg';
 
 const Layout = styled.div`
   position: fixed;
@@ -41,13 +41,13 @@ const Wrapper = ({ currentTab, history, schedule, standings, settings }) => (
     <TabBar
       tintColor={colors.white}
       barTintColor={colors.blue}
-      unselectedTintColor={colors.black}
+      unselectedTintColor={colors.liteGrey}
     >
       <TabBar.Item
         key="Schedule"
         title={<Title>Schedule</Title>}
         selected={currentTab === 1}
-        icon={<Icon url={calendarBlackIcon} />}
+        icon={<Icon url={calendarGreyIcon} />}
         selectedIcon={<Icon url={calendarWhiteIcon} />}
         onPress={() => {
           history.push(`/`);
