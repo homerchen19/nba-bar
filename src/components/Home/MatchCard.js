@@ -23,7 +23,7 @@ const Wrapper = styled(Card)`
 `;
 
 const CardHeader = styled(Card.Header)`
-  padding: 7px 0 !important;
+  padding: 6px 0 !important;
   flex: 1 0 !important;
 `;
 
@@ -40,7 +40,7 @@ const CardFooter = styled(Card.Footer)`
 
 const Footer = styled.div`
   width: 100%;
-  padding: 5px 0 !important;
+  padding: 4px 0 !important;
   flex: 1 0;
   color: ${colors.black};
   text-align: center;

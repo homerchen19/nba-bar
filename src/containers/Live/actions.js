@@ -1,4 +1,6 @@
 import R from 'ramda';
+import getTime from 'date-fns/get_time';
+import moment from 'moment-timezone';
 
 import {
   REQUEST_START,
@@ -30,12 +32,19 @@ export const fetchData = ({ date, gameId, firstCall }) => async dispatch => {
   }
 
   try {
+    const apiDate = getTime(
+      moment
+        .tz(date, 'America/New_York')
+        .startOf('day')
+        .format()
+    );
+
     const {
       sports_content: { game: _gameBoxScoreData },
-    } = await nba.getBoxScoreFromDate(date, gameId);
+    } = await nba.getBoxScoreFromDate(apiDate, gameId);
     const {
       sports_content: { game: { play: gamePlayByPlayData } },
-    } = await nba.getPlayByPlayFromDate(date, gameId);
+    } = await nba.getPlayByPlayFromDate(apiDate, gameId);
 
     const gameBoxScoreData = pickEssentialProps(_gameBoxScoreData);
 

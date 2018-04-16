@@ -1,6 +1,3 @@
-import moment from 'moment-timezone';
-import getTime from 'date-fns/get_time';
-
 import {
   REQUEST_START,
   REQUEST_SUCCESS,
@@ -9,12 +6,7 @@ import {
 } from './constants';
 
 const initialState = {
-  date: getTime(
-    moment
-      .tz(Date.now(), 'America/Los_Angeles')
-      .startOf('day')
-      .format()
-  ),
+  date: Date.now(),
   loading: true,
   scheduleData: [],
 };

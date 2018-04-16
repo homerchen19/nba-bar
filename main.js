@@ -133,12 +133,6 @@ mb.on('after-create-window', () => {
   });
 });
 
-mb.on('focus-lost', () => {
-  if (process.env.NODE_ENV !== 'development') {
-    mb.app.hide();
-  }
-});
-
 mb.app.on('before-quit', () => {
   aboutWindow.removeAllListeners('close');
   aboutWindow.close();

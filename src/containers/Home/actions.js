@@ -2,6 +2,8 @@ import R from 'ramda';
 import addDays from 'date-fns/add_days';
 import subDays from 'date-fns/sub_days';
 import getTime from 'date-fns/get_time';
+import format from 'date-fns/format';
+import moment from 'moment-timezone';
 
 import {
   REQUEST_START,
@@ -38,6 +40,14 @@ const getSeason = date => {
   return season;
 };
 
+const getValidTime = R.pipe(
+  R.insert(4, '-'),
+  R.insert(7, '-'),
+  R.insert(10, ' '),
+  R.insert(13, ':'),
+  R.join('')
+);
+
 const pickEssentialProps = gameData => ({
   id: gameData.id,
   season: getSeason(gameData.date),
@@ -48,21 +58,40 @@ const pickEssentialProps = gameData => ({
   home: gameData.home,
   visitor: gameData.visitor,
   periodTime: {
-    periodStatus: gameData.period_time.period_status,
+    periodStatus:
+      gameData.period_time.game_status === '1'
+        ? format(
+            moment.tz(
+              getValidTime(`${gameData.date}${gameData.time}`),
+              'America/New_York'
+            ),
+            'HH:mm A'
+          )
+        : gameData.period_time.period_status,
     gameClock: gameData.period_time.game_clock,
     gameStatus: gameData.period_time.game_status,
   },
   playoffs: gameData.playoffs,
 });
 
+const getApiDate = date =>
+  getTime(
+    moment
+      .tz(date, 'America/New_York')
+      .startOf('day')
+      .format()
+  );
+
 export const updateScheduleDataByGameId = (date, gameId) => async (
   dispatch,
   getState
 ) => {
   try {
+    const apiDate = getApiDate(date);
+
     const {
       sports_content: { game: _gameData },
-    } = await nba.getBoxScoreFromDate(date, gameId);
+    } = await nba.getBoxScoreFromDate(apiDate, gameId);
     const { home: { scheduleData: _scheduleData } } = getState();
 
     const gameData = pickEssentialProps(_gameData);
@@ -104,9 +133,11 @@ export const fetchData = (date, type) => async dispatch => {
   dispatch(setDate({ date: newDate }));
 
   try {
+    const apiDate = getApiDate(newDate);
+
     const {
       sports_content: { games: { game: gamesData } },
-    } = await nba.getGamesFromDate(newDate);
+    } = await nba.getGamesFromDate(apiDate);
 
     const scheduleData = R.map(pickEssentialProps, gamesData);
 
