@@ -15,6 +15,8 @@
 
 ## 🔽 Get NBA Bar
 
+Recently support **macOS** and **Windows**.
+
 [Download the latest release](https://github.com/xxhomey19/nba-bar/releases)
 
 ## 🖥️ Screenshots
@@ -38,17 +40,17 @@ The GIF has been accelerated 5 times.
 </p>
 <br />
 
-### Preview
-
-Click a future match. Compare two teams' season stats easily.
-
 ### Schedule
 
-Select a date, and NBA Bar will show the game schedule for that date.
+Select a date, and NBA Bar will show the game schedule for that date, including information on game time, result and more.
 
 ### Standings
 
 Display two conferences' regular season standings.
+
+### Preview
+
+Click a future match. Compare two teams' season stats easily.
 
 ## 🛠️ Development
 
@@ -78,6 +80,10 @@ $ npm run dev
 
 * [nba-go](https://github.com/xxhomey19/nba-go): The finest NBA CLI.
 * [nba-color](https://github.com/xxhomey19/nba-color): NPM library which shows all NBA team's color.
+
+If you like NBA Bar, I'd be glad to accept your support 🙂
+
+<a href="https://www.buymeacoffee.com/jtPpviOzh" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 ## License
 
