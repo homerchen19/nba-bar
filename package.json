@@ -13,7 +13,7 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js --progress",
     "precommit": "lint-staged",
     "dev": "cross-env NODE_ENV=development concurrently -k './node_modules/.bin/webpack-dev-server --config ./webpack.config.development.js' 'npm start'",
-    "dist": "npm run build && rimraf release && build --mac --win --linux",
+    "dist": "npm run build && rimraf release && build --mac --win",
     "postinstall": "electron-builder install-app-deps",
     "lint": "eslint src",
     "lint:css": "stylelint './src/**/*.js, !**/__tests__/**'",
@@ -158,13 +158,6 @@
     "win": {
       "icon": "resources/icon.png",
       "artifactName": "nba-bar-${version}-win.${ext}"
-    },
-    "linux": {
-      "target": [
-        "AppImage",
-        "deb"
-      ],
-      "artifactName": "nba-bar-${version}-linux.${ext}"
     }
   },
   "jest": {

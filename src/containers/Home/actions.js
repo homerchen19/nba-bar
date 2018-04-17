@@ -11,8 +11,8 @@ import {
   REQUEST_ERROR,
   SET_DATE,
 } from './constants';
-
 import nba from '../../utils/nba';
+import getApiDate from '../../utils/getApiDate';
 
 const requestStart = () => ({ type: REQUEST_START });
 const requestError = () => ({ type: REQUEST_ERROR });
@@ -73,14 +73,6 @@ const pickEssentialProps = gameData => ({
   },
   playoffs: gameData.playoffs,
 });
-
-const getApiDate = date =>
-  getTime(
-    moment
-      .tz(date, 'America/New_York')
-      .startOf('day')
-      .format()
-  );
 
 export const updateScheduleDataByGameId = (date, gameId) => async (
   dispatch,
