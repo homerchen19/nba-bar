@@ -1,4 +1,5 @@
 import moment from 'moment-timezone';
+import getTime from 'date-fns/get_time';
 
 import getApiDate from '../getApiDate';
 
@@ -21,20 +22,20 @@ describe('getApiDate', () => {
     const date = getDateByCity('Asia/Taipei');
 
     expect(date).toBe('2018-04-21T11:24:07+08:00');
-    expect(getApiDate(date)).toBe(1524196800000);
+    expect(getApiDate(getTime(date))).toBe(1524196800000);
   });
 
   it('should work fine in GMT+01:00', () => {
     const date = getDateByCity('Europe/London');
 
     expect(date).toBe('2018-04-21T04:24:07+01:00');
-    expect(getApiDate(date)).toBe(1524196800000);
+    expect(getApiDate(getTime(date))).toBe(1524196800000);
   });
 
   it('should work fine in GMT-07:00', () => {
     const date = getDateByCity('America/Los_Angeles');
 
     expect(date).toBe('2018-04-20T20:24:07-07:00');
-    expect(getApiDate(date)).toBe(1524196800000);
+    expect(getApiDate(getTime(date))).toBe(1524196800000);
   });
 });

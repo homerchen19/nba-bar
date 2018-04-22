@@ -94,7 +94,7 @@ const renderTeamBoxScoreTable = team => (
             fontWeight: '500',
           }}
         >
-          {player.last_name}
+          {player.last_name === '' ? player.first_name : player.last_name}
         </StyledCell>
         <StyledCell key="MIN">{player.minutes}</StyledCell>
         <StyledCell key="PTS">{player.points}</StyledCell>
