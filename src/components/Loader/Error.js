@@ -32,7 +32,10 @@ const Report = styled.a`
 
 class Error extends PureComponent {
   render() {
-    const { remote: { app }, shell } = window.require('electron');
+    const {
+      remote: { app },
+      shell,
+    } = window.require('electron');
 
     return (
       <Wrapper justify="center" direction="column">

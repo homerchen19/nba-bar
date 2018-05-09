@@ -11,7 +11,7 @@ Array [
     }
   >
     <button
-      className="BoxScore__Button-fJbqjU gMNDKv"
+      className="BoxScore__Button-fJbqjU fICwLV"
       onClick={[Function]}
       selected={true}
       style={
@@ -23,7 +23,7 @@ Array [
       IND
     </button>
     <button
-      className="BoxScore__Button-fJbqjU liExjX"
+      className="BoxScore__Button-fJbqjU lkcbhB"
       onClick={[Function]}
       selected={false}
       style={
@@ -36,12 +36,11 @@ Array [
     </button>
   </div>,
   <div
-    className="am-flexbox BoxScore__Wrapper-iYJCii ikeaQs am-flexbox-align-center"
+    className="am-flexbox BoxScore__Wrapper-iYJCii kXoevo am-flexbox-align-center"
     style={undefined}
   >
     <div
       className="sticky-table "
-      id="sticky-table-500000000"
     >
       <div
         className="x-scrollbar"
@@ -63,7 +62,7 @@ Array [
             className="sticky-table-table "
           >
             <div
-              className="sticky-table-row "
+              className="sticky-table-row sticky-table-row "
               id=""
             >
               <div
@@ -83,7 +82,7 @@ Array [
             className="sticky-table-table "
           >
             <div
-              className="sticky-table-row "
+              className="sticky-table-row sticky-table-row "
               id=""
             >
               <div
@@ -177,7 +176,7 @@ Array [
             className="sticky-table-table "
           >
             <div
-              className="sticky-table-row "
+              className="sticky-table-row sticky-table-row "
               id=""
             >
               <div
@@ -202,7 +201,7 @@ Array [
             className="sticky-table-table "
           >
             <div
-              className="sticky-table-row "
+              className="sticky-table-row sticky-table-row "
               id=""
             >
               <div

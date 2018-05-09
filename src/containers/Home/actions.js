@@ -84,7 +84,9 @@ export const updateScheduleDataByGameId = (date, gameId) => async (
     const {
       sports_content: { game: _gameData },
     } = await nba.getBoxScoreFromDate(apiDate, gameId);
-    const { home: { scheduleData: _scheduleData } } = getState();
+    const {
+      home: { scheduleData: _scheduleData },
+    } = getState();
 
     const gameData = pickEssentialProps(_gameData);
     const scheduleData = R.map(data => {
@@ -128,7 +130,9 @@ export const fetchData = (date, type) => async dispatch => {
     const apiDate = getApiDate(newDate);
 
     const {
-      sports_content: { games: { game: gamesData } },
+      sports_content: {
+        games: { game: gamesData },
+      },
     } = await nba.getGamesFromDate(apiDate);
 
     const scheduleData = R.map(pickEssentialProps, gamesData);

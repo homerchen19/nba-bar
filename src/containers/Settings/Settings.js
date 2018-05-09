@@ -8,7 +8,10 @@ import { List } from '../../components/Settings';
 class Settings extends Component {
   render() {
     const { history } = this.props;
-    const { remote: { app }, shell } = window.require('electron');
+    const {
+      remote: { app },
+      shell,
+    } = window.require('electron');
 
     return (
       <Wrapper

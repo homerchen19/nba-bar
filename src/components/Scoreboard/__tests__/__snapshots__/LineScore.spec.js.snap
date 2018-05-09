@@ -7,7 +7,6 @@ exports[`match snapshot 1`] = `
 >
   <div
     className="sticky-table "
-    id="sticky-table-500000000"
   >
     <div
       className="x-scrollbar"
@@ -47,7 +46,7 @@ exports[`match snapshot 1`] = `
           className="sticky-table-table "
         >
           <div
-            className="sticky-table-row "
+            className="sticky-table-row sticky-table-row "
             id=""
           >
             <div
@@ -55,7 +54,7 @@ exports[`match snapshot 1`] = `
             />
           </div>
           <div
-            className="sticky-table-row "
+            className="sticky-table-row sticky-table-row "
             id=""
           >
             <div
@@ -75,7 +74,7 @@ exports[`match snapshot 1`] = `
             </div>
           </div>
           <div
-            className="sticky-table-row "
+            className="sticky-table-row sticky-table-row "
             id=""
           >
             <div
@@ -103,7 +102,7 @@ exports[`match snapshot 1`] = `
           className="sticky-table-table "
         >
           <div
-            className="sticky-table-row "
+            className="sticky-table-row sticky-table-row "
             id=""
           >
             <div
@@ -143,7 +142,7 @@ exports[`match snapshot 1`] = `
             </div>
           </div>
           <div
-            className="sticky-table-row "
+            className="sticky-table-row sticky-table-row "
             id=""
           >
             <div
@@ -173,7 +172,7 @@ exports[`match snapshot 1`] = `
             </div>
           </div>
           <div
-            className="sticky-table-row "
+            className="sticky-table-row sticky-table-row "
             id=""
           >
             <div

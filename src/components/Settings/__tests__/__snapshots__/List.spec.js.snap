@@ -2,7 +2,7 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="am-flexbox List__Wrapper-fBZEGJ dUPBZT am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
+  className="am-flexbox List__Wrapper-fBZEGJ cEVkii am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
   style={undefined}
 >
   <div

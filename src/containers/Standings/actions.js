@@ -42,9 +42,13 @@ export const fetchData = () => async (dispatch, getState) => {
       date: 'current',
     });
 
-    const { home: { date } } = getState();
+    const {
+      home: { date },
+    } = getState();
 
-    const { league: { standard: allTeams } } = await nba.teams({
+    const {
+      league: { standard: allTeams },
+    } = await nba.teams({
       year: getCorrectYear(date),
     });
 
