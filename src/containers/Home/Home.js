@@ -10,10 +10,10 @@ import { Spinner } from '../../components/Loader';
 
 const DataSection = styled.section`
   display: flex;
+  overflow-y: scroll !important;
   width: 100%;
   margin-top: 30px;
   flex-direction: column;
-  overflow-y: scroll !important;
 
   ::-webkit-scrollbar {
     display: none;

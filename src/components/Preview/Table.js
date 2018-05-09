@@ -8,12 +8,12 @@ import { colors } from '../../styles/theme';
 
 const Wrapper = styled.div`
   display: block;
+  overflow-y: scroll !important;
   width: 100%;
   border-top: 1px solid ${colors.white};
   border-bottom: 1px solid ${colors.white};
   flex: 3;
   background: #fff;
-  overflow-y: scroll !important;
 
   ::-webkit-scrollbar {
     display: none;

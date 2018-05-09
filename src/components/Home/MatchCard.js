@@ -13,8 +13,8 @@ const Wrapper = styled(Card)`
   padding: 0 !important;
   flex: 1 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease;
+  cursor: pointer;
 
   &:hover {
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
@@ -89,7 +89,9 @@ class MatchCard extends Component {
   };
 
   componentDidMount() {
-    const { periodTime: { gameStatus } } = this.props.data;
+    const {
+      periodTime: { gameStatus },
+    } = this.props.data;
 
     if (gameStatus !== '3') {
       this.timer = setInterval(this.fetchLiveData, this.state.interval);
@@ -101,7 +103,9 @@ class MatchCard extends Component {
   }
 
   fetchLiveData = () => {
-    const { periodTime: { gameStatus } } = this.props.data;
+    const {
+      periodTime: { gameStatus },
+    } = this.props.data;
 
     if (gameStatus === '3') {
       clearInterval(this.timer);

@@ -9,8 +9,8 @@ import { getMainColor } from 'nba-color';
 import { colors } from '../../styles/theme';
 
 const Wrapper = styled(Flex)`
-  width: 100%;
   overflow-y: scroll !important;
+  width: 100%;
 
   ::-webkit-scrollbar {
     display: none;

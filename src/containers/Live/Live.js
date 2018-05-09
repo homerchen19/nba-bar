@@ -18,11 +18,11 @@ import {
 
 const DataSection = styled.section`
   display: flex;
+  overflow-y: scroll !important;
   width: 100%;
   height: 100%;
   flex-direction: column;
   align-items: center;
-  overflow-y: scroll !important;
 
   ::-webkit-scrollbar {
     display: none;

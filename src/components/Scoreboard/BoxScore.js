@@ -8,9 +8,9 @@ import { getMainColor } from 'nba-color';
 import { colors } from '../../styles/theme';
 
 const Wrapper = styled(Flex)`
+  overflow-y: scroll !important;
   width: 100%;
   height: 300px;
-  overflow-y: scroll !important;
 
   ::-webkit-scrollbar {
     display: none;
@@ -41,11 +41,11 @@ const Button = styled.button`
   margin: 8px 0;
   border: 1px solid ${colors.white};
   color: ${props => (props.selected ? '#fff' : colors.black)} !important;
+  transition: all ease 0.2s;
   cursor: pointer;
   background-color: ${props =>
     props.selected ? props.background : colors.white} !important;
   opacity: 1;
-  transition: all ease 0.2s;
 
   & :hover {
     ${props =>
