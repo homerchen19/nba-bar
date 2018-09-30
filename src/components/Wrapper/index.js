@@ -36,7 +36,7 @@ const Title = styled.span`
   cursor: pointer;
 `;
 
-const Wrapper = ({ currentTab, history, schedule, standings, settings }) => (
+const Wrapper = ({ currentTab, history, children, standings, settings }) => (
   <Layout>
     <TabBar
       tintColor={colors.white}
@@ -53,7 +53,7 @@ const Wrapper = ({ currentTab, history, schedule, standings, settings }) => (
           history.push(`/`);
         }}
       >
-        <Content direction="column">{schedule}</Content>
+        <Content direction="column">{children}</Content>
       </TabBar.Item>
       <TabBar.Item
         key="Standing"
@@ -86,13 +86,13 @@ const Wrapper = ({ currentTab, history, schedule, standings, settings }) => (
 Wrapper.propTypes = {
   currentTab: PropTypes.number.isRequired,
   history: PropTypes.object.isRequired,
-  schedule: PropTypes.element,
+  children: PropTypes.element,
   settings: PropTypes.element,
   standings: PropTypes.element,
 };
 
 Wrapper.defaultProps = {
-  schedule: <Fragment />,
+  children: <Fragment />,
   settings: <Fragment />,
   standings: <Fragment />,
 };

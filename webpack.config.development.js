@@ -8,7 +8,7 @@ const config = merge(baseConfig, {
   mode: 'development',
 
   entry: [
-    'babel-polyfill',
+    '@babel/polyfill',
     'react-hot-loader/patch',
     path.resolve(__dirname, 'src/index.js'),
   ],

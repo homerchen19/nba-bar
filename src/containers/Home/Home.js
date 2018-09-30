@@ -10,10 +10,10 @@ import { Spinner } from '../../components/Loader';
 
 const DataSection = styled.section`
   display: flex;
-  overflow-y: scroll !important;
+  flex-direction: column;
   width: 100%;
   margin-top: 30px;
-  flex-direction: column;
+  overflow-y: scroll !important;
 
   ::-webkit-scrollbar {
     display: none;
@@ -22,10 +22,10 @@ const DataSection = styled.section`
 
 const NoGame = styled.div`
   display: flex;
-  height: 100vh;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
-  flex: 1;
+  height: 100vh;
   text-align: center;
 `;
 
@@ -58,45 +58,41 @@ class Home extends Component {
     } = this.props;
 
     return (
-      <Wrapper
-        currentTab={1}
-        history={history}
-        schedule={
-          <Fragment>
-            <DateSelector
-              date={date}
-              addDay={() => fetchData(date, 'add')}
-              subDay={() => fetchData(date, 'sub')}
-            />
-            <DataSection>
-              {loading && <Spinner />}
-              {!loading &&
-                scheduleData.length === 0 && (
-                  <NoGame>
-                    <h3>No games available for this date</h3>
-                  </NoGame>
-                )}
-              {!loading &&
-                scheduleData.length !== 0 &&
-                scheduleData.map(game => (
-                  <MatchCard
-                    key={game.id}
-                    data={game}
-                    onClick={() => {
-                      const gameId = game.id;
-                      const path = this.getPath(game.periodTime.gameStatus);
+      <Wrapper currentTab={1} history={history}>
+        <Fragment>
+          <DateSelector
+            date={date}
+            addDay={() => fetchData(date, 'add')}
+            subDay={() => fetchData(date, 'sub')}
+          />
+          <DataSection>
+            {loading && <Spinner />}
+            {!loading &&
+              scheduleData.length === 0 && (
+                <NoGame>
+                  <h3>No games available for this date</h3>
+                </NoGame>
+              )}
+            {!loading &&
+              scheduleData.length !== 0 &&
+              scheduleData.map(game => (
+                <MatchCard
+                  key={game.id}
+                  data={game}
+                  onClick={() => {
+                    const gameId = game.id;
+                    const path = this.getPath(game.periodTime.gameStatus);
 
-                      this.props.history.push(`/${path}/${gameId}`);
-                    }}
-                    updateScheduleDataByGameId={() =>
-                      updateScheduleDataByGameId(date, game.id)
-                    }
-                  />
-                ))}
-            </DataSection>
-          </Fragment>
-        }
-      />
+                    this.props.history.push(`/${path}/${gameId}`);
+                  }}
+                  updateScheduleDataByGameId={() =>
+                    updateScheduleDataByGameId(date, game.id)
+                  }
+                />
+              ))}
+          </DataSection>
+        </Fragment>
+      </Wrapper>
     );
   }
 }
@@ -116,4 +112,7 @@ const mapStateToProps = state => ({
   scheduleData: state.home.scheduleData,
 });
 
-export default connect(mapStateToProps, actions)(Home);
+export default connect(
+  mapStateToProps,
+  actions
+)(Home);

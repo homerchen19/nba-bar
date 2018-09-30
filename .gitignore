@@ -4,3 +4,4 @@ release
 .vscode
 coverage
 dev-app-update.yml
+.DS_Store
