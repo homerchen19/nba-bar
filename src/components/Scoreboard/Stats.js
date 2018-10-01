@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
-import { StickyTable, Row, Cell } from 'react-sticky-table';
+import { List } from 'react-virtualized';
 
 import { colors } from '../../styles/theme';
-import nba from '../../utils/nba';
 
 const Wrapper = styled(Flex)`
   width: 100%;
@@ -13,69 +12,55 @@ const Wrapper = styled(Flex)`
   background: #fff;
 `;
 
-const StyledCell = styled(Cell)`
+const StyledCell = styled(Flex.Item)`
   padding: 8px 26px;
   border-bottom: 1px solid ${colors.white};
   text-align: center;
 `;
 
-const teamStatsKeys = {
-  'FG%': 'field_goals_percentage',
-  '3P%': 'three_pointers_percentage',
-  'FT%': 'free_throws_percentage',
-  AST: 'assists',
-  REB: '',
-  STL: 'steals',
-  BLK: 'blocks',
-  TOV: 'turnovers',
-  FOUL: 'fouls',
-};
-
-const reanderStatsRow = (homeStats, visitorStats) =>
-  Object.keys(teamStatsKeys).map(key => (
-    <Row key={key}>
-      <StyledCell key="home">
-        {key === 'REB'
-          ? +homeStats.rebounds_offensive + +homeStats.rebounds_defensive
-          : homeStats[teamStatsKeys[key]]}
-      </StyledCell>
-      <StyledCell key="item">
-        <b>{key}</b>
-      </StyledCell>
-      <StyledCell key="visitor">
-        {key === 'REB'
-          ? +visitorStats.rebounds_offensive + +visitorStats.rebounds_defensive
-          : visitorStats[teamStatsKeys[key]]}
-      </StyledCell>
-    </Row>
-  ));
+const teamStatsKeys = [
+  { abbr: 'FG%', key: 'field_goals_percentage' },
+  { abbr: '3P%', key: 'three_pointers_percentage' },
+  { abbr: 'FT%', key: 'free_throws_percentage' },
+  { abbr: 'AST', key: 'assists' },
+  { abbr: 'REB', key: '' },
+  { abbr: 'STL', key: 'steals' },
+  { abbr: 'BLK', key: 'blocks' },
+  { abbr: 'TOV', key: 'turnovers' },
+  { abbr: 'FOUL', key: 'fouls' },
+];
 
 const Stats = ({ home, visitor }) => (
   <Wrapper justify="center">
-    <StickyTable stickyColumnCount={0}>
-      <Row key="header">
-        <StyledCell
-          key="home"
-          style={{
-            color: nba.getTeamBackgroundColor(home.name),
-            fontWeight: '600',
-          }}
-        >
-          {home.name}
-        </StyledCell>
-        <StyledCell />
-        <StyledCell
-          key="visitor"
-          style={{
-            color: nba.getTeamBackgroundColor(visitor.name),
-            fontWeight: '600',
-          }}
-        >
-          {visitor.name}
-        </StyledCell>
-      </Row>
-      {reanderStatsRow(home.stats, visitor.stats)}
-    </StickyTable>
+    <List
+      width={300}
+      height={340}
+      rowCount={teamStatsKeys.length}
+      rowHeight={340 / teamStatsKeys.length}
+      rowRenderer={({ key, index, style }) => {
+        const { abbr, key: statsKey } = teamStatsKeys[index];
+
+        return (
+          <Flex key={key} style={style} justify="center">
+            <StyledCell key="home">
+              {abbr === 'REB'
+                ? +home.stats.rebounds_offensive +
+                  +home.stats.rebounds_defensive
+                : home.stats[statsKey]}
+            </StyledCell>
+            <StyledCell key="item">
+              <b>{abbr}</b>
+            </StyledCell>
+            <StyledCell key="visitor">
+              {abbr === 'REB'
+                ? +visitor.stats.rebounds_offensive +
+                  +visitor.stats.rebounds_defensive
+                : visitor.stats[statsKey]}
+            </StyledCell>
+          </Flex>
+        );
+      }}
+    />
   </Wrapper>
 );
 

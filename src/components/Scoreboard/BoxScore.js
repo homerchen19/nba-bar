@@ -58,28 +58,27 @@ const Button = styled.button`
   }
 `;
 
-const renderHeaderCell = () => {
-  const cells = [
-    'Player',
-    'MIN',
-    'PTS',
-    'REB',
-    'AST',
-    'STL',
-    'BLK',
-    'FG',
-    '3P',
-    'FT',
-    'TO',
-    '+/-',
-  ];
+const cells = [
+  'Player',
+  'MIN',
+  'PTS',
+  'REB',
+  'AST',
+  'STL',
+  'BLK',
+  'FG',
+  '3P',
+  'FT',
+  'TO',
+  '+/-',
+];
 
-  return cells.map(cell => (
+const renderHeaderCell = () =>
+  cells.map(cell => (
     <HeaderCell key={cell}>
       <b>{cell}</b>
     </HeaderCell>
   ));
-};
 
 const renderTeamBoxScoreTable = team => (
   <StickyTable>
