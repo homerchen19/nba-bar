@@ -12,11 +12,11 @@ import { TeamScore, Table } from '../../components/Preview';
 
 const DataSection = styled.section`
   display: flex;
-  overflow-y: scroll !important;
-  width: 100%;
-  height: 100%;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll !important;
 
   ::-webkit-scrollbar {
     display: none;
@@ -100,4 +100,7 @@ const mapStateToProps = (state, ownProps) => ({
   visitorTeamDashboardData: state.preview.visitorTeamDashboardData,
 });
 
-export default connect(mapStateToProps, actions)(Preview);
+export default connect(
+  mapStateToProps,
+  actions
+)(Preview);

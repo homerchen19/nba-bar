@@ -2,14 +2,13 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="DateSelector__Wrapper-cVxsRO hZJXXq"
+  className="DateSelector__Wrapper-sc-6yh5gz-0 hpnoCh"
 >
   <div
     className="am-flexbox am-flexbox-align-center"
-    style={undefined}
   >
     <svg
-      className="DateSelector__Button-ldXrgg eyLdTr am-icon am-icon-left am-icon-md"
+      className="DateSelector__Button-sc-6yh5gz-1 jprsxd am-icon am-icon-left am-icon-md"
       onClick={[MockFunction]}
     >
       <use
@@ -17,17 +16,16 @@ exports[`match snapshot 1`] = `
       />
     </svg>
     <div
-      className="am-flexbox-item DateSelector__Item-Drwhw kiCtlP"
-      style={undefined}
+      className="am-flexbox-item DateSelector__Item-sc-6yh5gz-2 bLLStf"
     >
       <p
-        className="DateSelector__Date-alRPo PzPRF"
+        className="DateSelector__Date-sc-6yh5gz-3 cdLjww"
       >
         06, Apr, 2018
       </p>
     </div>
     <svg
-      className="DateSelector__Button-ldXrgg eyLdTr am-icon am-icon-right am-icon-md"
+      className="DateSelector__Button-sc-6yh5gz-1 jprsxd am-icon am-icon-right am-icon-md"
       onClick={[MockFunction]}
     >
       <use

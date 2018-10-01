@@ -8,11 +8,11 @@ import { colors } from '../../styles/theme';
 
 const Wrapper = styled.div`
   display: block;
-  overflow-y: scroll !important;
+  flex: 3;
   width: 100%;
+  overflow-y: scroll !important;
   border-top: 1px solid ${colors.white};
   border-bottom: 1px solid ${colors.white};
-  flex: 3;
   background: #fff;
 
   ::-webkit-scrollbar {
@@ -21,11 +21,11 @@ const Wrapper = styled.div`
 `;
 
 const Row = styled(Flex)`
+  flex: 1;
   width: 100%;
   padding: 10px 15px;
   border-top: 1px solid ${colors.white};
   border-bottom: 1px solid ${colors.white};
-  flex: 1;
 `;
 
 const Column = styled(Flex.Item)`

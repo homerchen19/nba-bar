@@ -4,8 +4,8 @@ import { Flex, List as AntdList } from 'antd-mobile';
 import styled from 'styled-components';
 
 const Wrapper = styled(Flex)`
-  overflow-y: scroll !important;
   width: 100vw;
+  overflow-y: scroll !important;
 
   ::-webkit-scrollbar {
     display: none;

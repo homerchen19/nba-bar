@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
 import { StickyTable, Row, Cell } from 'react-sticky-table';
-import { getMainColor } from 'nba-color';
 
 import { colors } from '../../styles/theme';
+import nba from '../../utils/nba';
 
 const Wrapper = styled(Flex)`
-  overflow-y: scroll !important;
   width: 100%;
   height: 300px;
+  overflow-y: scroll !important;
 
   ::-webkit-scrollbar {
     display: none;
@@ -40,12 +40,12 @@ const Button = styled.button`
   height: 28px;
   margin: 8px 0;
   border: 1px solid ${colors.white};
+  opacity: 1;
+  background-color: ${props =>
+    props.selected ? props.background : colors.white} !important;
   color: ${props => (props.selected ? '#fff' : colors.black)} !important;
   transition: all ease 0.2s;
   cursor: pointer;
-  background-color: ${props =>
-    props.selected ? props.background : colors.white} !important;
-  opacity: 1;
 
   & :hover {
     ${props =>
@@ -142,7 +142,7 @@ class Boxscore extends Component {
         <Flex justify="center" style={{ background: '#fff' }}>
           <Button
             selected={selected === 'home'}
-            background={getMainColor(home.name).hex}
+            background={nba.getTeamBackgroundColor(home.name)}
             onClick={() => {
               this.toggleTeam(home, 'home');
             }}
@@ -154,7 +154,7 @@ class Boxscore extends Component {
           </Button>
           <Button
             selected={selected === 'visitor'}
-            background={getMainColor(visitor.name).hex}
+            background={nba.getTeamBackgroundColor(visitor.name)}
             onClick={() => {
               this.toggleTeam(visitor, 'visitor');
             }}

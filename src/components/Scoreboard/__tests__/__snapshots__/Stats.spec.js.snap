@@ -2,8 +2,7 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="am-flexbox Stats__Wrapper-gMNrje jplNuA am-flexbox-justify-center am-flexbox-align-center"
-  style={undefined}
+  className="am-flexbox Stats__Wrapper-sc-1ywz1vx-0 daQREe am-flexbox-justify-center am-flexbox-align-center"
 >
   <div
     className="sticky-table "
@@ -44,7 +43,7 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
               style={
                 Object {
                   "color": "#041e42",
@@ -55,10 +54,10 @@ exports[`match snapshot 1`] = `
               IND
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             />
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
               style={
                 Object {
                   "color": "#ffc72d",
@@ -130,19 +129,19 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               53.8
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               <b>
                 FG%
               </b>
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               44.6
             </div>
@@ -152,19 +151,19 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               51.7
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               <b>
                 3P%
               </b>
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               31.0
             </div>
@@ -174,19 +173,19 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               73.3
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               <b>
                 FT%
               </b>
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               95.8
             </div>
@@ -196,19 +195,19 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               32
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               <b>
                 AST
               </b>
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               29
             </div>
@@ -218,19 +217,19 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               47
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               <b>
                 REB
               </b>
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               39
             </div>
@@ -240,19 +239,19 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               11
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               <b>
                 STL
               </b>
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               6
             </div>
@@ -262,19 +261,19 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               3
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               <b>
                 BLK
               </b>
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               5
             </div>
@@ -284,19 +283,19 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               12
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               <b>
                 TOV
               </b>
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               16
             </div>
@@ -306,19 +305,19 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               24
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               <b>
                 FOUL
               </b>
             </div>
             <div
-              className="sticky-table-cell Stats__StyledCell-lisZzp cpHEZL"
+              className="sticky-table-cell Stats__StyledCell-sc-1ywz1vx-1 dOvoUZ"
             >
               14
             </div>

@@ -2,8 +2,7 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="am-flexbox LineScore__Wrapper-hnVFpu gzUTpE am-flexbox-justify-start am-flexbox-align-center"
-  style={undefined}
+  className="am-flexbox LineScore__Wrapper-sc-12k2j1r-0 bRtbHk am-flexbox-justify-start am-flexbox-align-center"
 >
   <div
     className="sticky-table "
@@ -50,7 +49,7 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             />
           </div>
           <div
@@ -58,7 +57,7 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
               style={
                 Object {
                   "backgroundColor": "#041e42",
@@ -67,7 +66,7 @@ exports[`match snapshot 1`] = `
               }
             >
               <p
-                className="LineScore__TeamName-hvtaNo fuYvmh"
+                className="LineScore__TeamName-sc-12k2j1r-2 kQalFi"
               >
                 IND
               </p>
@@ -78,7 +77,7 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
               style={
                 Object {
                   "backgroundColor": "#ffc72d",
@@ -87,7 +86,7 @@ exports[`match snapshot 1`] = `
               }
             >
               <p
-                className="LineScore__TeamName-hvtaNo fuYvmh"
+                className="LineScore__TeamName-sc-12k2j1r-2 kQalFi"
               >
                 GSW
               </p>
@@ -106,35 +105,35 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             >
               <b>
                 Q1
               </b>
             </div>
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             >
               <b>
                 Q2
               </b>
             </div>
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             >
               <b>
                 Q3
               </b>
             </div>
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             >
               <b>
                 Q4
               </b>
             </div>
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             >
               <b>
                 T
@@ -146,27 +145,27 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             >
               27
             </div>
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             >
               35
             </div>
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             >
               35
             </div>
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             >
               29
             </div>
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             >
               126
             </div>
@@ -176,27 +175,27 @@ exports[`match snapshot 1`] = `
             id=""
           >
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             >
               26
             </div>
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             >
               25
             </div>
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             >
               26
             </div>
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             >
               29
             </div>
             <div
-              className="sticky-table-cell LineScore__StyledCell-jCbJuM khKfRv"
+              className="sticky-table-cell LineScore__StyledCell-sc-12k2j1r-1 gURpPR"
             >
               106
             </div>

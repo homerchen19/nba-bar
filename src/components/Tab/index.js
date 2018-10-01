@@ -7,8 +7,8 @@ import { colors } from '../../styles/theme';
 
 const TabTitle = styled.span`
   font-size: 13px;
-  cursor: pointer;
   font-weight: 500;
+  cursor: pointer;
 `;
 
 const Tab = ({ children, titles }) => (

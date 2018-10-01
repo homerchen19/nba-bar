@@ -2,16 +2,14 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="Table__Wrapper-gqNOFZ kfnEGt"
+  className="Table__Wrapper-rjene-0 kDGHNT"
 >
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         78
@@ -19,8 +17,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -30,8 +27,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         79
@@ -39,13 +35,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         48
@@ -53,8 +47,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -64,8 +57,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         49
@@ -73,13 +65,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         30
@@ -87,8 +77,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -98,8 +87,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         30
@@ -107,13 +95,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         109.1
@@ -121,8 +107,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -132,8 +117,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         110.6
@@ -141,13 +125,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         0.47
@@ -155,8 +137,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -166,8 +147,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         0.477
@@ -175,13 +155,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         0.367
@@ -189,8 +167,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -200,8 +177,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         0.371
@@ -209,13 +185,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         0.754
@@ -223,8 +197,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -234,8 +207,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         0.781
@@ -243,13 +215,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         10.8
@@ -257,8 +227,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -268,8 +237,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         8.4
@@ -277,13 +245,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         36.4
@@ -291,8 +257,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -302,8 +267,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         33.7
@@ -311,13 +275,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         47.2
@@ -325,8 +287,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -336,8 +297,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         42.1
@@ -345,13 +305,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         26.8
@@ -359,8 +317,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -370,8 +327,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         23.4
@@ -379,13 +335,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         5.1
@@ -393,8 +347,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -404,8 +357,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         3.9
@@ -413,13 +365,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         8.2
@@ -427,8 +377,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -438,8 +387,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         7.1
@@ -447,13 +395,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         16.7
@@ -461,8 +407,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -472,8 +417,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         13.7
@@ -481,13 +425,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         22.2
@@ -495,8 +437,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -506,8 +447,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         18.7
@@ -515,13 +455,11 @@ exports[`match snapshot 1`] = `
     </div>
   </div>
   <div
-    className="am-flexbox Table__Row-iKjqiJ cGzYiH am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox Table__Row-rjene-1 kzPore am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       align="left"
-      className="am-flexbox-item Table__Column-jkJdkS jaNIBd"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 kVOdDN"
     >
       <p>
         4
@@ -529,8 +467,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="center"
-      className="am-flexbox-item Table__Column-jkJdkS jntFzz"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 bGRvhR"
     >
       <b>
         <p>
@@ -540,8 +477,7 @@ exports[`match snapshot 1`] = `
     </div>
     <div
       align="right"
-      className="am-flexbox-item Table__Column-jkJdkS ozkAj"
-      style={undefined}
+      className="am-flexbox-item Table__Column-rjene-2 jECfFI"
     >
       <p>
         1

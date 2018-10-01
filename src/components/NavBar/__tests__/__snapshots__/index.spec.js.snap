@@ -2,7 +2,7 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="NavBar__Wrapper-bxbnRP khTjOw"
+  className="NavBar__Wrapper-sc-1en1yvc-0 dZzGVK"
 >
   <div
     className="am-navbar am-navbar-dark"
@@ -49,7 +49,7 @@ exports[`match snapshot 1`] = `
       className="am-navbar-title"
     >
       <p
-        className="NavBar__Title-jcYDvr hVhnwc"
+        className="NavBar__Title-sc-1en1yvc-1 hnMWnd"
       >
         PAGE
       </p>

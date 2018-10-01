@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Tab from '../';
+import Tab from '..';
 
 it('be defined', () => {
   expect(Tab).toBeDefined();

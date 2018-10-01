@@ -4,9 +4,9 @@ import R from 'ramda';
 import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
 import { StickyTable, Row, Cell } from 'react-sticky-table';
-import { getMainColor } from 'nba-color';
 
 import { colors } from '../../styles/theme';
+import nba from '../../utils/nba';
 
 const Wrapper = styled(Flex)`
   width: 100%;
@@ -18,8 +18,8 @@ const StyledCell = styled(Cell)`
   padding: 8px 11px;
   border-bottom: 1px solid ${colors.white};
   text-align: ${props => props.align};
-  white-space: pre;
   word-wrap: break-word;
+  white-space: pre;
 `;
 
 const Score = styled.span`
@@ -44,9 +44,9 @@ const reanderPlayByPlayRow = R.compose(
     let visitorColor = '#000';
 
     if (+data.home_score > latestScore.home) {
-      homeColor = getMainColor(data.team_abr).hex;
+      homeColor = nba.getTeamBackgroundColor(data.team_abr);
     } else if (+data.visitor_score > latestScore.visitor) {
-      visitorColor = getMainColor(data.team_abr).hex;
+      visitorColor = nba.getTeamBackgroundColor(data.team_abr);
     }
 
     latestScore.home = +data.home_score;

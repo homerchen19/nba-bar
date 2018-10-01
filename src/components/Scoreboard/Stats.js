@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
 import { StickyTable, Row, Cell } from 'react-sticky-table';
-import { getMainColor } from 'nba-color';
 
 import { colors } from '../../styles/theme';
+import nba from '../../utils/nba';
 
 const Wrapper = styled(Flex)`
   width: 100%;
@@ -56,14 +56,20 @@ const Stats = ({ home, visitor }) => (
       <Row key="header">
         <StyledCell
           key="home"
-          style={{ color: getMainColor(home.name).hex, fontWeight: '600' }}
+          style={{
+            color: nba.getTeamBackgroundColor(home.name),
+            fontWeight: '600',
+          }}
         >
           {home.name}
         </StyledCell>
         <StyledCell />
         <StyledCell
           key="visitor"
-          style={{ color: getMainColor(visitor.name).hex, fontWeight: '600' }}
+          style={{
+            color: nba.getTeamBackgroundColor(visitor.name),
+            fontWeight: '600',
+          }}
         >
           {visitor.name}
         </StyledCell>

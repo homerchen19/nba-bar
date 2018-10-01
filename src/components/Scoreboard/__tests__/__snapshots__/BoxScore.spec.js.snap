@@ -11,7 +11,7 @@ Array [
     }
   >
     <button
-      className="BoxScore__Button-fJbqjU fICwLV"
+      className="BoxScore__Button-sc-1261dsa-3 hbGzxg"
       onClick={[Function]}
       selected={true}
       style={
@@ -23,7 +23,7 @@ Array [
       IND
     </button>
     <button
-      className="BoxScore__Button-fJbqjU lkcbhB"
+      className="BoxScore__Button-sc-1261dsa-3 kYgTJm"
       onClick={[Function]}
       selected={false}
       style={
@@ -36,8 +36,7 @@ Array [
     </button>
   </div>,
   <div
-    className="am-flexbox BoxScore__Wrapper-iYJCii kXoevo am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox BoxScore__Wrapper-sc-1261dsa-0 kbOYwp am-flexbox-align-center"
   >
     <div
       className="sticky-table "
@@ -66,7 +65,7 @@ Array [
               id=""
             >
               <div
-                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+                className="sticky-table-cell BoxScore__HeaderCell-sc-1261dsa-1 ecwmCV"
               >
                 <b>
                   Player
@@ -86,77 +85,77 @@ Array [
               id=""
             >
               <div
-                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+                className="sticky-table-cell BoxScore__HeaderCell-sc-1261dsa-1 ecwmCV"
               >
                 <b>
                   MIN
                 </b>
               </div>
               <div
-                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+                className="sticky-table-cell BoxScore__HeaderCell-sc-1261dsa-1 ecwmCV"
               >
                 <b>
                   PTS
                 </b>
               </div>
               <div
-                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+                className="sticky-table-cell BoxScore__HeaderCell-sc-1261dsa-1 ecwmCV"
               >
                 <b>
                   REB
                 </b>
               </div>
               <div
-                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+                className="sticky-table-cell BoxScore__HeaderCell-sc-1261dsa-1 ecwmCV"
               >
                 <b>
                   AST
                 </b>
               </div>
               <div
-                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+                className="sticky-table-cell BoxScore__HeaderCell-sc-1261dsa-1 ecwmCV"
               >
                 <b>
                   STL
                 </b>
               </div>
               <div
-                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+                className="sticky-table-cell BoxScore__HeaderCell-sc-1261dsa-1 ecwmCV"
               >
                 <b>
                   BLK
                 </b>
               </div>
               <div
-                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+                className="sticky-table-cell BoxScore__HeaderCell-sc-1261dsa-1 ecwmCV"
               >
                 <b>
                   FG
                 </b>
               </div>
               <div
-                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+                className="sticky-table-cell BoxScore__HeaderCell-sc-1261dsa-1 ecwmCV"
               >
                 <b>
                   3P
                 </b>
               </div>
               <div
-                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+                className="sticky-table-cell BoxScore__HeaderCell-sc-1261dsa-1 ecwmCV"
               >
                 <b>
                   FT
                 </b>
               </div>
               <div
-                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+                className="sticky-table-cell BoxScore__HeaderCell-sc-1261dsa-1 ecwmCV"
               >
                 <b>
                   TO
                 </b>
               </div>
               <div
-                className="sticky-table-cell BoxScore__HeaderCell-rNetC kxPwIv"
+                className="sticky-table-cell BoxScore__HeaderCell-sc-1261dsa-1 ecwmCV"
               >
                 <b>
                   +/-
@@ -180,7 +179,7 @@ Array [
               id=""
             >
               <div
-                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+                className="sticky-table-cell BoxScore__StyledCell-sc-1261dsa-2 cUQPIT"
                 style={
                   Object {
                     "borderRight": "1px solid #f7f7f7",
@@ -205,57 +204,57 @@ Array [
               id=""
             >
               <div
-                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+                className="sticky-table-cell BoxScore__StyledCell-sc-1261dsa-2 cUQPIT"
               >
                 30
               </div>
               <div
-                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+                className="sticky-table-cell BoxScore__StyledCell-sc-1261dsa-2 cUQPIT"
               >
                 28
               </div>
               <div
-                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+                className="sticky-table-cell BoxScore__StyledCell-sc-1261dsa-2 cUQPIT"
               >
                 3
               </div>
               <div
-                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+                className="sticky-table-cell BoxScore__StyledCell-sc-1261dsa-2 cUQPIT"
               >
                 2
               </div>
               <div
-                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+                className="sticky-table-cell BoxScore__StyledCell-sc-1261dsa-2 cUQPIT"
               >
                 1
               </div>
               <div
-                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+                className="sticky-table-cell BoxScore__StyledCell-sc-1261dsa-2 cUQPIT"
               >
                 1
               </div>
               <div
-                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+                className="sticky-table-cell BoxScore__StyledCell-sc-1261dsa-2 cUQPIT"
               >
                 11-13
               </div>
               <div
-                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+                className="sticky-table-cell BoxScore__StyledCell-sc-1261dsa-2 cUQPIT"
               >
                 6-7
               </div>
               <div
-                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+                className="sticky-table-cell BoxScore__StyledCell-sc-1261dsa-2 cUQPIT"
               >
                 0-0
               </div>
               <div
-                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+                className="sticky-table-cell BoxScore__StyledCell-sc-1261dsa-2 cUQPIT"
               >
                 2
               </div>
               <div
-                className="sticky-table-cell BoxScore__StyledCell-fEfkvL cGhBCI"
+                className="sticky-table-cell BoxScore__StyledCell-sc-1261dsa-2 cUQPIT"
               >
                 30
               </div>

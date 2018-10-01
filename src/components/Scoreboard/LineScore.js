@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
 import { StickyTable, Row, Cell } from 'react-sticky-table';
-import { getMainColor } from 'nba-color';
 
 import { colors } from '../../styles/theme';
+import nba from '../../utils/nba';
 
 const Wrapper = styled(Flex)`
   width: 100%;
@@ -28,7 +28,7 @@ const reanderTeamRow = team => (
     <StyledCell
       key="name"
       style={{
-        backgroundColor: getMainColor(team.name).hex,
+        backgroundColor: nba.getTeamBackgroundColor(team.name),
         padding: '8px 16px',
       }}
     >

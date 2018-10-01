@@ -2,18 +2,16 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="am-flexbox List__Wrapper-fBZEGJ cEVkii am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
-  style={undefined}
+  className="am-flexbox List__Wrapper-wta59r-0 kIFXCG am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
 >
   <div
-    className="am-list List__StyledList-fzpiIm dsCfjD"
-    style={undefined}
+    className="am-list List__StyledList-wta59r-1 GjCXY"
   >
     <div
       className="am-list-body"
     >
       <div
-        className="am-list-item List__StyledItem-fXZPYN jpMBcp am-list-item-middle"
+        className="am-list-item List__StyledItem-wta59r-2 kffzkh am-list-item-middle"
         onClick={[Function]}
       >
         <div
@@ -35,7 +33,7 @@ exports[`match snapshot 1`] = `
         />
       </div>
       <div
-        className="am-list-item List__StyledItem-fXZPYN jpMBcp am-list-item-middle"
+        className="am-list-item List__StyledItem-wta59r-2 kffzkh am-list-item-middle"
         onClick={[Function]}
       >
         <div
@@ -57,7 +55,7 @@ exports[`match snapshot 1`] = `
         />
       </div>
       <div
-        className="am-list-item List__StyledItem-fXZPYN jpMBcp am-list-item-middle"
+        className="am-list-item List__StyledItem-wta59r-2 kffzkh am-list-item-middle"
         onClick={[Function]}
         onMouseDown={[Function]}
         onMouseLeave={[Function]}

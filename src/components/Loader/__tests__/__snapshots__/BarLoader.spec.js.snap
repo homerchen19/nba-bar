@@ -2,13 +2,13 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="BarLoader__Wrapper-gNIvZm hWyERb"
+  className="BarLoader__Wrapper-sc-1ulk7l6-0 iZAMXF"
 >
   <div
-    className="BarLoader__Bar-fJuLnV gsesbU"
+    className="sc-1ulk7l6-1-BarLoader__Bar-cAbGJh kLvbjQ"
   />
   <div
-    className="BarLoader__Bar-fJuLnV cPgnpx"
+    className="sc-1ulk7l6-1-BarLoader__Bar-kTvBTy hMlVfM"
   />
 </div>
 `;

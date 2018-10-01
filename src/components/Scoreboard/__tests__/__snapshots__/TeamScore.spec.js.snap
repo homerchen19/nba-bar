@@ -2,12 +2,10 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="am-flexbox TeamScore__Wrapper-dkUenk eqJmmP am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
-  style={undefined}
+  className="am-flexbox TeamScore__Wrapper-sc-17n15io-0 bxIATL am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
 >
   <div
-    className="am-flexbox TeamScore__InfoWrapper-BUCyd hlwPDM am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox TeamScore__InfoWrapper-sc-17n15io-1 bGrUsb am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       className="am-flexbox-item"
@@ -48,35 +46,32 @@ exports[`match snapshot 1`] = `
         "visitor": "#ffc72d",
       }
     }
-    className="am-flexbox TeamScore__ScoreWrapper-tdjCa fjZfdr am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox TeamScore__ScoreWrapper-sc-17n15io-2 jwOPUT am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
-      className="am-flexbox TeamScore__Team-HyUuo gxoOEK am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
-      style={undefined}
+      className="am-flexbox TeamScore__Team-sc-17n15io-3 hJFRvH am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
     >
       <h3
-        className="TeamScore__TeamName-lfDjMy jdzNt"
+        className="TeamScore__TeamName-sc-17n15io-4 kDPcwy"
       >
         IND
       </h3>
       <p
-        className="TeamScore__Score-itlDXI dpSbIb"
+        className="TeamScore__Score-sc-17n15io-5 fjVgXA"
       >
         126
       </p>
     </div>
     <div
-      className="am-flexbox TeamScore__Team-HyUuo gxoOEK am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
-      style={undefined}
+      className="am-flexbox TeamScore__Team-sc-17n15io-3 hJFRvH am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
     >
       <h3
-        className="TeamScore__TeamName-lfDjMy jdzNt"
+        className="TeamScore__TeamName-sc-17n15io-4 kDPcwy"
       >
         GSW
       </h3>
       <p
-        className="TeamScore__Score-itlDXI dkGycK"
+        className="TeamScore__Score-sc-17n15io-5 dqSyoL"
       >
         106
       </p>

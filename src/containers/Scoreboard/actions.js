@@ -21,12 +21,12 @@ export const fetchData = ({ date, gameId }) => async dispatch => {
 
     const {
       sports_content: { game: _gameBoxScoreData },
-    } = await nba.getBoxScore(apiDate, gameId);
+    } = await nba.getBoxScore({ ...apiDate, gameId });
     const {
       sports_content: {
         game: { play: gamePlayByPlayData },
       },
-    } = await nba.getPlayByPlay(apiDate, gameId);
+    } = await nba.getPlayByPlay({ ...apiDate, gameId });
 
     const gameBoxScoreData = pickEssentialProps(_gameBoxScoreData);
 

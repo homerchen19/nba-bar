@@ -19,11 +19,11 @@ import {
 
 const DataSection = styled.section`
   display: flex;
-  overflow-y: scroll !important;
-  width: 100%;
-  height: 100%;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll !important;
 
   ::-webkit-scrollbar {
     display: none;
@@ -31,9 +31,9 @@ const DataSection = styled.section`
 `;
 
 const Item = styled.div`
+  flex: 1 1 auto;
   width: 100%;
   margin-top: ${props => props.marginTop}px;
-  flex: 1 1 auto;
 `;
 
 class Scoreboard extends Component {
@@ -55,84 +55,79 @@ class Scoreboard extends Component {
     } = this.props;
 
     return (
-      <Wrapper
-        currentTab={1}
-        history={history}
-        schedule={
-          <Fragment>
-            <NavBar page="SCOREBOARD" />
-            <DataSection>
-              {loading && <Spinner />}
-              {error && <Error />}
-              {!error &&
-                !loading && (
-                  <Fragment>
-                    <Item marginTop="0">
-                      <TeamScore
-                        arena={gameData.arena}
-                        city={gameData.city}
+      <Wrapper currentTab={1} history={history}>
+        <Fragment>
+          <NavBar page="SCOREBOARD" />
+          <DataSection>
+            {loading && <Spinner />}
+            {error && <Error />}
+            {!error &&
+              !loading && (
+                <Fragment>
+                  <Item marginTop="0">
+                    <TeamScore
+                      arena={gameData.arena}
+                      city={gameData.city}
+                      home={{
+                        name: gameData.home.abbreviation,
+                        score: gameData.home.score,
+                      }}
+                      visitor={{
+                        name: gameData.visitor.abbreviation,
+                        score: gameData.visitor.score,
+                      }}
+                      winner={
+                        +gameData.home.score > +gameData.visitor.score
+                          ? 'home'
+                          : 'visitor'
+                      }
+                      gameStatus="Final"
+                    />
+                  </Item>
+                  <Item marginTop="20">
+                    <LineScore
+                      home={{
+                        name: gameData.home.abbreviation,
+                        linescores: gameBoxScoreData.home.linescores.period,
+                        score: gameData.home.score,
+                      }}
+                      visitor={{
+                        name: gameData.visitor.abbreviation,
+                        linescores: gameBoxScoreData.visitor.linescores.period,
+                        score: gameData.visitor.score,
+                      }}
+                    />
+                  </Item>
+                  <Item marginTop="20">
+                    <Tab titles={['STATS', 'PLAY-BY-PLAY', 'BOX SCORE']}>
+                      <Stats
                         home={{
                           name: gameData.home.abbreviation,
-                          score: gameData.home.score,
+                          stats: gameBoxScoreData.home.stats,
                         }}
                         visitor={{
                           name: gameData.visitor.abbreviation,
-                          score: gameData.visitor.score,
+                          stats: gameBoxScoreData.visitor.stats,
                         }}
-                        winner={
-                          +gameData.home.score > +gameData.visitor.score
-                            ? 'home'
-                            : 'visitor'
-                        }
-                        gameStatus="Final"
                       />
-                    </Item>
-                    <Item marginTop="20">
-                      <LineScore
+                      <PlayByPlay gamePlayByPlayData={gamePlayByPlayData} />
+                      <BoxScore
                         home={{
                           name: gameData.home.abbreviation,
-                          linescores: gameBoxScoreData.home.linescores.period,
-                          score: gameData.home.score,
+                          players: gameBoxScoreData.home.players.player,
                         }}
                         visitor={{
                           name: gameData.visitor.abbreviation,
-                          linescores:
-                            gameBoxScoreData.visitor.linescores.period,
-                          score: gameData.visitor.score,
+                          players: gameBoxScoreData.visitor.players.player,
                         }}
                       />
-                    </Item>
-                    <Item marginTop="20">
-                      <Tab titles={['STATS', 'PLAY-BY-PLAY', 'BOX SCORE']}>
-                        <Stats
-                          home={{
-                            name: gameData.home.abbreviation,
-                            stats: gameBoxScoreData.home.stats,
-                          }}
-                          visitor={{
-                            name: gameData.visitor.abbreviation,
-                            stats: gameBoxScoreData.visitor.stats,
-                          }}
-                        />
-                        <PlayByPlay gamePlayByPlayData={gamePlayByPlayData} />
-                        <BoxScore
-                          home={{
-                            name: gameData.home.abbreviation,
-                            players: gameBoxScoreData.home.players.player,
-                          }}
-                          visitor={{
-                            name: gameData.visitor.abbreviation,
-                            players: gameBoxScoreData.visitor.players.player,
-                          }}
-                        />
-                      </Tab>
-                    </Item>
-                  </Fragment>
-                )}
-            </DataSection>
-          </Fragment>
-        }
-      />
+                    </Tab>
+                  </Item>
+                </Fragment>
+              )}
+          </DataSection>
+        </Fragment>
+      </Wrapper>
     );
   }
 }
@@ -159,4 +154,7 @@ const mapStateToProps = (state, ownProps) => ({
   gamePlayByPlayData: state.scoreboard.gamePlayByPlayData,
 });
 
-export default connect(mapStateToProps, actions)(Scoreboard);
+export default connect(
+  mapStateToProps,
+  actions
+)(Scoreboard);

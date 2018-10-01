@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 
-import NavBar from '../';
+import NavBar from '..';
 
 it('be defined', () => {
   expect(NavBar).toBeDefined();

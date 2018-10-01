@@ -19,10 +19,10 @@ const Layout = styled.div`
 `;
 
 const Content = styled(Flex)`
+  flex: 1;
   width: 100%;
   height: 100%;
   padding: 0;
-  flex: 1;
 `;
 
 const Icon = styled.div`

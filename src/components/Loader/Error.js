@@ -5,9 +5,9 @@ import styled from 'styled-components';
 import { colors } from '../../styles/theme';
 
 const Wrapper = styled(Flex)`
+  flex: 1;
   width: 100vh;
   height: 100%;
-  flex: 1;
 `;
 
 const Text = styled.p`
@@ -20,8 +20,8 @@ const Text = styled.p`
 const Report = styled.a`
   color: ${colors.blue};
   font-size: 15px;
-  cursor: pointer;
   font-weight: 400;
+  cursor: pointer;
 
   &:hover {
     margin-bottom: -1px;

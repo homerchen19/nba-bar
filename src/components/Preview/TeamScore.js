@@ -2,21 +2,21 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
-import { getMainColor } from 'nba-color';
 
 import { colors } from '../../styles/theme';
+import nba from '../../utils/nba';
 
 const Wrapper = styled(Flex)`
-  width: 100%;
   flex: 1;
+  width: 100%;
   color: ${colors.white};
 `;
 
 const TeamWrapper = styled(Flex)`
+  flex: 3;
   width: 100%;
   padding: 3px 0;
   border-top: 1px solid ${colors.white};
-  flex: 3;
   background: linear-gradient(
     to right,
     ${props => props.background.home} 50%,
@@ -25,9 +25,9 @@ const TeamWrapper = styled(Flex)`
 `;
 
 const InfoWrapper = styled(Flex)`
+  flex: 2;
   width: 100%;
   padding: 0;
-  flex: 2;
   background: ${colors.darkBlue};
 `;
 
@@ -57,8 +57,8 @@ const TeamScore = ({ time, arena, city, home, visitor }) => (
       <TeamWrapper
         justify="center"
         background={{
-          home: getMainColor(home.name).hex,
-          visitor: getMainColor(visitor.name).hex,
+          home: nba.getTeamBackgroundColor(home.name),
+          visitor: nba.getTeamBackgroundColor(visitor.name),
         }}
       >
         <Flex.Item>

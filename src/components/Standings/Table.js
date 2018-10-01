@@ -9,8 +9,8 @@ import { getMainColor } from 'nba-color';
 import { colors } from '../../styles/theme';
 
 const Wrapper = styled(Flex)`
-  overflow-y: scroll !important;
   width: 100%;
+  overflow-y: scroll !important;
 
   ::-webkit-scrollbar {
     display: none;
@@ -26,8 +26,8 @@ const HeaderCell = styled(Cell)`
   padding: 8px 14px;
   background: ${colors.darkBlue};
   color: #fff;
-  text-align: center;
   font-weight: 600;
+  text-align: center;
 `;
 
 const StyledCell = styled(Cell)`

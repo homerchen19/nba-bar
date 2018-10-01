@@ -18,11 +18,11 @@ import {
 
 const DataSection = styled.section`
   display: flex;
-  overflow-y: scroll !important;
-  width: 100%;
-  height: 100%;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll !important;
 
   ::-webkit-scrollbar {
     display: none;
@@ -30,9 +30,9 @@ const DataSection = styled.section`
 `;
 
 const Item = styled.div`
+  flex: 1 1 auto;
   width: 100%;
   margin-top: ${props => props.marginTop}px;
-  flex: 1 1 auto;
 `;
 
 class Live extends Component {
@@ -200,4 +200,7 @@ const mapStateToProps = (state, ownProps) => ({
   gamePlayByPlayData: state.live.gamePlayByPlayData,
 });
 
-export default connect(mapStateToProps, actions)(Live);
+export default connect(
+  mapStateToProps,
+  actions
+)(Live);

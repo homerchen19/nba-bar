@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import R from 'ramda';
 import { Flex, Card } from 'antd-mobile';
 import styled from 'styled-components';
-import { getMainColor } from 'nba-color';
 
 import { colors } from '../../styles/theme';
+import nba from '../../utils/nba';
 
 const Wrapper = styled(Card)`
+  flex: 1 0;
   width: 100%;
   margin: 5px 0;
   padding: 0 !important;
-  flex: 1 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease;
   cursor: pointer;
@@ -23,25 +23,25 @@ const Wrapper = styled(Card)`
 `;
 
 const CardHeader = styled(Card.Header)`
-  padding: 6px 0 !important;
   flex: 1 0 !important;
+  padding: 6px 0 !important;
 `;
 
 const CardBody = styled(Card.Body)`
-  padding: 0 !important;
   flex: 1 0 !important;
+  padding: 0 !important;
 `;
 
 const CardFooter = styled(Card.Footer)`
+  flex: 1 0 !important;
   padding: 0 !important;
   border-top: 1px solid ${colors.white};
-  flex: 1 0 !important;
 `;
 
 const Footer = styled.div`
+  flex: 1 0;
   width: 100%;
   padding: 4px 0 !important;
-  flex: 1 0;
   color: ${colors.black};
   text-align: center;
 `;
@@ -50,21 +50,21 @@ const GameStatus = styled.div`
   width: 100%;
   color: ${colors.black};
   font-size: small;
-  text-align: center;
   font-weight: 400;
+  text-align: center;
 `;
 
 const TeamContent = styled(Flex)`
+  flex: 1 0;
   width: 100%;
   padding: 8px 15px;
   border-bottom: 1px solid ${colors.white};
-  flex: 1 0;
+  opacity: 0.95;
   background: linear-gradient(
     to right,
     ${props => props.background} 80%,
     #fff 20%
   );
-  opacity: 0.95;
 `;
 
 const TeamName = styled.span`
@@ -74,9 +74,9 @@ const TeamName = styled.span`
 `;
 
 const TeamScore = styled.span`
+  opacity: ${props => (props.winner ? 1 : 0.8)};
   color: ${colors.black};
   font-weight: ${props => (props.winner ? 600 : 200)};
-  opacity: ${props => (props.winner ? 1 : 0.8)};
 `;
 
 class MatchCard extends Component {
@@ -158,7 +158,7 @@ class MatchCard extends Component {
           <TeamContent
             align="center"
             justify="between"
-            background={getMainColor(home.team_key).hex}
+            background={nba.getTeamBackgroundColor(home.team_key)}
           >
             <TeamName>{home.nickname}</TeamName>
             <TeamScore winner={winner === 'home'}>
@@ -168,7 +168,7 @@ class MatchCard extends Component {
           <TeamContent
             align="center"
             justify="between"
-            background={getMainColor(visitor.team_key).hex}
+            background={nba.getTeamBackgroundColor(visitor.team_key)}
             style={{
               borderBottom: 0,
               borderRadius: !playoffs && '0 0 10px',

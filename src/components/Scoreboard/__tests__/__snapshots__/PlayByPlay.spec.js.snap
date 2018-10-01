@@ -2,8 +2,7 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="am-flexbox PlayByPlay__Wrapper-jKyAEx fXPtQX am-flexbox-justify-center am-flexbox-align-center"
-  style={undefined}
+  className="am-flexbox PlayByPlay__Wrapper-sc-10nt11s-0 itUddu am-flexbox-justify-center am-flexbox-align-center"
 >
   <div
     className="sticky-table "
@@ -51,14 +50,14 @@ exports[`match snapshot 1`] = `
           >
             <div
               align="center"
-              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl ddqmlj"
+              className="sticky-table-cell PlayByPlay__StyledCell-sc-10nt11s-1 gdnRoG"
             >
               <p>
                 Q1 11:43
               </p>
               <p>
                 <span
-                  className="PlayByPlay__Score-bXplBE gOnJZh"
+                  className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
                   color="#000"
                 >
                   0
@@ -66,7 +65,7 @@ exports[`match snapshot 1`] = `
                  -
                  
                 <span
-                  className="PlayByPlay__Score-bXplBE gOnJZh"
+                  className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
                   color="#000"
                 >
                   0
@@ -80,14 +79,14 @@ exports[`match snapshot 1`] = `
           >
             <div
               align="center"
-              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl ddqmlj"
+              className="sticky-table-cell PlayByPlay__StyledCell-sc-10nt11s-1 gdnRoG"
             >
               <p>
                 Q1 12:00
               </p>
               <p>
                 <span
-                  className="PlayByPlay__Score-bXplBE gOnJZh"
+                  className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
                   color="#000"
                 >
                   0
@@ -95,7 +94,7 @@ exports[`match snapshot 1`] = `
                  -
                  
                 <span
-                  className="PlayByPlay__Score-bXplBE gOnJZh"
+                  className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
                   color="#000"
                 >
                   0
@@ -109,14 +108,14 @@ exports[`match snapshot 1`] = `
           >
             <div
               align="center"
-              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl ddqmlj"
+              className="sticky-table-cell PlayByPlay__StyledCell-sc-10nt11s-1 gdnRoG"
             >
               <p>
                 Q1 12:00
               </p>
               <p>
                 <span
-                  className="PlayByPlay__Score-bXplBE gOnJZh"
+                  className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
                   color="#000"
                 >
                   0
@@ -124,7 +123,7 @@ exports[`match snapshot 1`] = `
                  -
                  
                 <span
-                  className="PlayByPlay__Score-bXplBE gOnJZh"
+                  className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
                   color="#000"
                 >
                   0
@@ -146,7 +145,7 @@ exports[`match snapshot 1`] = `
           >
             <div
               align="left"
-              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl btptBf"
+              className="sticky-table-cell PlayByPlay__StyledCell-sc-10nt11s-1 epBgbz"
               style={
                 Object {
                   "padding": "8px 0",
@@ -162,7 +161,7 @@ exports[`match snapshot 1`] = `
           >
             <div
               align="left"
-              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl btptBf"
+              className="sticky-table-cell PlayByPlay__StyledCell-sc-10nt11s-1 epBgbz"
               style={
                 Object {
                   "padding": "8px 0",
@@ -178,7 +177,7 @@ exports[`match snapshot 1`] = `
           >
             <div
               align="left"
-              className="sticky-table-cell PlayByPlay__StyledCell-kwvErl btptBf"
+              className="sticky-table-cell PlayByPlay__StyledCell-sc-10nt11s-1 epBgbz"
               style={
                 Object {
                   "padding": "8px 0",

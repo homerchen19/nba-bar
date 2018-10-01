@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Wrapper from '../';
+import Wrapper from '..';
 
 it('be defined', () => {
   expect(Wrapper).toBeDefined();

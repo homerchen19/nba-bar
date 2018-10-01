@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
-import { getMainColor } from 'nba-color';
 
 import { BarLoader } from '../Loader';
 import { colors } from '../../styles/theme';
+import nba from '../../utils/nba';
 
 const Wrapper = styled(Flex)`
   width: 100%;
@@ -30,8 +30,8 @@ const ScoreWrapper = styled(Flex)`
 `;
 
 const Team = styled(Flex)`
-  margin: 0;
   flex: 1;
+  margin: 0;
 `;
 
 const TeamName = styled.h3`
@@ -39,10 +39,10 @@ const TeamName = styled.h3`
 `;
 
 const Score = styled.p`
-  font-size: large;
-  text-align: center;
-  font-weight: ${props => (props.win ? '600' : '100')};
   opacity: ${props => (props.win ? '1' : '0.9')};
+  font-size: large;
+  font-weight: ${props => (props.win ? '600' : '100')};
+  text-align: center;
 `;
 
 const TeamScore = ({
@@ -68,8 +68,8 @@ const TeamScore = ({
       justify="center"
       align="center"
       background={{
-        home: getMainColor(home.name).hex,
-        visitor: getMainColor(visitor.name).hex,
+        home: nba.getTeamBackgroundColor(home.name),
+        visitor: nba.getTeamBackgroundColor(visitor.name),
       }}
     >
       <Team direction="column" justify="center" align="center">

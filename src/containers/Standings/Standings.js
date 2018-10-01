@@ -11,10 +11,10 @@ import { Table } from '../../components/Standings';
 
 const DataSection = styled.section`
   display: flex;
-  overflow-y: scroll !important;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  flex-direction: column;
+  overflow-y: scroll !important;
 
   ::-webkit-scrollbar {
     display: none;
@@ -66,4 +66,7 @@ const mapStateToProps = state => ({
   updatedAt: state.standings.updatedAt,
 });
 
-export default connect(mapStateToProps, actions)(Standings);
+export default connect(
+  mapStateToProps,
+  actions
+)(Standings);

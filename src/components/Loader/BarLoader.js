@@ -30,23 +30,23 @@ const loading = keyframes`
 `;
 
 const Bar = styled.div`
+  content: '';
+  display: inline;
   position: absolute;
   left: 50%;
-  display: inline;
   width: 0;
   height: 100%;
   text-align: center;
-  content: '';
 `;
 
 const FirstBar = Bar.extend`
-  animation: ${loading} 2s ease-in-out infinite;
   background-color: ${colors.red};
+  animation: ${loading} 2s ease-in-out infinite;
 `;
 
 const SecondBar = Bar.extend`
-  animation: ${loading} 2s ease-in-out 1s infinite;
   background-color: ${colors.blue};
+  animation: ${loading} 2s ease-in-out 1s infinite;
 `;
 
 const BarLoader = () => (

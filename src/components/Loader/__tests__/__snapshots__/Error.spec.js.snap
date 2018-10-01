@@ -2,11 +2,10 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="am-flexbox Error__Wrapper-hfumIx fjBUTb am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
-  style={undefined}
+  className="am-flexbox Error__Wrapper-sc-15dx42x-0 gFMOUy am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
 >
   <p
-    className="Error__Text-bFSXws bPpoZw"
+    className="Error__Text-sc-15dx42x-1 lkZTBp"
   >
     Oops! Something goes wrong
      
@@ -18,10 +17,10 @@ exports[`match snapshot 1`] = `
     </span>
   </p>
   <p
-    className="Error__Text-bFSXws bPpoZw"
+    className="Error__Text-sc-15dx42x-1 lkZTBp"
   >
     <a
-      className="Error__Report-hpFkVY dHMpvL"
+      className="Error__Report-sc-15dx42x-2 cVcpev"
       onClick={[Function]}
     >
       Report issues

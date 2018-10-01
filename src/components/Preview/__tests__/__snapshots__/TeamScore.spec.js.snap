@@ -2,18 +2,16 @@
 
 exports[`match snapshot 1`] = `
 <div
-  className="am-flexbox TeamScore__Wrapper-dkUenk erFety am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
-  style={undefined}
+  className="am-flexbox TeamScore__Wrapper-xkk8xl-0 bfmdlw am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
 >
   <div
-    className="am-flexbox TeamScore__InfoWrapper-BUCyd fPRnPu am-flexbox-dir-column am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox TeamScore__InfoWrapper-xkk8xl-2 cJalDy am-flexbox-dir-column am-flexbox-align-center"
   >
     <h4>
       7:00 pm ET
     </h4>
     <p
-      className="TeamScore__Arena-jFPVgG bmPBsw"
+      className="TeamScore__Arena-xkk8xl-4 arBoT"
     >
       Wells Fargo Center, Philadelphia
     </p>
@@ -25,19 +23,16 @@ exports[`match snapshot 1`] = `
         "visitor": "#6f263d",
       }
     }
-    className="am-flexbox TeamScore__TeamWrapper-gLIDml fsdvYN am-flexbox-justify-center am-flexbox-align-center"
-    style={undefined}
+    className="am-flexbox TeamScore__TeamWrapper-xkk8xl-1 hyqaaT am-flexbox-justify-center am-flexbox-align-center"
   >
     <div
       className="am-flexbox-item"
-      style={undefined}
     >
       <div
         className="am-flexbox am-flexbox-dir-column am-flexbox-align-center"
-        style={undefined}
       >
         <h3
-          className="TeamScore__TeamName-lfDjMy hEvSnN"
+          className="TeamScore__TeamName-xkk8xl-3 dwunjw"
         >
           PHI
         </h3>
@@ -56,10 +51,9 @@ exports[`match snapshot 1`] = `
     >
       <div
         className="am-flexbox am-flexbox-dir-column am-flexbox-align-center"
-        style={undefined}
       >
         <h3
-          className="TeamScore__TeamName-lfDjMy hEvSnN"
+          className="TeamScore__TeamName-xkk8xl-3 dwunjw"
         >
           CLE
         </h3>

@@ -1,6 +1,7 @@
 import R from 'ramda';
 import { getGames, getBoxScore, getPlayByPlay } from 'nba-stats-client';
 import NBA from 'nba.js';
+import { getMainColor } from 'nba-color';
 
 const NBAClient = {
   getGames,
@@ -12,6 +13,7 @@ const essentialMethods = [
   'getGames',
   'getBoxScore',
   'getPlayByPlay',
+  'getTeamBackgroundColor',
   'teamSplits',
   'teams',
   'conferenceStandings',
@@ -27,4 +29,8 @@ export default R.compose(
   R.prop('stats', NBA),
   R.prop('data', NBA),
   NBAClient,
+  {
+    getTeamBackgroundColor: teamName =>
+      R.prop('hex', getMainColor(teamName)) || '#282828',
+  },
 ]);

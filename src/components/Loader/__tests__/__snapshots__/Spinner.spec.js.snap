@@ -12,7 +12,6 @@ exports[`match snapshot 1`] = `
   }
 >
   <span
-    className={undefined}
     style={
       Object {
         "animation": "__react-md-spinner-animation__root-rotate 1568.235294117647ms linear infinite",

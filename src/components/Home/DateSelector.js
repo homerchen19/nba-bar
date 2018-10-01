@@ -15,8 +15,8 @@ const Wrapper = styled.div`
   width: 100%;
   height: 30px;
   padding: 4px 7px;
-  color: ${colors.white};
   background-color: ${colors.darkBlue};
+  color: ${colors.white};
 `;
 
 const Button = styled(Icon)`
