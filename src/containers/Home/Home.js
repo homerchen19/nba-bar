@@ -82,7 +82,7 @@ class Home extends Component {
                   onClick={() => {
                     const gameId = game.id;
                     const path = this.getPath(game.periodTime.gameStatus);
-                    console.log(`/${path}/${gameId}`);
+
                     this.props.history.push(`/${path}/${gameId}`);
                   }}
                   updateScheduleDataByGameId={() =>

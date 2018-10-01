@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
 
+import 'react-virtualized/styles.css';
 import 'react-sticky-table/dist/react-sticky-table.css';
 
 import Home from '../Home';

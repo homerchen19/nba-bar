@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import R from 'ramda';
 import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
-import { StickyTable, Row, Cell } from 'react-sticky-table';
+import { MultiGrid } from 'react-virtualized';
 
 import { colors } from '../../styles/theme';
-import nba from '../../utils/nba';
 
 const Wrapper = styled(Flex)`
   width: 100%;
@@ -14,17 +12,25 @@ const Wrapper = styled(Flex)`
   background: #fff;
 `;
 
-const StyledCell = styled(Cell)`
-  padding: 8px 11px;
+const StyledCell = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px;
+  overflow: auto;
   border-bottom: 1px solid ${colors.white};
   text-align: ${props => props.align};
   word-wrap: break-word;
   white-space: pre;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const Score = styled.span`
-  color: ${props => props.color};
-  font-weight: ${props => (props.color === '#000' ? '200' : '700')};
+  color: #000;
+  font-weight: 200;
 `;
 
 const getQuaterString = period =>
@@ -32,48 +38,42 @@ const getQuaterString = period =>
 
 const getClock = clock => (clock !== '' ? clock : '12:00');
 
-const latestScore = {
-  home: 0,
-  visitor: 0,
-};
-
-const reanderPlayByPlayRow = R.compose(
-  R.reverse,
-  R.map(data => {
-    let homeColor = '#000';
-    let visitorColor = '#000';
-
-    if (+data.home_score > latestScore.home) {
-      homeColor = nba.getTeamBackgroundColor(data.team_abr);
-    } else if (+data.visitor_score > latestScore.visitor) {
-      visitorColor = nba.getTeamBackgroundColor(data.team_abr);
-    }
-
-    latestScore.home = +data.home_score;
-    latestScore.visitor = +data.visitor_score;
-
-    return (
-      <Row key={data.event}>
-        <StyledCell key="name" align="center">
-          <p>{`${getQuaterString(+data.period)} ${getClock(data.clock)}`}</p>
-          <p>
-            <Score color={homeColor}>{data.home_score}</Score> -{' '}
-            <Score color={visitorColor}>{data.visitor_score}</Score>
-          </p>
-        </StyledCell>
-        <StyledCell key="score" align="left" style={{ padding: '8px 0' }}>
-          {data.description.replace(/\[.*\]/i, '').trim()}
-        </StyledCell>
-      </Row>
-    );
-  })
-);
-
 const PlayByPlay = ({ gamePlayByPlayData }) => (
   <Wrapper justify="center">
-    <StickyTable stickyHeaderCount={0}>
-      {reanderPlayByPlayRow(gamePlayByPlayData)}
-    </StickyTable>
+    <MultiGrid
+      fixedColumnCount={1}
+      estimatedColumnSize={300}
+      columnWidth={({ index }) => (index === 0 ? 100 : 200)}
+      columnCount={2}
+      cellRenderer={({ columnIndex, key, rowIndex, style }) => {
+        const data = gamePlayByPlayData[rowIndex];
+
+        if (columnIndex === 0) {
+          return (
+            <StyledCell key={key} align="center" style={style}>
+              <p>
+                {`${getQuaterString(+data.period)} ${getClock(data.clock)}`}
+              </p>
+              <p>
+                <Score key="homeScore">{data.home_score}</Score> -{' '}
+                <Score key="visistorScore">{data.visitor_score}</Score>
+              </p>
+            </StyledCell>
+          );
+        }
+
+        return (
+          <StyledCell key={key} align="left" style={style}>
+            {data.description.replace(/\[.*\]/i, '').trim()}
+          </StyledCell>
+        );
+      }}
+      rowCount={gamePlayByPlayData.length}
+      rowHeight={50}
+      width={300}
+      height={340}
+      enableFixedColumnScroll
+    />
   </Wrapper>
 );
 

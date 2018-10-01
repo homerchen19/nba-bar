@@ -110,7 +110,9 @@ class Scoreboard extends Component {
                           stats: gameBoxScoreData.visitor.stats,
                         }}
                       />
-                      <PlayByPlay gamePlayByPlayData={gamePlayByPlayData} />
+                      <PlayByPlay
+                        gamePlayByPlayData={R.reverse(gamePlayByPlayData)}
+                      />
                       <BoxScore
                         home={{
                           name: gameData.home.abbreviation,

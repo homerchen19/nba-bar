@@ -5,187 +5,240 @@ exports[`match snapshot 1`] = `
   className="am-flexbox PlayByPlay__Wrapper-sc-10nt11s-0 itUddu am-flexbox-justify-center am-flexbox-align-center"
 >
   <div
-    className="sticky-table "
+    style={
+      Object {
+        "height": 340,
+        "overflow": "visible",
+        "width": 300,
+      }
+    }
   >
     <div
-      className="x-scrollbar"
-    >
-      <div />
-    </div>
+      style={
+        Object {
+          "height": 0,
+          "position": "relative",
+          "width": 300,
+        }
+      }
+    />
     <div
-      className="y-scrollbar"
-    >
-      <div />
-    </div>
-    <div
-      className="sticky-table-header-wrapper"
+      style={
+        Object {
+          "height": 340,
+          "overflow": "visible",
+          "position": "relative",
+          "width": 300,
+        }
+      }
     >
       <div
-        className="sticky-table-corner hidden"
+        aria-label="grid"
+        aria-readonly={true}
+        className="ReactVirtualized__Grid"
+        onScroll={[Function]}
+        role="grid"
+        style={
+          Object {
+            "WebkitOverflowScrolling": "touch",
+            "boxSizing": "border-box",
+            "direction": "ltr",
+            "height": 340,
+            "left": 0,
+            "overflowX": "hidden",
+            "overflowY": "auto",
+            "position": "absolute",
+            "width": 100,
+            "willChange": "transform",
+          }
+        }
+        tabIndex={null}
       >
         <div
-          className="sticky-table-table "
-        />
-      </div>
-      <div
-        className="sticky-table-header hidden"
-      >
-        <div
-          className="sticky-table-table "
-        />
-      </div>
-    </div>
-    <div
-      className="sticky-table-y-wrapper"
-    >
-      <div
-        className="sticky-table-column "
-      >
-        <div
-          className="sticky-table-table "
+          className="ReactVirtualized__Grid__innerScrollContainer"
+          role="rowgroup"
+          style={
+            Object {
+              "height": 150,
+              "maxHeight": 150,
+              "maxWidth": 100,
+              "overflow": "hidden",
+              "pointerEvents": "",
+              "position": "relative",
+              "width": 100,
+            }
+          }
         >
           <div
-            className="sticky-table-row sticky-table-row "
-            id=""
+            className="PlayByPlay__StyledCell-sc-10nt11s-1 dNvRsS"
+            style={
+              Object {
+                "height": 50,
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": 100,
+              }
+            }
           >
-            <div
-              align="center"
-              className="sticky-table-cell PlayByPlay__StyledCell-sc-10nt11s-1 gdnRoG"
-            >
-              <p>
-                Q1 11:43
-              </p>
-              <p>
-                <span
-                  className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
-                  color="#000"
-                >
-                  0
-                </span>
-                 -
-                 
-                <span
-                  className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
-                  color="#000"
-                >
-                  0
-                </span>
-              </p>
-            </div>
+            <p>
+              Q1 12:00
+            </p>
+            <p>
+              <span
+                className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
+              >
+                0
+              </span>
+               -
+               
+              <span
+                className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
+              >
+                0
+              </span>
+            </p>
           </div>
           <div
-            className="sticky-table-row sticky-table-row "
-            id=""
+            className="PlayByPlay__StyledCell-sc-10nt11s-1 dNvRsS"
+            style={
+              Object {
+                "height": 50,
+                "left": 0,
+                "position": "absolute",
+                "top": 50,
+                "width": 100,
+              }
+            }
           >
-            <div
-              align="center"
-              className="sticky-table-cell PlayByPlay__StyledCell-sc-10nt11s-1 gdnRoG"
-            >
-              <p>
-                Q1 12:00
-              </p>
-              <p>
-                <span
-                  className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
-                  color="#000"
-                >
-                  0
-                </span>
-                 -
-                 
-                <span
-                  className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
-                  color="#000"
-                >
-                  0
-                </span>
-              </p>
-            </div>
+            <p>
+              Q1 12:00
+            </p>
+            <p>
+              <span
+                className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
+              >
+                0
+              </span>
+               -
+               
+              <span
+                className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
+              >
+                0
+              </span>
+            </p>
           </div>
           <div
-            className="sticky-table-row sticky-table-row "
-            id=""
+            className="PlayByPlay__StyledCell-sc-10nt11s-1 dNvRsS"
+            style={
+              Object {
+                "height": 50,
+                "left": 0,
+                "position": "absolute",
+                "top": 100,
+                "width": 100,
+              }
+            }
           >
-            <div
-              align="center"
-              className="sticky-table-cell PlayByPlay__StyledCell-sc-10nt11s-1 gdnRoG"
-            >
-              <p>
-                Q1 12:00
-              </p>
-              <p>
-                <span
-                  className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
-                  color="#000"
-                >
-                  0
-                </span>
-                 -
-                 
-                <span
-                  className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
-                  color="#000"
-                >
-                  0
-                </span>
-              </p>
-            </div>
+            <p>
+              Q1 11:43
+            </p>
+            <p>
+              <span
+                className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
+              >
+                0
+              </span>
+               -
+               
+              <span
+                className="PlayByPlay__Score-sc-10nt11s-2 deSSZK"
+              >
+                0
+              </span>
+            </p>
           </div>
         </div>
       </div>
       <div
-        className="sticky-table-x-wrapper"
+        aria-label="grid"
+        aria-readonly={true}
+        className="ReactVirtualized__Grid"
+        onScroll={[Function]}
+        role="grid"
+        style={
+          Object {
+            "WebkitOverflowScrolling": "touch",
+            "boxSizing": "border-box",
+            "direction": "ltr",
+            "height": 340,
+            "left": 100,
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "position": "absolute",
+            "width": 200,
+            "willChange": "transform",
+          }
+        }
+        tabIndex={0}
       >
         <div
-          className="sticky-table-table "
+          className="ReactVirtualized__Grid__innerScrollContainer"
+          role="rowgroup"
+          style={
+            Object {
+              "height": 150,
+              "maxHeight": 150,
+              "maxWidth": 200,
+              "overflow": "hidden",
+              "pointerEvents": "",
+              "position": "relative",
+              "width": 200,
+            }
+          }
         >
           <div
-            className="sticky-table-row sticky-table-row "
-            id=""
-          >
-            <div
-              align="left"
-              className="sticky-table-cell PlayByPlay__StyledCell-sc-10nt11s-1 epBgbz"
-              style={
-                Object {
-                  "padding": "8px 0",
-                }
+            className="PlayByPlay__StyledCell-sc-10nt11s-1 eKWEvS"
+            style={
+              Object {
+                "height": 50,
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": 200,
               }
-            >
-              Adams Foul: Shooting (1 PF) (2 FTA) (B Spooner)
-            </div>
+            }
+          >
+            Start Period
           </div>
           <div
-            className="sticky-table-row sticky-table-row "
-            id=""
-          >
-            <div
-              align="left"
-              className="sticky-table-cell PlayByPlay__StyledCell-sc-10nt11s-1 epBgbz"
-              style={
-                Object {
-                  "padding": "8px 0",
-                }
+            className="PlayByPlay__StyledCell-sc-10nt11s-1 eKWEvS"
+            style={
+              Object {
+                "height": 50,
+                "left": 0,
+                "position": "absolute",
+                "top": 50,
+                "width": 200,
               }
-            >
-              Jump Ball Adams vs Duncan (Green gains possession)
-            </div>
+            }
+          >
+            Jump Ball Adams vs Duncan (Green gains possession)
           </div>
           <div
-            className="sticky-table-row sticky-table-row "
-            id=""
-          >
-            <div
-              align="left"
-              className="sticky-table-cell PlayByPlay__StyledCell-sc-10nt11s-1 epBgbz"
-              style={
-                Object {
-                  "padding": "8px 0",
-                }
+            className="PlayByPlay__StyledCell-sc-10nt11s-1 eKWEvS"
+            style={
+              Object {
+                "height": 50,
+                "left": 0,
+                "position": "absolute",
+                "top": 100,
+                "width": 200,
               }
-            >
-              Start Period
-            </div>
+            }
+          >
+            Adams Foul: Shooting (1 PF) (2 FTA) (B Spooner)
           </div>
         </div>
       </div>
