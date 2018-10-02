@@ -57,11 +57,11 @@ Click a future match. Compare two teams' season stats easily.
 
 NBA Bar is built with
 
-* Electron
-* React
-* Redux
-* react-router v4
-* webpack 4
+- Electron
+- React
+- Redux
+- Next.js
+- styled-components
 
 ### Install
 
@@ -79,8 +79,8 @@ $ npm run dev
 
 ## 🔗 Related repo
 
-* [nba-go](https://github.com/xxhomey19/nba-go): The finest NBA CLI.
-* [nba-color](https://github.com/xxhomey19/nba-color): NPM library which shows all NBA team's color.
+- [nba-go](https://github.com/xxhomey19/nba-go): The finest NBA CLI.
+- [nba-color](https://github.com/xxhomey19/nba-color): NPM library which shows all NBA team's color.
 
 If you like NBA Bar, I'd be glad to accept your support 🙂
 
