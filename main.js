@@ -1,4 +1,5 @@
 const path = require('path');
+const { format } = require('url');
 const {
   app,
   ipcMain,
@@ -11,10 +12,9 @@ const {
 } = require('electron');
 const menubar = require('menubar');
 const { autoUpdater } = require('electron-updater');
-
-require('fix-path')();
-
-const isDev = process.env.NODE_ENV === 'development';
+const isDev = require('electron-is-dev');
+const prepareNext = require('electron-next');
+const { resolve } = require('app-root-path');
 
 if (isDev) {
   require('electron-debug')({ showDevTools: true });
@@ -74,9 +74,12 @@ const mb = menubar({
   preloadWindow: true,
   resizable: isDev,
   movable: false,
+  webPreferences: { webSecurity: false },
 });
 
 mb.on('ready', async () => {
+  await prepareNext('./renderer', 8080);
+
   if (isDev) {
     await installExtensions();
   }
@@ -84,6 +87,17 @@ mb.on('ready', async () => {
   globalShortcut.register('CommandOrControl+R', () => {
     mb.window.reload();
   });
+
+  const devPath = 'http://localhost:8080/home';
+
+  const prodPath = format({
+    pathname: resolve('renderer/out/home/index.html'),
+    protocol: 'file:',
+    slashes: true,
+  });
+
+  const url = isDev ? devPath : prodPath;
+  mb.window.loadURL(url);
 
   console.log('app is ready');
 });

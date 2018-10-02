@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<div
+  className="NavBar__Wrapper-sc-7c7b47-0 iDrhgQ"
+>
+  <div
+    className="am-navbar am-navbar-dark"
+    style={
+      Object {
+        "background": "#084887",
+        "height": "100%",
+      }
+    }
+  >
+    <div
+      className="am-navbar-left"
+      onClick={[Function]}
+      role="button"
+    >
+      <svg
+        className="am-icon am-icon-left am-icon-md"
+        color="#f7f7f7"
+        onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+            "height": "30px",
+            "left": "7px",
+            "position": "absolute",
+          }
+        }
+      >
+        <use
+          xlinkHref="#left"
+        />
+      </svg>
+    </div>
+    <div
+      className="am-navbar-title"
+    >
+      <p
+        className="NavBar__Title-sc-7c7b47-1 hNEPwk"
+      >
+        PAGE
+      </p>
+    </div>
+    <div
+      className="am-navbar-right"
+    />
+  </div>
+</div>
+`;

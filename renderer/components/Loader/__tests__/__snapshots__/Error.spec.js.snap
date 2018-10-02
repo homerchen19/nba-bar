@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<div
+  className="am-flexbox Error__Wrapper-sc-1ln6l78-0 fnepRI am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
+>
+  <p
+    className="Error__Text-sc-1ln6l78-1 cwwiZS"
+  >
+    Oops! Something goes wrong
+     
+    <span
+      aria-label="Sad"
+      role="img"
+    >
+      🙁
+    </span>
+  </p>
+  <p
+    className="Error__Text-sc-1ln6l78-1 cwwiZS"
+  >
+    <a
+      className="Error__Report-sc-1ln6l78-2 fPDaPQ"
+      onClick={[Function]}
+    >
+      Report issues
+    </a>
+  </p>
+</div>
+`;

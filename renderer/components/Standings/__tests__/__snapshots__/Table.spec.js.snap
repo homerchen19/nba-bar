@@ -1,0 +1,518 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<div
+  className="am-flexbox Table__Wrapper-sc-9u2sr5-0 hbRiRB am-flexbox-dir-column am-flexbox-align-center"
+>
+  <div
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <h3
+      className="Table__Conference-sc-9u2sr5-3 iKGnKJ"
+    >
+      east
+    </h3>
+    <div
+      className="ReactVirtualized__Table"
+      role="grid"
+      style={Object {}}
+    >
+      <div
+        className="am-flexbox ReactVirtualized__Table__headerRow am-flexbox-align-center"
+        style={
+          Object {
+            "height": 32,
+            "overflow": "hidden",
+            "paddingRight": 0,
+            "width": 300,
+          }
+        }
+      >
+        <div
+          className="Table__HeaderCell-sc-9u2sr5-1 jhHCnp"
+          width="75"
+        >
+          Teams
+        </div>
+        <div
+          className="Table__HeaderCell-sc-9u2sr5-1 iGaVpi"
+          width="47"
+        >
+          W
+        </div>
+        <div
+          className="Table__HeaderCell-sc-9u2sr5-1 iGaVpi"
+          width="47"
+        >
+          L
+        </div>
+        <div
+          className="Table__HeaderCell-sc-9u2sr5-1 eZeJyr"
+          width="73"
+        >
+          WIN%
+        </div>
+        <div
+          className="Table__HeaderCell-sc-9u2sr5-1 cBrKBo"
+          width="59"
+        >
+          GB
+        </div>
+      </div>
+      <div
+        aria-label="grid"
+        aria-readonly={true}
+        className="ReactVirtualized__Grid ReactVirtualized__Table__Grid"
+        onScroll={[Function]}
+        role="rowgroup"
+        style={
+          Object {
+            "WebkitOverflowScrolling": "touch",
+            "boxSizing": "border-box",
+            "direction": "ltr",
+            "height": 268,
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "position": "relative",
+            "width": 300,
+            "willChange": "transform",
+          }
+        }
+        tabIndex={0}
+      >
+        <div
+          className="ReactVirtualized__Grid__innerScrollContainer"
+          role="rowgroup"
+          style={
+            Object {
+              "height": 90,
+              "maxHeight": 90,
+              "maxWidth": 300,
+              "overflow": "hidden",
+              "pointerEvents": "",
+              "position": "relative",
+              "width": "auto",
+            }
+          }
+        >
+          <div
+            className="am-flexbox am-flexbox-align-center"
+            style={
+              Object {
+                "height": 30,
+                "left": 0,
+                "overflow": "hidden",
+                "paddingRight": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": 300,
+              }
+            }
+          >
+            <div
+              className="Table__Cell-sc-9u2sr5-2 fjWUKQ"
+              style={
+                Object {
+                  "background": "#ce1141",
+                  "color": "#fff",
+                  "fontWeight": "500",
+                }
+              }
+              width="75"
+            >
+              TOR
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 kiTAKI"
+              width="47"
+            >
+              56
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 kiTAKI"
+              width="47"
+            >
+              22
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 gCFYag"
+              width="73"
+            >
+              .718
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 dqgMn"
+              width="59"
+            >
+              0
+            </div>
+          </div>
+          <div
+            className="am-flexbox am-flexbox-align-center"
+            style={
+              Object {
+                "height": 30,
+                "left": 0,
+                "overflow": "hidden",
+                "paddingRight": 0,
+                "position": "absolute",
+                "top": 30,
+                "width": 300,
+              }
+            }
+          >
+            <div
+              className="Table__Cell-sc-9u2sr5-2 fjWUKQ"
+              style={
+                Object {
+                  "background": "#007a33",
+                  "color": "#fff",
+                  "fontWeight": "500",
+                }
+              }
+              width="75"
+            >
+              BOS
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 kiTAKI"
+              width="47"
+            >
+              53
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 kiTAKI"
+              width="47"
+            >
+              25
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 gCFYag"
+              width="73"
+            >
+              .679
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 dqgMn"
+              width="59"
+            >
+              3
+            </div>
+          </div>
+          <div
+            className="am-flexbox am-flexbox-align-center"
+            style={
+              Object {
+                "height": 30,
+                "left": 0,
+                "overflow": "hidden",
+                "paddingRight": 0,
+                "position": "absolute",
+                "top": 60,
+                "width": 300,
+              }
+            }
+          >
+            <div
+              className="Table__Cell-sc-9u2sr5-2 fjWUKQ"
+              style={
+                Object {
+                  "background": "#6f263d",
+                  "color": "#fff",
+                  "fontWeight": "500",
+                }
+              }
+              width="75"
+            >
+              CLE
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 kiTAKI"
+              width="47"
+            >
+              49
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 kiTAKI"
+              width="47"
+            >
+              30
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 gCFYag"
+              width="73"
+            >
+              .620
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 dqgMn"
+              width="59"
+            >
+              7.5
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <h3
+      className="Table__Conference-sc-9u2sr5-3 iKGnKJ"
+    >
+      west
+    </h3>
+    <div
+      className="ReactVirtualized__Table"
+      role="grid"
+      style={Object {}}
+    >
+      <div
+        className="am-flexbox ReactVirtualized__Table__headerRow am-flexbox-align-center"
+        style={
+          Object {
+            "height": 32,
+            "overflow": "hidden",
+            "paddingRight": 0,
+            "width": 300,
+          }
+        }
+      >
+        <div
+          className="Table__HeaderCell-sc-9u2sr5-1 jhHCnp"
+          width="75"
+        >
+          Teams
+        </div>
+        <div
+          className="Table__HeaderCell-sc-9u2sr5-1 iGaVpi"
+          width="47"
+        >
+          W
+        </div>
+        <div
+          className="Table__HeaderCell-sc-9u2sr5-1 iGaVpi"
+          width="47"
+        >
+          L
+        </div>
+        <div
+          className="Table__HeaderCell-sc-9u2sr5-1 eZeJyr"
+          width="73"
+        >
+          WIN%
+        </div>
+        <div
+          className="Table__HeaderCell-sc-9u2sr5-1 cBrKBo"
+          width="59"
+        >
+          GB
+        </div>
+      </div>
+      <div
+        aria-label="grid"
+        aria-readonly={true}
+        className="ReactVirtualized__Grid ReactVirtualized__Table__Grid"
+        onScroll={[Function]}
+        role="rowgroup"
+        style={
+          Object {
+            "WebkitOverflowScrolling": "touch",
+            "boxSizing": "border-box",
+            "direction": "ltr",
+            "height": 268,
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "position": "relative",
+            "width": 300,
+            "willChange": "transform",
+          }
+        }
+        tabIndex={0}
+      >
+        <div
+          className="ReactVirtualized__Grid__innerScrollContainer"
+          role="rowgroup"
+          style={
+            Object {
+              "height": 90,
+              "maxHeight": 90,
+              "maxWidth": 300,
+              "overflow": "hidden",
+              "pointerEvents": "",
+              "position": "relative",
+              "width": "auto",
+            }
+          }
+        >
+          <div
+            className="am-flexbox am-flexbox-align-center"
+            style={
+              Object {
+                "height": 30,
+                "left": 0,
+                "overflow": "hidden",
+                "paddingRight": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": 300,
+              }
+            }
+          >
+            <div
+              className="Table__Cell-sc-9u2sr5-2 fjWUKQ"
+              style={
+                Object {
+                  "background": "#ba0c2f",
+                  "color": "#fff",
+                  "fontWeight": "500",
+                }
+              }
+              width="75"
+            >
+              HOU
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 kiTAKI"
+              width="47"
+            >
+              64
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 kiTAKI"
+              width="47"
+            >
+              15
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 gCFYag"
+              width="73"
+            >
+              .810
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 dqgMn"
+              width="59"
+            >
+              0
+            </div>
+          </div>
+          <div
+            className="am-flexbox am-flexbox-align-center"
+            style={
+              Object {
+                "height": 30,
+                "left": 0,
+                "overflow": "hidden",
+                "paddingRight": 0,
+                "position": "absolute",
+                "top": 30,
+                "width": 300,
+              }
+            }
+          >
+            <div
+              className="Table__Cell-sc-9u2sr5-2 fjWUKQ"
+              style={
+                Object {
+                  "background": "#ffc72d",
+                  "color": "#fff",
+                  "fontWeight": "500",
+                }
+              }
+              width="75"
+            >
+              GSW
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 kiTAKI"
+              width="47"
+            >
+              57
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 kiTAKI"
+              width="47"
+            >
+              22
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 gCFYag"
+              width="73"
+            >
+              .722
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 dqgMn"
+              width="59"
+            >
+              7
+            </div>
+          </div>
+          <div
+            className="am-flexbox am-flexbox-align-center"
+            style={
+              Object {
+                "height": 30,
+                "left": 0,
+                "overflow": "hidden",
+                "paddingRight": 0,
+                "position": "absolute",
+                "top": 60,
+                "width": 300,
+              }
+            }
+          >
+            <div
+              className="Table__Cell-sc-9u2sr5-2 fjWUKQ"
+              style={
+                Object {
+                  "background": "#f0163a",
+                  "color": "#fff",
+                  "fontWeight": "500",
+                }
+              }
+              width="75"
+            >
+              POR
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 kiTAKI"
+              width="47"
+            >
+              48
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 kiTAKI"
+              width="47"
+            >
+              31
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 gCFYag"
+              width="73"
+            >
+              .608
+            </div>
+            <div
+              className="Table__Cell-sc-9u2sr5-2 dqgMn"
+              width="59"
+            >
+              16
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

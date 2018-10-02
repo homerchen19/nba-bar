@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<div
+  className="BarLoader__Wrapper-sc-1cjmyxn-0 cthRyu"
+>
+  <div
+    className="BarLoader__FirstBar-sc-1cjmyxn-2 ivdCQi"
+  />
+  <div
+    className="BarLoader__SecondBar-sc-1cjmyxn-3 dktTAd"
+  />
+</div>
+`;

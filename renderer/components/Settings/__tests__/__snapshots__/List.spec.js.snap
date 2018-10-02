@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<div
+  className="am-flexbox List__Wrapper-pnwga2-0 jXdhXV am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
+>
+  <div
+    className="am-list List__StyledList-pnwga2-1 jDtvWZ"
+  >
+    <div
+      className="am-list-body"
+    >
+      <div
+        className="am-list-item List__StyledItem-pnwga2-2 heegGh am-list-item-middle"
+        onClick={[Function]}
+      >
+        <div
+          className="am-list-line"
+        >
+          <div
+            className="am-list-content"
+          >
+            About NBA Bar
+          </div>
+        </div>
+        <div
+          className="am-list-ripple"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        />
+      </div>
+      <div
+        className="am-list-item List__StyledItem-pnwga2-2 heegGh am-list-item-middle"
+        onClick={[Function]}
+      >
+        <div
+          className="am-list-line"
+        >
+          <div
+            className="am-list-content"
+          >
+            Report issues
+          </div>
+        </div>
+        <div
+          className="am-list-ripple"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        />
+      </div>
+      <div
+        className="am-list-item List__StyledItem-pnwga2-2 heegGh am-list-item-middle"
+        onClick={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchCancel={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="am-list-line"
+        >
+          <div
+            className="am-list-content"
+          >
+            Quit NBA Bar
+          </div>
+          <div
+            className="am-list-extra"
+          >
+            ⌘Q
+          </div>
+        </div>
+        <div
+          className="am-list-ripple"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

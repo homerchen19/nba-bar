@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<div
+  className="am-flexbox TeamScore__Wrapper-pv8bgr-0 kJLffd am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
+>
+  <div
+    className="am-flexbox TeamScore__InfoWrapper-pv8bgr-2 jLzHKX am-flexbox-dir-column am-flexbox-align-center"
+  >
+    <h4>
+      7:00 pm ET
+    </h4>
+    <p
+      className="TeamScore__Arena-pv8bgr-4 idkKPH"
+    >
+      Wells Fargo Center, Philadelphia
+    </p>
+  </div>
+  <div
+    background={
+      Object {
+        "home": "#006bb6",
+        "visitor": "#6f263d",
+      }
+    }
+    className="am-flexbox TeamScore__TeamWrapper-pv8bgr-1 fTsAdS am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      className="am-flexbox-item"
+    >
+      <div
+        className="am-flexbox am-flexbox-dir-column am-flexbox-align-center"
+      >
+        <h3
+          className="TeamScore__TeamName-pv8bgr-3 dCbLsN"
+        >
+          PHI
+        </h3>
+        <p>
+          48 - 30
+        </p>
+      </div>
+    </div>
+    <div
+      className="am-flexbox-item"
+      style={
+        Object {
+          "margin": 0,
+        }
+      }
+    >
+      <div
+        className="am-flexbox am-flexbox-dir-column am-flexbox-align-center"
+      >
+        <h3
+          className="TeamScore__TeamName-pv8bgr-3 dCbLsN"
+        >
+          CLE
+        </h3>
+        <p>
+          49 - 30
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

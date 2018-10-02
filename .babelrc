@@ -1,52 +1,20 @@
 {
-  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "presets": ["next/babel"],
   "plugins": [
-    "babel-plugin-styled-components",
-    "react-hot-loader/babel",
     [
-      "@babel/plugin-proposal-class-properties",
+      "babel-plugin-styled-components",
       {
-        "loose": true
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
       }
     ],
     [
       "import",
       {
-        "libraryName": "antd-mobile",
-        "style": "css"
+        "libraryName": "antd-mobile"
       }
     ],
-    "ramda",
-    [
-      "transform-imports",
-      {
-        "react-router": {
-          "transform": "react-router-dom/${member}",
-          "preventFullImport": true
-        }
-      }
-    ],
-    "@babel/plugin-syntax-dynamic-import",
-    "@babel/plugin-syntax-import-meta",
-    "@babel/plugin-proposal-json-strings",
-    [
-      "@babel/plugin-proposal-decorators",
-      {
-        "legacy": true
-      }
-    ],
-    "@babel/plugin-proposal-function-sent",
-    "@babel/plugin-proposal-export-namespace-from",
-    "@babel/plugin-proposal-numeric-separator",
-    "@babel/plugin-proposal-throw-expressions"
-  ],
-  "env": {
-    "production": {
-      "plugins": [
-        "@babel/plugin-transform-react-constant-elements",
-        "transform-react-pure-class-to-function",
-        "transform-react-remove-prop-types"
-      ]
-    }
-  }
+    "ramda"
+  ]
 }
