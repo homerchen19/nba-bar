@@ -1,28 +1,20 @@
 {
-  "presets": ["env", "react", "stage-2"],
+  "presets": ["next/babel"],
   "plugins": [
-    "babel-plugin-styled-components",
-    "react-hot-loader/babel",
-    ["transform-class-properties", { "loose": true }],
-    ["import", { "libraryName": "antd-mobile", "style": "css" }],
-    "ramda",
     [
-      "transform-imports",
+      "babel-plugin-styled-components",
       {
-        "react-router": {
-          "transform": "react-router-dom/${member}",
-          "preventFullImport": true
-        }
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
       }
-    ]
-  ],
-  "env": {
-    "production": {
-      "plugins": [
-        "transform-react-constant-elements",
-        "transform-react-pure-class-to-function",
-        "transform-react-remove-prop-types"
-      ]
-    }
-  }
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd-mobile"
+      }
+    ],
+    "ramda"
+  ]
 }

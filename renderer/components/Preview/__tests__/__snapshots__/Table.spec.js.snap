@@ -1,0 +1,488 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<div
+  className="Table__Wrapper-k865a3-0 jOByoO"
+>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        78
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          GP
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        79
+      </p>
+    </div>
+  </div>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        48
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          W
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        49
+      </p>
+    </div>
+  </div>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        30
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          L
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        30
+      </p>
+    </div>
+  </div>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        109.1
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          PTS
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        110.6
+      </p>
+    </div>
+  </div>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        0.47
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          FG%
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        0.477
+      </p>
+    </div>
+  </div>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        0.367
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          FG3%
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        0.371
+      </p>
+    </div>
+  </div>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        0.754
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          FT%
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        0.781
+      </p>
+    </div>
+  </div>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        10.8
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          OREB
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        8.4
+      </p>
+    </div>
+  </div>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        36.4
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          DREB
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        33.7
+      </p>
+    </div>
+  </div>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        47.2
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          REB
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        42.1
+      </p>
+    </div>
+  </div>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        26.8
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          AST
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        23.4
+      </p>
+    </div>
+  </div>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        5.1
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          BLK
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        3.9
+      </p>
+    </div>
+  </div>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        8.2
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          STL
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        7.1
+      </p>
+    </div>
+  </div>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        16.7
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          TOV
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        13.7
+      </p>
+    </div>
+  </div>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        22.2
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          PF
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        18.7
+      </p>
+    </div>
+  </div>
+  <div
+    className="am-flexbox Table__Row-k865a3-1 hYyPjy am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      align="left"
+      className="am-flexbox-item Table__Column-k865a3-2 iOtFwu"
+    >
+      <p>
+        4
+      </p>
+    </div>
+    <div
+      align="center"
+      className="am-flexbox-item Table__Column-k865a3-2 gAbqaP"
+    >
+      <b>
+        <p>
+          +/-
+        </p>
+      </b>
+    </div>
+    <div
+      align="right"
+      className="am-flexbox-item Table__Column-k865a3-2 kNYEkj"
+    >
+      <p>
+        1
+      </p>
+    </div>
+  </div>
+</div>
+`;

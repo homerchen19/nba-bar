@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<div
+  className="am-flexbox TeamScore__Wrapper-dpbnwk-0 fPRylN am-flexbox-dir-column am-flexbox-justify-start am-flexbox-align-center"
+>
+  <div
+    className="am-flexbox TeamScore__InfoWrapper-dpbnwk-1 cgGrQF am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      className="am-flexbox-item"
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      <h4>
+        Final
+      </h4>
+    </div>
+    <div
+      className="am-flexbox-item"
+      style={
+        Object {
+          "margin": 0,
+          "textAlign": "center",
+        }
+      }
+    >
+      <span
+        style={
+          Object {
+            "fontSize": "10px",
+          }
+        }
+      >
+        Bankers Life Fieldhouse, Indianapolis
+      </span>
+    </div>
+  </div>
+  <div
+    background={
+      Object {
+        "home": "#041e42",
+        "visitor": "#ffc72d",
+      }
+    }
+    className="am-flexbox TeamScore__ScoreWrapper-dpbnwk-2 jMzxzS am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <div
+      className="am-flexbox TeamScore__Team-dpbnwk-3 bBlydO am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
+    >
+      <h3
+        className="TeamScore__TeamName-dpbnwk-4 kDLhxp"
+      >
+        IND
+      </h3>
+      <p
+        className="TeamScore__Score-dpbnwk-5 bsFBtt"
+      >
+        126
+      </p>
+    </div>
+    <div
+      className="am-flexbox TeamScore__Team-dpbnwk-3 bBlydO am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
+    >
+      <h3
+        className="TeamScore__TeamName-dpbnwk-4 kDLhxp"
+      >
+        GSW
+      </h3>
+      <p
+        className="TeamScore__Score-dpbnwk-5 fmmlWw"
+      >
+        106
+      </p>
+    </div>
+  </div>
+</div>
+`;

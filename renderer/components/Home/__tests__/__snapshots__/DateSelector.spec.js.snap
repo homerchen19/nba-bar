@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<div
+  className="DateSelector__Wrapper-sc-1doghr4-0 NtdVW"
+>
+  <div
+    className="am-flexbox am-flexbox-align-center"
+  >
+    <svg
+      className="DateSelector__Button-sc-1doghr4-1 gofxkt am-icon am-icon-left am-icon-md"
+      onClick={[MockFunction]}
+    >
+      <use
+        xlinkHref="#left"
+      />
+    </svg>
+    <div
+      className="am-flexbox-item DateSelector__Item-sc-1doghr4-2 QPjgb"
+    >
+      <p
+        className="DateSelector__Date-sc-1doghr4-3 gRtgOB"
+      >
+        06, Apr, 2018
+      </p>
+    </div>
+    <svg
+      className="DateSelector__Button-sc-1doghr4-1 gofxkt am-icon am-icon-right am-icon-md"
+      onClick={[MockFunction]}
+    >
+      <use
+        xlinkHref="#right"
+      />
+    </svg>
+  </div>
+</div>
+`;
