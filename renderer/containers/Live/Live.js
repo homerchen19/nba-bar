@@ -80,84 +80,83 @@ class Live extends Component {
     }
 
     return (
-      <Wrapper
-        currentTab={1}
-        schedule={
-          <Fragment>
-            <NavBar page="LIVE" />
-            <DataSection>
-              {loading && <Spinner />}
-              {error && <Error />}
-              {!error &&
-                !loading && (
-                  <Fragment>
-                    <Item marginTop="0">
-                      <TeamScore
-                        arena={gameData.arena}
-                        city={gameData.city}
+      <Wrapper currentTab={1}>
+        <Fragment>
+          <NavBar page="LIVE" />
+          <DataSection>
+            {loading && <Spinner />}
+            {error && <Error />}
+            {!error &&
+              !loading && (
+                <Fragment>
+                  <Item marginTop="0">
+                    <TeamScore
+                      arena={gameData.arena}
+                      city={gameData.city}
+                      home={{
+                        name: gameData.home.abbreviation,
+                        score: gameBoxScoreData.home.score,
+                      }}
+                      visitor={{
+                        name: gameData.visitor.abbreviation,
+                        score: gameBoxScoreData.visitor.score,
+                      }}
+                      winner={
+                        +gameBoxScoreData.home.score >
+                        +gameBoxScoreData.visitor.score
+                          ? 'home'
+                          : 'visitor'
+                      }
+                      gameStatus={`${
+                        gameBoxScoreData.periodTime.periodStatus
+                      }${gameClock}`}
+                      showBarLoader={live !== 'error'}
+                    />
+                  </Item>
+                  <Item marginTop="20">
+                    <LineScore
+                      home={{
+                        name: gameData.home.abbreviation,
+                        linescores: Array.isArray(
+                          gameBoxScoreData.home.linescores.period
+                        )
+                          ? gameBoxScoreData.home.linescores.period
+                          : [gameBoxScoreData.home.linescores.period],
+                        score: gameBoxScoreData.home.score,
+                      }}
+                      visitor={{
+                        name: gameData.visitor.abbreviation,
+                        linescores: Array.isArray(
+                          gameBoxScoreData.visitor.linescores.period
+                        )
+                          ? gameBoxScoreData.visitor.linescores.period
+                          : [gameBoxScoreData.visitor.linescores.period],
+                        score: gameBoxScoreData.visitor.score,
+                      }}
+                    />
+                  </Item>
+                  <Item marginTop="20">
+                    <Tab titles={['PLAY-BY-PLAY', 'BOX SCORE']}>
+                      <PlayByPlay
+                        gamePlayByPlayData={R.reverse(gamePlayByPlayData)}
+                      />
+                      <BoxScore
                         home={{
                           name: gameData.home.abbreviation,
-                          score: gameBoxScoreData.home.score,
+                          players: gameBoxScoreData.home.players.player,
                         }}
                         visitor={{
                           name: gameData.visitor.abbreviation,
-                          score: gameBoxScoreData.visitor.score,
-                        }}
-                        winner={
-                          +gameBoxScoreData.home.score >
-                          +gameBoxScoreData.visitor.score
-                            ? 'home'
-                            : 'visitor'
-                        }
-                        gameStatus={`${
-                          gameBoxScoreData.periodTime.periodStatus
-                        }${gameClock}`}
-                        showBarLoader={live !== 'error'}
-                      />
-                    </Item>
-                    <Item marginTop="20">
-                      <LineScore
-                        home={{
-                          name: gameData.home.abbreviation,
-                          linescores: Array.isArray(
-                            gameBoxScoreData.home.linescores.period
-                          )
-                            ? gameBoxScoreData.home.linescores.period
-                            : [gameBoxScoreData.home.linescores.period],
-                          score: gameBoxScoreData.home.score,
-                        }}
-                        visitor={{
-                          name: gameData.visitor.abbreviation,
-                          linescores: Array.isArray(
-                            gameBoxScoreData.visitor.linescores.period
-                          )
-                            ? gameBoxScoreData.visitor.linescores.period
-                            : [gameBoxScoreData.visitor.linescores.period],
-                          score: gameBoxScoreData.visitor.score,
+                          players: gameBoxScoreData.visitor.players.player,
                         }}
                       />
-                    </Item>
-                    <Item marginTop="20">
-                      <Tab titles={['PLAY-BY-PLAY', 'BOX SCORE']}>
-                        <PlayByPlay gamePlayByPlayData={gamePlayByPlayData} />
-                        <BoxScore
-                          home={{
-                            name: gameData.home.abbreviation,
-                            players: gameBoxScoreData.home.players.player,
-                          }}
-                          visitor={{
-                            name: gameData.visitor.abbreviation,
-                            players: gameBoxScoreData.visitor.players.player,
-                          }}
-                        />
-                      </Tab>
-                    </Item>
-                  </Fragment>
-                )}
-            </DataSection>
-          </Fragment>
-        }
-      />
+                    </Tab>
+                  </Item>
+                </Fragment>
+              )}
+          </DataSection>
+        </Fragment>
+      </Wrapper>
     );
   }
 }
