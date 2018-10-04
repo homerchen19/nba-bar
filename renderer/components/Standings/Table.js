@@ -4,8 +4,8 @@ import { Flex } from 'antd-mobile';
 import { Table as VirtualizedTable } from 'react-virtualized';
 import styled from 'styled-components';
 
-import { colors } from '../../styles/theme';
-import nba from '../../utils/nba';
+import { colors } from '@styles/theme';
+import nba from '@utils/nba';
 
 const Wrapper = styled(Flex)`
   width: 100%;

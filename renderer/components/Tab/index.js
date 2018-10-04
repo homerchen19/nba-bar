@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Tabs } from 'antd-mobile';
 import styled from 'styled-components';
 
-import { colors } from '../../styles/theme';
+import { colors } from '@styles/theme';
 
 const TabTitle = styled.span`
   font-size: 13px;

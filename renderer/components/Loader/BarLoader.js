@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import { colors } from '../../styles/theme';
+import { colors } from '@styles/theme';
 
 const Wrapper = styled.div`
   position: relative;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Flex } from 'antd-mobile';
 import MDSpinner from 'react-md-spinner';
 
-import { colors } from '../../styles/theme';
+import { colors } from '@styles/theme';
 
 const Spinner = () => (
   <Flex justify="center" style={{ height: '100vh', width: '100%', flex: 1 }}>

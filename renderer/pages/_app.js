@@ -6,7 +6,7 @@ import withRedux from 'next-redux-wrapper';
 import isOnline from 'is-online';
 
 import { Offline } from '@components/shared';
-import GlobalStyle from '../styles/global';
+import GlobalStyle from '@styles/global';
 import configureStore from '../store';
 
 export default withRedux(configureStore)(

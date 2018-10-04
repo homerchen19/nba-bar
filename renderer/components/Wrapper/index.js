@@ -4,8 +4,8 @@ import Router from 'next/router';
 import { TabBar, Flex } from 'antd-mobile';
 import styled from 'styled-components';
 
-import { Layout } from '../shared';
-import { colors } from '../../styles/theme';
+import { colors } from '@styles/theme';
+import { Layout } from '@components/shared';
 import calendarWhiteIcon from '../../../resources/calendar_white.svg';
 import calendarGreyIcon from '../../../resources/calendar_grey.svg';
 import trophyWhiteIcon from '../../../resources/trophy_white.svg';

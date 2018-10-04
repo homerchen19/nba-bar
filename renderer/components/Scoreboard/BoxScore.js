@@ -4,8 +4,8 @@ import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
 import { StickyTable, Row, Cell } from 'react-sticky-table';
 
-import { colors } from '../../styles/theme';
-import nba from '../../utils/nba';
+import { colors } from '@styles/theme';
+import nba from '@utils/nba';
 
 const Wrapper = styled(Flex)`
   width: 100%;

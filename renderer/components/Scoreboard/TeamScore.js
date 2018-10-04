@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
 
+import { colors } from '@styles/theme';
+import nba from '@utils/nba';
 import { BarLoader } from '../Loader';
-import { colors } from '../../styles/theme';
-import nba from '../../utils/nba';
 
 const Wrapper = styled(Flex)`
   width: 100%;

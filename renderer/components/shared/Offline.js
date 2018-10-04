@@ -2,8 +2,8 @@ import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import { Flex } from 'antd-mobile';
 
+import { colors } from '@styles/theme';
 import Layout from './Layout';
-import { colors } from '../../styles/theme';
 
 const Content = styled(Flex)`
   flex: 1;

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import format from 'date-fns/format';
 import startOfDay from 'date-fns/start_of_day';
 
-import { colors } from '../../styles/theme';
+import { colors } from '@styles/theme';
 
 const formatDate = date => format(startOfDay(date), 'DD, MMM, YYYY');
 
