@@ -41,7 +41,7 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/core@^7.0.0":
+"@babel/core@^7.0.0", "@babel/core@^7.1.2":
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.1.2.tgz#f8d2a9ceb6832887329a7b60f9d035791400ba4e"
   dependencies:
@@ -3240,12 +3240,11 @@ eslint-plugin-jsx-a11y@^6.1.1:
     has "^1.0.3"
     jsx-ast-utils "^2.0.1"
 
-eslint-plugin-prettier@^2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-2.7.0.tgz#b4312dcf2c1d965379d7f9d5b5f8aaadc6a45904"
+eslint-plugin-prettier@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.0.0.tgz#f6b823e065f8c36529918cdb766d7a0e975ec30c"
   dependencies:
-    fast-diff "^1.1.1"
-    jest-docblock "^21.0.0"
+    prettier-linter-helpers "^1.0.0"
 
 eslint-plugin-react@^7.11.1:
   version "7.11.1"
@@ -3556,7 +3555,7 @@ fast-deep-equal@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz#7b05218ddf9667bf7f370bf7fdb2cb15fdd0aa49"
 
-fast-diff@^1.1.1:
+fast-diff@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/fast-diff/-/fast-diff-1.1.2.tgz#4b62c42b8e03de3f848460b639079920695d0154"
 
@@ -4313,9 +4312,9 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
-husky@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-1.0.1.tgz#749bc6b3a14bdc9cab73d8cc827b92fcd691fac6"
+husky@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-1.1.0.tgz#7271e85f5d98b54349788839b720c9a60cd95dba"
   dependencies:
     cosmiconfig "^5.0.6"
     execa "^0.9.0"
@@ -5056,10 +5055,6 @@ jest-diff@^23.6.0:
     diff "^3.2.0"
     jest-get-type "^22.1.0"
     pretty-format "^23.6.0"
-
-jest-docblock@^21.0.0:
-  version "21.2.0"
-  resolved "https://registry.yarnpkg.com/jest-docblock/-/jest-docblock-21.2.0.tgz#51529c3b30d5fd159da60c27ceedc195faf8d414"
 
 jest-docblock@^23.2.0:
   version "23.2.0"
@@ -6395,9 +6390,9 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
 
-nba-client-template@3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/nba-client-template/-/nba-client-template-3.5.0.tgz#7566e71b6f6c98ea068ab708d8820a2a5d1ad8f3"
+nba-client-template@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/nba-client-template/-/nba-client-template-4.0.0.tgz#46af91222c27ab4e4de1db2d973563a5aacf3187"
 
 nba-color@^1.3.0:
   version "1.3.1"
@@ -6418,9 +6413,9 @@ nba.js@^0.6.1:
   dependencies:
     got "^8.0.0"
 
-nba@^4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/nba/-/nba-4.2.2.tgz#1bae6c6b750e56ee60610d3865a2ffdf43e285c0"
+nba@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/nba/-/nba-4.3.0.tgz#28b5c787c99fc35759b4809fae0a3324dfed01e5"
   dependencies:
     camel-case "^3.0.0"
     debug "^2.2.0"
@@ -6434,7 +6429,7 @@ nba@^4.2.2:
     lodash.mapkeys "^3.8.0"
     lodash.pick "^3.1.0"
     minimist "^1.2.0"
-    nba-client-template "3.5.0"
+    nba-client-template "4.0.0"
     node-fetch "^1.6.3"
     pify "^2.3.0"
     url "^0.11.0"
@@ -6451,9 +6446,9 @@ neo-async@^2.5.0:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.5.1.tgz#acb909e327b1e87ec9ef15f41b8a269512ad41ee"
 
-next-images@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/next-images/-/next-images-1.0.0.tgz#506bff0b97e1fc50d9e228bb4fbd6967cc3a807a"
+next-images@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/next-images/-/next-images-1.0.1.tgz#011c9dc9648770ec2ca664059950749ab92a46ad"
   dependencies:
     file-loader "^2.0"
     url-loader "^1.0.1"
@@ -7388,6 +7383,12 @@ prepend-http@^2.0.0:
 preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
+
+prettier-linter-helpers@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/prettier-linter-helpers/-/prettier-linter-helpers-1.0.0.tgz#d23d41fe1375646de2d0104d3454a3008802cf7b"
+  dependencies:
+    fast-diff "^1.1.2"
 
 prettier-package-json@^2.0.1:
   version "2.0.1"
