@@ -77,6 +77,12 @@ const mb = menubar({
   webPreferences: { webSecurity: false },
 });
 
+const reload = () => {
+  if (isDev) {
+    mb.window.reload();
+  }
+};
+
 mb.on('ready', async () => {
   await prepareNext('./renderer', 8080);
 
@@ -84,9 +90,8 @@ mb.on('ready', async () => {
     await installExtensions();
   }
 
-  globalShortcut.register('CommandOrControl+R', () => {
-    mb.window.reload();
-  });
+  globalShortcut.register('CommandOrControl+R', reload);
+  globalShortcut.register('F5', reload);
 
   const devPath = 'http://localhost:8080/home';
 
