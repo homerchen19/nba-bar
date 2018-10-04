@@ -4,8 +4,8 @@ import R from 'ramda';
 import { Flex, Card } from 'antd-mobile';
 import styled from 'styled-components';
 
-import { colors } from '../../styles/theme';
-import nba from '../../utils/nba';
+import { colors } from '@styles/theme';
+import nba from '@utils/nba';
 
 const Wrapper = styled(Card)`
   flex: 1 0;

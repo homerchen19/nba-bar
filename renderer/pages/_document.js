@@ -9,10 +9,13 @@ export default class MyDocument extends Document {
       sheet.collectStyles(<App {...props} />)
     );
     const styleTags = sheet.getStyleElement();
+
     return { ...page, styleTags };
   }
 
   render() {
+    const { styleTags } = this.props;
+
     return (
       <html lang="en">
         <Head>
@@ -26,7 +29,7 @@ export default class MyDocument extends Document {
             type="text/css"
             href="https://unpkg.com/react-sticky-table/dist/react-sticky-table.css"
           />
-          {this.props.styleTags}
+          {styleTags}
         </Head>
         <body>
           <Main />

@@ -4,7 +4,7 @@ import R from 'ramda';
 import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
 
-import { colors } from '../../styles/theme';
+import { colors } from '@styles/theme';
 
 const Wrapper = styled.div`
   display: block;

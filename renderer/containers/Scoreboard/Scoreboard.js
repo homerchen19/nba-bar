@@ -28,7 +28,7 @@ class Scoreboard extends Component {
   componentDidMount() {
     this.props.fetchData({
       date: this.props.date,
-      gameId: this.props.gameData.id,
+      gameId: this.props.router.query.gameId,
     });
   }
 
@@ -125,6 +125,7 @@ Scoreboard.propTypes = {
   fetchData: PropTypes.func.isRequired,
   error: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
+  router: PropTypes.object.isRequired,
   gameData: PropTypes.object.isRequired,
   date: PropTypes.number.isRequired,
   gameBoxScoreData: PropTypes.object.isRequired,

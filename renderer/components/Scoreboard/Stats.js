@@ -4,7 +4,7 @@ import { Flex } from 'antd-mobile';
 import styled from 'styled-components';
 import { List } from 'react-virtualized';
 
-import { colors } from '../../styles/theme';
+import { colors } from '@styles/theme';
 
 const Wrapper = styled(Flex)`
   width: 100%;

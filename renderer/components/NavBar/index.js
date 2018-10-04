@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { NavBar as AntdNavBar, Icon } from 'antd-mobile';
 import styled from 'styled-components';
 
-import { colors } from '../../styles/theme';
+import { colors } from '@styles/theme';
 
 const Wrapper = styled.div`
   width: 100vw;

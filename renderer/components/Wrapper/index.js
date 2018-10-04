@@ -4,20 +4,14 @@ import Router from 'next/router';
 import { TabBar, Flex } from 'antd-mobile';
 import styled from 'styled-components';
 
-import { colors } from '../../styles/theme';
+import { colors } from '@styles/theme';
+import { Layout } from '@components/shared';
 import calendarWhiteIcon from '../../../resources/calendar_white.svg';
 import calendarGreyIcon from '../../../resources/calendar_grey.svg';
 import trophyWhiteIcon from '../../../resources/trophy_white.svg';
 import trophyBlackIcon from '../../../resources/trophy_grey.svg';
 import settingsWhiteIcon from '../../../resources/settings_white.svg';
 import settingsBlackIcon from '../../../resources/settings_grey.svg';
-
-const Layout = styled.div`
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-`;
 
 const Content = styled(Flex)`
   flex: 1;

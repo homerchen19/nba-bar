@@ -30,13 +30,7 @@
   },
   "settings": {
     "import/resolver": {
-      "babel-module": {
-        "alias": {
-          "@containers": "./renderer/containers",
-          "@components": "./renderer/components",
-          "@utils": "./renderer/utils"
-        }
-      }
+      "babel-module": {}
     }
   },
   "plugins": ["react", "babel", "prettier"]
