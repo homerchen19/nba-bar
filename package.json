@@ -37,6 +37,7 @@
     "electron-is-dev": "^1.0.1",
     "electron-next": "^3.1.5",
     "electron-updater": "^3.1.2",
+    "is-online": "^7.0.0",
     "menubar": "^5.2.3",
     "moment-timezone": "^0.5.21",
     "nba": "^4.3.0",

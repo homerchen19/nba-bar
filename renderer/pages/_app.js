@@ -3,7 +3,9 @@ import { Provider } from 'react-redux';
 import App, { Container } from 'next/app';
 import Head from 'next/head';
 import withRedux from 'next-redux-wrapper';
+import isOnline from 'is-online';
 
+import { Offline } from '@components/shared';
 import GlobalStyle from '../styles/global';
 import configureStore from '../store';
 
@@ -14,11 +16,13 @@ export default withRedux(configureStore)(
         pageProps: Component.getInitialProps
           ? await Component.getInitialProps(ctx)
           : {},
+        online: await isOnline(),
       };
     }
 
     render() {
-      const { Component, pageProps, store } = this.props;
+      const { Component, pageProps, store, online } = this.props;
+
       return (
         <Container>
           <Head>
@@ -32,7 +36,7 @@ export default withRedux(configureStore)(
           <Provider store={store}>
             <>
               <GlobalStyle />
-              <Component {...pageProps} />
+              {online ? <Component {...pageProps} /> : <Offline />}
             </>
           </Provider>
         </Container>
