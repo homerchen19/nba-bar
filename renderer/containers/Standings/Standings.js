@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import differenceInHours from 'date-fns/difference_in_hours';
 
+import Wrapper from '@components/Wrapper';
+import { Spinner, Error } from '@components/Loader';
+import { Table } from '@components/Standings';
+import { DataSection } from '@components/shared';
 import * as actions from './actions';
-import Wrapper from '../../components/Wrapper';
-import { Spinner, Error } from '../../components/Loader';
-import { Table } from '../../components/Standings';
-import { DataSection } from '../../components/shared';
 
 class Standings extends Component {
   componentDidMount() {

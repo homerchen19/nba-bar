@@ -5,14 +5,14 @@ import getTime from 'date-fns/get_time';
 import format from 'date-fns/format';
 import moment from 'moment-timezone';
 
+import nba from '@utils/nba';
+import getApiDate from '@utils/getApiDate';
 import {
   REQUEST_START,
   REQUEST_SUCCESS,
   REQUEST_ERROR,
   SET_DATE,
 } from './constants';
-import nba from '../../utils/nba';
-import getApiDate from '../../utils/getApiDate';
 
 const requestStart = () => ({ type: REQUEST_START });
 const requestError = () => ({ type: REQUEST_ERROR });

@@ -4,11 +4,11 @@ import Router from 'next/router';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 
+import Wrapper from '@components/Wrapper';
+import { DateSelector, MatchCard } from '@components/Home';
+import { Spinner } from '@components/Loader';
+import { DataSection } from '@components/shared';
 import * as actions from './actions';
-import Wrapper from '../../components/Wrapper';
-import { DateSelector, MatchCard } from '../../components/Home';
-import { Spinner } from '../../components/Loader';
-import { DataSection } from '../../components/shared';
 
 const NoGame = styled.div`
   display: flex;

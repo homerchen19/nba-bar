@@ -1,3 +1,3 @@
-import Standings from '../containers/Standings';
+import Standings from '@containers/Standings';
 
 export default Standings;

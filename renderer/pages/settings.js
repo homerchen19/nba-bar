@@ -1,3 +1,3 @@
-import Settings from '../containers/Settings';
+import Settings from '@containers/Settings';
 
 export default Settings;

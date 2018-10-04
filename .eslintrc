@@ -30,8 +30,12 @@
   },
   "settings": {
     "import/resolver": {
-      "webpack": {
-        "config": "./webpack.config.development.js"
+      "babel-module": {
+        "alias": {
+          "@containers": "./renderer/containers",
+          "@components": "./renderer/components",
+          "@utils": "./renderer/utils"
+        }
       }
     }
   },

@@ -15,6 +15,16 @@
         "libraryName": "antd-mobile"
       }
     ],
-    "ramda"
+    "ramda",
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@containers": "./renderer/containers",
+          "@components": "./renderer/components",
+          "@utils": "./renderer/utils"
+        }
+      }
+    ]
   ]
 }
