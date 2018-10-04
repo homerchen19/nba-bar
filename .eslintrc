@@ -14,7 +14,6 @@
         "singleQuote": true
       }
     ],
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx"] }],
     "consistent-return": "off",
     "global-require": "off",
     "no-console": "off",
@@ -24,6 +23,7 @@
     "react/prefer-stateless-function": "off",
     "react/forbid-prop-types": "off",
     "react/destructuring-assignment": "off",
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx"] }],
     "react/jsx-wrap-multilines": "off",
     "react/jsx-one-expression-per-line": "off",
     "jsx-a11y/anchor-is-valid": "off"
