@@ -4,18 +4,18 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import R from 'ramda';
 
-import * as actions from './actions';
-import Wrapper from '../../components/Wrapper';
-import Tab from '../../components/Tab';
-import NavBar from '../../components/NavBar';
-import { Spinner, Error } from '../../components/Loader';
+import Wrapper from '@components/Wrapper';
+import Tab from '@components/Tab';
+import NavBar from '@components/NavBar';
+import { Spinner, Error } from '@components/Loader';
 import {
   TeamScore,
   LineScore,
   BoxScore,
   PlayByPlay,
-} from '../../components/Scoreboard';
-import { DataSection } from '../../components/shared';
+} from '@components/Scoreboard';
+import { DataSection } from '@components/shared';
+import * as actions from './actions';
 
 const Item = styled.div`
   flex: 1 1 auto;

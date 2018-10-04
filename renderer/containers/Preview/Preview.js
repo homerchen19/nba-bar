@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import R from 'ramda';
 
+import Wrapper from '@components/Wrapper';
+import NavBar from '@components/NavBar';
+import { Spinner, Error } from '@components/Loader';
+import { TeamScore, Table } from '@components/Preview';
+import { DataSection } from '@components/shared';
 import * as actions from './actions';
-import Wrapper from '../../components/Wrapper';
-import NavBar from '../../components/NavBar';
-import { Spinner, Error } from '../../components/Loader';
-import { TeamScore, Table } from '../../components/Preview';
-import { DataSection } from '../../components/shared';
 
 class Preview extends Component {
   componentDidMount() {

@@ -1,5 +1,7 @@
 import R from 'ramda';
 
+import nba from '@utils/nba';
+import getApiDate from '@utils/getApiDate';
 import {
   REQUEST_START,
   REQUEST_SUCCESS,
@@ -8,8 +10,6 @@ import {
   LIVE_SUCCESS,
   LIVE_ERROR,
 } from './constants';
-import nba from '../../utils/nba';
-import getApiDate from '../../utils/getApiDate';
 
 const requestStart = () => ({ type: REQUEST_START });
 const requestError = () => ({ type: REQUEST_ERROR });
