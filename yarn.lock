@@ -568,13 +568,6 @@
     "@babel/helper-regex" "^7.0.0"
     regexpu-core "^4.1.3"
 
-"@babel/polyfill@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/polyfill/-/polyfill-7.0.0.tgz#c8ff65c9ec3be6a1ba10113ebd40e8750fb90bff"
-  dependencies:
-    core-js "^2.5.7"
-    regenerator-runtime "^0.11.1"
-
 "@babel/preset-env@7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.0.0.tgz#f450f200c14e713f98cb14d113bf0c2cfbb89ca9"
@@ -3031,9 +3024,9 @@ electron-updater@^3.1.2:
     semver "^5.5.1"
     source-map-support "^0.5.9"
 
-electron@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-3.0.2.tgz#0aed43a331b43dfe671ddb54d75fc4102d362959"
+electron@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-3.0.3.tgz#2857ed8d37c1b46e0a75a72684800252255f3243"
   dependencies:
     "@types/node" "^8.0.24"
     electron-download "^4.1.0"
@@ -3251,9 +3244,9 @@ eslint-plugin-import@^2.14.0:
     read-pkg-up "^2.0.0"
     resolve "^1.6.0"
 
-eslint-plugin-jsx-a11y@^6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.1.1.tgz#7bf56dbe7d47d811d14dbb3ddff644aa656ce8e1"
+eslint-plugin-jsx-a11y@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.1.2.tgz#69bca4890b36dcf0fe16dd2129d2d88b98f33f88"
   dependencies:
     aria-query "^3.0.0"
     array-includes "^3.0.3"
@@ -4336,9 +4329,9 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
-husky@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-1.1.0.tgz#7271e85f5d98b54349788839b720c9a60cd95dba"
+husky@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-1.1.1.tgz#7179043184f68a4d1ffc975cbd1c6132ef1fd7b3"
   dependencies:
     cosmiconfig "^5.0.6"
     execa "^0.9.0"
@@ -4901,12 +4894,6 @@ isbinaryfile@^3.0.3:
   dependencies:
     buffer-alloc "^1.2.0"
 
-isemail@3.x.x:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/isemail/-/isemail-3.1.2.tgz#937cf919002077999a73ea8b1951d590e84e01dd"
-  dependencies:
-    punycode "2.x.x"
-
 isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
@@ -5317,14 +5304,6 @@ jest@^23.6.0:
   dependencies:
     import-local "^1.0.0"
     jest-cli "^23.6.0"
-
-joi@11.3.4:
-  version "11.3.4"
-  resolved "https://registry.yarnpkg.com/joi/-/joi-11.3.4.tgz#c25fc2598c3847865f92c51b5249b519af3e51cb"
-  dependencies:
-    hoek "4.x.x"
-    isemail "3.x.x"
-    topo "2.x.x"
 
 js-base64@^2.1.9:
   version "2.4.3"
@@ -6441,11 +6420,10 @@ nba-client-template@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/nba-client-template/-/nba-client-template-4.0.0.tgz#46af91222c27ab4e4de1db2d973563a5aacf3187"
 
-nba-color@^1.3.0:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/nba-color/-/nba-color-1.3.1.tgz#0fce8ab537847942a6e2aa79cdbd9a0bec4faf02"
+nba-color@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/nba-color/-/nba-color-1.3.4.tgz#f3e8f74835a90deed09e9c15fe560fe8f49885d6"
   dependencies:
-    joi "11.3.4"
     ramda "^0.25.0"
 
 nba-stats-client@^1.0.0:
@@ -6460,9 +6438,9 @@ nba.js@^0.6.1:
   dependencies:
     got "^8.0.0"
 
-nba@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/nba/-/nba-4.3.0.tgz#28b5c787c99fc35759b4809fae0a3324dfed01e5"
+nba@^4.3.2:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/nba/-/nba-4.3.2.tgz#d71b642ad2baa14f299a5a019d0b0702d575b322"
   dependencies:
     camel-case "^3.0.0"
     debug "^2.2.0"
@@ -6477,7 +6455,7 @@ nba@^4.3.0:
     lodash.pick "^3.1.0"
     minimist "^1.2.0"
     nba-client-template "4.0.0"
-    node-fetch "^1.6.3"
+    node-fetch "2.2.0"
     pify "^2.3.0"
     url "^0.11.0"
 
@@ -6572,7 +6550,11 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
-node-fetch@^1.0.1, node-fetch@^1.6.3:
+node-fetch@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.2.0.tgz#4ee79bde909262f9775f731e3656d0db55ced5b5"
+
+node-fetch@^1.0.1:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
   dependencies:
@@ -7612,13 +7594,13 @@ punycode@1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.3.2.tgz#9653a036fb7c1ee42342f2325cceefea3926c48d"
 
-punycode@2.x.x, punycode@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.0.tgz#5f863edc89b96db09074bad7947bf09056ca4e7d"
-
 punycode@^1.2.4, punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
+
+punycode@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.0.tgz#5f863edc89b96db09074bad7947bf09056ca4e7d"
 
 qs@~6.5.1:
   version "6.5.2"
@@ -8055,7 +8037,7 @@ regenerate@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
 
-regenerator-runtime@^0.11.0, regenerator-runtime@^0.11.1:
+regenerator-runtime@^0.11.0:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
 
@@ -9163,9 +9145,9 @@ stylelint-order@^0.8.1:
     postcss "^6.0.14"
     postcss-sorting "^3.1.0"
 
-stylelint-processor-styled-components@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/stylelint-processor-styled-components/-/stylelint-processor-styled-components-1.4.0.tgz#7688a7965920b49ba287663b27d6715a9918688f"
+stylelint-processor-styled-components@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/stylelint-processor-styled-components/-/stylelint-processor-styled-components-1.5.0.tgz#bf17ab1a263621015f2cab302f0e6cb174e6bd2a"
   dependencies:
     "@babel/parser" "^7.0.0"
     "@babel/traverse" "^7.0.0"
@@ -9493,12 +9475,6 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     extend-shallow "^3.0.2"
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
-
-topo@2.x.x:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/topo/-/topo-2.0.2.tgz#cd5615752539057c0dc0491a621c3bc6fbe1d182"
-  dependencies:
-    hoek "4.x.x"
 
 toposort@^1.0.0:
   version "1.0.7"
