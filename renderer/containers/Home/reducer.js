@@ -6,7 +6,7 @@ import {
 } from './constants';
 
 const initialState = {
-  date: Date.now(),
+  date: new Date().getTime(),
   loading: true,
   scheduleData: [],
 };
