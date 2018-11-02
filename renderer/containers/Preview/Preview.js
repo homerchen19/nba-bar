@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import R from 'ramda';
@@ -10,61 +10,55 @@ import { TeamScore, Table } from '@components/Preview';
 import { DataSection } from '@components/shared';
 import * as actions from './actions';
 
-class Preview extends Component {
-  componentDidMount() {
-    this.props.fetchData(this.props.gameData);
-  }
+const Preview = ({
+  fetchData,
+  error,
+  loading,
+  gameData,
+  homeTeamDashboardData,
+  visitorTeamDashboardData,
+}) => {
+  useLayoutEffect(() => fetchData(gameData), []);
 
-  render() {
-    const {
-      error,
-      loading,
-      gameData,
-      homeTeamDashboardData,
-      visitorTeamDashboardData,
-    } = this.props;
-
-    return (
-      <Wrapper currentTab={1}>
-        <Fragment>
-          <NavBar page="PREVIEW" />
-          <DataSection>
-            {loading && <Spinner />}
-            {error && <Error />}
-            {!error &&
-              !loading && (
-                <Fragment>
-                  <TeamScore
-                    time={gameData.periodTime.periodStatus.replace(' ET', '')}
-                    arena={gameData.arena}
-                    city={gameData.city}
-                    home={{
-                      name: gameData.home.abbreviation,
-                      w: homeTeamDashboardData.w,
-                      l: homeTeamDashboardData.l,
-                    }}
-                    visitor={{
-                      name: gameData.visitor.abbreviation,
-                      w: visitorTeamDashboardData.w,
-                      l: visitorTeamDashboardData.l,
-                    }}
-                  />
-                  <Table
-                    home={homeTeamDashboardData}
-                    visitor={visitorTeamDashboardData}
-                  />
-                </Fragment>
-              )}
-          </DataSection>
-        </Fragment>
-      </Wrapper>
-    );
-  }
-}
+  return (
+    <Wrapper currentTab={1}>
+      <>
+        <NavBar page="PREVIEW" />
+        <DataSection>
+          {loading && <Spinner />}
+          {error && <Error />}
+          {!error &&
+            !loading && (
+              <>
+                <TeamScore
+                  time={gameData.periodTime.periodStatus.replace(' ET', '')}
+                  arena={gameData.arena}
+                  city={gameData.city}
+                  home={{
+                    name: gameData.home.abbreviation,
+                    w: homeTeamDashboardData.w,
+                    l: homeTeamDashboardData.l,
+                  }}
+                  visitor={{
+                    name: gameData.visitor.abbreviation,
+                    w: visitorTeamDashboardData.w,
+                    l: visitorTeamDashboardData.l,
+                  }}
+                />
+                <Table
+                  home={homeTeamDashboardData}
+                  visitor={visitorTeamDashboardData}
+                />
+              </>
+            )}
+        </DataSection>
+      </>
+    </Wrapper>
+  );
+};
 
 Preview.propTypes = {
   fetchData: PropTypes.func.isRequired,
-
   error: PropTypes.bool.isRequired,
   loading: PropTypes.bool.isRequired,
   gameData: PropTypes.object.isRequired,

@@ -44,4 +44,4 @@ NavBar.propTypes = {
   page: PropTypes.string.isRequired,
 };
 
-export default NavBar;
+export default React.memo(NavBar);

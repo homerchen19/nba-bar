@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
 import Router from 'next/router';
 import { connect } from 'react-redux';
@@ -19,75 +19,70 @@ const NoGame = styled.div`
   text-align: center;
 `;
 
-class Home extends Component {
-  componentDidMount() {
-    this.props.fetchData(this.props.date, 'today');
+const getPath = gameStatus => {
+  switch (gameStatus) {
+    default:
+    case '1':
+      return 'preview';
+    case 'Halftime':
+    case '2':
+      return 'live';
+    case '3':
+      return 'scoreboard';
   }
+};
 
-  getPath = gameStatus => {
-    switch (gameStatus) {
-      default:
-      case '1':
-        return 'preview';
-      case 'Halftime':
-      case '2':
-        return 'live';
-      case '3':
-        return 'scoreboard';
-    }
-  };
+const handleMatchCardClick = game => () => {
+  const path = getPath(game.periodTime.gameStatus);
 
-  render() {
-    const {
-      fetchData,
-      updateScheduleDataByGameId,
-      date,
-      loading,
-      scheduleData,
-    } = this.props;
+  Router.push({
+    pathname: `/${path}`,
+    query: { gameId: `${game.id}` },
+  });
+};
 
-    return (
-      <Wrapper currentTab={1}>
-        <Fragment>
-          <DateSelector
-            date={date}
-            addDay={() => fetchData(date, 'add')}
-            subDay={() => fetchData(date, 'sub')}
-          />
-          <DataSection style={{ height: 'auto', marginTop: '30px' }}>
-            {loading && <Spinner />}
-            {!loading &&
-              scheduleData.length === 0 && (
-                <NoGame>
-                  <h3>No games available for this date</h3>
-                </NoGame>
-              )}
-            {!loading &&
-              scheduleData.length !== 0 &&
-              scheduleData.map(game => (
-                <MatchCard
-                  key={game.id}
-                  data={game}
-                  onClick={() => {
-                    const gameId = game.id;
-                    const path = this.getPath(game.periodTime.gameStatus);
+const Home = ({
+  fetchData,
+  updateScheduleDataByGameId,
+  date,
+  loading,
+  scheduleData,
+}) => {
+  useLayoutEffect(() => fetchData(date, 'today'), []);
 
-                    Router.push({
-                      pathname: `/${path}`,
-                      query: { gameId: `${gameId}` },
-                    });
-                  }}
-                  updateScheduleDataByGameId={() =>
-                    updateScheduleDataByGameId(date, game.id)
-                  }
-                />
-              ))}
-          </DataSection>
-        </Fragment>
-      </Wrapper>
-    );
-  }
-}
+  return (
+    <Wrapper currentTab={1}>
+      <>
+        <DateSelector
+          date={date}
+          addDay={() => fetchData(date, 'add')}
+          subDay={() => fetchData(date, 'sub')}
+        />
+        <DataSection style={{ height: 'auto', marginTop: '30px' }}>
+          {loading && <Spinner />}
+          {!loading &&
+            scheduleData.length === 0 && (
+              <NoGame>
+                <h3>No games available for this date</h3>
+              </NoGame>
+            )}
+          {!loading &&
+            scheduleData.length !== 0 &&
+            scheduleData.map(game => (
+              <MatchCard
+                key={game.id}
+                data={game}
+                onClick={handleMatchCardClick(game)}
+                updateScheduleDataByGameId={() =>
+                  updateScheduleDataByGameId(date, game.id)
+                }
+              />
+            ))}
+        </DataSection>
+      </>
+    </Wrapper>
+  );
+};
 
 Home.propTypes = {
   date: PropTypes.number.isRequired,
