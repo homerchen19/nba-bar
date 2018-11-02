@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import differenceInHours from 'date-fns/difference_in_hours';
@@ -9,30 +9,26 @@ import { Table } from '@components/Standings';
 import { DataSection } from '@components/shared';
 import * as actions from './actions';
 
-class Standings extends Component {
-  componentDidMount() {
-    if (differenceInHours(Date.now(), this.props.updatedAt) >= 6) {
-      this.props.fetchData();
+const Standings = ({ fetchData, updatedAt, error, loading, standingsData }) => {
+  useEffect(() => {
+    if (differenceInHours(Date.now(), updatedAt) >= 6) {
+      fetchData();
     }
-  }
+  });
 
-  render() {
-    const { error, loading, standingsData } = this.props;
-
-    return (
-      <Wrapper currentTab={2}>
-        <DataSection>
-          {loading && <Spinner />}
-          {error && <Error />}
-          {!error &&
-            !loading && (
-              <Table east={standingsData.east} west={standingsData.west} />
-            )}
-        </DataSection>
-      </Wrapper>
-    );
-  }
-}
+  return (
+    <Wrapper currentTab={2}>
+      <DataSection>
+        {loading && <Spinner />}
+        {error && <Error />}
+        {!error &&
+          !loading && (
+            <Table east={standingsData.east} west={standingsData.west} />
+          )}
+      </DataSection>
+    </Wrapper>
+  );
+};
 
 Standings.propTypes = {
   fetchData: PropTypes.func.isRequired,

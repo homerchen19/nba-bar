@@ -36,70 +36,71 @@ const getQuaterString = period =>
 
 const getClock = clock => (clock !== '' ? clock : '12:00');
 
-const PlayByPlay = ({ gamePlayByPlayData }) => (
-  <Wrapper justify="center">
-    <Flex.Item style={{ height: '100%' }}>
-      <AutoSizer>
-        {({ height }) => (
-          <MultiGrid
-            fixedColumnCount={1}
-            estimatedColumnSize={300}
-            columnWidth={({ index }) => (index === 0 ? 100 : 200)}
-            columnCount={2}
-            cellRenderer={({ columnIndex, key, rowIndex, style }) => {
-              const data = gamePlayByPlayData[rowIndex];
+const PlayByPlay = ({ gamePlayByPlayData }) =>
+  gamePlayByPlayData.length !== 0 && (
+    <Wrapper justify="center">
+      <Flex.Item style={{ height: '100%' }}>
+        <AutoSizer>
+          {({ height }) => (
+            <MultiGrid
+              fixedColumnCount={1}
+              estimatedColumnSize={300}
+              columnWidth={({ index }) => (index === 0 ? 100 : 200)}
+              columnCount={2}
+              cellRenderer={({ columnIndex, key, rowIndex, style }) => {
+                const data = gamePlayByPlayData[rowIndex];
 
-              let homeColor = '#000';
-              let visitorColor = '#000';
+                let homeColor = '#000';
+                let visitorColor = '#000';
 
-              if (rowIndex !== gamePlayByPlayData.length) {
-                const previousData = gamePlayByPlayData[rowIndex + 1];
-                if (data.home_score > previousData.home_score) {
-                  homeColor = nba.getTeamBackgroundColor(data.team_abr);
-                } else if (data.visitor_score > previousData.visitor_score) {
-                  visitorColor = nba.getTeamBackgroundColor(data.team_abr);
+                if (rowIndex !== gamePlayByPlayData.length) {
+                  const previousData = gamePlayByPlayData[rowIndex + 1];
+                  if (data.home_score > previousData.home_score) {
+                    homeColor = nba.getTeamBackgroundColor(data.team_abr);
+                  } else if (data.visitor_score > previousData.visitor_score) {
+                    visitorColor = nba.getTeamBackgroundColor(data.team_abr);
+                  }
                 }
-              }
 
-              if (columnIndex === 0) {
+                if (columnIndex === 0) {
+                  return (
+                    <StyledCell key={key} align="center" style={style}>
+                      <p>
+                        {`${getQuaterString(+data.period)} ${getClock(
+                          data.clock
+                        )}`}
+                      </p>
+                      <p>
+                        <Score key="homeScore" color={homeColor}>
+                          {data.home_score}
+                        </Score>{' '}
+                        -{' '}
+                        <Score key="visistorScore" color={visitorColor}>
+                          {data.visitor_score}
+                        </Score>
+                      </p>
+                    </StyledCell>
+                  );
+                }
+
                 return (
-                  <StyledCell key={key} align="center" style={style}>
-                    <p>
-                      {`${getQuaterString(+data.period)} ${getClock(
-                        data.clock
-                      )}`}
-                    </p>
-                    <p>
-                      <Score key="homeScore" color={homeColor}>
-                        {data.home_score}
-                      </Score>{' '}
-                      -{' '}
-                      <Score key="visistorScore" color={visitorColor}>
-                        {data.visitor_score}
-                      </Score>
-                    </p>
+                  <StyledCell key={key} align="left" style={style}>
+                    {data.description.replace(/\[.*\]/i, '').trim()}
                   </StyledCell>
                 );
-              }
-
-              return (
-                <StyledCell key={key} align="left" style={style}>
-                  {data.description.replace(/\[.*\]/i, '').trim()}
-                </StyledCell>
-              );
-            }}
-            rowCount={gamePlayByPlayData.length}
-            rowHeight={50}
-            width={300}
-            height={height}
-            hideTopRightGridScrollbar
-            hideBottomLeftGridScrollbar
-          />
-        )}
-      </AutoSizer>
-    </Flex.Item>
-  </Wrapper>
-);
+              }}
+              rowCount={gamePlayByPlayData.length}
+              rowHeight={50}
+              width={300}
+              height={height}
+              hideTopRightGridScrollbar
+              hideBottomLeftGridScrollbar
+            />
+          )}
+        </AutoSizer>
+      </Flex.Item>
+    </Wrapper>
+  );
 
 PlayByPlay.propTypes = {
   gamePlayByPlayData: PropTypes.arrayOf(PropTypes.object).isRequired,

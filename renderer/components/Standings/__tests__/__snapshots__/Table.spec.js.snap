@@ -17,6 +17,8 @@ exports[`match snapshot 1`] = `
       east
     </h3>
     <div
+      aria-colcount={0}
+      aria-rowcount={3}
       className="ReactVirtualized__Table"
       role="grid"
       style={Object {}}
@@ -272,6 +274,8 @@ exports[`match snapshot 1`] = `
       west
     </h3>
     <div
+      aria-colcount={0}
+      aria-rowcount={3}
       className="ReactVirtualized__Table"
       role="grid"
       style={Object {}}
