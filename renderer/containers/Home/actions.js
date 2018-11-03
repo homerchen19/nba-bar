@@ -2,6 +2,8 @@ import R from 'ramda';
 import addDays from 'date-fns/add_days';
 import subDays from 'date-fns/sub_days';
 import getTime from 'date-fns/get_time';
+import getYear from 'date-fns/get_year';
+import getMonth from 'date-fns/get_month';
 import { DateTime } from 'luxon';
 
 import nba from '@utils/nba';
@@ -27,8 +29,8 @@ const setDate = payload => ({
 
 const getSeason = date => {
   let season = '';
-  const year = date.slice(0, 4);
-  const month = date.slice(5, 6);
+  const year = getYear(date);
+  const month = getMonth(date) + 1;
 
   if (month > 9) {
     season = `${year}-${(year + 1).toString().slice(-2)}`;
