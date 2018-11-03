@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<section
+  className="DataSection-sc-1qt7zdu-0 gMtvoG"
+/>
+`;

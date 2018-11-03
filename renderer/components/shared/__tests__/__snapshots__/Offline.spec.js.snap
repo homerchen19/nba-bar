@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<div
+  className="Layout-sc-1qlvb6x-0 iYCmAx"
+>
+  <div
+    className="am-flexbox Offline__Content-sc-1hops6p-0 YXDsW am-flexbox-dir-column am-flexbox-justify-center am-flexbox-align-center"
+  >
+    <h1
+      className="Offline__Oops-sc-1hops6p-1 jEifYf"
+    >
+      Oops, offline.
+      <br />
+      This App requires the internent to be connected 📡
+    </h1>
+  </div>
+</div>
+`;
