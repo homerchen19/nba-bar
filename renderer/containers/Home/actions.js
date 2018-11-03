@@ -2,8 +2,7 @@ import R from 'ramda';
 import addDays from 'date-fns/add_days';
 import subDays from 'date-fns/sub_days';
 import getTime from 'date-fns/get_time';
-import format from 'date-fns/format';
-import moment from 'moment-timezone';
+import { DateTime } from 'luxon';
 
 import nba from '@utils/nba';
 import getApiDate from '@utils/getApiDate';
@@ -40,14 +39,6 @@ const getSeason = date => {
   return season;
 };
 
-const getValidTime = R.pipe(
-  R.insert(4, '-'),
-  R.insert(7, '-'),
-  R.insert(10, ' '),
-  R.insert(13, ':'),
-  R.join('')
-);
-
 const pickEssentialProps = gameData => ({
   id: gameData.id,
   season: getSeason(gameData.date),
@@ -60,13 +51,11 @@ const pickEssentialProps = gameData => ({
   periodTime: {
     periodStatus:
       gameData.period_time.game_status === '1'
-        ? format(
-            moment.tz(
-              getValidTime(`${gameData.date}${gameData.time}`),
-              'America/New_York'
-            ),
-            'HH:mm A'
-          )
+        ? DateTime.fromISO(`${gameData.date}T${gameData.time}`, {
+            zone: 'America/New_York',
+          })
+            .toLocal()
+            .toFormat('t')
         : gameData.period_time.period_status,
     gameClock: gameData.period_time.game_clock,
     gameStatus: gameData.period_time.game_status,
@@ -111,7 +100,7 @@ export const fetchData = (date, type) => async dispatch => {
   R.ifElse(
     R.equals('today'),
     () => {
-      newDate = date;
+      newDate = new Date().getTime();
     },
     R.ifElse(
       R.equals('add'),
