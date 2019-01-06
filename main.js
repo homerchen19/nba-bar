@@ -83,15 +83,21 @@ const reload = () => {
   }
 };
 
+const registerShortcuts = () => {
+  globalShortcut.register('CommandOrControl+R', reload);
+  globalShortcut.register('F5', reload);
+};
+
+const unregisterShortcuts = () => {
+  globalShortcut.unregisterAll();
+};
+
 mb.on('ready', async () => {
   await prepareNext('./renderer', 8080);
 
   if (isDev) {
     await installExtensions();
   }
-
-  globalShortcut.register('CommandOrControl+R', reload);
-  globalShortcut.register('F5', reload);
 
   const devPath = 'http://localhost:8080/home';
 
@@ -103,6 +109,9 @@ mb.on('ready', async () => {
 
   const url = isDev ? devPath : prodPath;
   mb.window.loadURL(url);
+
+  mb.window.on('focus', registerShortcuts);
+  mb.window.on('blur', unregisterShortcuts);
 
   console.log('app is ready');
 });
@@ -158,7 +167,7 @@ mb.app.on('before-quit', () => {
 });
 
 mb.app.on('will-quit', () => {
-  globalShortcut.unregisterAll();
+  unregisterShortcuts();
 });
 
 ipcMain.on('quit', () => {
