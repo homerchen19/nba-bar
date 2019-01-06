@@ -9,8 +9,8 @@ const middleware = [thunk, logger];
 const enhancers = compose(
   applyMiddleware(...middleware),
   typeof window !== 'undefined' &&
-  window.devToolsExtension &&
-  process.env.NODE_ENV !== 'production'
+    window.devToolsExtension &&
+    process.env.NODE_ENV !== 'production'
     ? window.devToolsExtension()
     : f => f
 );

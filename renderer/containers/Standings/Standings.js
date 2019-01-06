@@ -21,10 +21,9 @@ const Standings = ({ fetchData, updatedAt, error, loading, standingsData }) => {
       <DataSection>
         {loading && <Spinner />}
         {error && <Error />}
-        {!error &&
-          !loading && (
-            <Table east={standingsData.east} west={standingsData.west} />
-          )}
+        {!error && !loading && (
+          <Table east={standingsData.east} west={standingsData.west} />
+        )}
       </DataSection>
     </Wrapper>
   );

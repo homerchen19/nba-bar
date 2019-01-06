@@ -60,12 +60,11 @@ const Home = ({
         />
         <DataSection style={{ height: 'auto', marginTop: '30px' }}>
           {loading && <Spinner />}
-          {!loading &&
-            scheduleData.length === 0 && (
-              <NoGame>
-                <h3>No games available for this date</h3>
-              </NoGame>
-            )}
+          {!loading && scheduleData.length === 0 && (
+            <NoGame>
+              <h3>No games available for this date</h3>
+            </NoGame>
+          )}
           {!loading &&
             scheduleData.length !== 0 &&
             scheduleData.map(game => (

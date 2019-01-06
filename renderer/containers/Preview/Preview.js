@@ -27,30 +27,29 @@ const Preview = ({
         <DataSection>
           {loading && <Spinner />}
           {error && <Error />}
-          {!error &&
-            !loading && (
-              <>
-                <TeamScore
-                  time={gameData.periodTime.periodStatus.replace(' ET', '')}
-                  arena={gameData.arena}
-                  city={gameData.city}
-                  home={{
-                    name: gameData.home.abbreviation,
-                    w: homeTeamDashboardData.w,
-                    l: homeTeamDashboardData.l,
-                  }}
-                  visitor={{
-                    name: gameData.visitor.abbreviation,
-                    w: visitorTeamDashboardData.w,
-                    l: visitorTeamDashboardData.l,
-                  }}
-                />
-                <Table
-                  home={homeTeamDashboardData}
-                  visitor={visitorTeamDashboardData}
-                />
-              </>
-            )}
+          {!error && !loading && (
+            <>
+              <TeamScore
+                time={gameData.periodTime.periodStatus.replace(' ET', '')}
+                arena={gameData.arena}
+                city={gameData.city}
+                home={{
+                  name: gameData.home.abbreviation,
+                  w: homeTeamDashboardData.w,
+                  l: homeTeamDashboardData.l,
+                }}
+                visitor={{
+                  name: gameData.visitor.abbreviation,
+                  w: visitorTeamDashboardData.w,
+                  l: visitorTeamDashboardData.l,
+                }}
+              />
+              <Table
+                home={homeTeamDashboardData}
+                visitor={visitorTeamDashboardData}
+              />
+            </>
+          )}
         </DataSection>
       </>
     </Wrapper>
