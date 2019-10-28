@@ -24,11 +24,6 @@ export default class MyDocument extends Document {
             type="text/css"
             href="https://unpkg.com/antd-mobile/dist/antd-mobile.min.css"
           />
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://unpkg.com/react-sticky-table/dist/react-sticky-table.css"
-          />
           {styleTags}
         </Head>
         <body>
