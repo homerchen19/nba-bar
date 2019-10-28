@@ -10,14 +10,11 @@ import { DataSection } from '@components/shared';
 import * as actions from './actions';
 
 const Standings = ({ fetchData, updatedAt, error, loading, standingsData }) => {
-  useLayoutEffect(
-    () => {
-      if (differenceInHours(Date.now(), updatedAt) >= 6) {
-        fetchData();
-      }
-    },
-    [updatedAt, fetchData]
-  );
+  useLayoutEffect(() => {
+    if (differenceInHours(Date.now(), updatedAt) >= 6) {
+      fetchData();
+    }
+  }, [updatedAt, fetchData]);
 
   return (
     <Wrapper currentTab={2}>

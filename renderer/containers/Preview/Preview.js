@@ -18,7 +18,7 @@ const Preview = ({
   homeTeamDashboardData,
   visitorTeamDashboardData,
 }) => {
-  useLayoutEffect(() => fetchData(gameData), []);
+  useLayoutEffect(() => fetchData(gameData), []); // eslint-disable-line
 
   return (
     <Wrapper currentTab={1}>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
@@ -35,9 +35,9 @@ const Live = ({
   gameBoxScoreData,
   gamePlayByPlayData,
 }) => {
-  let timer;
+  let timer = useRef(null);
 
-  const fetchLiveData = () => {
+  const fetchLiveData = useCallback(() => {
     const lastPlay = R.last(gamePlayByPlayData);
     const isFinal =
       (lastPlay.period === '4' || +lastPlay.period > 4) &&
@@ -45,7 +45,7 @@ const Live = ({
       lastPlay.home_score !== lastPlay.visitor_score;
 
     if (isFinal) {
-      clearInterval(timer);
+      clearInterval(timer.current);
     } else {
       fetchData({
         date,
@@ -53,18 +53,21 @@ const Live = ({
         firstCall: false,
       });
     }
-  };
+  }, [date, fetchData, gameData.id, gamePlayByPlayData, timer]);
+
+  useEffect(
+    () => {
+      fetchData({
+        date,
+        gameId: gameData.id,
+        firstCall: true,
+      });
+    },
+    [] // eslint-disable-line
+  );
 
   useEffect(() => {
-    fetchData({
-      date,
-      gameId: gameData.id,
-      firstCall: true,
-    });
-  }, []);
-
-  useEffect(() => {
-    timer = setInterval(fetchLiveData, INTERVAL);
+    timer.current = setInterval(fetchLiveData, INTERVAL);
 
     return () => clearInterval(timer);
   });
@@ -82,9 +85,12 @@ const Live = ({
     <Wrapper currentTab={1}>
       <>
         <NavBar page="LIVE" />
+
         <DataSection>
           {loading && <Spinner />}
+
           {error && <Error />}
+
           {!error && !loading && (
             <>
               <Item marginTop="0">
@@ -105,12 +111,11 @@ const Live = ({
                       ? 'home'
                       : 'visitor'
                   }
-                  gameStatus={`${
-                    gameBoxScoreData.periodTime.periodStatus
-                  }${gameClock}`}
+                  gameStatus={`${gameBoxScoreData.periodTime.periodStatus}${gameClock}`}
                   showBarLoader={live !== 'error'}
                 />
               </Item>
+
               <Item marginTop="20">
                 <LineScore
                   home={{
@@ -133,6 +138,7 @@ const Live = ({
                   }}
                 />
               </Item>
+
               <Item marginTop="20">
                 <Tab titles={['PLAY-BY-PLAY', 'BOX SCORE']}>
                   <PlayByPlay

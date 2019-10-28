@@ -48,9 +48,12 @@ const Home = ({
   loading,
   scheduleData,
 }) => {
-  useLayoutEffect(() => {
-    fetchData(date, 'today');
-  }, []);
+  useLayoutEffect(
+    () => {
+      fetchData(date, 'today');
+    },
+    [] // eslint-disable-line
+  );
 
   return (
     <Wrapper currentTab={1}>

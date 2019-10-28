@@ -39,15 +39,18 @@ const Scoreboard = ({
       date,
       gameId: router.query.gameId,
     });
-  }, []);
+  }, []); // eslint-disable-line
 
   return (
     <Wrapper currentTab={1}>
       <>
         <NavBar page="SCOREBOARD" />
+
         <DataSection>
           {loading && <Spinner />}
+
           {error && <Error />}
+
           {!error && !loading && (
             <>
               <Item marginTop="0">
@@ -70,6 +73,7 @@ const Scoreboard = ({
                   gameStatus="Final"
                 />
               </Item>
+
               <Item marginTop="20">
                 <LineScore
                   home={{
@@ -84,6 +88,7 @@ const Scoreboard = ({
                   }}
                 />
               </Item>
+
               <Item marginTop="20">
                 <Tab titles={['STATS', 'PLAY-BY-PLAY', 'BOX SCORE']}>
                   <Stats
@@ -96,9 +101,11 @@ const Scoreboard = ({
                       stats: gameBoxScoreData.visitor.stats,
                     }}
                   />
+
                   <PlayByPlay
                     gamePlayByPlayData={R.reverse(gamePlayByPlayData)}
                   />
+
                   <BoxScore
                     home={{
                       name: gameData.home.abbreviation,

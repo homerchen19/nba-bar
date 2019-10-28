@@ -79,8 +79,9 @@ const renderHeaderCell = () =>
 const renderTeamBoxScoreTable = team => (
   <StickyTable>
     <Row key="header">{renderHeaderCell()}</Row>
+
     {team.players.map(player => (
-      <Row key="player">
+      <Row key={`${player.first_name}${player.last_name}`}>
         <StyledCell
           key="Player"
           style={{
