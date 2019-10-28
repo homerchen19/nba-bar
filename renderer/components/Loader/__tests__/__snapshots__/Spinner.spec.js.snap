@@ -14,8 +14,10 @@ exports[`match snapshot 1`] = `
   <span
     style={
       Object {
+        "WebkitAnimation": "__react-md-spinner-animation__root-rotate 1568.235294117647ms linear infinite",
         "animation": "__react-md-spinner-animation__root-rotate 1568.235294117647ms linear infinite",
         "display": "inline-block",
+        "fontSize": "0",
         "height": 32,
         "position": "relative",
         "verticalAlign": "middle",
@@ -26,12 +28,17 @@ exports[`match snapshot 1`] = `
     <span
       style={
         Object {
+          "WebkitAnimationDuration": "5332ms",
+          "WebkitAnimationIterationCount": "infinite",
+          "WebkitAnimationName": "__react-md-spinner-animation__fill-unfill-rotate, __react-md-spinner-animation__layer-1-fade-in-out",
+          "WebkitAnimationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
           "animationDuration": "5332ms",
           "animationIterationCount": "infinite",
           "animationName": "__react-md-spinner-animation__fill-unfill-rotate, __react-md-spinner-animation__layer-1-fade-in-out",
           "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
           "borderColor": "#0069b9",
-          "display": "flex",
+          "boxSizing": "border-box",
+          "display": "block",
           "height": "100%",
           "opacity": 1,
           "position": "absolute",
@@ -44,17 +51,23 @@ exports[`match snapshot 1`] = `
         style={
           Object {
             "borderColor": "inherit",
+            "boxSizing": "border-box",
             "display": "inline-block",
-            "flexGrow": 1,
             "height": "100%",
             "overflow": "hidden",
             "position": "relative",
+            "width": "50%",
           }
         }
       >
         <span
           style={
             Object {
+              "WebkitAnimationDuration": "1333ms",
+              "WebkitAnimationIterationCount": "infinite",
+              "WebkitAnimationName": "__react-md-spinner-animation__left-spin",
+              "WebkitAnimationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "WebkitTransform": "rotate(129deg)",
               "animationDuration": "1333ms",
               "animationIterationCount": "infinite",
               "animationName": "__react-md-spinner-animation__left-spin",
@@ -65,6 +78,7 @@ exports[`match snapshot 1`] = `
               "borderWidth": 3,
               "bottom": 0,
               "boxSizing": "border-box",
+              "display": "inline-block",
               "left": 0,
               "position": "absolute",
               "top": 0,
@@ -78,17 +92,23 @@ exports[`match snapshot 1`] = `
         style={
           Object {
             "borderColor": "inherit",
+            "boxSizing": "border-box",
             "display": "inline-block",
-            "flexGrow": 1,
             "height": "100%",
             "overflow": "hidden",
             "position": "relative",
+            "width": "50%",
           }
         }
       >
         <span
           style={
             Object {
+              "WebkitAnimationDuration": "1333ms",
+              "WebkitAnimationIterationCount": "infinite",
+              "WebkitAnimationName": "__react-md-spinner-animation__right-spin",
+              "WebkitAnimationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "WebkitTransform": "rotate(-129deg)",
               "animationDuration": "1333ms",
               "animationIterationCount": "infinite",
               "animationName": "__react-md-spinner-animation__right-spin",
@@ -99,6 +119,7 @@ exports[`match snapshot 1`] = `
               "borderWidth": 3,
               "bottom": 0,
               "boxSizing": "border-box",
+              "display": "inline-block",
               "left": "-100%",
               "position": "absolute",
               "top": 0,
@@ -116,6 +137,7 @@ exports[`match snapshot 1`] = `
             "borderTopStyle": "solid",
             "borderWidth": 3,
             "boxSizing": "border-box",
+            "display": "inline-block",
             "left": "45%",
             "position": "absolute",
             "top": 0,
@@ -127,12 +149,17 @@ exports[`match snapshot 1`] = `
     <span
       style={
         Object {
+          "WebkitAnimationDuration": "5332ms",
+          "WebkitAnimationIterationCount": "infinite",
+          "WebkitAnimationName": "__react-md-spinner-animation__fill-unfill-rotate, __react-md-spinner-animation__layer-2-fade-in-out",
+          "WebkitAnimationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
           "animationDuration": "5332ms",
           "animationIterationCount": "infinite",
           "animationName": "__react-md-spinner-animation__fill-unfill-rotate, __react-md-spinner-animation__layer-2-fade-in-out",
           "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
           "borderColor": "#f00b47",
-          "display": "flex",
+          "boxSizing": "border-box",
+          "display": "block",
           "height": "100%",
           "opacity": 1,
           "position": "absolute",
@@ -145,17 +172,23 @@ exports[`match snapshot 1`] = `
         style={
           Object {
             "borderColor": "inherit",
+            "boxSizing": "border-box",
             "display": "inline-block",
-            "flexGrow": 1,
             "height": "100%",
             "overflow": "hidden",
             "position": "relative",
+            "width": "50%",
           }
         }
       >
         <span
           style={
             Object {
+              "WebkitAnimationDuration": "1333ms",
+              "WebkitAnimationIterationCount": "infinite",
+              "WebkitAnimationName": "__react-md-spinner-animation__left-spin",
+              "WebkitAnimationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "WebkitTransform": "rotate(129deg)",
               "animationDuration": "1333ms",
               "animationIterationCount": "infinite",
               "animationName": "__react-md-spinner-animation__left-spin",
@@ -166,6 +199,7 @@ exports[`match snapshot 1`] = `
               "borderWidth": 3,
               "bottom": 0,
               "boxSizing": "border-box",
+              "display": "inline-block",
               "left": 0,
               "position": "absolute",
               "top": 0,
@@ -179,17 +213,23 @@ exports[`match snapshot 1`] = `
         style={
           Object {
             "borderColor": "inherit",
+            "boxSizing": "border-box",
             "display": "inline-block",
-            "flexGrow": 1,
             "height": "100%",
             "overflow": "hidden",
             "position": "relative",
+            "width": "50%",
           }
         }
       >
         <span
           style={
             Object {
+              "WebkitAnimationDuration": "1333ms",
+              "WebkitAnimationIterationCount": "infinite",
+              "WebkitAnimationName": "__react-md-spinner-animation__right-spin",
+              "WebkitAnimationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "WebkitTransform": "rotate(-129deg)",
               "animationDuration": "1333ms",
               "animationIterationCount": "infinite",
               "animationName": "__react-md-spinner-animation__right-spin",
@@ -200,6 +240,7 @@ exports[`match snapshot 1`] = `
               "borderWidth": 3,
               "bottom": 0,
               "boxSizing": "border-box",
+              "display": "inline-block",
               "left": "-100%",
               "position": "absolute",
               "top": 0,
@@ -217,6 +258,7 @@ exports[`match snapshot 1`] = `
             "borderTopStyle": "solid",
             "borderWidth": 3,
             "boxSizing": "border-box",
+            "display": "inline-block",
             "left": "45%",
             "position": "absolute",
             "top": 0,
@@ -228,12 +270,17 @@ exports[`match snapshot 1`] = `
     <span
       style={
         Object {
+          "WebkitAnimationDuration": "5332ms",
+          "WebkitAnimationIterationCount": "infinite",
+          "WebkitAnimationName": "__react-md-spinner-animation__fill-unfill-rotate, __react-md-spinner-animation__layer-3-fade-in-out",
+          "WebkitAnimationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
           "animationDuration": "5332ms",
           "animationIterationCount": "infinite",
           "animationName": "__react-md-spinner-animation__fill-unfill-rotate, __react-md-spinner-animation__layer-3-fade-in-out",
           "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
           "borderColor": "#0069b9",
-          "display": "flex",
+          "boxSizing": "border-box",
+          "display": "block",
           "height": "100%",
           "opacity": 1,
           "position": "absolute",
@@ -246,17 +293,23 @@ exports[`match snapshot 1`] = `
         style={
           Object {
             "borderColor": "inherit",
+            "boxSizing": "border-box",
             "display": "inline-block",
-            "flexGrow": 1,
             "height": "100%",
             "overflow": "hidden",
             "position": "relative",
+            "width": "50%",
           }
         }
       >
         <span
           style={
             Object {
+              "WebkitAnimationDuration": "1333ms",
+              "WebkitAnimationIterationCount": "infinite",
+              "WebkitAnimationName": "__react-md-spinner-animation__left-spin",
+              "WebkitAnimationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "WebkitTransform": "rotate(129deg)",
               "animationDuration": "1333ms",
               "animationIterationCount": "infinite",
               "animationName": "__react-md-spinner-animation__left-spin",
@@ -267,6 +320,7 @@ exports[`match snapshot 1`] = `
               "borderWidth": 3,
               "bottom": 0,
               "boxSizing": "border-box",
+              "display": "inline-block",
               "left": 0,
               "position": "absolute",
               "top": 0,
@@ -280,17 +334,23 @@ exports[`match snapshot 1`] = `
         style={
           Object {
             "borderColor": "inherit",
+            "boxSizing": "border-box",
             "display": "inline-block",
-            "flexGrow": 1,
             "height": "100%",
             "overflow": "hidden",
             "position": "relative",
+            "width": "50%",
           }
         }
       >
         <span
           style={
             Object {
+              "WebkitAnimationDuration": "1333ms",
+              "WebkitAnimationIterationCount": "infinite",
+              "WebkitAnimationName": "__react-md-spinner-animation__right-spin",
+              "WebkitAnimationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "WebkitTransform": "rotate(-129deg)",
               "animationDuration": "1333ms",
               "animationIterationCount": "infinite",
               "animationName": "__react-md-spinner-animation__right-spin",
@@ -301,6 +361,7 @@ exports[`match snapshot 1`] = `
               "borderWidth": 3,
               "bottom": 0,
               "boxSizing": "border-box",
+              "display": "inline-block",
               "left": "-100%",
               "position": "absolute",
               "top": 0,
@@ -318,6 +379,7 @@ exports[`match snapshot 1`] = `
             "borderTopStyle": "solid",
             "borderWidth": 3,
             "boxSizing": "border-box",
+            "display": "inline-block",
             "left": "45%",
             "position": "absolute",
             "top": 0,
@@ -329,12 +391,17 @@ exports[`match snapshot 1`] = `
     <span
       style={
         Object {
+          "WebkitAnimationDuration": "5332ms",
+          "WebkitAnimationIterationCount": "infinite",
+          "WebkitAnimationName": "__react-md-spinner-animation__fill-unfill-rotate, __react-md-spinner-animation__layer-4-fade-in-out",
+          "WebkitAnimationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
           "animationDuration": "5332ms",
           "animationIterationCount": "infinite",
           "animationName": "__react-md-spinner-animation__fill-unfill-rotate, __react-md-spinner-animation__layer-4-fade-in-out",
           "animationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
           "borderColor": "#f00b47",
-          "display": "flex",
+          "boxSizing": "border-box",
+          "display": "block",
           "height": "100%",
           "opacity": 1,
           "position": "absolute",
@@ -347,17 +414,23 @@ exports[`match snapshot 1`] = `
         style={
           Object {
             "borderColor": "inherit",
+            "boxSizing": "border-box",
             "display": "inline-block",
-            "flexGrow": 1,
             "height": "100%",
             "overflow": "hidden",
             "position": "relative",
+            "width": "50%",
           }
         }
       >
         <span
           style={
             Object {
+              "WebkitAnimationDuration": "1333ms",
+              "WebkitAnimationIterationCount": "infinite",
+              "WebkitAnimationName": "__react-md-spinner-animation__left-spin",
+              "WebkitAnimationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "WebkitTransform": "rotate(129deg)",
               "animationDuration": "1333ms",
               "animationIterationCount": "infinite",
               "animationName": "__react-md-spinner-animation__left-spin",
@@ -368,6 +441,7 @@ exports[`match snapshot 1`] = `
               "borderWidth": 3,
               "bottom": 0,
               "boxSizing": "border-box",
+              "display": "inline-block",
               "left": 0,
               "position": "absolute",
               "top": 0,
@@ -381,17 +455,23 @@ exports[`match snapshot 1`] = `
         style={
           Object {
             "borderColor": "inherit",
+            "boxSizing": "border-box",
             "display": "inline-block",
-            "flexGrow": 1,
             "height": "100%",
             "overflow": "hidden",
             "position": "relative",
+            "width": "50%",
           }
         }
       >
         <span
           style={
             Object {
+              "WebkitAnimationDuration": "1333ms",
+              "WebkitAnimationIterationCount": "infinite",
+              "WebkitAnimationName": "__react-md-spinner-animation__right-spin",
+              "WebkitAnimationTimingFunction": "cubic-bezier(.4, 0, .2, 1)",
+              "WebkitTransform": "rotate(-129deg)",
               "animationDuration": "1333ms",
               "animationIterationCount": "infinite",
               "animationName": "__react-md-spinner-animation__right-spin",
@@ -402,6 +482,7 @@ exports[`match snapshot 1`] = `
               "borderWidth": 3,
               "bottom": 0,
               "boxSizing": "border-box",
+              "display": "inline-block",
               "left": "-100%",
               "position": "absolute",
               "top": 0,
@@ -419,6 +500,7 @@ exports[`match snapshot 1`] = `
             "borderTopStyle": "solid",
             "borderWidth": 3,
             "boxSizing": "border-box",
+            "display": "inline-block",
             "left": "45%",
             "position": "absolute",
             "top": 0,

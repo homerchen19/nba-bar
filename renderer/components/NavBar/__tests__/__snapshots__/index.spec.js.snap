@@ -22,6 +22,7 @@ exports[`match snapshot 1`] = `
         className="am-icon am-icon-left am-icon-md"
         color="#f7f7f7"
         onClick={[Function]}
+        onMouseEnter={[Function]}
         style={
           Object {
             "cursor": "pointer",

@@ -5,10 +5,10 @@ exports[`match snapshot 1`] = `
   className="BarLoader__Wrapper-sc-1cjmyxn-0 cthRyu"
 >
   <div
-    className="BarLoader__FirstBar-sc-1cjmyxn-2 ivdCQi"
+    className="BarLoader__Bar-sc-1cjmyxn-1 BarLoader__FirstBar-sc-1cjmyxn-2 ivdCQi"
   />
   <div
-    className="BarLoader__SecondBar-sc-1cjmyxn-3 dktTAd"
+    className="BarLoader__Bar-sc-1cjmyxn-1 BarLoader__SecondBar-sc-1cjmyxn-3 dktTAd"
   />
 </div>
 `;
