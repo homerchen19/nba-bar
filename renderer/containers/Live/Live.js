@@ -53,7 +53,7 @@ const Live = ({
         firstCall: false,
       });
     }
-  }, [date, fetchData, gameData.id, gamePlayByPlayData, timer]);
+  }, [date, fetchData, gameData, gamePlayByPlayData, timer]);
 
   useEffect(
     () => {
