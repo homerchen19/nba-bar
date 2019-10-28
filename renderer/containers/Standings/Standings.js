@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import differenceInHours from 'date-fns/difference_in_hours';
+import { differenceInHours } from 'date-fns';
 
 import Wrapper from '@components/Wrapper';
 import { Spinner, Error } from '@components/Loader';

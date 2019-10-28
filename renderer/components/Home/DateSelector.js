@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Flex, Icon } from 'antd-mobile';
 import styled from 'styled-components';
-import format from 'date-fns/format';
-import startOfDay from 'date-fns/start_of_day';
+import { format, startOfDay } from 'date-fns';
 
 import { colors } from '@styles/theme';
 
-const formatDate = date => format(startOfDay(date), 'DD, MMM, YYYY');
+const formatDate = date => format(startOfDay(date), 'dd, MMM, yyyy');
 
 const Wrapper = styled.div`
   position: fixed;

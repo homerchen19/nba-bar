@@ -1,6 +1,5 @@
 import R from 'ramda';
-import getYear from 'date-fns/get_year';
-import getMonth from 'date-fns/get_month';
+import { getYear, getMonth } from 'date-fns';
 
 import nba from '@utils/nba';
 import { REQUEST_START, REQUEST_SUCCESS, REQUEST_ERROR } from './constants';

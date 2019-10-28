@@ -10,7 +10,7 @@ const {
   dialog,
   Notification,
 } = require('electron');
-const menubar = require('menubar');
+const { menubar } = require('menubar');
 const { autoUpdater } = require('electron-updater');
 const isDev = require('electron-is-dev');
 const prepareNext = require('electron-next');
@@ -65,16 +65,18 @@ const createAboutWindow = () => {
 let aboutWindow;
 
 const mb = menubar({
-  alwaysOnTop: isDev,
   icon: path.join(app.getAppPath(), 'resources/menubarDefaultTemplate.png'),
-  minWidth: 300,
-  maxWidth: isDev ? undefined : 300,
-  minHeight: 465,
-  maxHeight: isDev ? undefined : 465,
+  browserWindow: {
+    alwaysOnTop: isDev,
+    minWidth: 300,
+    maxWidth: isDev ? undefined : 300,
+    minHeight: 465,
+    maxHeight: isDev ? undefined : 465,
+    resizable: isDev,
+    movable: false,
+    webPreferences: { webSecurity: false },
+  },
   preloadWindow: true,
-  resizable: isDev,
-  movable: false,
-  webPreferences: { webSecurity: false },
 });
 
 const reload = () => {

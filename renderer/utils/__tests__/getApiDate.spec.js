@@ -1,5 +1,5 @@
 import { DateTime } from 'luxon';
-import getTime from 'date-fns/get_time';
+import { getTime, parseISO } from 'date-fns';
 
 import getApiDate from '../getApiDate';
 
@@ -23,7 +23,7 @@ describe('getApiDate', () => {
     const date = getDateByZone('Asia/Taipei');
 
     expect(date).toBe('2018-10-31T10:00:00.000+08:00');
-    expect(getApiDate(getTime(date))).toEqual({
+    expect(getApiDate(getTime(parseISO(date)))).toEqual({
       day: 30,
       month: 10,
       year: 2018,
@@ -34,7 +34,7 @@ describe('getApiDate', () => {
     const date = getDateByZone('Europe/London');
 
     expect(date).toBe('2018-10-31T10:00:00.000+00:00');
-    expect(getApiDate(getTime(date))).toEqual({
+    expect(getApiDate(getTime(parseISO(date)))).toEqual({
       day: 30,
       month: 10,
       year: 2018,
@@ -45,7 +45,7 @@ describe('getApiDate', () => {
     const date = getDateByZone('America/Los_Angeles');
 
     expect(date).toBe('2018-10-31T10:00:00.000-07:00');
-    expect(getApiDate(getTime(date))).toEqual({
+    expect(getApiDate(getTime(parseISO(date)))).toEqual({
       day: 31,
       month: 10,
       year: 2018,

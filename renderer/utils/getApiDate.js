@@ -1,4 +1,4 @@
-import startOfDay from 'date-fns/start_of_day';
+import { startOfDay } from 'date-fns';
 import { DateTime } from 'luxon';
 
 export default function(date) {
