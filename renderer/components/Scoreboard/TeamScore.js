@@ -39,9 +39,9 @@ const TeamName = styled.h3`
 `;
 
 const Score = styled.p`
-  opacity: ${props => (props.win ? '1' : '0.9')};
+  opacity: 1;
   font-size: large;
-  font-weight: ${props => (props.win ? '600' : '100')};
+  font-weight: ${props => (props.win ? '800' : '300')};
   text-align: center;
 `;
 

@@ -74,9 +74,9 @@ const TeamName = styled.span`
 `;
 
 const TeamScore = styled.span`
-  opacity: ${props => (props.winner ? 1 : 0.8)};
+  opacity: 1;
   color: ${colors.black};
-  font-weight: ${props => (props.winner ? 600 : 200)};
+  font-weight: ${props => (props.win ? 800 : 300)};
 `;
 
 class MatchCard extends Component {
@@ -161,7 +161,7 @@ class MatchCard extends Component {
             background={nba.getTeamBackgroundColor(home.team_key)}
           >
             <TeamName>{home.nickname}</TeamName>
-            <TeamScore winner={winner === 'home'}>
+            <TeamScore win={winner === 'home'}>
               {home.score === '' ? 0 : home.score}
             </TeamScore>
           </TeamContent>
@@ -175,7 +175,7 @@ class MatchCard extends Component {
             }}
           >
             <TeamName>{visitor.nickname}</TeamName>
-            <TeamScore winner={winner === 'visitor'}>
+            <TeamScore win={winner === 'visitor'}>
               {visitor.score === '' ? 0 : visitor.score}
             </TeamScore>
           </TeamContent>

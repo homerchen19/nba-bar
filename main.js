@@ -104,7 +104,7 @@ mb.on('ready', async () => {
   const devPath = 'http://localhost:8080/home';
 
   const prodPath = format({
-    pathname: resolve('renderer/out/home/index.html'),
+    pathname: resolve('renderer/out/home.html'),
     protocol: 'file:',
     slashes: true,
   });
