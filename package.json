@@ -88,17 +88,16 @@
     "jest": "^24.9.0",
     "lint-staged": "^9.4.2",
     "node-noop": "^1.0.0",
+    "null-loader": "^3.0.0",
     "prettier": "^1.18.2",
     "prettier-package-json": "^2.1.0",
     "react-test-renderer": "^16.11.0",
     "redux-logger": "^3.0.6",
-    "require-hacker": "^3.0.1",
     "rimraf": "^3.0.0",
     "stylelint": "11.1.1",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-config-yoctol": "^2.0.0",
-    "stylelint-processor-styled-components": "^1.8.0",
-    "svg-sprite-loader": "^4.1.6"
+    "stylelint-processor-styled-components": "^1.8.0"
   },
   "keywords": [
     "App",
