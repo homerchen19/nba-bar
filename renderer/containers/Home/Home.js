@@ -48,7 +48,9 @@ const Home = ({
   loading,
   scheduleData,
 }) => {
-  useLayoutEffect(() => fetchData(date, 'today'), []);
+  useLayoutEffect(() => {
+    fetchData(date, 'today');
+  }, []);
 
   return (
     <Wrapper currentTab={1}>

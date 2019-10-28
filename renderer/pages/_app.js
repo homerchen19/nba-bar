@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import Head from 'next/head';
 import withRedux from 'next-redux-wrapper';
 import isOnline from 'is-online';
@@ -24,7 +24,7 @@ export default withRedux(configureStore)(
       const { Component, pageProps, store, online } = this.props;
 
       return (
-        <Container>
+        <>
           <Head>
             <meta charSet="UTF-8" />
             <meta
@@ -39,7 +39,7 @@ export default withRedux(configureStore)(
               {online ? <Component {...pageProps} /> : <Offline />}
             </>
           </Provider>
-        </Container>
+        </>
       );
     }
   }

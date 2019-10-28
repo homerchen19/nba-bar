@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import differenceInHours from 'date-fns/difference_in_hours';
@@ -10,11 +10,14 @@ import { DataSection } from '@components/shared';
 import * as actions from './actions';
 
 const Standings = ({ fetchData, updatedAt, error, loading, standingsData }) => {
-  useEffect(() => {
-    if (differenceInHours(Date.now(), updatedAt) >= 6) {
-      fetchData();
-    }
-  });
+  useLayoutEffect(
+    () => {
+      if (differenceInHours(Date.now(), updatedAt) >= 6) {
+        fetchData();
+      }
+    },
+    [updatedAt, fetchData]
+  );
 
   return (
     <Wrapper currentTab={2}>
